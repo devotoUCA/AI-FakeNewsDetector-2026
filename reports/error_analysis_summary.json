@@ -1,0 +1,21 @@
+{
+  "n_errores_test": 61,
+  "fp_test": 34,
+  "fn_test": 27,
+  "n_en_csv": 40,
+  "por_origen": {
+    "test": 40
+  },
+  "por_tipo": {
+    "FP (real marcada como falsa)": 20,
+    "FN (falsa dada por real)": 20
+  },
+  "alta_confianza": 26,
+  "por_categoria": {
+    "tema o vocabulario ambiguo": 21,
+    "basada en redes sociales": 5,
+    "opinión / primera persona": 5,
+    "falsa con formato de agencia (muchas atribuciones)": 5,
+    "real con tono sensacionalista / mayúsculas": 4
+  }
+}
