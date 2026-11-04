@@ -1,0 +1,97 @@
+{
+  "seed": 42,
+  "pasos": [
+    {
+      "paso": "carga",
+      "filas": {
+        "real": 21417,
+        "fake": 23481,
+        "total": 44898
+      }
+    },
+    {
+      "paso": "filtrar_textos_cortos (< 20 palabras tras limpiar)",
+      "filas_eliminadas": 729,
+      "eliminadas_por_clase": {
+        "real": 3,
+        "fake": 726,
+        "total": 729
+      }
+    },
+    {
+      "paso": "duplicados_exactos (texto limpio normalizado)",
+      "filas_eliminadas": 5871,
+      "eliminadas_por_clase": {
+        "real": 490,
+        "fake": 5381,
+        "total": 5871
+      },
+      "grupos_con_etiquetas_en_conflicto": 0,
+      "filas_en_conflicto": 0
+    },
+    {
+      "paso": "casi_duplicados (Jaccard >= 0.8 en shingles de 5 palabras)",
+      "filas_eliminadas": 99,
+      "eliminadas_por_clase": {
+        "real": 40,
+        "fake": 59,
+        "total": 99
+      },
+      "grupos_con_etiquetas_en_conflicto": 1,
+      "filas_en_conflicto": 2,
+      "pares_detectados": 103
+    },
+    {
+      "paso": "dataset_final",
+      "filas": {
+        "real": 20884,
+        "fake": 17315,
+        "total": 38199
+      }
+    }
+  ],
+  "splits": {
+    "train": {
+      "real": 14619,
+      "fake": 12120,
+      "total": 26739,
+      "sha256_archivo": "9df854574ba6c4ffe48d55307dba0a97b23b3a2896889f7d35eb0017375c5876",
+      "sha256_ids": "fde3c9771a4fe6d15beaf263ae9c544d03b0b03afe1c7f912ebad873e2ec76f6",
+      "archivo": "data/processed/train.csv"
+    },
+    "val": {
+      "real": 3133,
+      "fake": 2597,
+      "total": 5730,
+      "sha256_archivo": "77a642161ecc54d70f0f0d439338b75e803c6bfb5d8328c6fb806fe17e5552b1",
+      "sha256_ids": "370b7bd51a7606485c3a7bb8ccd8a7a1fe0b1c8c0854f6ec499ae588e6a52230",
+      "archivo": "data/processed/val.csv"
+    },
+    "test": {
+      "real": 3132,
+      "fake": 2598,
+      "total": 5730,
+      "sha256_archivo": "aa1c7b44683d7432aa13abf6026783ebcbe7be8c77c726c7c6183317492999e0",
+      "sha256_ids": "e4dcef04fac38a6b550bde9361e54cf7ece6e9f03bed5791a25a63c3691b8047",
+      "archivo": "data/processed/test.csv"
+    }
+  },
+  "solapamiento": {
+    "train-val": {
+      "ids": 0,
+      "exactos": 0,
+      "casi_duplicados": 0
+    },
+    "train-test": {
+      "ids": 0,
+      "exactos": 0,
+      "casi_duplicados": 0
+    },
+    "val-test": {
+      "ids": 0,
+      "exactos": 0,
+      "casi_duplicados": 0
+    },
+    "ok": true
+  }
+}

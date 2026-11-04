@@ -1,0 +1,281 @@
+{
+  "nota": "Accuracy de una regla que usa SOLO la presencia de la marca (sobre todo el dataset crudo). Valores cercanos a 1 indican que la marca separa las clases sin leer el contenido.",
+  "marcas_texto_crudo": [
+    {
+      "marca": "dateline '(Reuters) -'",
+      "columna": "text",
+      "frac_falsas": 0.0,
+      "frac_reales": 0.992,
+      "accuracy_regla_sola": 0.9962
+    },
+    {
+      "marca": "palabra 'Reuters'",
+      "columna": "text",
+      "frac_falsas": 0.0126,
+      "frac_reales": 0.9982,
+      "accuracy_regla_sola": 0.9925
+    },
+    {
+      "marca": "'Featured image'",
+      "columna": "text",
+      "frac_falsas": 0.3476,
+      "frac_reales": 0.0,
+      "accuracy_regla_sola": 0.6588
+    },
+    {
+      "marca": "'Getty Images'",
+      "columna": "text",
+      "frac_falsas": 0.1679,
+      "frac_reales": 0.0,
+      "accuracy_regla_sola": 0.5648
+    },
+    {
+      "marca": "pic.twitter.com",
+      "columna": "text",
+      "frac_falsas": 0.1479,
+      "frac_reales": 0.0,
+      "accuracy_regla_sola": 0.5544
+    },
+    {
+      "marca": "URL (http/www)",
+      "columna": "text",
+      "frac_falsas": 0.143,
+      "frac_reales": 0.0019,
+      "accuracy_regla_sola": 0.5509
+    },
+    {
+      "marca": "@usuario",
+      "columna": "text",
+      "frac_falsas": 0.2606,
+      "frac_reales": 0.0131,
+      "accuracy_regla_sola": 0.607
+    },
+    {
+      "marca": "firma de tuit '(@x) Mes D, AAAA'",
+      "columna": "text",
+      "frac_falsas": 0.232,
+      "frac_reales": 0.0,
+      "accuracy_regla_sola": 0.5984
+    },
+    {
+      "marca": "'Via:' / 'Read more:'",
+      "columna": "text",
+      "frac_falsas": 0.2088,
+      "frac_reales": 0.0002,
+      "accuracy_regla_sola": 0.5861
+    },
+    {
+      "marca": "21st Century Wire / ACR",
+      "columna": "text",
+      "frac_falsas": 0.0656,
+      "frac_reales": 0.0,
+      "accuracy_regla_sola": 0.5113
+    },
+    {
+      "marca": "descargo SAP",
+      "columna": "text",
+      "frac_falsas": 0.0,
+      "frac_reales": 0.0115,
+      "accuracy_regla_sola": 0.5285
+    },
+    {
+      "marca": "comilla/apóstrofo curvo (’ “ ”)",
+      "columna": "text",
+      "frac_falsas": 0.0,
+      "frac_reales": 0.5051,
+      "accuracy_regla_sola": 0.7639
+    },
+    {
+      "marca": "apóstrofo convertido en espacio ('don t')",
+      "columna": "text",
+      "frac_falsas": 0.6541,
+      "frac_reales": 0.0889,
+      "accuracy_regla_sola": 0.7766
+    },
+    {
+      "marca": "espacio duro (\\xa0)",
+      "columna": "text",
+      "frac_falsas": 0.0,
+      "frac_reales": 0.051,
+      "accuracy_regla_sola": 0.5473
+    },
+    {
+      "marca": "título con (VIDEO)/[VIDEO]",
+      "columna": "title",
+      "frac_falsas": 0.2154,
+      "frac_reales": 0.0,
+      "accuracy_regla_sola": 0.5897
+    },
+    {
+      "marca": "título con palabra en MAYÚSCULAS (>=4 letras)",
+      "columna": "title",
+      "frac_falsas": 0.7959,
+      "frac_reales": 0.025,
+      "accuracy_regla_sola": 0.8814
+    },
+    {
+      "marca": "título con '!'",
+      "columna": "title",
+      "frac_falsas": 0.1393,
+      "frac_reales": 0.0008,
+      "accuracy_regla_sola": 0.5495
+    },
+    {
+      "marca": "título 'Factbox:'/'Exclusive:'",
+      "columna": "title",
+      "frac_falsas": 0.0,
+      "frac_reales": 0.0287,
+      "accuracy_regla_sola": 0.5367
+    }
+  ],
+  "marcas_tras_limpieza_full": [
+    {
+      "marca": "dateline '(Reuters) -'",
+      "columna": "doc",
+      "frac_falsas": 0.0,
+      "frac_reales": 0.0,
+      "accuracy_regla_sola": 0.477
+    },
+    {
+      "marca": "palabra 'Reuters'",
+      "columna": "doc",
+      "frac_falsas": 0.0,
+      "frac_reales": 0.0,
+      "accuracy_regla_sola": 0.477
+    },
+    {
+      "marca": "'Featured image'",
+      "columna": "doc",
+      "frac_falsas": 0.0,
+      "frac_reales": 0.0,
+      "accuracy_regla_sola": 0.477
+    },
+    {
+      "marca": "'Getty Images'",
+      "columna": "doc",
+      "frac_falsas": 0.0,
+      "frac_reales": 0.0,
+      "accuracy_regla_sola": 0.477
+    },
+    {
+      "marca": "pic.twitter.com",
+      "columna": "doc",
+      "frac_falsas": 0.0,
+      "frac_reales": 0.0,
+      "accuracy_regla_sola": 0.477
+    },
+    {
+      "marca": "URL (http/www)",
+      "columna": "doc",
+      "frac_falsas": 0.0,
+      "frac_reales": 0.0,
+      "accuracy_regla_sola": 0.477
+    },
+    {
+      "marca": "@usuario",
+      "columna": "doc",
+      "frac_falsas": 0.0,
+      "frac_reales": 0.0,
+      "accuracy_regla_sola": 0.477
+    },
+    {
+      "marca": "firma de tuit '(@x) Mes D, AAAA'",
+      "columna": "doc",
+      "frac_falsas": 0.0,
+      "frac_reales": 0.0,
+      "accuracy_regla_sola": 0.477
+    },
+    {
+      "marca": "'Via:' / 'Read more:'",
+      "columna": "doc",
+      "frac_falsas": 0.0,
+      "frac_reales": 0.0,
+      "accuracy_regla_sola": 0.477
+    },
+    {
+      "marca": "21st Century Wire / ACR",
+      "columna": "doc",
+      "frac_falsas": 0.0,
+      "frac_reales": 0.0,
+      "accuracy_regla_sola": 0.477
+    },
+    {
+      "marca": "descargo SAP",
+      "columna": "doc",
+      "frac_falsas": 0.0,
+      "frac_reales": 0.0,
+      "accuracy_regla_sola": 0.477
+    },
+    {
+      "marca": "comilla/apóstrofo curvo (’ “ ”)",
+      "columna": "doc",
+      "frac_falsas": 0.0,
+      "frac_reales": 0.0,
+      "accuracy_regla_sola": 0.477
+    },
+    {
+      "marca": "apóstrofo convertido en espacio ('don t')",
+      "columna": "doc",
+      "frac_falsas": 0.6602,
+      "frac_reales": 0.251,
+      "accuracy_regla_sola": 0.7025
+    },
+    {
+      "marca": "espacio duro (\\xa0)",
+      "columna": "doc",
+      "frac_falsas": 0.0,
+      "frac_reales": 0.0,
+      "accuracy_regla_sola": 0.477
+    },
+    {
+      "marca": "título con (VIDEO)/[VIDEO]",
+      "columna": "first_line",
+      "frac_falsas": 0.0,
+      "frac_reales": 0.0,
+      "accuracy_regla_sola": 0.477
+    },
+    {
+      "marca": "título con palabra en MAYÚSCULAS (>=4 letras)",
+      "columna": "first_line",
+      "frac_falsas": 0.6669,
+      "frac_reales": 0.0259,
+      "accuracy_regla_sola": 0.8134
+    },
+    {
+      "marca": "título con '!'",
+      "columna": "first_line",
+      "frac_falsas": 0.145,
+      "frac_reales": 0.0008,
+      "accuracy_regla_sola": 0.5524
+    },
+    {
+      "marca": "título 'Factbox:'/'Exclusive:'",
+      "columna": "first_line",
+      "frac_falsas": 0.0,
+      "frac_reales": 0.0,
+      "accuracy_regla_sola": 0.477
+    }
+  ],
+  "metadatos_solos": {
+    "solo_subject": {
+      "accuracy_val": 1.0,
+      "subjects_falsas": [
+        "Government News",
+        "News",
+        "US_News",
+        "left-news",
+        "politics"
+      ],
+      "subjects_reales": [
+        "politicsNews",
+        "worldnews"
+      ]
+    },
+    "solo_fecha (año, mes, día)": {
+      "accuracy_val": 0.7197
+    },
+    "solo_formato_de_fecha (espacio final, mes abreviado)": {
+      "accuracy_val": 1.0
+    }
+  }
+}
