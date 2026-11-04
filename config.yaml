@@ -1,0 +1,133 @@
+# Configuración única del proyecto. Todo parámetro del pipeline se lee de acá.
+seed: 42
+
+paths:
+  raw_isot: data/raw/isot_kaggle
+  raw_liar: data/raw/liar
+  interim: data/interim
+  processed: data/processed
+  models: models
+  reports: reports
+  figures: reports/figures
+
+download:
+  isot:
+    url: https://www.kaggle.com/api/v1/datasets/download/clmentbisaillon/fake-and-real-news-dataset
+    zip_name: fake-and-real-news-dataset.zip
+    sha256:
+      Fake.csv: bebf8bcfe95678bf2c732bf413a2ce5f621af0102c82bf08083b2e5d3c693d0c
+      True.csv: ba0844414a65dc6ae7402b8eee5306da24b6b56488d6767135af466c7dcb2775
+  liar:
+    url: https://www.cs.ucsb.edu/~william/data/liar_dataset.zip
+    zip_name: liar_dataset.zip
+    sha256:
+      train.tsv: 23ef8cb7ff57b25c941100d0744039cebc595d65a67ea190f72b330a658d8c36
+      valid.tsv: 8dd3d7ed1a11e78ed7df090c9eddb0f91147f895850c78d49dd7b4e88fd09a16
+      test.tsv: ee41e2c741e0019216952625145af8c4aa8c8d3057ec68284b134267bb845e6f
+
+labels:
+  real: 0
+  fake: 1   # clase positiva
+
+data:
+  min_words: 20            # textos con menos palabras (tras limpiar) se descartan
+  near_duplicates:
+    shingle_size: 5        # shingles de 5 palabras
+    num_perm: 64           # permutaciones MinHash
+    bands: 16              # LSH: 16 bandas x 4 filas
+    jaccard_threshold: 0.8 # se verifica Jaccard exacto sobre los candidatos
+
+split:
+  train: 0.70
+  val: 0.15
+  test: 0.15
+
+tfidf:
+  lowercase: true
+  sublinear_tf: true
+  min_df: 3
+  max_df: 0.9
+  max_features: 100000
+  strip_accents: unicode
+
+models:
+  logreg:
+    C_grid: [0.1, 0.3, 1.0, 3.0, 10.0, 30.0, 100.0]
+    ngram_grid: [[1, 1], [1, 2]]
+    max_train_val_gap: 0.03   # brecha máxima tolerada entre F1 falsa train y val
+  naive_bayes:
+    alpha_grid: [0.01, 0.03, 0.1, 0.3, 1.0]
+  linear_svm:
+    C_grid: [0.03, 0.1, 0.3, 1.0, 3.0]
+  style_tree:
+    max_depth_grid: [3, 5, 8, 12]
+    min_samples_leaf: 20
+  style_forest:
+    n_estimators: 200
+    max_depth_grid: [5, 8, 12]
+    min_samples_leaf: 10
+  knn:
+    k_grid: [3, 5, 7, 11, 15]
+    max_features: 50000
+  mlp:
+    max_features: 20000
+    hidden_units: 32
+    epochs: 30
+    learning_rate: 0.001
+    batch_size: 256
+    alpha: 0.0001
+    adopt_min_gain_f1: 0.005   # ganancia mínima en F1 falsa (val y test) para adoptar la red
+  scratch_logreg:
+    max_features: 20000
+    learning_rates: [0.5, 5.0, 50.0]
+    epochs: 300
+
+calibration:
+  methods: [none, sigmoid, isotonic]   # se elige por Brier en validación
+  cv_folds: 5
+  n_bins: 10
+
+decision:
+  threshold_grid: [0.20, 0.80, 0.01]   # inicio, fin, paso
+  max_fpr: 0.10                         # tasa de falsas alarmas máxima tolerada en validación
+  ambiguous_low: 0.40
+  ambiguous_high: 0.60
+  confidence_high_target_accuracy: 0.97 # accuracy mínima en validación para la banda "alta"
+  confidence_grid: [0.60, 0.99, 0.01]
+  confidence_window: 0.10
+
+ood:
+  min_words: 20
+  max_words: 3000
+  min_known_vocab_ratio: 0.50
+  min_english_stopword_ratio: 0.15
+  max_non_ascii_letter_ratio: 0.30
+
+evaluation:
+  bootstrap_resamples: 1000
+  success_accuracy: 0.80
+  success_f1_per_class: 0.80
+  suspicious_accuracy: 0.98
+  error_analysis_min_cases: 40
+
+external:
+  liar_fake_labels: ["false", "pants-fire"]
+  liar_real_labels: ["true", "mostly-true"]
+  liar_excluded_labels: ["half-true", "barely-true"]
+
+clustering:
+  svd_components: 100
+  k_grid: [5, 6, 7, 8, 9, 10]
+  silhouette_sample: 5000
+  gmm_components_dims: 20
+  anomaly_percentile: 99.5
+
+genetic:
+  population: 20
+  generations: 15
+  mutation_rate: 0.1
+  feature_penalty: 0.002
+
+demo:
+  log_predictions: false   # si es true, guarda hash del texto + salida en reports/predictions_log.jsonl
+  similar_examples: 3
