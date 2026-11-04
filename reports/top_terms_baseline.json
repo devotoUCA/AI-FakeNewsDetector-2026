@@ -1,0 +1,246 @@
+{
+  "hacia_falsa": [
+    {
+      "termino": "gop",
+      "peso": 26.8879
+    },
+    {
+      "termino": "breaking",
+      "peso": 23.1224
+    },
+    {
+      "termino": "this",
+      "peso": 21.5785
+    },
+    {
+      "termino": "us",
+      "peso": 21.5608
+    },
+    {
+      "termino": "just",
+      "peso": 17.7642
+    },
+    {
+      "termino": "sen",
+      "peso": 17.1156
+    },
+    {
+      "termino": "mr",
+      "peso": 16.7882
+    },
+    {
+      "termino": "rep",
+      "peso": 15.4807
+    },
+    {
+      "termino": "obama",
+      "peso": 14.1428
+    },
+    {
+      "termino": "hillary",
+      "peso": 13.776
+    },
+    {
+      "termino": "reportedly",
+      "peso": 13.3729
+    },
+    {
+      "termino": "that",
+      "peso": 13.3393
+    },
+    {
+      "termino": "watch",
+      "peso": 13.3307
+    },
+    {
+      "termino": "even",
+      "peso": 12.9626
+    },
+    {
+      "termino": "press",
+      "peso": 12.7879
+    },
+    {
+      "termino": "these",
+      "peso": 11.805
+    },
+    {
+      "termino": "america",
+      "peso": 11.6406
+    },
+    {
+      "termino": "fox",
+      "peso": 11.3356
+    },
+    {
+      "termino": "gov",
+      "peso": 11.1473
+    },
+    {
+      "termino": "isis",
+      "peso": 10.9973
+    },
+    {
+      "termino": "according",
+      "peso": 10.9881
+    },
+    {
+      "termino": "entire",
+      "peso": 10.6278
+    },
+    {
+      "termino": "terror",
+      "peso": 10.6241
+    },
+    {
+      "termino": "is",
+      "peso": 10.5693
+    },
+    {
+      "termino": "didn",
+      "peso": 10.4793
+    },
+    {
+      "termino": "isn",
+      "peso": 10.4215
+    },
+    {
+      "termino": "reports",
+      "peso": 10.1547
+    },
+    {
+      "termino": "here",
+      "peso": 10.1031
+    },
+    {
+      "termino": "morning",
+      "peso": 9.3393
+    },
+    {
+      "termino": "well",
+      "peso": 9.3258
+    }
+  ],
+  "hacia_real": [
+    {
+      "termino": "said",
+      "peso": -54.005
+    },
+    {
+      "termino": "twitter",
+      "peso": -22.1884
+    },
+    {
+      "termino": "nov",
+      "peso": -18.599
+    },
+    {
+      "termino": "wednesday",
+      "peso": -18.2732
+    },
+    {
+      "termino": "tuesday",
+      "peso": -17.3081
+    },
+    {
+      "termino": "republican",
+      "peso": -15.8732
+    },
+    {
+      "termino": "thursday",
+      "peso": -15.2429
+    },
+    {
+      "termino": "friday",
+      "peso": -14.8629
+    },
+    {
+      "termino": "barack",
+      "peso": -14.2981
+    },
+    {
+      "termino": "democratic",
+      "peso": -12.2777
+    },
+    {
+      "termino": "monday",
+      "peso": -12.1686
+    },
+    {
+      "termino": "presidential",
+      "peso": -11.6442
+    },
+    {
+      "termino": "reporters",
+      "peso": -11.5312
+    },
+    {
+      "termino": "some",
+      "peso": -11.3727
+    },
+    {
+      "termino": "healthcare",
+      "peso": -10.9115
+    },
+    {
+      "termino": "comment",
+      "peso": -10.8965
+    },
+    {
+      "termino": "spokesman",
+      "peso": -10.7383
+    },
+    {
+      "termino": "statement",
+      "peso": -10.4338
+    },
+    {
+      "termino": "representatives",
+      "peso": -10.3942
+    },
+    {
+      "termino": "rival",
+      "peso": -10.2851
+    },
+    {
+      "termino": "says",
+      "peso": -10.1115
+    },
+    {
+      "termino": "had",
+      "peso": -9.838
+    },
+    {
+      "termino": "representative",
+      "peso": -9.7421
+    },
+    {
+      "termino": "showed",
+      "peso": -9.6713
+    },
+    {
+      "termino": "saying",
+      "peso": -9.6208
+    },
+    {
+      "termino": "tax",
+      "peso": -9.4989
+    },
+    {
+      "termino": "stock",
+      "peso": -9.3444
+    },
+    {
+      "termino": "told",
+      "peso": -9.16
+    },
+    {
+      "termino": "declined",
+      "peso": -8.5978
+    },
+    {
+      "termino": "militants",
+      "peso": -8.5917
+    }
+  ]
+}

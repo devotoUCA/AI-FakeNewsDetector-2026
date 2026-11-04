@@ -1,0 +1,18 @@
+# Verbos y expresiones de atribución de fuentes (inglés), usados como aproximación a
+# "presencia de citas o fuentes atribuidas". Lista armada a mano por el equipo.
+said
+says
+told
+according
+stated
+reported
+announced
+added
+spokesman
+spokeswoman
+spokesperson
+statement
+official
+officials
+confirmed
+declined
