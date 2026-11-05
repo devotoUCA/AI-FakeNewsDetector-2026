@@ -1,0 +1,32 @@
+rasgo,auc_crudo,acc_stump_crudo,auc_v1,acc_stump_v1,auc_v2,acc_stump_v2,auc_v3,acc_stump_v3,direccion_en_isot,auc_welfake_dev_orientacion_isot
+META fecha con espacio final (no entra),1.0,1.0,,,,,,,,
+META subject (no entra al modelo),1.0,1.0,,,,,,,,
+dateline_reuters,0.9959,0.9955,0.5,0.5468,0.5,0.5468,0.5,0.5468,más en reales,0.5007
+verbos_atribucion_ratio,0.8689,0.7986,0.8662,0.8023,0.8688,0.8003,0.556,0.5468,más en reales,0.7465
+said_says_told_x100p,0.8633,0.8024,0.8634,0.8024,0.8657,0.8065,0.5,0.5468,más en reales,0.767
+titulo_palabras_mayusculas,0.8625,0.8361,0.7937,0.7768,0.7288,0.7248,0.5819,0.6084,más en falsas,0.5861
+dias_semana_x100p,0.857,0.7796,0.8556,0.7813,0.5,0.5468,0.5,0.5468,más en reales,0.7138
+apostrofo_como_espacio_x100p,0.8472,0.8361,0.7945,0.7653,0.5,0.5468,0.5,0.5468,más en falsas,0.5003
+comillas_curvas_x100p,0.7616,0.7393,0.5,0.5468,0.5,0.5468,0.5,0.5468,más en reales,0.6542
+no_ascii_ratio,0.7616,0.7393,0.5027,0.5468,0.5026,0.5468,0.5026,0.5468,más en reales,0.5957
+US_con_puntos_x100p,0.7546,0.7126,0.7522,0.7094,0.5,0.5468,0.5,0.5468,más en reales,0.4536
+segunda_persona_x100p,0.7331,0.7293,0.7323,0.729,0.7317,0.7281,0.7314,0.7272,más en falsas,0.5265
+META fecha con mes abreviado (no entra),0.7325,0.7541,,,,,,,,
+preguntas_x100p,0.7264,0.7398,0.7192,0.7326,0.7191,0.7332,0.7189,0.7326,más en falsas,0.556
+parentesis_x100p,0.7251,0.7592,0.5127,0.5468,0.512,0.5468,0.5112,0.5468,más en reales,0.4443
+posesivo_con_espacio_x100p,0.7004,0.719,0.5169,0.5468,0.5032,0.5496,0.5032,0.5496,más en falsas,0.5011
+primera_persona_x100p,0.6884,0.6356,0.6921,0.6365,0.6898,0.6332,0.6877,0.6351,más en falsas,0.4712
+exclamaciones_x100p,0.6464,0.6703,0.6462,0.6703,0.6462,0.6702,0.6461,0.67,más en falsas,0.5824
+handles_x100p,0.6249,0.6586,0.5,0.5468,0.5,0.5468,0.5,0.5468,más en falsas,0.4401
+urls_x100p,0.5693,0.6094,0.5,0.5468,0.5,0.5468,0.5,0.5468,más en falsas,0.5489
+hashtags_x100p,0.5654,0.6049,0.5606,0.6005,0.5,0.5468,0.5,0.5468,más en falsas,0.5075
+largo_oracion_media,0.5563,0.5468,0.5041,0.5468,0.7603,0.7183,0.7428,0.7082,más en reales,0.3934
+comillas_rectas_x100p,0.5469,0.5873,0.5,0.5468,0.5,0.5468,0.5,0.5468,más en falsas,0.5652
+meses_x100p,0.5454,0.5506,0.6542,0.6298,0.5007,0.5468,0.5007,0.5468,más en reales,0.4763
+largo_log_palabras,0.5416,0.5468,0.5302,0.5468,0.5371,0.5468,0.5428,0.5468,más en falsas,0.3195
+proporcion_mayusculas,0.5334,0.5613,0.5304,0.5726,0.549,0.5698,0.5068,0.552,más en reales,0.3824
+espacio_duro,0.5262,0.5468,0.5,0.5468,0.5,0.5468,0.5,0.5468,más en reales,0.5418
+guiones_largos_x100p,0.5171,0.5468,0.501,0.5468,0.5008,0.5468,0.5008,0.5468,más en reales,0.5989
+digitos_x100p,0.5118,0.5634,0.6273,0.6161,0.5032,0.5468,0.5032,0.5468,más en reales,0.4215
+hora_o_huso_x100p,0.5026,0.5468,0.5035,0.5468,0.5005,0.5468,0.5002,0.5468,más en reales,0.4951
+xurlx_xuserx_xhashtagx_x100p,0.5,0.5468,0.5,0.5468,0.6301,0.6606,0.63,0.6606,más en falsas,0.5

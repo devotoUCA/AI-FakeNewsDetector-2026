@@ -129,10 +129,10 @@ def bar_compare(labels: list[str], values: dict[str, list[float]], title: str, y
 
 
 def line_plot(series: dict[str, tuple[list[float], list[float]]], title: str, xlabel: str,
-              ylabel: str, path: Path, logy: bool = False) -> Path:
+              ylabel: str, path: Path, logy: bool = False, colors: list[str] | None = None) -> Path:
     """Varias series sobre un mismo eje (p. ej. pérdida por época)."""
     fig, ax = plt.subplots(figsize=(5.2, 4.0))
-    for (name, (xs, ys)), color in zip(series.items(), SERIES):
+    for (name, (xs, ys)), color in zip(series.items(), colors or SERIES):
         ax.plot(xs, ys, linewidth=2, marker="o", markersize=3, color=color, label=name)
     _style(ax, title, xlabel, ylabel)
     if logy:
@@ -171,3 +171,21 @@ def stacked_share(categories: list[str], fake_share: list[float], counts: list[i
 def save_all_notice(paths: list[Any]) -> list[str]:
     """Devuelve rutas como texto (para registrar en los reportes)."""
     return [str(p) for p in paths]
+
+
+def hbar_groups(categories: list[str], values: dict[str, list[float]], title: str, xlabel: str,
+                path: Path, xlim: tuple[float, float] | None = None, colors: list[str] | None = None
+                ) -> Path:
+    """Barras horizontales agrupadas (una serie por perfil o vista)."""
+    n = len(values)
+    fig, ax = plt.subplots(figsize=(7.2, 0.42 * len(categories) * max(1, n / 2) + 1.4))
+    h = 0.8 / n
+    y = np.arange(len(categories))
+    for i, ((name, vals), color) in enumerate(zip(values.items(), colors or SERIES)):
+        ax.barh(y + (i - (n - 1) / 2) * h, vals, h * 0.9, color=color, label=name)
+    ax.set_yticks(y, categories, fontsize=8)
+    _style(ax, title, xlabel, "")
+    if xlim:
+        ax.set_xlim(*xlim)
+    ax.legend(fontsize=8, frameon=False, loc="upper center", bbox_to_anchor=(0.5, -0.08), ncol=n)
+    return _save(fig, path)

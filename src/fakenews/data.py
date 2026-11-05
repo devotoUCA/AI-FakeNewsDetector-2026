@@ -71,6 +71,24 @@ def download_datasets(force: bool = False) -> dict[str, Any]:
     return out
 
 
+def download_external(force: bool = False) -> dict[str, Any]:
+    """Descarga WELFake (Zenodo, CC BY 4.0) a `data/raw/welfake/` y verifica su SHA-256."""
+    spec = load_config()["download"]["welfake"]
+    target = get_paths().root / "data" / "raw" / "welfake"
+    path = target / spec["file"]
+    if force or not path.exists():
+        try:
+            _download(spec["url"], path)
+        except Exception as exc:  # noqa: BLE001
+            raise DataValidationError(
+                f"No se pudo descargar WELFake ({exc}). Bajalo a mano de "
+                f"https://zenodo.org/records/4561253 y dejá {spec['file']} en {target}/") from exc
+    h = sha256_file(path)
+    if h != spec["sha256"]:
+        LOGGER.warning("SHA-256 de WELFake distinto al registrado (%s)", h)
+    return {"welfake": {"archivo": str(path), "sha256": h, "hash_ok": h == spec["sha256"]}}
+
+
 def _require(path: Path, hint: str) -> None:
     if not path.exists():
         raise DataValidationError(f"Falta {path}. {hint}")

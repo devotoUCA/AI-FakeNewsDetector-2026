@@ -24,6 +24,10 @@ download:
       train.tsv: 23ef8cb7ff57b25c941100d0744039cebc595d65a67ea190f72b330a658d8c36
       valid.tsv: 8dd3d7ed1a11e78ed7df090c9eddb0f91147f895850c78d49dd7b4e88fd09a16
       test.tsv: ee41e2c741e0019216952625145af8c4aa8c8d3057ec68284b134267bb845e6f
+  welfake:   # externo de nivel artículo (iteración 2): solo evaluación, nunca entrenamiento
+    url: https://zenodo.org/api/records/4561253/files/WELFake_Dataset.csv/content
+    file: WELFake_Dataset.csv
+    sha256: 665331424230fc452e9482c3547a6a199a2c29745ade8d236950d1d105223773
 
 labels:
   real: 0
@@ -131,3 +135,52 @@ genetic:
 demo:
   log_predictions: false   # si es true, guarda hash del texto + salida en reports/predictions_log.jsonl
   similar_examples: 3
+
+# ---------------------------------------------------------------------------------------------
+# Iteración 2
+cleaning:
+  # Perfil con el que se entrena el modelo productivo de la iteración 2 (lo fija la selección
+  # robusta del panel; queda guardado en la metadata del artefacto y lo usa predict).
+  profile: v2   # perfil del modelo productivo v2 (elegido por el panel)
+  # Vocabulario de redacción de agencia que v3 enmascara (justificado en shortcut_audit_v2.csv).
+  v3_mask_terms: [said, says, told, according to, spokesman, spokeswoman, spokesperson,
+                  reporters, news conference, in a statement, statement, officials, official]
+
+panel:
+  temporal_cutoff: "2017-07-01"
+  invariance_sample: 2000
+  min_in_domain_f1: 0.90
+  max_invariance_flip: 0.02
+  tie_tolerance: 0.005
+  candidates:
+    # Referencia: configuración productiva de la iteración 1 (SVM C=3, 1-2 gramas, isotónica)
+    - {name: it1_svm_v1, profile: v1, model: svm_word, C: 3.0}
+    - {name: lr_v1_C10, profile: v1, model: lr_word, C: 10.0}
+    - {name: lr_v1_C1, profile: v1, model: lr_word, C: 1.0}
+    - {name: lr_v2_C10, profile: v2, model: lr_word, C: 10.0}
+    - {name: lr_v2_C1, profile: v2, model: lr_word, C: 1.0}
+    - {name: lr_v3_C10, profile: v3, model: lr_word, C: 10.0}
+    - {name: lr_v3_C1, profile: v3, model: lr_word, C: 1.0}
+    - {name: svm_v2, profile: v2, model: svm_word, C: 3.0}
+    - {name: svm_v3, profile: v3, model: svm_word, C: 3.0}
+    - {name: lrchar_v1_C10, profile: v1, model: lr_char, C: 10.0}
+    - {name: lrchar_v2_C10, profile: v2, model: lr_char, C: 10.0}
+    - {name: lrchar_v3_C10, profile: v3, model: lr_char, C: 10.0}
+    - {name: ens_v2, profile: v2, model: ensemble, C: 10.0}
+    - {name: ens_v3, profile: v3, model: ensemble, C: 10.0}
+    # D1: ISOT + LIAR-train (PolitiFact, ambas clases de la misma fuente), peso de dominio
+    - {name: d1_lr_v2_w025, profile: v2, model: lr_word, C: 10.0, d1: true, d1_weight: 0.25}
+    - {name: d1_lr_v2_w1, profile: v2, model: lr_word, C: 10.0, d1: true, d1_weight: 1.0}
+    - {name: d1_lr_v3_w025, profile: v3, model: lr_word, C: 10.0, d1: true, d1_weight: 0.25}
+    - {name: d1_lr_v3_w1, profile: v3, model: lr_word, C: 10.0, d1: true, d1_weight: 1.0}
+
+final_v2:
+  candidate: lrchar_v2_C10 # elegido por el panel (reports/panel_v2.json); null = leerlo del panel
+
+ood_v2:
+  min_in_domain_coverage: 0.95   # el sistema debe responder al menos el 95 % de ISOT-val
+  cap_quantile_in_domain: 0.95   # por encima de este cuantil del puntaje OOD in-domain, la confianza no es "alta"
+
+inference:
+  artifact: final_model_v2.joblib      # si no existe, se usa final_model.joblib (iteración 1)
+  retrieval: retrieval_v2.joblib
