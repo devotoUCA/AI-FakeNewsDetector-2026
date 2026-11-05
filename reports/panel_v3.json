@@ -1,0 +1,1155 @@
+{
+  "generado": "2026-11-05T18:35:57",
+  "seleccion": {
+    "elegido": "lrchar_v21_C10",
+    "spec": {
+      "name": "lrchar_v21_C10",
+      "profile": "v2_1",
+      "model": "lr_char",
+      "C": 10.0
+    },
+    "hubo_elegibles": true,
+    "empatados": [
+      "lrchar_v21_C10"
+    ],
+    "criterio": "máx. promedio F1 macro (grupo, tiempo, WELFake-dev) con F1 por clase in-domain >= 0.9 e invarianza <= 2%; empates (< 0.005) -> más simple",
+    "hubo_aceptados": false,
+    "decision_final": "it2_lrchar_v2",
+    "motivo_decision": "ningún candidato v2_1 cumple la regla de aceptación: se conserva el clasificador de la iteración 2 con las correcciones A1 y B (prompt, sección C)",
+    "embeddings": {
+      "puntaje_robusto": 0.6230401037652725,
+      "mejor_sin_embeddings": 0.7420797351671188,
+      "mejor_sin_embeddings_con_v2_1": 0.6971774310222779,
+      "mejora": -0.11903963140184626,
+      "mejora_vs_v2_1": -0.07413732725700539,
+      "adoptar": false
+    }
+  },
+  "resultados": [
+    {
+      "candidato": "it2_lrchar_v2",
+      "spec": {
+        "name": "it2_lrchar_v2",
+        "profile": "v2",
+        "model": "lr_char",
+        "C": 10.0
+      },
+      "in_domain": {
+        "n": 5730,
+        "prop_falsas": 0.45322862129144853,
+        "accuracy": 0.9895287958115183,
+        "f1_macro": 0.9894335562469811,
+        "f1_falsa": 0.9884303895102198,
+        "f1_real": 0.9904367229837424,
+        "brier": 0.008810012085048106,
+        "ece": 0.015938757272680574,
+        "trivial_accuracy": 0.5467713787085515,
+        "trivial_f1_macro": 0.35349204558275976,
+        "trivial_brier": 0.2478124398878423
+      },
+      "externo_dev_welfake": {
+        "n": 11625,
+        "prop_falsas": 0.4172043010752688,
+        "accuracy": 0.5965591397849462,
+        "f1_macro": 0.5935211651927301,
+        "f1_falsa": 0.6286619160728424,
+        "f1_real": 0.5583804143126178,
+        "brier": 0.3068433924670247,
+        "ece": 0.28339274359563416,
+        "trivial_accuracy": 0.5827956989247312,
+        "trivial_f1_macro": 0.36820652173913043,
+        "trivial_brier": 0.24444564321555715
+      },
+      "liar_valid": {
+        "n": 799,
+        "prop_falsas": 0.47434292866082606,
+        "accuracy": 0.5669586983729662,
+        "f1_macro": 0.5669254580544902,
+        "f1_falsa": 0.5631313131313131,
+        "f1_real": 0.5707196029776674,
+        "brier": 0.29543704124464143,
+        "ece": 0.20099068547319854,
+        "trivial_accuracy": 0.5256570713391739,
+        "trivial_f1_macro": 0.3445447087776866,
+        "trivial_brier": 0.2497857617815584,
+        "nota": ""
+      },
+      "invarianza": {
+        "comillas_curvas_rectas": {
+          "tasa_cambio": 0.0,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0,
+          "n": 2000,
+          "delta_p_medio": 0.0
+        },
+        "apostrofo_espacio": {
+          "tasa_cambio": 0.0,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0,
+          "n": 2000,
+          "delta_p_medio": 1.1177465930813923e-06
+        },
+        "mayusculas_titulo": {
+          "tasa_cambio": 0.0,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0,
+          "n": 2000,
+          "delta_p_medio": 0.0005412688247834012
+        },
+        "sin_dias_meses": {
+          "tasa_cambio": 0.0015,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0035,
+          "n": 2000,
+          "delta_p_medio": 0.0026459149429138053
+        },
+        "marcas_de_fuente": {
+          "tasa_cambio": 0.0,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0,
+          "n": 2000,
+          "delta_p_medio": 2.7009968223865143e-05
+        },
+        "oraciones_pegadas": {
+          "tasa_cambio": 0.06,
+          "ic95_inf": 0.05,
+          "ic95_sup": 0.07051249999999992,
+          "n": 2000,
+          "delta_p_medio": 0.0883227741622702
+        },
+        "espacios_dobles": {
+          "tasa_cambio": 0.0,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0,
+          "n": 2000,
+          "delta_p_medio": 0.0
+        },
+        "guiones": {
+          "tasa_cambio": 0.0,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0,
+          "n": 2000,
+          "delta_p_medio": 3.5406302777118983e-07
+        },
+        "puntos_suspensivos": {
+          "tasa_cambio": 0.0,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0,
+          "n": 2000,
+          "delta_p_medio": 0.0
+        },
+        "espacio_antes_de_puntuacion": {
+          "tasa_cambio": 0.004,
+          "ic95_inf": 0.0015,
+          "ic95_sup": 0.007,
+          "n": 2000,
+          "delta_p_medio": 0.011518619628987608
+        },
+        "espacio_duro": {
+          "tasa_cambio": 0.0,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0,
+          "n": 2000,
+          "delta_p_medio": 0.0
+        }
+      },
+      "invarianza_max_cambio": 0.07051249999999992,
+      "grupo_folds": [
+        {
+          "fold": "politicsNews + News",
+          "n": 17246,
+          "prop_falsas": 0.4459004986663574,
+          "accuracy": 0.6571378870462716,
+          "f1_macro": 0.6374900729829251,
+          "f1_falsa": 0.7218851418089459,
+          "f1_real": 0.5530950041569043,
+          "brier": 0.25945592106286747,
+          "ece": 0.32210641517526184,
+          "trivial_accuracy": 0.5540995013336426,
+          "trivial_f1_macro": 0.356540556674875,
+          "trivial_brier": 0.24731984867131013
+        },
+        {
+          "fold": "worldnews + politics",
+          "n": 13571,
+          "prop_falsas": 0.39606513889912315,
+          "accuracy": 0.9479773045464593,
+          "f1_macro": 0.9454718622346305,
+          "f1_falsa": 0.9337835302945039,
+          "f1_real": 0.9571601941747573,
+          "brier": 0.042508372518040946,
+          "ece": 0.043382692564909314,
+          "trivial_accuracy": 0.6039348611008769,
+          "trivial_f1_macro": 0.37653328432948957,
+          "trivial_brier": 0.24885510482745868
+        },
+        {
+          "fold": "politicsNews + subjects falsos chicos",
+          "n": 11208,
+          "prop_falsas": 0.14739471805852963,
+          "accuracy": 0.46306209850107066,
+          "f1_macro": 0.44536596364514275,
+          "f1_falsa": 0.3462958939821855,
+          "f1_real": 0.5444360333081,
+          "brier": 0.4253098786330733,
+          "ece": 0.5025333871752609,
+          "trivial_accuracy": 0.14739471805852963,
+          "trivial_f1_macro": 0.12846034214618973,
+          "trivial_brier": 0.34386193467618986
+        },
+        {
+          "fold": "worldnews + subjects falsos chicos",
+          "n": 9848,
+          "prop_falsas": 0.16774979691307879,
+          "accuracy": 0.9510560519902518,
+          "f1_macro": 0.9194634170177649,
+          "f1_falsa": 0.8690217391304348,
+          "f1_real": 0.9699050949050949,
+          "brier": 0.04077597324764592,
+          "ece": 0.09347596869526371,
+          "trivial_accuracy": 0.16774979691307879,
+          "trivial_f1_macro": 0.14365217391304347,
+          "trivial_brier": 0.30755475728998155
+        }
+      ],
+      "grupo": {
+        "prop_falsas": 0.28927753813427226,
+        "accuracy": 0.7548083355210133,
+        "f1_macro": 0.7369478289701159,
+        "f1_falsa": 0.7177465763040175,
+        "f1_real": 0.7561490816362142,
+        "brier": 0.1920125363654069,
+        "ece": 0.24037461590267395,
+        "trivial_accuracy": 0.36829471935153196,
+        "trivial_f1_macro": 0.25129658926589943,
+        "trivial_brier": 0.28689791136623505
+      },
+      "tiempo": {
+        "corte": "2017-07-01",
+        "n": 12952,
+        "prop_falsas": 0.17549413218035825,
+        "accuracy": 0.9315163681284744,
+        "f1_macro": 0.8957702113385104,
+        "f1_falsa": 0.8347307620644681,
+        "f1_real": 0.9568096606125529,
+        "brier": 0.05353118667862164,
+        "ece": 0.11686276526997884,
+        "trivial_accuracy": 0.17549413218035825,
+        "trivial_f1_macro": 0.14929392446633827,
+        "trivial_brier": 0.35823591854373266
+      },
+      "puntaje_robusto": 0.7420797351671188,
+      "piso_in_domain_ok": true,
+      "piso_invarianza_ok": false,
+      "elegible": false,
+      "segundos": 243.5,
+      "caidas_vs_iteracion_2": {
+        "in_domain": 0.0,
+        "grupo": 0.0,
+        "tiempo": 0.0,
+        "externo_dev_welfake": 0.0
+      },
+      "aceptado": true
+    },
+    {
+      "candidato": "lrchar_v21_C10",
+      "spec": {
+        "name": "lrchar_v21_C10",
+        "profile": "v2_1",
+        "model": "lr_char",
+        "C": 10.0
+      },
+      "in_domain": {
+        "n": 5730,
+        "prop_falsas": 0.45322862129144853,
+        "accuracy": 0.9851657940663177,
+        "f1_macro": 0.985024283537034,
+        "f1_falsa": 0.983568528900058,
+        "f1_real": 0.9864800381740099,
+        "brier": 0.01313942907741977,
+        "ece": 0.020413262546573368,
+        "trivial_accuracy": 0.5467713787085515,
+        "trivial_f1_macro": 0.35349204558275976,
+        "trivial_brier": 0.2478124398878423
+      },
+      "externo_dev_welfake": {
+        "n": 11625,
+        "prop_falsas": 0.4172043010752688,
+        "accuracy": 0.5433118279569893,
+        "f1_macro": 0.5287426863997883,
+        "f1_falsa": 0.6116028970663545,
+        "f1_real": 0.445882475733222,
+        "brier": 0.35732636546596114,
+        "ece": 0.3435995574780197,
+        "trivial_accuracy": 0.5827956989247312,
+        "trivial_f1_macro": 0.36820652173913043,
+        "trivial_brier": 0.24444564321555715
+      },
+      "liar_valid": {
+        "n": 799,
+        "prop_falsas": 0.47434292866082606,
+        "accuracy": 0.5556946182728411,
+        "f1_macro": 0.5554690107933682,
+        "f1_falsa": 0.565483476132191,
+        "f1_real": 0.5454545454545454,
+        "brier": 0.3054150579349788,
+        "ece": 0.21548719296639246,
+        "trivial_accuracy": 0.5256570713391739,
+        "trivial_f1_macro": 0.3445447087776866,
+        "trivial_brier": 0.2497857617815584,
+        "nota": ""
+      },
+      "invarianza": {
+        "comillas_curvas_rectas": {
+          "tasa_cambio": 0.0,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0,
+          "n": 2000,
+          "delta_p_medio": 0.0
+        },
+        "apostrofo_espacio": {
+          "tasa_cambio": 0.0,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0,
+          "n": 2000,
+          "delta_p_medio": 3.772322699660435e-06
+        },
+        "mayusculas_titulo": {
+          "tasa_cambio": 0.0,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0,
+          "n": 2000,
+          "delta_p_medio": 0.0008020262895261113
+        },
+        "sin_dias_meses": {
+          "tasa_cambio": 0.002,
+          "ic95_inf": 0.0005,
+          "ic95_sup": 0.004,
+          "n": 2000,
+          "delta_p_medio": 0.0030103855781198944
+        },
+        "marcas_de_fuente": {
+          "tasa_cambio": 0.0,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0,
+          "n": 2000,
+          "delta_p_medio": 4.964439923060126e-05
+        },
+        "oraciones_pegadas": {
+          "tasa_cambio": 0.0,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0,
+          "n": 2000,
+          "delta_p_medio": 0.0003859852012028568
+        },
+        "espacios_dobles": {
+          "tasa_cambio": 0.0,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0,
+          "n": 2000,
+          "delta_p_medio": 0.0
+        },
+        "guiones": {
+          "tasa_cambio": 0.0,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0,
+          "n": 2000,
+          "delta_p_medio": 0.0
+        },
+        "puntos_suspensivos": {
+          "tasa_cambio": 0.0,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0,
+          "n": 2000,
+          "delta_p_medio": 0.0
+        },
+        "espacio_antes_de_puntuacion": {
+          "tasa_cambio": 0.0005,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0015,
+          "n": 2000,
+          "delta_p_medio": 0.0009750407055335018
+        },
+        "espacio_duro": {
+          "tasa_cambio": 0.0,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0,
+          "n": 2000,
+          "delta_p_medio": 0.0
+        }
+      },
+      "invarianza_max_cambio": 0.004,
+      "grupo_folds": [
+        {
+          "fold": "politicsNews + News",
+          "n": 17246,
+          "prop_falsas": 0.4459004986663574,
+          "accuracy": 0.6315667401136495,
+          "f1_macro": 0.605337350751429,
+          "f1_falsa": 0.7070809515028582,
+          "f1_real": 0.50359375,
+          "brier": 0.2840757265223539,
+          "ece": 0.34178281586379977,
+          "trivial_accuracy": 0.5540995013336426,
+          "trivial_f1_macro": 0.356540556674875,
+          "trivial_brier": 0.24731984867131013
+        },
+        {
+          "fold": "worldnews + politics",
+          "n": 13571,
+          "prop_falsas": 0.39606513889912315,
+          "accuracy": 0.9281556259671359,
+          "f1_macro": 0.9249278503464144,
+          "f1_falsa": 0.9093613461002138,
+          "f1_real": 0.9404943545926152,
+          "brier": 0.05686284499615238,
+          "ece": 0.042688989723753915,
+          "trivial_accuracy": 0.6039348611008769,
+          "trivial_f1_macro": 0.37653328432948957,
+          "trivial_brier": 0.24885510482745868
+        },
+        {
+          "fold": "politicsNews + subjects falsos chicos",
+          "n": 11208,
+          "prop_falsas": 0.14739471805852963,
+          "accuracy": 0.4243397573162027,
+          "f1_macro": 0.41248622088186354,
+          "f1_falsa": 0.3290349417637271,
+          "f1_real": 0.4959375,
+          "brier": 0.4656837576881197,
+          "ece": 0.5329371065946721,
+          "trivial_accuracy": 0.14739471805852963,
+          "trivial_f1_macro": 0.12846034214618973,
+          "trivial_brier": 0.34386193467618986
+        },
+        {
+          "fold": "worldnews + subjects falsos chicos",
+          "n": 9848,
+          "prop_falsas": 0.16774979691307879,
+          "accuracy": 0.9205930138099107,
+          "f1_macro": 0.8753750173154624,
+          "f1_falsa": 0.8003064351378958,
+          "f1_real": 0.9504435994930291,
+          "brier": 0.06177386673972625,
+          "ece": 0.11845660379351144,
+          "trivial_accuracy": 0.16774979691307879,
+          "trivial_f1_macro": 0.14365217391304347,
+          "trivial_brier": 0.30755475728998155
+        }
+      ],
+      "grupo": {
+        "prop_falsas": 0.28927753813427226,
+        "accuracy": 0.7261637843017247,
+        "f1_macro": 0.7045316098237924,
+        "f1_falsa": 0.6864459186261738,
+        "f1_real": 0.7226173010214111,
+        "brier": 0.21709904898658805,
+        "ece": 0.2589663789939343,
+        "trivial_accuracy": 0.36829471935153196,
+        "trivial_f1_macro": 0.25129658926589943,
+        "trivial_brier": 0.28689791136623505
+      },
+      "tiempo": {
+        "corte": "2017-07-01",
+        "n": 12952,
+        "prop_falsas": 0.17549413218035825,
+        "accuracy": 0.9022544780728845,
+        "f1_macro": 0.8582579968432531,
+        "f1_falsa": 0.7792887029288703,
+        "f1_real": 0.9372272907576359,
+        "brier": 0.0709723205780848,
+        "ece": 0.14290194158902417,
+        "trivial_accuracy": 0.17549413218035825,
+        "trivial_f1_macro": 0.14929392446633827,
+        "trivial_brier": 0.35823591854373266
+      },
+      "puntaje_robusto": 0.6971774310222779,
+      "piso_in_domain_ok": true,
+      "piso_invarianza_ok": true,
+      "elegible": true,
+      "segundos": 242.1,
+      "caidas_vs_iteracion_2": {
+        "in_domain": 0.004409272709947176,
+        "grupo": 0.03241621914632353,
+        "tiempo": 0.03751221449525732,
+        "externo_dev_welfake": 0.06477847879294185
+      },
+      "aceptado": false
+    },
+    {
+      "candidato": "lrword_v21_C10",
+      "spec": {
+        "name": "lrword_v21_C10",
+        "profile": "v2_1",
+        "model": "lr_word",
+        "C": 10.0
+      },
+      "in_domain": {
+        "n": 5730,
+        "prop_falsas": 0.45322862129144853,
+        "accuracy": 0.9827225130890053,
+        "f1_macro": 0.9825600758457005,
+        "f1_falsa": 0.9808769557658876,
+        "f1_real": 0.9842431959255132,
+        "brier": 0.014270635765641658,
+        "ece": 0.023646894488301706,
+        "trivial_accuracy": 0.5467713787085515,
+        "trivial_f1_macro": 0.35349204558275976,
+        "trivial_brier": 0.2478124398878423
+      },
+      "externo_dev_welfake": {
+        "n": 11625,
+        "prop_falsas": 0.4172043010752688,
+        "accuracy": 0.5433978494623656,
+        "f1_macro": 0.524644427206145,
+        "f1_falsa": 0.6190612889335438,
+        "f1_real": 0.43022756547874624,
+        "brier": 0.3620772349679355,
+        "ece": 0.35241582246573383,
+        "trivial_accuracy": 0.5827956989247312,
+        "trivial_f1_macro": 0.36820652173913043,
+        "trivial_brier": 0.24444564321555715
+      },
+      "liar_valid": {
+        "n": 799,
+        "prop_falsas": 0.47434292866082606,
+        "accuracy": 0.5556946182728411,
+        "f1_macro": 0.5524529921407688,
+        "f1_falsa": 0.5905420991926182,
+        "f1_real": 0.5143638850889193,
+        "brier": 0.2750415938496579,
+        "ece": 0.16066606421915586,
+        "trivial_accuracy": 0.5256570713391739,
+        "trivial_f1_macro": 0.3445447087776866,
+        "trivial_brier": 0.2497857617815584,
+        "nota": ""
+      },
+      "invarianza": {
+        "comillas_curvas_rectas": {
+          "tasa_cambio": 0.0,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0,
+          "n": 2000,
+          "delta_p_medio": 0.0
+        },
+        "apostrofo_espacio": {
+          "tasa_cambio": 0.0,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0,
+          "n": 2000,
+          "delta_p_medio": 0.0
+        },
+        "mayusculas_titulo": {
+          "tasa_cambio": 0.0,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0,
+          "n": 2000,
+          "delta_p_medio": 0.0001716358497797046
+        },
+        "sin_dias_meses": {
+          "tasa_cambio": 0.0005,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0015,
+          "n": 2000,
+          "delta_p_medio": 0.0002867442965507507
+        },
+        "marcas_de_fuente": {
+          "tasa_cambio": 0.0,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0,
+          "n": 2000,
+          "delta_p_medio": 2.1422493940917775e-05
+        },
+        "oraciones_pegadas": {
+          "tasa_cambio": 0.0,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0,
+          "n": 2000,
+          "delta_p_medio": 0.0002028206580434926
+        },
+        "espacios_dobles": {
+          "tasa_cambio": 0.0,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0,
+          "n": 2000,
+          "delta_p_medio": 0.0
+        },
+        "guiones": {
+          "tasa_cambio": 0.0,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0,
+          "n": 2000,
+          "delta_p_medio": 0.0
+        },
+        "puntos_suspensivos": {
+          "tasa_cambio": 0.0,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0,
+          "n": 2000,
+          "delta_p_medio": 0.0
+        },
+        "espacio_antes_de_puntuacion": {
+          "tasa_cambio": 0.001,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0025,
+          "n": 2000,
+          "delta_p_medio": 0.0008659605812936206
+        },
+        "espacio_duro": {
+          "tasa_cambio": 0.0,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0,
+          "n": 2000,
+          "delta_p_medio": 0.0
+        }
+      },
+      "invarianza_max_cambio": 0.0025,
+      "grupo_folds": [
+        {
+          "fold": "politicsNews + News",
+          "n": 17246,
+          "prop_falsas": 0.4459004986663574,
+          "accuracy": 0.6436275078279021,
+          "f1_macro": 0.620562704015635,
+          "f1_falsa": 0.7141129407386734,
+          "f1_real": 0.5270124672925965,
+          "brier": 0.25997866076056136,
+          "ece": 0.32810888766178015,
+          "trivial_accuracy": 0.5540995013336426,
+          "trivial_f1_macro": 0.356540556674875,
+          "trivial_brier": 0.24731984867131013
+        },
+        {
+          "fold": "worldnews + politics",
+          "n": 13571,
+          "prop_falsas": 0.39606513889912315,
+          "accuracy": 0.928302999042075,
+          "f1_macro": 0.925204888858007,
+          "f1_falsa": 0.9099824220556944,
+          "f1_real": 0.9404273556603197,
+          "brier": 0.05787909903542237,
+          "ece": 0.05865582609219997,
+          "trivial_accuracy": 0.6039348611008769,
+          "trivial_f1_macro": 0.37653328432948957,
+          "trivial_brier": 0.24885510482745868
+        },
+        {
+          "fold": "politicsNews + subjects falsos chicos",
+          "n": 11208,
+          "prop_falsas": 0.14739471805852963,
+          "accuracy": 0.44816202712348324,
+          "f1_macro": 0.4324819147382864,
+          "f1_falsa": 0.33814874264312467,
+          "f1_real": 0.5268150868334481,
+          "brier": 0.4102758769433834,
+          "ece": 0.4993903479105946,
+          "trivial_accuracy": 0.14739471805852963,
+          "trivial_f1_macro": 0.12846034214618973,
+          "trivial_brier": 0.34386193467618986
+        },
+        {
+          "fold": "worldnews + subjects falsos chicos",
+          "n": 9848,
+          "prop_falsas": 0.16774979691307879,
+          "accuracy": 0.9124695369618196,
+          "f1_macro": 0.8648411234678315,
+          "f1_falsa": 0.784607696151924,
+          "f1_real": 0.945074550783739,
+          "brier": 0.0684884596015259,
+          "ece": 0.1363571470317065,
+          "trivial_accuracy": 0.16774979691307879,
+          "trivial_f1_macro": 0.14365217391304347,
+          "trivial_brier": 0.30755475728998155
+        }
+      ],
+      "grupo": {
+        "prop_falsas": 0.28927753813427226,
+        "accuracy": 0.73314051773882,
+        "f1_macro": 0.7107726577699399,
+        "f1_falsa": 0.6867129503973541,
+        "f1_real": 0.7348323651425258,
+        "brier": 0.19915552408522327,
+        "ece": 0.2556280521740703,
+        "trivial_accuracy": 0.36829471935153196,
+        "trivial_f1_macro": 0.25129658926589943,
+        "trivial_brier": 0.28689791136623505
+      },
+      "tiempo": {
+        "corte": "2017-07-01",
+        "n": 12952,
+        "prop_falsas": 0.17549413218035825,
+        "accuracy": 0.8738418777022854,
+        "f1_macro": 0.8254434539398193,
+        "f1_falsa": 0.733529028049576,
+        "f1_real": 0.9173578798300627,
+        "brier": 0.0904822793780744,
+        "ece": 0.17553611463596894,
+        "trivial_accuracy": 0.17549413218035825,
+        "trivial_f1_macro": 0.14929392446633827,
+        "trivial_brier": 0.35823591854373266
+      },
+      "puntaje_robusto": 0.686953512971968,
+      "piso_in_domain_ok": true,
+      "piso_invarianza_ok": true,
+      "elegible": true,
+      "segundos": 67.3,
+      "caidas_vs_iteracion_2": {
+        "in_domain": 0.006873480401280663,
+        "grupo": 0.026175171200175984,
+        "tiempo": 0.0703267573986911,
+        "externo_dev_welfake": 0.06887673798658511
+      },
+      "aceptado": false
+    },
+    {
+      "candidato": "svm_v21",
+      "spec": {
+        "name": "svm_v21",
+        "profile": "v2_1",
+        "model": "svm_word",
+        "C": 3.0
+      },
+      "in_domain": {
+        "n": 5730,
+        "prop_falsas": 0.45322862129144853,
+        "accuracy": 0.9895287958115183,
+        "f1_macro": 0.9894411668450427,
+        "f1_falsa": 0.988479262672811,
+        "f1_real": 0.9904030710172744,
+        "brier": 0.008107976092161944,
+        "ece": 0.004418055793265651,
+        "trivial_accuracy": 0.5467713787085515,
+        "trivial_f1_macro": 0.35349204558275976,
+        "trivial_brier": 0.2478124398878423
+      },
+      "externo_dev_welfake": {
+        "n": 11625,
+        "prop_falsas": 0.4172043010752688,
+        "accuracy": 0.5239569892473118,
+        "f1_macro": 0.4955423469744938,
+        "f1_falsa": 0.6152669632925473,
+        "f1_real": 0.3758177306564403,
+        "brier": 0.4181180705437196,
+        "ece": 0.4174990164466445,
+        "trivial_accuracy": 0.5827956989247312,
+        "trivial_f1_macro": 0.36820652173913043,
+        "trivial_brier": 0.24444564321555715
+      },
+      "liar_valid": {
+        "n": 799,
+        "prop_falsas": 0.47434292866082606,
+        "accuracy": 0.5469336670838548,
+        "f1_macro": 0.5315043020784741,
+        "f1_falsa": 0.6165254237288136,
+        "f1_real": 0.44648318042813456,
+        "brier": 0.34011682007816246,
+        "ece": 0.28563128292131684,
+        "trivial_accuracy": 0.5256570713391739,
+        "trivial_f1_macro": 0.3445447087776866,
+        "trivial_brier": 0.2497857617815584,
+        "nota": ""
+      },
+      "invarianza": {
+        "comillas_curvas_rectas": {
+          "tasa_cambio": 0.0,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0,
+          "n": 2000,
+          "delta_p_medio": 0.0
+        },
+        "apostrofo_espacio": {
+          "tasa_cambio": 0.0,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0,
+          "n": 2000,
+          "delta_p_medio": 0.0
+        },
+        "mayusculas_titulo": {
+          "tasa_cambio": 0.0005,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0015,
+          "n": 2000,
+          "delta_p_medio": 0.0002876188799570277
+        },
+        "sin_dias_meses": {
+          "tasa_cambio": 0.0,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0,
+          "n": 2000,
+          "delta_p_medio": 0.00046651647215309347
+        },
+        "marcas_de_fuente": {
+          "tasa_cambio": 0.0,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0,
+          "n": 2000,
+          "delta_p_medio": 1.002504738313024e-06
+        },
+        "oraciones_pegadas": {
+          "tasa_cambio": 0.0,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0,
+          "n": 2000,
+          "delta_p_medio": 0.00010170183494395232
+        },
+        "espacios_dobles": {
+          "tasa_cambio": 0.0,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0,
+          "n": 2000,
+          "delta_p_medio": 0.0
+        },
+        "guiones": {
+          "tasa_cambio": 0.0,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0,
+          "n": 2000,
+          "delta_p_medio": 0.0
+        },
+        "puntos_suspensivos": {
+          "tasa_cambio": 0.0,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0,
+          "n": 2000,
+          "delta_p_medio": 0.0
+        },
+        "espacio_antes_de_puntuacion": {
+          "tasa_cambio": 0.0015,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0035,
+          "n": 2000,
+          "delta_p_medio": 0.0009825473654514034
+        },
+        "espacio_duro": {
+          "tasa_cambio": 0.0,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0,
+          "n": 2000,
+          "delta_p_medio": 0.0
+        }
+      },
+      "invarianza_max_cambio": 0.0035,
+      "grupo_folds": [
+        {
+          "fold": "politicsNews + News",
+          "n": 17246,
+          "prop_falsas": 0.4459004986663574,
+          "accuracy": 0.6245506204337238,
+          "f1_macro": 0.5958878592297054,
+          "f1_falsa": 0.7035120655707678,
+          "f1_real": 0.488263652888643,
+          "brier": 0.3134042468690929,
+          "ece": 0.3562665537073226,
+          "trivial_accuracy": 0.5540995013336426,
+          "trivial_f1_macro": 0.356540556674875,
+          "trivial_brier": 0.24731984867131013
+        },
+        {
+          "fold": "worldnews + politics",
+          "n": 13571,
+          "prop_falsas": 0.39606513889912315,
+          "accuracy": 0.9327978778277208,
+          "f1_macro": 0.9303880681149388,
+          "f1_falsa": 0.9174361759913091,
+          "f1_real": 0.9433399602385686,
+          "brier": 0.049287209283864444,
+          "ece": 0.030068816966405395,
+          "trivial_accuracy": 0.6039348611008769,
+          "trivial_f1_macro": 0.37653328432948957,
+          "trivial_brier": 0.24885510482745868
+        },
+        {
+          "fold": "politicsNews + subjects falsos chicos",
+          "n": 11208,
+          "prop_falsas": 0.14739471805852963,
+          "accuracy": 0.4234475374732334,
+          "f1_macro": 0.4123825452225335,
+          "f1_falsa": 0.33174767321613235,
+          "f1_real": 0.49301741722893455,
+          "brier": 0.48899313614516715,
+          "ece": 0.5417970792835242,
+          "trivial_accuracy": 0.14739471805852963,
+          "trivial_f1_macro": 0.12846034214618973,
+          "trivial_brier": 0.34386193467618986
+        },
+        {
+          "fold": "worldnews + subjects falsos chicos",
+          "n": 9848,
+          "prop_falsas": 0.16774979691307879,
+          "accuracy": 0.920085296506905,
+          "f1_macro": 0.8751285207557667,
+          "f1_falsa": 0.8002030972328003,
+          "f1_real": 0.9500539442787332,
+          "brier": 0.058445452978670105,
+          "ece": 0.08761936850366212,
+          "trivial_accuracy": 0.16774979691307879,
+          "trivial_f1_macro": 0.14365217391304347,
+          "trivial_brier": 0.30755475728998155
+        }
+      ],
+      "grupo": {
+        "prop_falsas": 0.28927753813427226,
+        "accuracy": 0.7252203330603958,
+        "f1_macro": 0.7034467483307361,
+        "f1_falsa": 0.6882247530027523,
+        "f1_real": 0.7186687436587198,
+        "brier": 0.22753251131919863,
+        "ece": 0.25393795461522856,
+        "trivial_accuracy": 0.36829471935153196,
+        "trivial_f1_macro": 0.25129658926589943,
+        "trivial_brier": 0.28689791136623505
+      },
+      "tiempo": {
+        "corte": "2017-07-01",
+        "n": 12952,
+        "prop_falsas": 0.17549413218035825,
+        "accuracy": 0.9053428042001236,
+        "f1_macro": 0.8625992107443325,
+        "f1_falsa": 0.785963687150838,
+        "f1_real": 0.9392347343378271,
+        "brier": 0.07351449777483465,
+        "ece": 0.11887990637925368,
+        "trivial_accuracy": 0.17549413218035825,
+        "trivial_f1_macro": 0.14929392446633827,
+        "trivial_brier": 0.35823591854373266
+      },
+      "puntaje_robusto": 0.6871961020165208,
+      "piso_in_domain_ok": true,
+      "piso_invarianza_ok": true,
+      "elegible": true,
+      "segundos": 298.9,
+      "caidas_vs_iteracion_2": {
+        "in_domain": -7.610598061535967e-06,
+        "grupo": 0.03350108063937984,
+        "tiempo": 0.03317100059417788,
+        "externo_dev_welfake": 0.09797881821823634
+      },
+      "aceptado": false
+    },
+    {
+      "candidato": "emb_minilm_v21",
+      "spec": {
+        "name": "emb_minilm_v21",
+        "profile": "v2_1",
+        "model": "emb_lr",
+        "C": 10.0
+      },
+      "in_domain": {
+        "n": 5730,
+        "prop_falsas": 0.45322862129144853,
+        "accuracy": 0.9383944153577661,
+        "f1_macro": 0.9377852287001631,
+        "f1_falsa": 0.9316288979275615,
+        "f1_real": 0.9439415594727648,
+        "brier": 0.04659785061993108,
+        "ece": 0.00609321675758968,
+        "trivial_accuracy": 0.5467713787085515,
+        "trivial_f1_macro": 0.35349204558275976,
+        "trivial_brier": 0.2478124398878423
+      },
+      "externo_dev_welfake": {
+        "n": 11625,
+        "prop_falsas": 0.4172043010752688,
+        "accuracy": 0.5184516129032258,
+        "f1_macro": 0.5173114208871885,
+        "f1_falsa": 0.5407711238720263,
+        "f1_real": 0.49385171790235083,
+        "brier": 0.3875661962547905,
+        "ece": 0.3569722735445342,
+        "trivial_accuracy": 0.5827956989247312,
+        "trivial_f1_macro": 0.36820652173913043,
+        "trivial_brier": 0.24444564321555715
+      },
+      "liar_valid": {
+        "n": 799,
+        "prop_falsas": 0.47434292866082606,
+        "accuracy": 0.5369211514392991,
+        "f1_macro": 0.5359259817403208,
+        "f1_falsa": 0.5144356955380578,
+        "f1_real": 0.5574162679425837,
+        "brier": 0.34843743123628007,
+        "ece": 0.29221777867685783,
+        "trivial_accuracy": 0.5256570713391739,
+        "trivial_f1_macro": 0.3445447087776866,
+        "trivial_brier": 0.2497857617815584,
+        "nota": ""
+      },
+      "invarianza": {
+        "comillas_curvas_rectas": {
+          "tasa_cambio": 0.0,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0,
+          "n": 2000,
+          "delta_p_medio": 0.0
+        },
+        "apostrofo_espacio": {
+          "tasa_cambio": 0.0,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0,
+          "n": 2000,
+          "delta_p_medio": 1.0579824447631835e-08
+        },
+        "mayusculas_titulo": {
+          "tasa_cambio": 0.0035,
+          "ic95_inf": 0.0015,
+          "ic95_sup": 0.0065,
+          "n": 2000,
+          "delta_p_medio": 0.002904856358224606
+        },
+        "sin_dias_meses": {
+          "tasa_cambio": 0.0005,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0015,
+          "n": 2000,
+          "delta_p_medio": 0.0015847890245786402
+        },
+        "marcas_de_fuente": {
+          "tasa_cambio": 0.0,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0,
+          "n": 2000,
+          "delta_p_medio": 0.00012558233772870154
+        },
+        "oraciones_pegadas": {
+          "tasa_cambio": 0.0,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0,
+          "n": 2000,
+          "delta_p_medio": 0.00017531203545513563
+        },
+        "espacios_dobles": {
+          "tasa_cambio": 0.0,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0,
+          "n": 2000,
+          "delta_p_medio": 0.0
+        },
+        "guiones": {
+          "tasa_cambio": 0.0,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0,
+          "n": 2000,
+          "delta_p_medio": 0.0
+        },
+        "puntos_suspensivos": {
+          "tasa_cambio": 0.0,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0,
+          "n": 2000,
+          "delta_p_medio": 0.0
+        },
+        "espacio_antes_de_puntuacion": {
+          "tasa_cambio": 0.0015,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0035,
+          "n": 2000,
+          "delta_p_medio": 0.0023876567469233124
+        },
+        "espacio_duro": {
+          "tasa_cambio": 0.0,
+          "ic95_inf": 0.0,
+          "ic95_sup": 0.0,
+          "n": 2000,
+          "delta_p_medio": 0.0
+        }
+      },
+      "invarianza_max_cambio": 0.0065,
+      "grupo_folds": [
+        {
+          "fold": "politicsNews + News",
+          "n": 17246,
+          "prop_falsas": 0.4459004986663574,
+          "accuracy": 0.5999072248637365,
+          "f1_macro": 0.5664327873866873,
+          "f1_falsa": 0.6869044377892731,
+          "f1_real": 0.4459611369841015,
+          "brier": 0.33547530368376394,
+          "ece": 0.36631822905668016,
+          "trivial_accuracy": 0.5540995013336426,
+          "trivial_f1_macro": 0.356540556674875,
+          "trivial_brier": 0.24731984867131013
+        },
+        {
+          "fold": "worldnews + politics",
+          "n": 13571,
+          "prop_falsas": 0.39606513889912315,
+          "accuracy": 0.8280156215459435,
+          "f1_macro": 0.8247411279976427,
+          "f1_falsa": 0.800785250938887,
+          "f1_real": 0.8486970050563983,
+          "brier": 0.12523156389602516,
+          "ece": 0.08637523137568781,
+          "trivial_accuracy": 0.6039348611008769,
+          "trivial_f1_macro": 0.37653328432948957,
+          "trivial_brier": 0.24885510482745868
+        },
+        {
+          "fold": "politicsNews + subjects falsos chicos",
+          "n": 11208,
+          "prop_falsas": 0.14739471805852963,
+          "accuracy": 0.36902212705210563,
+          "f1_macro": 0.3632621757197382,
+          "f1_falsa": 0.3027016367580359,
+          "f1_real": 0.42382271468144045,
+          "brier": 0.5454419414306729,
+          "ece": 0.5884719925355515,
+          "trivial_accuracy": 0.14739471805852963,
+          "trivial_f1_macro": 0.12846034214618973,
+          "trivial_brier": 0.34386193467618986
+        },
+        {
+          "fold": "worldnews + subjects falsos chicos",
+          "n": 9848,
+          "prop_falsas": 0.16774979691307879,
+          "accuracy": 0.8074735987002437,
+          "f1_macro": 0.7402472495445516,
+          "f1_falsa": 0.6081025217031831,
+          "f1_real": 0.87239197738592,
+          "brier": 0.13596928576445144,
+          "ece": 0.18509978493346177,
+          "trivial_accuracy": 0.16774979691307879,
+          "trivial_f1_macro": 0.14365217391304347,
+          "trivial_brier": 0.30755475728998155
+        }
+      ],
+      "grupo": {
+        "prop_falsas": 0.28927753813427226,
+        "accuracy": 0.6511046430405074,
+        "f1_macro": 0.6236708351621549,
+        "f1_falsa": 0.5996234617973448,
+        "f1_real": 0.647718208526965,
+        "brier": 0.28552952369372836,
+        "ece": 0.3065663094753453,
+        "trivial_accuracy": 0.36829471935153196,
+        "trivial_f1_macro": 0.25129658926589943,
+        "trivial_brier": 0.28689791136623505
+      },
+      "tiempo": {
+        "corte": "2017-07-01",
+        "n": 12952,
+        "prop_falsas": 0.17549413218035825,
+        "accuracy": 0.7845892526250772,
+        "f1_macro": 0.728138055246474,
+        "f1_falsa": 0.6042553191489362,
+        "f1_real": 0.8520207913440119,
+        "brier": 0.15549881005357966,
+        "ece": 0.21611478198749057,
+        "trivial_accuracy": 0.17549413218035825,
+        "trivial_f1_macro": 0.14929392446633827,
+        "trivial_brier": 0.35823591854373266
+      },
+      "puntaje_robusto": 0.6230401037652725,
+      "piso_in_domain_ok": true,
+      "piso_invarianza_ok": true,
+      "elegible": true,
+      "segundos": 2.0,
+      "caidas_vs_iteracion_2": {
+        "in_domain": 0.05164832754681803,
+        "grupo": 0.11327699380796097,
+        "tiempo": 0.1676321560920364,
+        "externo_dev_welfake": 0.07620974430554162
+      },
+      "aceptado": false
+    }
+  ]
+}

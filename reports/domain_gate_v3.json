@@ -1,0 +1,127 @@
+{
+  "detectores": {
+    "vecindad": {
+      "auc_pertenencia": 0.7870784699873512,
+      "auc_vs_welfake": 0.7851736756178573,
+      "auc_vs_liar": 0.7981500872600349,
+      "por_retencion": [
+        {
+          "retencion": 0.95,
+          "umbral": -1.2057030318390725,
+          "retencion_real": 0.949738219895288,
+          "deteccion_fuera_de_dominio": 0.3056880733944954,
+          "deteccion_welfake": 0.32387096774193547,
+          "deteccion_liar": 0.2
+        },
+        {
+          "retencion": 0.97,
+          "umbral": -1.4264960761610388,
+          "retencion_real": 0.9699825479930192,
+          "deteccion_fuera_de_dominio": 0.23559633027522936,
+          "deteccion_welfake": 0.24817204301075269,
+          "deteccion_liar": 0.1625
+        },
+        {
+          "retencion": 0.99,
+          "umbral": -1.6979806934913195,
+          "retencion_real": 0.9898778359511344,
+          "deteccion_fuera_de_dominio": 0.1669724770642202,
+          "deteccion_welfake": 0.17419354838709677,
+          "deteccion_liar": 0.125
+        }
+      ]
+    },
+    "clasificador": {
+      "auc_pertenencia": 0.9557688649791055,
+      "auc_vs_welfake": 0.9489321998911595,
+      "auc_vs_liar": 0.9955069808027925,
+      "por_retencion": [
+        {
+          "retencion": 0.95,
+          "umbral": -0.22797688841819763,
+          "retencion_real": 0.949738219895288,
+          "deteccion_fuera_de_dominio": 0.7941284403669725,
+          "deteccion_welfake": 0.7617204301075269,
+          "deteccion_liar": 0.9825
+        },
+        {
+          "retencion": 0.97,
+          "umbral": -0.5955756902694702,
+          "retencion_real": 0.9699825479930192,
+          "deteccion_fuera_de_dominio": 0.7258715596330275,
+          "deteccion_welfake": 0.6843010752688172,
+          "deteccion_liar": 0.9675
+        },
+        {
+          "retencion": 0.99,
+          "umbral": -1.3856180906295776,
+          "retencion_real": 0.9898778359511344,
+          "deteccion_fuera_de_dominio": 0.544954128440367,
+          "deteccion_welfake": 0.4834408602150538,
+          "deteccion_liar": 0.9025
+        }
+      ]
+    },
+    "combinado": {
+      "auc_pertenencia": 0.9600590486254544,
+      "auc_vs_welfake": 0.955023663420218,
+      "auc_vs_liar": 0.9893272251308899,
+      "por_retencion": [
+        {
+          "retencion": 0.95,
+          "umbral": -1.0392020899879535,
+          "retencion_real": 0.949738219895288,
+          "deteccion_fuera_de_dominio": 0.7988990825688074,
+          "deteccion_welfake": 0.7724731182795699,
+          "deteccion_liar": 0.9525
+        },
+        {
+          "retencion": 0.97,
+          "umbral": -1.5789435639017362,
+          "retencion_real": 0.9699825479930192,
+          "deteccion_fuera_de_dominio": 0.7442201834862385,
+          "deteccion_welfake": 0.7131182795698925,
+          "deteccion_liar": 0.925
+        },
+        {
+          "retencion": 0.99,
+          "umbral": -2.8289837569953433,
+          "retencion_real": 0.9898778359511344,
+          "deteccion_fuera_de_dominio": 0.5691743119266055,
+          "deteccion_welfake": 0.5346236559139785,
+          "deteccion_liar": 0.77
+        }
+      ]
+    }
+  },
+  "elegido": "combinado",
+  "umbral": 0.17094515117399228,
+  "criterio": "mayor detección de fuera-de-dominio a 97% de retención de ISOT val (mitad de evaluación)",
+  "particiones": {
+    "w_train": 6975,
+    "w_comb": 2325,
+    "w_eval": 2325,
+    "l_train": 6489,
+    "l_comb": 399,
+    "l_eval": 400,
+    "i_train": 26739,
+    "i_comb": 2865,
+    "i_eval": 2865
+  },
+  "dejar_un_dominio_afuera": {
+    "sin_ver_WELFake": {
+      "auc": 0.4409451106232055,
+      "retencion": 0.97,
+      "umbral": 0.43005862832069397,
+      "retencion_real": 0.9699825479930192,
+      "deteccion_fuera_de_dominio": 0.08
+    },
+    "sin_ver_LIAR": {
+      "auc": 0.7738821989528796,
+      "retencion": 0.97,
+      "umbral": -0.5910652875900269,
+      "retencion_real": 0.9699825479930192,
+      "deteccion_fuera_de_dominio": 0.065
+    }
+  }
+}

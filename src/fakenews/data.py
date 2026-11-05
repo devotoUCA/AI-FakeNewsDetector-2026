@@ -72,7 +72,7 @@ def download_datasets(force: bool = False) -> dict[str, Any]:
 
 
 def download_external(force: bool = False) -> dict[str, Any]:
-    """Descarga WELFake (Zenodo, CC BY 4.0) a `data/raw/welfake/` y verifica su SHA-256."""
+    """Descarga WELFake y FA-KES (Zenodo, CC BY 4.0) a `data/raw/` y verifica su SHA-256."""
     spec = load_config()["download"]["welfake"]
     target = get_paths().root / "data" / "raw" / "welfake"
     path = target / spec["file"]
@@ -86,7 +86,19 @@ def download_external(force: bool = False) -> dict[str, Any]:
     h = sha256_file(path)
     if h != spec["sha256"]:
         LOGGER.warning("SHA-256 de WELFake distinto al registrado (%s)", h)
-    return {"welfake": {"archivo": str(path), "sha256": h, "hash_ok": h == spec["sha256"]}}
+    out = {"welfake": {"archivo": str(path), "sha256": h, "hash_ok": h == spec["sha256"]}}
+    spec = load_config()["download"]["fakes"]
+    path = get_paths().root / "data" / "raw" / "fakes" / spec["file"]
+    if force or not path.exists():
+        try:
+            _download(spec["url"], path)
+        except Exception as exc:  # noqa: BLE001
+            raise DataValidationError(
+                f"No se pudo descargar FA-KES ({exc}). Bajalo a mano de "
+                f"https://zenodo.org/records/2607278 y dejá {spec['file']} en {path.parent}/") from exc
+    h = sha256_file(path)
+    out["fakes"] = {"archivo": str(path), "sha256": h, "hash_ok": h == spec["sha256"]}
+    return out
 
 
 def _require(path: Path, hint: str) -> None:

@@ -1,0 +1,3814 @@
+{
+  "cifras": [
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.0
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.0001326376027017684
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.0038357451437177415
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.004050735355768775
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.005118530131170644
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.005845351332714823
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.006337790833595542
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.006574264772417962
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.007540797431353375
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.008224214978405722
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.00842333458052018
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.008618035460817642
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.00955717293100153
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.009578544061302681
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.010018810281975692
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.010421519808982631
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.01053639846743295
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.010604264881777988
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.010855683269476373
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.011174968071519796
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.01176891784677644
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.012411694715073186
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.012857652202891697
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.028416347381864625
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.02981914615170599
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.03165348222481418
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.03503663612107836
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.03674508562349239
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.03872919641937744
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.03894855197356587
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.0408497766634213
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.04259834516769981
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.04455410418755783
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.04885057471264368
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.05175510726193893
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.05546815793775174
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.05921564067201611
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.06194125159642401
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.06937399619416346
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.07014748885010665
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.07428208602370064
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.07435330618576691
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.07476439790575895
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.07861357378320728
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.07948599107362614
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.09227330779054917
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.14221106752234589
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.19423272349675422
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.24667029923363382
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.24782875035773466
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.24895458054205077
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.35341909275558564
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.38657658882458745
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.5
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.5345506108202444
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.5465968586387434
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.5589921465968587
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.6646272130232415
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.688798373776885
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.6966868433478653
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.7068381855111713
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.7171199002017632
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.8133179368745188
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.8625283446712018
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.8706925504550719
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.8804166666666666
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.8808100490282235
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.8889315910837817
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.8896153846153846
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.8903002309468823
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.8904635016567173
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.8919720767888307
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.8923167539267015
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.8971152402402403
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.8981974187219275
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.8989610469402802
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.899825479930192
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.900850143436947
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9069002015193202
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9071553228621292
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9077266922094508
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9078534031413612
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9083067092651758
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9088874680306905
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9104885100255042
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9133949191685913
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9138138138138138
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9153057542661315
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9188770571151984
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9195462478184991
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9210074711087035
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9244253992987924
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.926158147302635
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.926332877101797
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9267887704514507
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9268760907504363
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9288650015807778
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9334392374900715
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9335078534031414
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9347447026776964
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.938058748403576
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9397136050441609
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9410122164048865
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9411312043093497
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.941312295555128
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9414934565050038
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9458885675497196
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9463067944325216
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9467713787085514
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9478760934407138
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9511494252873564
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9513012933099154
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9514532098371128
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9527050610820245
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9570533876640808
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9595821980018165
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9715836526181354
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9814565231275851
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9815242494226328
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9815651192125328
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9827544393395188
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9832460732984293
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9834488067744419
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9842931937172775
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9844935804064198
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9847058759128224
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9847619047619047
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.984936268829664
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9849653045489591
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9849884526558892
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.985410728981192
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9856994977726621
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9861271676300578
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9862599204702284
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9862645400295816
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9863057324840764
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9863874345549738
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9864864864864865
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9867364746945899
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9869481765834933
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9872685185185185
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9873219570207705
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.987434554973822
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9875637755102041
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9875717017208413
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9875835721107927
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9878632727380617
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9881581224147452
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9882759946184894
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9883720930232558
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9884570988841862
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9885167464114832
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9888250319284803
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9891443167305236
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9891698495253273
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.989263456794621
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9893542757417103
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9894636015325671
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9895287958115183
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9896073903002309
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9900523560209424
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.990123204779919
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9902509189707528
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9904183966783775
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9904214559386973
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9909883325848902
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9910785631296164
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.99136
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.9917975567190227
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 0.992514850780426
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 1,
+      "valor": 1.0
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.0
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.0001326376027017684
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.0037756414806032618
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.004889975550122249
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.0059434202753927915
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.007335774225344454
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.00891735872696124
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.013054830287206266
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.026792390083418837
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.02774869109947644
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.029585798816568046
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.04537521815008726
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.04614187690162593
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.057069670581892405
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.06858638743455497
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.1
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.1440433611121477
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.18079386071936354
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.2
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.2336990637606891
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.24675456678755517
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.24782875035773466
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.30000000000000004
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.3308900523560209
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.3416709188942981
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.35341909275558564
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.4
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.44
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.445054823733648
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.45340314136125653
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.5
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.5465968586387434
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.5659480780042369
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.5761626812276407
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.6000000000000001
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.6005235602094241
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.6515972224844925
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.688798373776885
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.7000000000000001
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.7068381855111713
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.7458119978414449
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.8
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.8433822879247563
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.8982188295165394
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.9
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.9268760907504363
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.9451104161906378
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.9475218658892128
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.9859412368000352
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.9861431870669746
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.9872600349040139
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.9872832369942196
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.9873369148119724
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.9883419493073792
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.9883784606023729
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.9884259259259259
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.9884816753926702
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.988527724665392
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.9888547271329746
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.9894636015325671
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.9894736842105263
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.9897918136943645
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.9898778359511344
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.9903772132409546
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.9904214559386973
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.9907289002557544
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.9917426484492591
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.9919974391805377
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.992412739965096
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.992734670154025
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.9930443446785107
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.9933407325194229
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.9943820224719101
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.9950738916256158
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.9951045000941442
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.9960732984293194
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 0.9994725738396625
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 2,
+      "valor": 1.0
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.0037762328202521757
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.0038358011858916504
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.005859884557825871
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.007335774225942328
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.008423334580582876
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.008920824006750896
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.010421519809049972
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.012411694715141827
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.022462895492509273
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.026792981423366703
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.02931937172774869
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.03872925246158502
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.24782875035773466
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.35341909275558564
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.43887090974469617
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.45340314136125653
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.5465968586387434
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.5611290902553039
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.9814565231275851
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.9815242494226328
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.9832460732984293
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.9844935804064198
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.9847619047619047
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.984936268829664
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.9859206558405266
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.9862599204702284
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.9863874345549738
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.9872600349040139
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.9873369148119724
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.9875835721107927
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.9883115212403377
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.9883720930232558
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.9884570988841862
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.9888547271329746
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.9894636015325671
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.9895287958115183
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.9897918136943645
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.9898778359511344
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.9903772132409546
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.9904183966783775
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.9904214559386973
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.9904710535778497
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.9907289002557544
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.9916945913171141
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.9919974391805377
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.9924956369982548
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.9930928673849652
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.9988950386238753
+    },
+    {
+      "conjunto": "isot_test",
+      "iteracion": 3,
+      "valor": 0.9994641103235912
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.0
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.014021505376344086
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.02265361004531291
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.03615222418866243
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.04894623655913979
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.07039574853710977
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.1
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.10141896601013158
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.1457856052042464
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.15734265734265734
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.15870543833322778
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.16068817204301075
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.1680473372781065
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.1686046511627907
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.17092337917485265
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.17928286852589642
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.18911917098445596
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.2
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.2026578073089701
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.21641791044776118
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.22055913978494623
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.22916666666666666
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.23529411764705882
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.23666666666666666
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.241635687732342
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.24169161518293694
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.24443760373233278
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.25080311092497776
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.25377421717796617
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.2665806451612903
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.2840909090909091
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.2900158478605388
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.30000000000000004
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.3416050338335275
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.3428964994554207
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.3502997059237113
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.3506557397987127
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.3514648856967084
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.35854321531398753
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.36824085647519156
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.38940243894290516
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.3973386125341637
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.3976875537639043
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.39817001180637546
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.4
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.40502703183441235
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.40988754117969584
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.41711827956989245
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.41750503018108653
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.4223343571741992
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.43530509167168546
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.4494477413685792
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.4612131476080869
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.46658851113716293
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.4714838709677419
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.4775444264943457
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.48642266824085006
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.48982869379014987
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.4984626737178699
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.5
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.5010780508840017
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.5049082373026035
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.5107357572287432
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.5128602150537634
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.5133146836810837
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.514494623655914
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.5166959578207382
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.5211340206185567
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.5248787959636385
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.5254138266796494
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.5367633643495713
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.536802657636072
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.5381053763440861
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.547010752688172
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.5485709117221418
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.5486139902709583
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.5488215488215489
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.550114995781574
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.5560021505376344
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.5605137135393992
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.5713053763440861
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.5737156295224313
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.5749565281318123
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.5796693633485754
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.5807311827956989
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.5828817204301076
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.588622356366997
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.5888172043010753
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.5893376344086021
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.5975753493854185
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.6000000000000001
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.613814988208878
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.6183519342426886
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.6244992295839753
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.6268656716417911
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.6274232347530777
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.6298222073129822
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.6308285810130828
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.6331717104163184
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.6344666237646638
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.6363719354109759
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.6436577358635116
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.6474358760533862
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.6805530002456943
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.6819962295527094
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.7000000000000001
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.7116564417177914
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.7171453437771975
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.7319034852546917
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.7364817129503831
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.7424794127807546
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.74996957392821
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.772180881511162
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.7903655913978495
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.8
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.8226495726495726
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.8358424417405651
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.8414809357297149
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.8571410507609863
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.9
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.9144153433697669
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.9357536633665269
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.9510537634408602
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 0.985045737936968
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 2,
+      "valor": 1.0
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 3,
+      "valor": 0.24443760373233278
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 3,
+      "valor": 0.3416049002052001
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 3,
+      "valor": 0.342722177892121
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 3,
+      "valor": 0.35029964216133824
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 3,
+      "valor": 0.35756149298429546
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 3,
+      "valor": 0.36824085647519156
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 3,
+      "valor": 0.39817001180637546
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 3,
+      "valor": 0.41711827956989245
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 3,
+      "valor": 0.49783048886317616
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 3,
+      "valor": 0.4984626737178699
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 3,
+      "valor": 0.5021695111368238
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 3,
+      "valor": 0.5138891133030745
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 3,
+      "valor": 0.5254138266796494
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 3,
+      "valor": 0.5371997900658201
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 3,
+      "valor": 0.5718709677419355
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 3,
+      "valor": 0.5749565281318123
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 3,
+      "valor": 0.5807311827956989
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 3,
+      "valor": 0.5828817204301076
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 3,
+      "valor": 0.5898559139784947
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 3,
+      "valor": 0.6148559303612844
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 3,
+      "valor": 0.6244992295839753
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 3,
+      "valor": 0.6342737075943893
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 3,
+      "valor": 0.6404396875903963
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 3,
+      "valor": 0.7026236559139785
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 3,
+      "valor": 0.713957411099746
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 3,
+      "valor": 0.772180881511162
+    },
+    {
+      "conjunto": "welfake_holdout",
+      "iteracion": 3,
+      "valor": 0.8358424417405651
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.0
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.013097450606515237
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.16140380646303926
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.18739184177997523
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.24559155217428835
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.24659227964324143
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.24771950599571585
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.26275115919629055
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.28107096440158286
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.28628593107269795
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.2866993682186513
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.28880547582247734
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.29172632643929025
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.29242906194204094
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.298094355170993
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.3122718337545633
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.3307377626861541
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.3332008091260867
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.3409042217698337
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.348333463399635
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.3564958969499463
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.3589032411443062
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.36441586280814575
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.36801616172828266
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.37033044177196695
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.37184417321518143
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.37642845764246446
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.3784878899646504
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.37886896249525237
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.37923735027008376
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.38326777753266644
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.3841886684710401
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.3860925624903978
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.38717292383517604
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.3881490490270508
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.3950904357332951
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.3978803267829543
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.40494590417310666
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.4113490836829322
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.4492935636613992
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.45154402102496716
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.45327050375855477
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.4534899052327977
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.45950413223140496
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.45998315080033697
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.4608540925266904
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.462556025109131
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.4635748407643312
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.4638912489379779
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.46710792104030463
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.46786632390745503
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.46907855598841197
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.47570148331273177
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.47665652691442933
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.47798971214781044
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.48294930875576036
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.48689740420271943
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.4895258173735544
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.49607346288496723
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.49778121137206427
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.5004882571075402
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.5017373626150424
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.5040791100123609
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.5087772714627837
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.5108776266996292
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.5127617830907515
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.5145859085290482
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.5216779975278122
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.5218201483312732
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.5243343061974381
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.5249103831891224
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.5252750309023485
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.5289780599625477
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.5296991288217466
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.5320148331273177
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.5355995055624228
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.5408980160111382
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.5425742574257426
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.5444993819530284
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.5471013597033375
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.547765760197775
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.5526194346936445
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.5549887018133133
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.5582371189774807
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.5598269468479604
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.5680776014109348
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.5697999792724635
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.5705346106304079
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.5735818881420083
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.5809544563085639
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.5812734539349381
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.5847773634568985
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.5886509163170678
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.5943271767810027
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.5944055944055944
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.5950540958268934
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.5981735159817352
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.5981922776524018
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.6021196732170457
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.6052771982282172
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.6078787452298388
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.6200930111968493
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.6316305520149034
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.6421269699432512
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.6540297669194046
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.6545914069081719
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.6863181943396555
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.707814786926241
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.7097525515680486
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.7111945241775226
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.7178064822886124
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.7265482316007676
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.7372488408037094
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.7719741645605167
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 0.8042789675592502
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 1,
+      "valor": 1.0
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.0
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.022443890274314215
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.026836588546584716
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.042369655468281704
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.07107231920199501
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.0806662162743183
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.1
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.1172069825436409
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.14573976078104356
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.16357368148156465
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.16643644313736478
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.2
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.23067331670822944
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.24530823365377907
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.24786482960060238
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.25064091768899455
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.2608695652173913
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.28284470602148215
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.2955112219451372
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.30000000000000004
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.30612244897959184
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.3076923076923077
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.3144296406706506
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.32019336467871257
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.33620689655172414
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.3401241189379266
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.34375
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.3486542140336044
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.3518260278238914
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.36199095022624433
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.36231884057971014
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.36450079239302696
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.36682271722828047
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.36697926205367015
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.38165949273652533
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.3923351570186629
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.39473684210526316
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.4
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.4002493765586035
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.4060596584040417
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.40714399529331013
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.4074074074074074
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.4186046511627907
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.42643391521197005
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.4310481004038507
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.4323873121869783
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.43636363636363634
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.4375
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.4389027431421446
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.4412470023980815
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.4444444444444444
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.44516129032258067
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.44537815126050423
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.4455008809327723
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.44642857142857145
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.4496124031007752
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.44968425900419795
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.456234582445747
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.4590395480225989
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.4608695652173913
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.46272526661071506
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.470404984423676
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.47183098591549294
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.47256857855361595
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.4727272727272727
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.47368421052631576
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.47471689895470387
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.480642144638404
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.4825436408977556
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.48484848484848486
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.4891304347826087
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.4934782608695652
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.4936708860759494
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.5
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.5063291139240507
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.5093827930174564
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.5110632956786803
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.5119514356611131
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.5124688279301746
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.5136068174042858
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.513715710723192
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.5173674588665448
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.5208845208845209
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.525
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.5372781065088758
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.5380116959064327
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.5428571428571428
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.5447362013090898
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.5467549827559858
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.5467892768079801
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.5488192294124563
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.5504782146652497
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.5594550770866561
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.5663841807909604
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.57356608478803
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.574468085106383
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.5847953216374269
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.5880126002290951
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.5896103896103896
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.5911330049261084
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.5982142857142857
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.5988700564971752
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.6000000000000001
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.6111111111111112
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.6479945959942499
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.6498689519012992
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.6820448877805486
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.6837425858580368
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.6982543640897756
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.7000000000000001
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.7290015847860539
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.7420157676647073
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.7547111436778259
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.7573099415204678
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.777925833134609
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.8
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.8413256221631673
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.8543917308991283
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.8827930174563591
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.9
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.9184644986714083
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 0.9595014934317302
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 2,
+      "valor": 1.0
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 3,
+      "valor": 0.24530823365377907
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 3,
+      "valor": 0.3201933597952294
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 3,
+      "valor": 0.33984397265560734
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 3,
+      "valor": 0.36450079239302696
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 3,
+      "valor": 0.36697926205367515
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 3,
+      "valor": 0.3925516765776253
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 3,
+      "valor": 0.42643391521197005
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 3,
+      "valor": 0.44642857142857145
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 3,
+      "valor": 0.4603174603174603
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 3,
+      "valor": 0.4608695652173913
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 3,
+      "valor": 0.46311612520463136
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 3,
+      "valor": 0.47568493937732487
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 3,
+      "valor": 0.48129675810473815
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 3,
+      "valor": 0.5063291139240507
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 3,
+      "valor": 0.5079365079365079
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 3,
+      "valor": 0.5136068174042858
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 3,
+      "valor": 0.513715710723192
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 3,
+      "valor": 0.5208845208845209
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 3,
+      "valor": 0.5351957793033307
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 3,
+      "valor": 0.5396825396825397
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 3,
+      "valor": 0.5486284289276808
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 3,
+      "valor": 0.5505561214158126
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 3,
+      "valor": 0.5598180267588163
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 3,
+      "valor": 0.57356608478803
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 3,
+      "valor": 0.5847953216374269
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 3,
+      "valor": 0.5988700564971752
+    },
+    {
+      "conjunto": "liar_test",
+      "iteracion": 3,
+      "valor": 0.9214463840399002
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.06497175141242938
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.07446742516234622
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.11528822055137844
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.11581920903954802
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.13210960739648936
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.16
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.18222222222222223
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.22728566991095464
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.24939104644200047
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.3463541666666667
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.38508807663074174
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.39048003207423915
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.3958071335575721
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.39820418254307854
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.4077025232403719
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.4164248128445084
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.41686868686868683
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.4172950082536653
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.4270833333333333
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.4282335328250642
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.44949223751030604
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.45964125560538116
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.4610430371357818
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.4701195219123506
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.47277556440903057
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.48969528340625573
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.49003865596193885
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.4966467463479416
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.5111111111111111
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.5112881806108898
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.5235920852359208
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.5298804780876494
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.5312084993359893
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.5324858757062146
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.5381165919282511
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.5403587443946188
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.547144754316069
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.5683930942895087
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.6162830214086357
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.649476632764634
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.6515151515151515
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.6811201445347786
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.6846670997358278
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.7126728657974044
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.8621553884711779
+    },
+    {
+      "conjunto": "fakes_holdout",
+      "iteracion": 3,
+      "valor": 0.9448621553884712
+    }
+  ]
+}

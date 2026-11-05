@@ -112,6 +112,24 @@ Solapamiento entre splits: 0 ids, 0 duplicados exactos y 0 casi-duplicados para 
 
 Manifiesto: `reports/welfake_manifest_v2.json` (SHA-256 del CSV, pasos y hashes de ids de cada split).
 
+## 4. Dataset externo de la iteración 3: FA-KES (holdout virgen)
+
+| Campo | Valor |
+|---|---|
+| Fuente | F. K. Abu Salem, R. Al Feel, S. Elbassuoni, M. Jaber y M. Farah, *FA-KES: A Fake News Dataset around the Syrian War*, Zenodo, registro 2607278 (2019). https://zenodo.org/records/2607278 |
+| Licencia | **CC BY 4.0**, declarada en Zenodo |
+| Contenido | 804 artículos sobre la guerra en Siria, de 15 medios (ahram, manar, alalam, reuters, sana, etc.) |
+| Qué significa la etiqueta | Etiqueta de **veracidad**: cada artículo se contrastó con la base del *Syrian Violations Documentation Center*. **Ambas clases salen de los mismos medios** (por ejemplo ahram 75/74, manar 51/54): la etiqueta **no** está confundida con la fuente, a diferencia de ISOT. |
+| Dirección de las etiquetas | El CSV usa `0 = falsa, 1 = creíble`, al revés que nuestra convención, y se invierte. Lo dicen la descripción de Zenodo y una leyenda dentro del propio archivo. **No se pudo verificar por cruce** como en WELFake, porque casi no solapa con ISOT. |
+| Codificación | latin-1 (no UTF-8) |
+| Solapamiento | 0 exactos y 2 casi-duplicados con ISOT; ninguno adicional con WELFake ni con LIAR |
+| Limpieza | 25 duplicados internos, 2 coincidencias con ISOT y 24 casi-duplicados internos |
+| Resultado | **753 artículos** (354 falsos, 399 reales) |
+| Uso | Holdout **virgen**: un solo acceso por modelo, al final. No participa de ninguna decisión. |
+| Limitaciones | Tema único (guerra en Siria), tamaño chico, y la etiqueta mide concordancia con una base de víctimas, no veracidad general |
+
+Manifiesto: `reports/fakes_manifest_v3.json`.
+
 ### Porciones de LIAR
 
 En la iteración 1 se evaluaron las tres porciones juntas, así que **ninguna es virgen**. En la iteración 2:
@@ -124,6 +142,6 @@ En la iteración 1 se evaluaron las tres porciones juntas, así que **ninguna es
 
 - Confirmar si el ISOT original de la University of Victoria impone condiciones además de la licencia
   CC BY-NC-SA 4.0 que declara el mirror de Kaggle.
-- Confirmar las condiciones de uso de WELFake: CC BY 4.0, con cita de Verma, Agrawal y Prodan (2021).
+- WELFake y FA-KES (CC BY 4.0) exigen citar a sus autores; las citas están en el README.
 - Revisar a mano una muestra de etiquetas dudosas (acta, riesgo "etiquetas ambiguas"):
   `reports/error_analysis.csv` incluye casos de este tipo.

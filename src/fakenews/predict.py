@@ -24,6 +24,7 @@ from .cleaning import clean_text, word_count
 from .config import get_paths, load_config
 from .explain import style_part, style_summary, term_contributions
 from .features import english_stopword_ratio, known_vocab_ratio, non_ascii_letter_ratio
+from .domain import domain_score
 from .models import p_fake
 from .ood import ood_features, ood_score, shrink
 from .thresholds import (LABEL_UNCERTAIN, confidence_level, confidence_score, decide,
@@ -35,6 +36,26 @@ DISCLAIMER = ("Estimación basada en patrones del texto, no un veredicto ni una 
               "políticas de EE.UU., 2015-2018), no certeza sobre la verdad de los hechos.")
 _URL = re.compile(r"(?:https?://|www\.)\S+", re.I)
 _NEUTRAL = re.compile(r"\bx(?:url|user|hashtag|num|time)x\b")
+
+
+OUT_OF_DOMAIN = "fuera_de_dominio"
+P_MIN, P_MAX = 0.001, 0.999
+
+
+def clip_public(p: float) -> float:
+    """Probabilidad para la salida pública: nunca 0 ni 1 literales, nunca NaN."""
+    if p != p:  # NaN
+        return 0.5
+    return round(min(P_MAX, max(P_MIN, float(p))), 4)
+
+
+def display_probability(p: float) -> str:
+    """Texto de la probabilidad: extremos como "< 1 %" y "> 99 %"."""
+    if p < 0.01:
+        return "< 1 %"
+    if p > 0.99:
+        return "> 99 %"
+    return f"{100 * p:.1f} %".replace(".", ",")
 
 
 class ModelNotTrainedError(FileNotFoundError):
@@ -66,11 +87,13 @@ class Predictor:
         # Perfil de limpieza con el que se entrenó (iteración 1 = v1): se usa igual al predecir.
         self.profile: str = self.artifact.get("profile", "v1")
         self.ood_params: dict[str, Any] | None = self.artifact.get("ood")
+        # Compuerta de dominio de validez (iteración 3); los artefactos anteriores no la tienen.
+        self.gate: dict[str, Any] | None = self.artifact.get("domain_gate")
         self.retrieval = None
-        rname = inf.get("retrieval", "retrieval_v2.joblib") if self.artifact.get("iteration") == 2 \
-            else "retrieval.joblib"
+        rname = {2: "retrieval_v2.joblib", 3: "retrieval_v3.joblib"}.get(self.artifact.get("iteration"),
+                                                                        "retrieval.joblib")
         rpath = models_dir / rname
-        if (load_retrieval or self.ood_params) and rpath.exists():
+        if (load_retrieval or self.ood_params or self.gate) and rpath.exists():
             self.retrieval = joblib.load(rpath)
         self.ood = load_config()["ood"]
 
@@ -134,7 +157,9 @@ class Predictor:
                                 "top_terms": {"hacia_falsa": [], "hacia_real": []}, "warnings": [],
                                 "similar_examples": [], "model_version": self.version,
                                 "disclaimer": DISCLAIMER}
-        base.update({"p_false_raw": None, "ood_score": None, "cleaning_profile": self.profile})
+        base.update({"p_false_raw": None, "ood_score": None, "cleaning_profile": self.profile,
+                     "in_domain": False, "domain_score": None, "p_false_reference": None,
+                     "p_false_display": "no disponible"})
         if not isinstance(text, str):
             base["warnings"].append("La entrada no es texto.")
             return base
@@ -143,8 +168,11 @@ class Predictor:
             warns, force, lower = self.input_warnings(raw, cleaned)
             base["warnings"] = warns
             if not cleaned or word_count(_NEUTRAL.sub(" ", cleaned)) == 0:
+                base["warnings"].append(f"{OUT_OF_DOMAIN}: no hay texto analizable.")
                 return base
             p = float(p_fake(self.model, [cleaned])[0])
+            if self.gate is not None:
+                return self._predict_with_gate(raw, cleaned, p, warns, force, lower, base, with_similar)
             p_raw, s = p, None
             cap = False
             if self.ood_params and self.retrieval is not None:
@@ -184,6 +212,34 @@ class Predictor:
             base["warnings"].append(f"Error interno al analizar el texto ({type(exc).__name__}). "
                                     "El resultado no está disponible.")
             return base
+
+    def _predict_with_gate(self, raw: str, cleaned: str, p: float, warns: list[str], force: bool, lower: bool,
+                           base: dict[str, Any], with_similar: bool) -> dict[str, Any]:
+        """Iteración 3: dentro del dominio, probabilidad calibrada; fuera, sin veredicto."""
+        score = float(domain_score([cleaned], self.gate, self.retrieval, self.vocabulary)[0])
+        inside = score >= self.gate["umbral"] and not force
+        pub = clip_public(p)
+        out = {**base, "in_domain": bool(inside), "domain_score": round(score, 4), "p_false_raw": pub,
+               "top_terms": term_contributions(self.model, cleaned, top_k=8)}
+        if not inside:
+            why = ("el texto no cumple las condiciones de entrada (ver las otras advertencias)" if force else
+                   f"no se parece a las noticias de entrenamiento (puntaje de dominio {score:.2f} < "
+                   f"{self.gate['umbral']:.2f})")
+            warns.append(f"{OUT_OF_DOMAIN}: {why}. No se emite veredicto.")
+            out.update({"label": LABEL_UNCERTAIN, "p_false": None, "confidence_level": "baja", "confidence": None,
+                        "ambiguous": True, "p_false_reference": pub, "p_false_display": "sin veredicto"})
+        else:
+            level = confidence_level(p, self.cuts)
+            if lower and level != "baja":
+                level = "media" if level == "alta" else "baja"
+            out.update({"label": decide(p, self.threshold, self.low, self.high), "p_false": pub,
+                        "confidence_level": level, "confidence": round(confidence_score(pub), 4),
+                        "ambiguous": bool(is_ambiguous(p, self.low, self.high)), "p_false_reference": pub,
+                        "p_false_display": display_probability(p)})
+        if with_similar:
+            out["similar_examples"] = self.similar_examples(cleaned, int(load_config()["demo"]["similar_examples"]))
+        self._log(raw, out)
+        return out
 
     def _log(self, raw: str, out: dict[str, Any]) -> None:
         """Registro opcional (sin guardar el texto: solo su hash) para monitoreo (lab 21)."""

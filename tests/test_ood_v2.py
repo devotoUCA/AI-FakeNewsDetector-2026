@@ -35,7 +35,8 @@ def test_choose_tau_rule():
 def predictor():
     from fakenews.predict import Predictor
 
-    return Predictor()
+    # Estos tests cubren el comportamiento del artefacto de la iteración 2 (sigue reproducible).
+    return Predictor(artifact="final_model_v2.joblib")
 
 
 @needs_v2_model

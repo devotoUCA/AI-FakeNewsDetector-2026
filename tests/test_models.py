@@ -19,9 +19,15 @@ def test_training_is_deterministic(tiny_corpus):
     X, y = tiny_corpus
     a, b = _small_lr().fit(X, y), _small_lr().fit(X, y)
     assert np.array_equal(a.named_steps["clf"].coef_, b.named_steps["clf"].coef_)
-    s1 = M.style_forest(5).fit(X, y)
-    s2 = M.style_forest(5).fit(X, y)
+    # El bosque se entrena con su configuración real (n_jobs=-1), que es determinista. Solo la predicción
+    # va en un hilo: con varios, predict_proba suma los árboles en el orden en que terminan los hilos y
+    # el resultado puede variar en el último bit (~1e-16). Así la comparación puede seguir siendo exacta.
+    s1 = M.style_forest(5).fit(X, y).set_params(clf__n_jobs=1)
+    s2 = M.style_forest(5).fit(X, y).set_params(clf__n_jobs=1)
     assert np.array_equal(M.p_fake(s1, X), M.p_fake(s2, X))
+    # Control: otra semilla debe dar otro resultado, o el test no detectaría un random_state roto.
+    s3 = M.style_forest(5).set_params(clf__random_state=43).fit(X, y).set_params(clf__n_jobs=1)
+    assert not np.array_equal(M.p_fake(s1, X), M.p_fake(s3, X))
 
 
 def test_dummy_predicts_prior(tiny_corpus):

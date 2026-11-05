@@ -262,7 +262,30 @@ def _v3_pass(text: str, mask_terms: tuple[str, ...]) -> str:
     return _collapse_ws(text)
 
 
-PROFILES = ("v1", "v2", "v3")
+# --- Perfil v2_1 (iteración 3): v2 + normalización de espacios y puntuación ------------------
+# Justificado por reports/format_shortcut_discovery_v3.csv: la "oración pegada" (`a.A`) predice la
+# etiqueta sola con AUC ~0,94 aun después de v2, y los espacios antes de puntuación son huecos que
+# deja la propia limpieza. `v2` no se modifica: los resultados ya reportados siguen reproducibles.
+_V21_STEPS: list[tuple[re.Pattern[str], str]] = [
+    (re.compile(r"\.{2,}|…"), "."),                                    # puntos suspensivos
+    (re.compile(r"[—–−]"), "-"),                                        # guiones largos y medios
+    (re.compile(r"[ \t]+([.,;:!?)\]])"), r"\1"),                        # espacio antes de puntuación
+    (re.compile(r"([(\[])[ \t]+"), r"\1"),                              # espacio tras apertura
+    (re.compile(r"\(\s*\)|\[\s*\]"), " "),                              # paréntesis vacíos
+    (re.compile(r"([.,;:])(?:\s*[.,;:])+"), r"\1"),                     # puntuación repetida
+    (re.compile(r"(?<=[A-Za-z)\]])([.!?;:,])(?=[A-Za-z(])"), r"\1 "),   # oración pegada
+    (re.compile(r"(?m)^[ \t.,;:]+"), ""),                               # puntuación huérfana inicial
+]
+
+
+def _v2_1_pass(text: str) -> str:
+    text = _v2_pass(text)
+    for pattern, repl in _V21_STEPS:
+        text = pattern.sub(repl, text)
+    return _collapse_ws(text)
+
+
+PROFILES = ("v1", "v2", "v2_1", "v3")
 
 
 def v3_mask_terms() -> tuple[str, ...]:
@@ -280,7 +303,8 @@ def clean_text(text: object, mode: str = "full", profile: str = "v1") -> str:
         mode: ``"full"`` (modelo) o ``"minimal"`` (solo para el experimento de fuga).
         profile: perfil de limpieza para ``mode="full"``: ``"v1"`` (iteración 1), ``"v2"``
             (neutral a la fuente: contracciones, tokens neutros, sin días/meses/números) o
-            ``"v3"`` (v2 + enmascarado de vocabulario de agencia y de mayúsculas).
+            ``"v2_1"`` (v2 + espacios y puntuación normalizados) o ``"v3"`` (v2 + enmascarado de
+            vocabulario de agencia y de mayúsculas).
 
     Returns:
         El texto limpio (puede ser vacío si no quedaba contenido).
@@ -298,6 +322,8 @@ def clean_text(text: object, mode: str = "full", profile: str = "v1") -> str:
         step = _one_pass
     elif profile == "v2":
         step = _v2_pass
+    elif profile == "v2_1":
+        step = _v2_1_pass
     else:
         terms = v3_mask_terms()
 

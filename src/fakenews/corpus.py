@@ -207,3 +207,86 @@ def welfake_split(name: str, profile: str) -> pd.DataFrame:
             df["doc"] = [build_document(t, b, profile=profile) for t, b in zip(df["title"], df["text"])]
             df[["id", "doc"]].to_csv(cache, index=False)
     return df
+
+
+# --- FA-KES (holdout virgen de la iteración 3) ------------------------------------------------
+def load_fakes_raw() -> pd.DataFrame:
+    """CSV de FA-KES (Zenodo 2607278, CC BY 4.0). El archivo está en latin-1.
+
+    La columna `labels` usa 0 = falsa y 1 = creíble (lo dicen la descripción de Zenodo y una
+    leyenda dentro del propio CSV): es la convención OPUESTA a la nuestra y acá se invierte.
+    """
+    path = get_paths().root / "data" / "raw" / "fakes" / "FA-KES-Dataset.csv"
+    if not path.exists():
+        raise DataValidationError(f"Falta {path}. Ejecutá `python -m fakenews.cli download-external`.")
+    df = pd.read_csv(path, encoding="latin-1", dtype=str, keep_default_na=False)
+    legend = " ".join(df.iloc[:, 7:].to_numpy().ravel().tolist())
+    if "Fake = 0" not in legend or "True = 1" not in legend:
+        raise DataValidationError("FA-KES: no se encontró la leyenda de etiquetas esperada en el CSV.")
+    out = pd.DataFrame({"id": "fk_" + df["unit_id"], "title": df["article_title"], "text": df["article_content"],
+                        "source": df["source"], "label": 1 - df["labels"].astype(int)})
+    return out
+
+
+def prepare_fakes() -> dict[str, Any]:
+    """Prepara FA-KES: filtra cortos, deduplica y quita lo que coincide con ISOT, WELFake o LIAR.
+
+    No corre ningún modelo: FA-KES es un holdout virgen y se toca una sola vez en `evaluate_v3`.
+    """
+    cfg, paths = load_config(), get_paths()
+    nd = cfg["data"]["near_duplicates"]
+    kw = {"shingle_size": nd["shingle_size"], "num_perm": nd["num_perm"], "bands": nd["bands"],
+          "threshold": nd["jaccard_threshold"], "seed": cfg["seed"]}
+    df = load_fakes_raw()
+    log: list[dict[str, Any]] = [{"paso": "carga", "filas": int(len(df)), "falsas": int(df["label"].sum())}]
+
+    def step(name: str, keep: np.ndarray) -> None:
+        nonlocal df
+        log.append({"paso": name, "eliminadas": int((~keep).sum())})
+        df = df[keep].reset_index(drop=True)
+
+    df["doc"] = [build_document(t, b) for t, b in zip(df["title"], df["text"])]
+    df["n_words"] = df["doc"].map(word_count)
+    step("filtrar_textos_cortos", (df["n_words"] >= cfg["data"]["min_words"]).to_numpy())
+    keys = df["doc"].map(exact_key)
+    nlab = df.groupby(keys)["label"].transform("nunique").to_numpy()
+    step("duplicados_internos (conflicto de etiqueta: se descarta el grupo)", (~keys.duplicated().to_numpy()) & (nlab == 1))
+    isot = load_isot()
+    wel = load_welfake_raw()
+    others = {"ISOT": [build_document(t, b) for t, b in zip(isot["title"], isot["text"])],
+              "WELFake": [build_document(t, b) for t, b in zip(wel["title"], wel["text"])]}
+    for name, docs in others.items():
+        ks = {exact_key(d) for d in docs}
+        keep = ~df["doc"].map(exact_key).isin(ks).to_numpy()
+        near = cross_set_near_duplicates(df["doc"].tolist(), docs, **kw)
+        keep[[i for i, _, _ in near]] = False
+        step(f"coincide_con_{name} (exacto o casi-duplicado)", keep)
+    liar = set(load_liar()["statement"].map(exact_key))
+    step("coincide_con_LIAR", ~df["doc"].map(exact_key).isin(liar).to_numpy())
+    pairs = near_duplicate_pairs(df["doc"].tolist(), **kw)
+    grp = np.array(connected_groups(len(df), pairs))
+    nlab = df.groupby(grp)["label"].transform("nunique").to_numpy()
+    step("casi_duplicados_internos", (~pd.Series(grp).duplicated().to_numpy()) & (nlab == 1))
+    path = paths.processed / "fakes_holdout.csv"
+    df.sort_values("id")[["id", "label", "source", "title", "text", "doc", "n_words"]].to_csv(path, index=False)
+    out = {"fuente": "FA-KES, Zenodo record 2607278 (CC BY 4.0)",
+           "sha256_csv": sha256_file(paths.root / "data/raw/fakes/FA-KES-Dataset.csv"),
+           "direccion_etiquetas": "el CSV usa 0 = falsa, 1 = creíble (descripción de Zenodo y leyenda en el "
+                                  "archivo); se invierte a nuestra convención. No se pudo verificar por cruce.",
+           "pasos": log, "n": int(len(df)), "falsas": int(df["label"].sum()), "reales": int((df["label"] == 0).sum()),
+           "sha256_ids": hashlib.sha256("\n".join(sorted(df["id"])).encode()).hexdigest()}
+    write_json(out, paths.reports / "fakes_manifest_v3.json")
+    return out
+
+
+def fakes_split(profile: str) -> pd.DataFrame:
+    """FA-KES preparado, con `doc` en el perfil pedido. Solo debe usarse en la evaluación final."""
+    path = get_paths().processed / "fakes_holdout.csv"
+    if not path.exists():
+        raise FileNotFoundError(f"Falta {path}. Ejecutá `python -m fakenews.cli prepare-external`.")
+    df = pd.read_csv(path, dtype=str, keep_default_na=False)
+    df["label"] = df["label"].astype(int)
+    df["n_words"] = df["n_words"].astype(int)
+    if profile != "v1":
+        df["doc"] = [build_document(t, b, profile=profile) for t, b in zip(df["title"], df["text"])]
+    return df

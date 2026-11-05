@@ -28,6 +28,10 @@ download:
     url: https://zenodo.org/api/records/4561253/files/WELFake_Dataset.csv/content
     file: WELFake_Dataset.csv
     sha256: 665331424230fc452e9482c3547a6a199a2c29745ade8d236950d1d105223773
+  fakes:     # holdout virgen de la iteración 3: solo evaluación final, nunca decisiones
+    url: https://zenodo.org/api/records/2607278/files/FA-KES-Dataset.csv/content
+    file: FA-KES-Dataset.csv
+    sha256: 90822dc38d080fa220960d4b7c704fb66adba0feaf038ab44e56ec4d6f2e15ab
 
 labels:
   real: 0
@@ -182,5 +186,28 @@ ood_v2:
   cap_quantile_in_domain: 0.95   # por encima de este cuantil del puntaje OOD in-domain, la confianza no es "alta"
 
 inference:
-  artifact: final_model_v2.joblib      # si no existe, se usa final_model.joblib (iteración 1)
-  retrieval: retrieval_v2.joblib
+  artifact: final_model_v3.joblib      # si no existe, se usa final_model.joblib (iteración 1)
+
+panel_v3:
+  reference: it2_lrchar_v2       # modelo de la iteración 2, re-medido con la invarianza rigurosa
+  acceptance_max_drop: 0.02      # no perder más que esto de F1 macro en ninguna vista
+  embedding_min_gain: 0.03       # adoptar embeddings solo si mejoran el puntaje robusto en >= 0,03
+  candidates:
+    - {name: it2_lrchar_v2, profile: v2, model: lr_char, C: 10.0}
+    - {name: lrchar_v21_C10, profile: v2_1, model: lr_char, C: 10.0}
+    - {name: lrword_v21_C10, profile: v2_1, model: lr_word, C: 10.0}
+    - {name: svm_v21, profile: v2_1, model: svm_word, C: 3.0}
+    - {name: emb_minilm_v21, profile: v2_1, model: emb_lr, C: 10.0}   # opcional (punto D)
+
+format_discovery:
+  sample: 8000
+
+domain_gate:
+  min_in_domain_retention: 0.97  # el umbral se fija para retener al menos este % de ISOT val
+  max_features: 20000
+
+final_v3:
+  # Regla de aceptación (prompt de la iteración 3, sección C): ningún candidato v2_1 la cumple, así
+  # que se conserva el clasificador de la iteración 2 con las correcciones A1 y B.
+  # Alternativa más robusta pero con peor panel: lrchar_v21_C10 (ver docs/02_iteracion_3.md).
+  candidate: it2_lrchar_v2

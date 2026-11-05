@@ -1,0 +1,63 @@
+{
+  "nota": "Solo ISOT val, WELFake dev y LIAR valid. Nunca test ni holdouts.",
+  "isot_val": {
+    "it2_contraccion_global": {
+      "ece": 0.18115181346109638,
+      "brier": 0.057360702988395934,
+      "accuracy": 0.9890052356020942,
+      "n": 5730
+    },
+    "it3_calibrada_todos": {
+      "ece": 0.0027545437034347886,
+      "brier": 0.008143619591521574,
+      "accuracy": 0.9895287958115183,
+      "n": 5730
+    },
+    "it3_calibrada_en_dominio": {
+      "ece": 0.002318468381853997,
+      "brier": 0.007841942283665696,
+      "accuracy": 0.9897666068222621,
+      "n": 5570
+    }
+  },
+  "welfake_dev": {
+    "it2_contraccion_global": {
+      "ece": 0.10214005191733905,
+      "brier": 0.24161642352330373,
+      "accuracy": 0.5876129032258065,
+      "n": 11625
+    },
+    "it3_calibrada_todos": {
+      "ece": 0.3440922958311855,
+      "brier": 0.35231618903037965,
+      "accuracy": 0.5784086021505377,
+      "n": 11625
+    },
+    "it3_calibrada_en_dominio": {
+      "ece": 0.2790101897527568,
+      "brier": 0.2947098306715835,
+      "accuracy": 0.6473014781711929,
+      "n": 2909
+    }
+  },
+  "liar_valid": {
+    "it2_contraccion_global": {
+      "ece": 0.1090640423300919,
+      "brier": 0.2624393899740209,
+      "accuracy": 0.571964956195244,
+      "n": 799
+    },
+    "it3_calibrada_todos": {
+      "ece": 0.27164668616514126,
+      "brier": 0.3281565995991122,
+      "accuracy": 0.5682102628285357,
+      "n": 799
+    },
+    "it3_calibrada_en_dominio": {
+      "ece": 0.2494177298571326,
+      "brier": 0.2631619997831577,
+      "accuracy": 0.6842105263157895,
+      "n": 57
+    }
+  }
+}

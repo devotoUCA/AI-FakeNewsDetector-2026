@@ -1,0 +1,40 @@
+{
+  "fuente": "FA-KES, Zenodo record 2607278 (CC BY 4.0)",
+  "sha256_csv": "90822dc38d080fa220960d4b7c704fb66adba0feaf038ab44e56ec4d6f2e15ab",
+  "direccion_etiquetas": "el CSV usa 0 = falsa, 1 = creíble (descripción de Zenodo y leyenda en el archivo); se invierte a nuestra convención. No se pudo verificar por cruce.",
+  "pasos": [
+    {
+      "paso": "carga",
+      "filas": 804,
+      "falsas": 378
+    },
+    {
+      "paso": "filtrar_textos_cortos",
+      "eliminadas": 0
+    },
+    {
+      "paso": "duplicados_internos (conflicto de etiqueta: se descarta el grupo)",
+      "eliminadas": 25
+    },
+    {
+      "paso": "coincide_con_ISOT (exacto o casi-duplicado)",
+      "eliminadas": 2
+    },
+    {
+      "paso": "coincide_con_WELFake (exacto o casi-duplicado)",
+      "eliminadas": 0
+    },
+    {
+      "paso": "coincide_con_LIAR",
+      "eliminadas": 0
+    },
+    {
+      "paso": "casi_duplicados_internos",
+      "eliminadas": 24
+    }
+  ],
+  "n": 753,
+  "falsas": 354,
+  "reales": 399,
+  "sha256_ids": "984699c3449dbd57fe71f441e97b7185fe59b4fa423f4c1d90516984b0c42354"
+}

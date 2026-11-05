@@ -1,0 +1,3 @@
+# Dependencias OPCIONALES: solo para el experimento de embeddings (iteración 3, punto D).
+# No hacen falta para entrenar, evaluar ni usar la demo. Instalar en un entorno aparte.
+sentence-transformers==6.2.0

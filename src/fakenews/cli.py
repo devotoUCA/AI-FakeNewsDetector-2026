@@ -87,9 +87,11 @@ def _cmd_download_external(_: argparse.Namespace) -> None:
 
 
 def _cmd_prepare_external(_: argparse.Namespace) -> None:
-    from .corpus import prepare_welfake
+    from .corpus import prepare_fakes, prepare_welfake
 
     m = prepare_welfake()
+    f = prepare_fakes()
+    print(json.dumps({"fakes": f["n"], "falsas": f["falsas"]}))
     print(json.dumps({k: v["n"] for k, v in m["splits"].items()} | {"etiquetas": m["direccion_etiquetas"]["direccion"]},
                      ensure_ascii=False))
 
@@ -128,20 +130,61 @@ def _cmd_evaluate_v2(_: argparse.Namespace) -> None:
         print(f"- {c['criterio']}: {c['estado']}")
 
 
+def _cmd_format_shortcuts(_: argparse.Namespace) -> None:
+    from .format_shortcuts import run_format_discovery
+
+    run_format_discovery(("v2", "v2_1"))
+
+
+def _cmd_panel_v3(args: argparse.Namespace) -> None:
+    from .panel import run_panel_v3
+
+    print(json.dumps(run_panel_v3(only=getattr(args, "only", None) or None, n_jobs=getattr(args, "jobs", 2))["seleccion"],
+                     ensure_ascii=False, indent=2, default=str))
+
+
+def _cmd_train_v3(args: argparse.Namespace) -> None:
+    from .train_v3 import train_final_v3
+
+    out = train_final_v3(quick=getattr(args, "quick", False))
+    print(json.dumps({"modelo": out.get("spec", {}).get("name"), "dominio_dev": out.get("dominio_dev")}, ensure_ascii=False, default=str))
+
+
+def _cmd_evaluate_v3(_: argparse.Namespace) -> None:
+    from .evaluate_v3 import evaluate_final_v3, success_criteria_v3
+
+    r = evaluate_final_v3()
+    s = success_criteria_v3()
+    print(json.dumps({k: round(v["accuracy"], 4) for k, v in r["v3"].items()}, ensure_ascii=False))
+    for c in s["criterios"]:
+        print(f"- {c['criterio']}: {c['estado']}")
+
+
+def _cmd_report(_: argparse.Namespace) -> None:
+    from .access_log import verify_access_log
+    from .make_report import make_report
+
+    print(json.dumps(make_report(), ensure_ascii=False, indent=2))
+    r = verify_access_log()
+    print(json.dumps(r, ensure_ascii=False, indent=2))
+    if not r["ok"]:
+        sys.exit(1)
+
+
 def _cmd_quickstart(args: argparse.Namespace) -> None:
-    """Inicio rápido: descarga ISOT/LIAR, prepara ISOT y entrena SOLO el modelo productivo v2."""
+    """Inicio rápido: descarga ISOT/LIAR, prepara ISOT y entrena SOLO el modelo productivo."""
     from .data import download_datasets
     from .splits import prepare_dataset
-    from .train_v2 import train_final_v2
+    from .train_v3 import train_final_v3
 
     download_datasets()
     prepare_dataset()
-    out = train_final_v2(quick=True)
+    out = train_final_v3(quick=True)
     print(json.dumps(out, ensure_ascii=False, default=str))
 
 
 def _cmd_all(args: argparse.Namespace) -> None:
-    for fn in (_cmd_download, _cmd_prepare, _cmd_audit, _cmd_train, _cmd_evaluate, _cmd_analyze):
+    for fn in (_cmd_download, _cmd_prepare, _cmd_audit, _cmd_train, _cmd_evaluate, _cmd_analyze):  # solo iteración 1
         fn(args)
 
 
@@ -170,6 +213,14 @@ def main(argv: list[str] | None = None) -> None:
     tv = sub.add_parser("train-v2", help="(it2) Entrena el modelo final v2 (OOD, abstención)")
     tv.add_argument("--quick", action="store_true", help="Sin externos: reutiliza models/ood_params_v2.json")
     sub.add_parser("evaluate-v2", help="(it2) Evaluación final única: ISOT test + WELFake holdout (registrada)")
+    sub.add_parser("format-shortcuts", help="(it3) Descubrimiento automático de atajos de formato")
+    p3 = sub.add_parser("panel-v3", help="(it3) Panel con invarianza rigurosa y regla de aceptación")
+    p3.add_argument("--only", nargs="*")
+    p3.add_argument("--jobs", type=int, default=2)
+    t3 = sub.add_parser("train-v3", help="(it3) Modelo final con compuerta de dominio")
+    t3.add_argument("--quick", action="store_true", help="Sin externos: reutiliza models/domain_gate_v3.json.gz")
+    sub.add_parser("evaluate-v3", help="(it3) Evaluación final de cierre (registrada)")
+    sub.add_parser("report", help="(it3) Genera tablas de los documentos desde reports/ y verifica el log")
     sub.add_parser("quickstart", help="Inicio rápido: datos mínimos + solo el modelo productivo")
     al = sub.add_parser("all", help="Todo el pipeline")
     al.add_argument("--reason", default="evaluación final (pipeline completo)")
@@ -179,7 +230,9 @@ def main(argv: list[str] | None = None) -> None:
      "evaluate": _cmd_evaluate, "external": _cmd_external, "analyze": _cmd_analyze,
      "predict": _cmd_predict, "all": _cmd_all, "download-external": _cmd_download_external,
      "prepare-external": _cmd_prepare_external, "shortcuts": _cmd_shortcuts, "panel": _cmd_panel,
-     "train-v2": _cmd_train_v2, "evaluate-v2": _cmd_evaluate_v2, "quickstart": _cmd_quickstart}[args.cmd](args)
+     "train-v2": _cmd_train_v2, "evaluate-v2": _cmd_evaluate_v2, "quickstart": _cmd_quickstart,
+     "format-shortcuts": _cmd_format_shortcuts, "panel-v3": _cmd_panel_v3, "train-v3": _cmd_train_v3,
+     "evaluate-v3": _cmd_evaluate_v3, "report": _cmd_report}[args.cmd](args)
 
 
 if __name__ == "__main__":
