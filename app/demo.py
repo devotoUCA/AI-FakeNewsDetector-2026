@@ -32,27 +32,38 @@ text = st.text_area("Pegá el texto de la noticia (título y/o cuerpo, en inglé
 
 if st.button("Analizar", type="primary"):
     r = analyze(predictor, text)
-    st.subheader(r["titulo_resultado"])
-    c1, c2 = st.columns(2)
-    c1.metric("Probabilidad de que sea falsa", r["p_false_texto"])
-    c2.metric("Nivel de confianza", r["confianza"])
-    st.progress(r["barra"], text="0 % = parecida a las reales · 100 % = parecida a las falsas")
-    if r["zona_ambigua"]:
-        st.info(r["aviso_zona"])
-    for w in r["advertencias"]:
-        st.warning(w)
-    if r["terminos_falsa"] or r["terminos_real"]:
-        st.markdown("**Términos del texto que más pesaron en la decisión**")
-        a, b = st.columns(2)
-        a.markdown("Empujan hacia *falsa*")
-        a.table([{"término": d["termino"], "peso": d["peso"]} for d in r["terminos_falsa"]])
-        b.markdown("Empujan hacia *real*")
-        b.table([{"término": d["termino"], "peso": d["peso"]} for d in r["terminos_real"]])
-    if r["similares"]:
-        st.markdown("**Noticias del entrenamiento más parecidas** (similitud coseno; trazabilidad, no prueba)")
-        st.table(r["similares"])
+    if not r["en_dominio"]:
+        st.subheader(r["titulo_resultado"])
+        st.error(r["mensaje_dominio"])
+        for w in r["advertencias"]:
+            st.warning(w)
+        if r["referencia_texto"] is not None:
+            with st.expander("Valor de referencia (NO confiable fuera del dominio)"):
+                st.write(f"El modelo daría una probabilidad de falsa de {r['referencia_texto']}, pero fuera del "
+                         "dominio de validez ese número no tiene respaldo: en esos textos el modelo no supera a "
+                         "un clasificador trivial.")
+    else:
+        st.success("Dentro del dominio de validez: el texto se parece a las noticias de entrenamiento.")
+        st.subheader(r["titulo_resultado"])
+        c1, c2 = st.columns(2)
+        c1.metric("Probabilidad de que sea falsa", r["p_false_texto"])
+        c2.metric("Nivel de confianza", r["confianza"])
+        st.progress(r["barra"], text="0 % = parecida a las reales · 100 % = parecida a las falsas")
+        if r["zona_ambigua"]:
+            st.info(r["aviso_zona"])
+        for w in r["advertencias"]:
+            st.warning(w)
+        if r["terminos_falsa"] or r["terminos_real"]:
+            st.markdown("**Términos del texto que más pesaron en la decisión**")
+            a, b = st.columns(2)
+            a.markdown("Empujan hacia *falsa*")
+            a.table([{"término": d["termino"], "peso": d["peso"]} for d in r["terminos_falsa"]])
+            b.markdown("Empujan hacia *real*")
+            b.table([{"término": d["termino"], "peso": d["peso"]} for d in r["terminos_real"]])
+        if r["similares"]:
+            st.markdown("**Noticias del entrenamiento más parecidas** (similitud coseno; trazabilidad, no prueba)")
+            st.table(r["similares"])
     with st.expander("Detalles técnicos"):
-        st.write(f"Probabilidad cruda del modelo (antes de contraer por OOD): {r['p_cruda_texto']}")
-        st.write(f"Puntaje fuera-de-distribución (0 = parecido al entrenamiento, 1 = muy distinto): {r['ood_texto']}")
+        st.write(f"Puntaje de dominio: {r['puntaje_dominio']}")
         st.write(f"Perfil de limpieza: {r['perfil']}")
     st.caption(f"Modelo: {r['version']}")

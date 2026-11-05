@@ -1,0 +1,23 @@
+# CI opcional: tests rápidos con fixtures chicos, sin descargar datasets.
+# NO se ejecutó localmente: se verá su resultado recién en GitHub Actions.
+name: tests
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+jobs:
+  pytest:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: python -m pip install -r requirements.txt
+      - run: python -m pip install -e . --no-deps
+      - run: python -m pytest -q -m "not slow"

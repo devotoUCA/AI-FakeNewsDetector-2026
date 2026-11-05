@@ -28,10 +28,22 @@ def test_analyze_returns_label_and_probability():
     assert r["titulo_resultado"] and r["p_false"] is not None
     assert 0 <= r["barra"] <= 1 and r["confianza"] in ("Alta", "Media", "Baja")
     empty = analyze(pred, "")
-    assert empty["p_false"] is None and empty["zona_ambigua"] and empty["advertencias"]
+    # Iteración 3: lo vacío no es "zona ambigua" sino "fuera de dominio" (sin veredicto).
+    assert empty["p_false"] is None and not empty["en_dominio"] and empty["advertencias"]
 
 
 @needs_data
 def test_examples_come_from_test_set_and_are_marked():
     ex = example_texts()
-    assert len(ex) == 4 and all("dataset de test" in e["nombre"] for e in ex)
+    assert sum("dataset de test" in e["nombre"] for e in ex) == 4
+    assert sum("fuera de dominio" in e["nombre"] for e in ex) == 1  # iteración 3: ejemplo fuera de dominio
+
+
+@needs_model
+def test_demo_out_of_domain_shows_no_verdict():
+    pred, err = load_predictor()
+    assert err is None
+    r = analyze(pred, "Says the unemployment rate doubled under the governor.")
+    if pred.gate is not None:
+        assert r["en_dominio"] is False and "no se emite veredicto" in r["mensaje_dominio"]
+        assert r["p_false"] is None and r["terminos_falsa"] == [] and "Sin veredicto" in r["titulo_resultado"]
