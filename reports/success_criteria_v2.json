@@ -1,0 +1,59 @@
+{
+  "modelo": "lrchar_v2_C10",
+  "criterios": [
+    {
+      "criterio": "Accuracy en test > 80 %",
+      "valor": 0.9898778359511344,
+      "estado": "cumplido"
+    },
+    {
+      "criterio": "F1 por clase > 0,80",
+      "valor": [
+        0.9907289002557544,
+        0.9888547271329746
+      ],
+      "estado": "cumplido"
+    },
+    {
+      "criterio": "Supera con claridad al ingenuo sin favorecer una clase",
+      "valor": {
+        "trivial_accuracy": 0.5465968586387434
+      },
+      "estado": "cumplido"
+    },
+    {
+      "criterio": "Modelo adicional >= baseline, con la diferencia explicada",
+      "valor": "iteración 1: SVM 0,988 vs LR 0,985 (McNemar p=0,030); el modelo v2 se elige por robustez, no por in-domain",
+      "estado": "cumplido (iteración 1; ver informe §15 para el v2)"
+    },
+    {
+      "criterio": "Sin filtración entre splits",
+      "valor": "0 solapamientos ISOT; WELFake deduplicado contra todo ISOT y LIAR",
+      "estado": "cumplido"
+    },
+    {
+      "criterio": ">= 20 errores revisados por el equipo",
+      "valor": {
+        "casos_v2": 40,
+        "comentados": 0
+      },
+      "estado": "pendiente: revisión humana del equipo (error_analysis_v2.csv)"
+    },
+    {
+      "criterio": "Demo devuelve etiqueta y probabilidad",
+      "valor": "tests de predict y demo",
+      "estado": "cumplido (si pytest pasa)"
+    },
+    {
+      "criterio": "Accuracy > 98 % => sospecha",
+      "valor": 0.9898778359511344,
+      "estado": "ALERTA activa"
+    },
+    {
+      "criterio": "(it2) referencia it1 en ISOT test",
+      "valor": 0.9893542757417103,
+      "estado": "informativo"
+    }
+  ],
+  "generado": "2026-11-04T19:44:05"
+}
