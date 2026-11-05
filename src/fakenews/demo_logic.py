@@ -44,6 +44,10 @@ def analyze(predictor: Predictor, text: str) -> dict[str, Any]:
         "advertencias": out["warnings"],
         "similares": out.get("similar_examples", []),
         "version": out["model_version"],
+        "perfil": out.get("cleaning_profile", "v1"),
+        "ood": out.get("ood_score"),
+        "ood_texto": "no calculado" if out.get("ood_score") is None else f"{out['ood_score']:.2f}",
+        "p_cruda_texto": "—" if out.get("p_false_raw") is None else f"{out['p_false_raw']:.1%}",
         "crudo": out,
     }
 

@@ -51,4 +51,8 @@ if st.button("Analizar", type="primary"):
     if r["similares"]:
         st.markdown("**Noticias del entrenamiento más parecidas** (similitud coseno; trazabilidad, no prueba)")
         st.table(r["similares"])
+    with st.expander("Detalles técnicos"):
+        st.write(f"Probabilidad cruda del modelo (antes de contraer por OOD): {r['p_cruda_texto']}")
+        st.write(f"Puntaje fuera-de-distribución (0 = parecido al entrenamiento, 1 = muy distinto): {r['ood_texto']}")
+        st.write(f"Perfil de limpieza: {r['perfil']}")
     st.caption(f"Modelo: {r['version']}")
