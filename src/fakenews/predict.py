@@ -25,6 +25,7 @@ from .config import get_paths, load_config
 from .explain import style_part, style_summary, term_contributions
 from .features import english_stopword_ratio, known_vocab_ratio, non_ascii_letter_ratio
 from .models import p_fake
+from .ood import ood_features, ood_score, shrink
 from .thresholds import (LABEL_UNCERTAIN, confidence_level, confidence_score, decide,
                          is_ambiguous)
 
@@ -33,6 +34,7 @@ DISCLAIMER = ("Estimación basada en patrones del texto, no un veredicto ni una 
               "hechos. La probabilidad refleja parecido con los textos de entrenamiento (noticias "
               "políticas de EE.UU., 2015-2018), no certeza sobre la verdad de los hechos.")
 _URL = re.compile(r"(?:https?://|www\.)\S+", re.I)
+_NEUTRAL = re.compile(r"\bx(?:url|user|hashtag|num|time)x\b")
 
 
 class ModelNotTrainedError(FileNotFoundError):
@@ -42,9 +44,14 @@ class ModelNotTrainedError(FileNotFoundError):
 class Predictor:
     """Carga los artefactos una vez y responde predicciones."""
 
-    def __init__(self, models_dir: Path | None = None, load_retrieval: bool = True) -> None:
+    def __init__(self, models_dir: Path | None = None, load_retrieval: bool = True,
+                 artifact: str | None = None) -> None:
         models_dir = models_dir or get_paths().models
-        path = models_dir / "final_model.joblib"
+        inf = load_config().get("inference", {})
+        wanted = artifact or inf.get("artifact", "final_model.joblib")
+        path = models_dir / wanted
+        if not path.exists() and artifact is None:
+            path = models_dir / "final_model.joblib"  # compatibilidad con la iteración 1
         if not path.exists():
             raise ModelNotTrainedError(
                 f"No se encontró {path}. Entrená el modelo con `make train` "
@@ -56,9 +63,14 @@ class Predictor:
         self.cuts: dict[str, float] = self.artifact["confidence_cuts"]
         self.vocabulary = self.artifact["vocabulary"]
         self.version: str = self.artifact["metadata"]["version"]
+        # Perfil de limpieza con el que se entrenó (iteración 1 = v1): se usa igual al predecir.
+        self.profile: str = self.artifact.get("profile", "v1")
+        self.ood_params: dict[str, Any] | None = self.artifact.get("ood")
         self.retrieval = None
-        rpath = models_dir / "retrieval.joblib"
-        if load_retrieval and rpath.exists():
+        rname = inf.get("retrieval", "retrieval_v2.joblib") if self.artifact.get("iteration") == 2 \
+            else "retrieval.joblib"
+        rpath = models_dir / rname
+        if (load_retrieval or self.ood_params) and rpath.exists():
             self.retrieval = joblib.load(rpath)
         self.ood = load_config()["ood"]
 
@@ -72,7 +84,9 @@ class Predictor:
         o = self.ood
         warns: list[str] = []
         force, lower = False, False
-        n = word_count(cleaned)
+        # Los tokens neutros de v2 (xurlx, xnumx, ...) no cuentan como palabras de contenido.
+        content = _NEUTRAL.sub(" ", cleaned)
+        n = word_count(content)
         if not raw.strip():
             return ["El texto está vacío."], True, True
         if n == 0:
@@ -87,7 +101,7 @@ class Predictor:
             warns.append(f"Texto muy largo ({n} palabras): está fuera del rango típico del "
                          "entrenamiento; la confianza se reduce.")
             lower = True
-        if (english_stopword_ratio(cleaned) < o["min_english_stopword_ratio"]
+        if n >= 8 and (english_stopword_ratio(cleaned) < o["min_english_stopword_ratio"]
                 or non_ascii_letter_ratio(cleaned) > o["max_non_ascii_letter_ratio"]):
             warns.append("El texto no parece estar en inglés. El modelo solo fue entrenado con "
                          "noticias en inglés: el resultado no es interpretable.")
@@ -120,16 +134,31 @@ class Predictor:
                                 "top_terms": {"hacia_falsa": [], "hacia_real": []}, "warnings": [],
                                 "similar_examples": [], "model_version": self.version,
                                 "disclaimer": DISCLAIMER}
+        base.update({"p_false_raw": None, "ood_score": None, "cleaning_profile": self.profile})
         if not isinstance(text, str):
             base["warnings"].append("La entrada no es texto.")
             return base
         try:
-            cleaned = clean_text(raw)
+            cleaned = clean_text(raw, profile=self.profile)
             warns, force, lower = self.input_warnings(raw, cleaned)
             base["warnings"] = warns
-            if not cleaned or word_count(cleaned) == 0:
+            if not cleaned or word_count(_NEUTRAL.sub(" ", cleaned)) == 0:
                 return base
             p = float(p_fake(self.model, [cleaned])[0])
+            p_raw, s = p, None
+            cap = False
+            if self.ood_params and self.retrieval is not None:
+                s = float(ood_score(ood_features([cleaned], self.retrieval, self.vocabulary), self.ood_params)[0])
+                p = float(shrink(np.array([p]), np.array([s]), self.ood_params["prior"])[0])
+                if s >= self.ood_params["tau"]:
+                    warns.append(f"Fuera de distribución (puntaje OOD {s:.2f} >= {self.ood_params['tau']:.2f}): "
+                                 "el texto se parece poco a las noticias de entrenamiento. Se responde "
+                                 "'incierta' y la probabilidad se contrajo hacia la proporción base.")
+                    force = True
+                elif s >= self.ood_params["tau_cap"]:
+                    warns.append(f"El texto se parece menos que lo habitual al entrenamiento (puntaje OOD "
+                                 f"{s:.2f}): la confianza se limita a 'media'.")
+                    cap = True
             amb = is_ambiguous(p, self.low, self.high)
             label = LABEL_UNCERTAIN if force else decide(p, self.threshold, self.low, self.high)
             level = confidence_level(p, self.cuts)
@@ -137,7 +166,10 @@ class Predictor:
                 level = "baja"
             elif lower and level != "baja":
                 level = "media" if level == "alta" else "baja"
+            if cap and level == "alta":
+                level = "media"
             out = {**base, "label": label, "p_false": round(p, 4), "confidence_level": level,
+                   "p_false_raw": round(p_raw, 4), "ood_score": None if s is None else round(s, 4),
                    "confidence": round(confidence_score(p), 4), "ambiguous": bool(amb or force),
                    "top_terms": term_contributions(self.model, cleaned, top_k=8)}
             if style_part(self.model):

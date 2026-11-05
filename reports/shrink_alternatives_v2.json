@@ -1,0 +1,58 @@
+{
+  "nota": "Calculado SOLO con ISOT val y desarrollo externo (WELFake-dev, LIAR-valid). No evaluado en test ni holdout.",
+  "modos": {
+    "proporcional (evaluado)": "p' = prior + (p - prior)(1 - s)",
+    "exceso (alternativa)": "s' = max(0, (s - 0.756) / (1 - 0.756)); p' = prior + (p - prior)(1 - s')"
+  },
+  "isot_val": {
+    "sin_contraccion": {
+      "ece": 0.0028,
+      "brier": 0.0081,
+      "accuracy": 0.9895
+    },
+    "proporcional": {
+      "ece": 0.1812,
+      "brier": 0.0574,
+      "accuracy": 0.989
+    },
+    "exceso": {
+      "ece": 0.0065,
+      "brier": 0.0093,
+      "accuracy": 0.9895
+    }
+  },
+  "welfake_dev": {
+    "sin_contraccion": {
+      "ece": 0.3441,
+      "brier": 0.3523,
+      "accuracy": 0.5784
+    },
+    "proporcional": {
+      "ece": 0.1021,
+      "brier": 0.2416,
+      "accuracy": 0.5876
+    },
+    "exceso": {
+      "ece": 0.2817,
+      "brier": 0.3198,
+      "accuracy": 0.572
+    }
+  },
+  "liar_valid": {
+    "sin_contraccion": {
+      "ece": 0.2716,
+      "brier": 0.3282,
+      "accuracy": 0.5682
+    },
+    "proporcional": {
+      "ece": 0.1091,
+      "brier": 0.2624,
+      "accuracy": 0.572
+    },
+    "exceso": {
+      "ece": 0.2649,
+      "brier": 0.3249,
+      "accuracy": 0.5657
+    }
+  }
+}
