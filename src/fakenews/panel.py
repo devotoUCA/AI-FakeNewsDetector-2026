@@ -33,11 +33,11 @@ from .cleaning import build_document
 from .config import get_paths, load_config, write_json
 from .corpus import isot_raw, isot_split, liar_split, welfake_split
 from .features import make_tfidf
-from .invariance import TRANSFORMS, flip_stats
+from .invariance import TRANSFORMS, TRANSFORMS_V3, flip_stats, flip_stats_ci
 from .metrics import classification_metrics
 
 LOGGER = logging.getLogger(__name__)
-COMPLEXITY = {"lr_word": 1, "lr_char": 2, "svm_word": 3, "ensemble": 4}
+COMPLEXITY = {"lr_word": 1, "lr_char": 2, "svm_word": 3, "ensemble": 4, "emb_lr": 5}
 
 
 # --- Construcción de modelos ---------------------------------------------------------------
@@ -61,6 +61,10 @@ def build_model(spec: dict[str, Any]) -> Any:
         style = M.style_forest(spec.get("style_depth", 12))
         style.named_steps["clf"].set_params(n_jobs=1)
         return M.stacking(text, style)
+    if kind == "emb_lr":
+        from .embeddings import EmbeddingLookup
+
+        return Pipeline([("emb", EmbeddingLookup()), ("clf", M.logreg_clf(spec["C"]))])
     raise ValueError(f"Modelo desconocido: {kind}")
 
 
@@ -130,8 +134,28 @@ def invariance_inputs(profile: str, n: int, seed: int) -> dict[str, list[str]]:
     return out
 
 
-def evaluate_candidate(spec: dict[str, Any]) -> dict[str, Any]:
-    """Corre todas las vistas para un candidato."""
+def invariance_inputs_v3(profile: str, n: int, seed: int) -> dict[str, list[str]]:
+    """Como `invariance_inputs`, con todas las transformaciones de la iteración 3."""
+    cache = get_paths().interim / f"invariance_v3_{profile}_{n}.joblib"
+    if cache.exists():
+        return joblib.load(cache)
+    va = isot_split("val", "v1")
+    sample = va.groupby("label", group_keys=False).sample(frac=min(1.0, n / len(va)), random_state=seed)
+    raw = isot_raw(sample["id"])
+    out = {"__ids__": sample["id"].tolist(), "__y__": sample["label"].tolist(),
+           "base": [build_document(t, b, profile=profile) for t, b in zip(raw["title"], raw["text"])]}
+    for name, fn in TRANSFORMS_V3.items():
+        out[name] = [build_document(*fn(t, b), profile=profile) for t, b in zip(raw["title"], raw["text"])]
+    joblib.dump(out, cache)
+    return out
+
+
+def evaluate_candidate(spec: dict[str, Any], rigorous: bool = False) -> dict[str, Any]:
+    """Corre todas las vistas para un candidato.
+
+    Con ``rigorous=True`` (iteración 3) la invarianza usa todas las transformaciones de formato y
+    el piso se aplica a la cota superior del IC 95 % de la tasa de cambio de cada transformación.
+    """
     cfg = load_config()
     t0 = time.time()
     prof = spec["profile"]
@@ -147,10 +171,17 @@ def evaluate_candidate(spec: dict[str, Any]) -> dict[str, Any]:
     lv = liar_split("valid", prof)
     out["liar_valid"] = view_metrics(lv["label"].to_numpy(), M.p_fake(m, lv["doc"].tolist()), ytr)
     out["liar_valid"]["nota"] = "en D1 LIAR no es externo (se entrenó con LIAR-train)" if spec.get("d1") else ""
-    inv = invariance_inputs(prof, cfg["panel"]["invariance_sample"], cfg["seed"])
-    p_base = M.p_fake(m, inv["base"])
-    out["invarianza"] = {name: flip_stats(p_base, M.p_fake(m, inv[name])) for name in TRANSFORMS}
-    out["invarianza_max_cambio"] = max(v["tasa_cambio"] for v in out["invarianza"].values())
+    if rigorous:
+        inv = invariance_inputs_v3(prof, cfg["panel"]["invariance_sample"], cfg["seed"])
+        p_base = M.p_fake(m, inv["base"])
+        out["invarianza"] = {name: flip_stats_ci(p_base, M.p_fake(m, inv[name]), 0.5, cfg["seed"])
+                             for name in TRANSFORMS_V3}
+        out["invarianza_max_cambio"] = max(v["ic95_sup"] for v in out["invarianza"].values())
+    else:
+        inv = invariance_inputs(prof, cfg["panel"]["invariance_sample"], cfg["seed"])
+        p_base = M.p_fake(m, inv["base"])
+        out["invarianza"] = {name: flip_stats(p_base, M.p_fake(m, inv[name])) for name in TRANSFORMS}
+        out["invarianza_max_cambio"] = max(v["tasa_cambio"] for v in out["invarianza"].values())
     # 2. grupo
     folds = []
     for f in group_folds(pool):
@@ -274,3 +305,64 @@ def ablation_report() -> pd.DataFrame:
                       paths.figures / "ablation_v2.png", (0.5, 0.8),
                       colors=[plots.NEUTRAL, plots.SERIES[6], plots.SERIES[3]])
     return table
+
+
+def run_panel_v3(only: list[str] | None = None, n_jobs: int = 2) -> dict[str, Any]:
+    """Panel de la iteración 3: conjunto chico de candidatos, invarianza rigurosa y regla de aceptación.
+
+    Escribe `reports/panel_v3.*` (no toca `panel_v2.*`). Regla de aceptación: el ganador con `v2_1` no
+    puede perder más de `acceptance_max_drop` de F1 macro en ninguna vista frente al modelo de la
+    iteración 2 medido en esta misma corrida, ni empeorar la invarianza.
+    """
+    import datetime as dt
+
+    from joblib import Parallel, delayed
+
+    from .config import read_json
+
+    cfg, paths = load_config(), get_paths()
+    pc = cfg["panel_v3"]
+    specs = [c for c in pc["candidates"] if not only or c["name"] in only]
+    for prof in sorted({s["profile"] for s in specs}):
+        isot_split("train", prof)
+        welfake_split("dev", prof)
+        invariance_inputs_v3(prof, cfg["panel"]["invariance_sample"], cfg["seed"])
+    results = Parallel(n_jobs=n_jobs)(delayed(evaluate_candidate)(s, True) for s in specs)
+    prev = paths.reports / "panel_v3.json"
+    if only and prev.exists():
+        new = {r["candidato"] for r in results}
+        results += [r for r in read_json(prev)["resultados"] if r["candidato"] not in new]
+    order = {s["name"]: i for i, s in enumerate(pc["candidates"])}
+    results = sorted([r for r in results if r["candidato"] in order], key=lambda r: order[r["candidato"]])
+    ref = next(r for r in results if r["candidato"] == pc["reference"])
+    views = {"in_domain": "in_domain", "grupo": "grupo", "tiempo": "tiempo", "externo_dev_welfake": "externo_dev_welfake"}
+    for r in results:
+        drops = {v: ref[k]["f1_macro"] - r[k]["f1_macro"] for v, k in views.items()}
+        r["caidas_vs_iteracion_2"] = drops
+        r["aceptado"] = bool(max(drops.values()) <= pc["acceptance_max_drop"]
+                             and r["invarianza_max_cambio"] <= max(ref["invarianza_max_cambio"], cfg["panel"]["max_invariance_flip"]))
+    pool = [r for r in results if r["candidato"] != pc["reference"] and r["spec"]["model"] != "emb_lr"]
+    sel = select_robust([r for r in pool if r["aceptado"]] or pool)
+    sel["hubo_aceptados"] = any(r["aceptado"] for r in pool)
+    sel["decision_final"] = sel["elegido"] if sel["hubo_aceptados"] else pc["reference"]
+    sel["motivo_decision"] = ("el mejor candidato cumple la regla de aceptación" if sel["hubo_aceptados"] else
+                              "ningún candidato v2_1 cumple la regla de aceptación: se conserva el clasificador de la "
+                              "iteración 2 con las correcciones A1 y B (prompt, sección C)")
+    emb = next((r for r in results if r["spec"]["model"] == "emb_lr"), None)
+    if emb is not None:
+        best = max(r["puntaje_robusto"] for r in results if r["spec"]["model"] != "emb_lr")
+        best_clean = max(r["puntaje_robusto"] for r in pool)
+        sel["embeddings"] = {"puntaje_robusto": emb["puntaje_robusto"], "mejor_sin_embeddings": best,
+                             "mejor_sin_embeddings_con_v2_1": best_clean, "mejora": emb["puntaje_robusto"] - best,
+                             "mejora_vs_v2_1": emb["puntaje_robusto"] - best_clean,
+                             "adoptar": bool(emb["puntaje_robusto"] - best >= pc["embedding_min_gain"] and emb["elegible"])}
+    rows = []
+    for r in results:
+        row = flat_row(r)
+        row["invarianza_peor_transformacion"] = max(r["invarianza"], key=lambda k: r["invarianza"][k]["ic95_sup"])
+        row["aceptado_vs_it2"] = r["aceptado"]
+        rows.append(row)
+    pd.DataFrame(rows).to_csv(paths.reports / "panel_v3.csv", index=False)
+    out = {"generado": dt.datetime.now().isoformat(timespec="seconds"), "seleccion": sel, "resultados": results}
+    write_json(out, paths.reports / "panel_v3.json")
+    return out

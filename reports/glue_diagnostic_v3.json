@@ -1,0 +1,70 @@
+{
+  "nota": "Solo desarrollo y validación. Modelo de la iteración 2 sin reentrenar; cambia solo el texto de entrada.",
+  "isot_val": {
+    "texto_v2 (con pegado)": {
+      "accuracy": 0.9895287958115183,
+      "f1_macro": 0.9894377477812819,
+      "f1_falsa": 0.9884570988841862,
+      "f1_real": 0.9904183966783775
+    },
+    "texto_v2_1 (sin pegado)": {
+      "accuracy": 0.9792321116928446,
+      "f1_macro": 0.9790133630649409,
+      "f1_falsa": 0.9768707482993197,
+      "f1_real": 0.9811559778305622
+    },
+    "oraciones_pegadas_x100c": {
+      "falsas": 0.15520232275118948,
+      "reales": 0.00032832024879128965,
+      "auc_rasgo_solo": 0.9315793924119521,
+      "frac_docs_con_pegado_falsas": 0.8648440508278783,
+      "frac_docs_con_pegado_reales": 0.009575486753909991
+    }
+  },
+  "welfake_dev": {
+    "texto_v2 (con pegado)": {
+      "accuracy": 0.5784086021505377,
+      "f1_macro": 0.5723471365984907,
+      "f1_falsa": 0.6232608194327004,
+      "f1_real": 0.5214334537642809
+    },
+    "texto_v2_1 (sin pegado)": {
+      "accuracy": 0.5693763440860216,
+      "f1_macro": 0.5609657915930552,
+      "f1_falsa": 0.6217319026749282,
+      "f1_real": 0.5001996805111821
+    },
+    "oraciones_pegadas_x100c": {
+      "falsas": 0.005811045485644081,
+      "reales": 7.343829404948199e-05,
+      "auc_rasgo_solo": 0.5278805188876631,
+      "frac_docs_con_pegado_falsas": 0.058762886597938144,
+      "frac_docs_con_pegado_reales": 0.0030996309963099633
+    }
+  },
+  "sesgo_externo": {
+    "nota": "LR de caracteres sin calibrar (como en el panel), entrenada en ISOT train; WELFake dev.",
+    "con atajo (v2)": {
+      "frac_predichas_falsas": 0.6692473118279569,
+      "prop_falsas_real": 0.4172043010752688,
+      "p_media": 0.6530052044643502,
+      "recall_real": 0.43763837638376385,
+      "recall_falsa": 0.8185567010309278,
+      "f1_macro_umbral_05": 0.5935211651927301,
+      "auc": 0.722453988663598,
+      "mejor_f1_macro_con_otro_umbral": 0.6744693398969988,
+      "umbral_oraculo": 0.9
+    },
+    "sin atajo (v2_1)": {
+      "frac_predichas_falsas": 0.7586236559139785,
+      "prop_falsas_real": 0.4172043010752688,
+      "p_media": 0.7307697919452555,
+      "recall_real": 0.3152767527675277,
+      "recall_falsa": 0.8618556701030928,
+      "f1_macro_umbral_05": 0.5287426863997883,
+      "auc": 0.7048558603111805,
+      "mejor_f1_macro_con_otro_umbral": 0.6608592657267481,
+      "umbral_oraculo": 0.9500000000000001
+    }
+  }
+}

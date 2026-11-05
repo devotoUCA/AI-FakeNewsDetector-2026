@@ -189,3 +189,22 @@ def hbar_groups(categories: list[str], values: dict[str, list[float]], title: st
         ax.set_xlim(*xlim)
     ax.legend(fontsize=8, frameon=False, loc="upper center", bbox_to_anchor=(0.5, -0.08), ncol=n)
     return _save(fig, path)
+
+
+def model_vs_trivial(labels: list[str], model: list[float], trivial: list[float], title: str, path: Path) -> Path:
+    """Accuracy del modelo frente al clasificador trivial, con etiquetas directas."""
+    fig, ax = plt.subplots(figsize=(7.4, 4.2))
+    x = np.arange(len(labels))
+    w = 0.36
+    b1 = ax.bar(x - w / 2, model, w * 0.94, color=SERIES[6], label="Modelo final")
+    b2 = ax.bar(x + w / 2, trivial, w * 0.94, color=NEUTRAL, label="Trivial (siempre \"real\")")
+    for bars in (b1, b2):
+        for b in bars:
+            ax.text(b.get_x() + b.get_width() / 2, b.get_height() + 0.012, f"{b.get_height():.3f}".replace(".", ","),
+                    ha="center", fontsize=8, color=INK2)
+    ax.set_xticks(x, labels, fontsize=9)
+    _style(ax, title, "", "Accuracy")
+    ax.set_ylim(0, 1.1)
+    ax.grid(axis="x", visible=False)
+    ax.legend(fontsize=8, frameon=False, loc="upper right", ncol=2)
+    return _save(fig, path)
