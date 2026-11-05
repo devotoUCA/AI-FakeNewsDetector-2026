@@ -1,0 +1,193 @@
+{
+  "descripcion": "Mismo modelo (LR, mismos C y n-gramas), mismos datos, misma semilla y misma división. Cambia solo la limpieza: 'minimal' conserva marcas de fuente, de formato y de plataforma; 'full' las quita.",
+  "val_minimal": {
+    "accuracy": 0.9958115183246073,
+    "precision_fake": 0.9969100038624952,
+    "recall_fake": 0.9938390450519831,
+    "f1_fake": 0.9953721558040879,
+    "precision_real": 0.9949060808659662,
+    "recall_real": 0.997446536865624,
+    "f1_real": 0.9961746891934969,
+    "brier": 0.004009475472974937,
+    "log_loss": 0.01979091973575808,
+    "ece": 0.01041447300622893
+  },
+  "val_full": {
+    "accuracy": 0.9865619546247818,
+    "precision_fake": 0.9872389791183295,
+    "recall_fake": 0.9830573738929534,
+    "f1_fake": 0.9851437391472121,
+    "precision_real": 0.9860050890585241,
+    "recall_real": 0.989466964570699,
+    "f1_real": 0.9877329934682173,
+    "brier": 0.01054831859096041,
+    "log_loss": 0.03914917339904261,
+    "ece": 0.003197331414863827
+  },
+  "top_terms_minimal": {
+    "hacia_falsa": [
+      {
+        "termino": "via",
+        "peso": 27.9068
+      },
+      {
+        "termino": "video",
+        "peso": 18.466
+      },
+      {
+        "termino": "read",
+        "peso": 14.5826
+      },
+      {
+        "termino": "image",
+        "peso": 12.8097
+      },
+      {
+        "termino": "featured",
+        "peso": 12.4411
+      },
+      {
+        "termino": "gop",
+        "peso": 12.4326
+      },
+      {
+        "termino": "us",
+        "peso": 11.286
+      },
+      {
+        "termino": "breaking",
+        "peso": 10.779
+      },
+      {
+        "termino": "this",
+        "peso": 10.6469
+      },
+      {
+        "termino": "just",
+        "peso": 10.4598
+      },
+      {
+        "termino": "watch",
+        "peso": 9.7946
+      },
+      {
+        "termino": "com",
+        "peso": 9.6933
+      },
+      {
+        "termino": "getty",
+        "peso": 9.5095
+      },
+      {
+        "termino": "mr",
+        "peso": 9.1724
+      },
+      {
+        "termino": "obama",
+        "peso": 8.8217
+      },
+      {
+        "termino": "sen",
+        "peso": 8.5357
+      },
+      {
+        "termino": "america",
+        "peso": 8.4709
+      },
+      {
+        "termino": "pic",
+        "peso": 8.1524
+      },
+      {
+        "termino": "images",
+        "peso": 7.5653
+      },
+      {
+        "termino": "rep",
+        "peso": 7.5268
+      }
+    ],
+    "hacia_real": [
+      {
+        "termino": "reuters",
+        "peso": -53.1809
+      },
+      {
+        "termino": "said",
+        "peso": -28.2993
+      },
+      {
+        "termino": "washington",
+        "peso": -13.4973
+      },
+      {
+        "termino": "republican",
+        "peso": -9.5454
+      },
+      {
+        "termino": "wednesday",
+        "peso": -9.4586
+      },
+      {
+        "termino": "nov",
+        "peso": -9.453
+      },
+      {
+        "termino": "tuesday",
+        "peso": -9.1707
+      },
+      {
+        "termino": "thursday",
+        "peso": -7.839
+      },
+      {
+        "termino": "democratic",
+        "peso": -6.7772
+      },
+      {
+        "termino": "some",
+        "peso": -6.6959
+      },
+      {
+        "termino": "statement",
+        "peso": -6.6837
+      },
+      {
+        "termino": "had",
+        "peso": -6.6567
+      },
+      {
+        "termino": "comment",
+        "peso": -6.6061
+      },
+      {
+        "termino": "presidential",
+        "peso": -6.5911
+      },
+      {
+        "termino": "friday",
+        "peso": -6.5124
+      },
+      {
+        "termino": "monday",
+        "peso": -6.3392
+      },
+      {
+        "termino": "spokesman",
+        "peso": -6.3354
+      },
+      {
+        "termino": "reporters",
+        "peso": -6.2822
+      },
+      {
+        "termino": "barack",
+        "peso": -5.7531
+      },
+      {
+        "termino": "london",
+        "peso": -5.7398
+      }
+    ]
+  }
+}

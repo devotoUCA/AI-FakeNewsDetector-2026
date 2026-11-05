@@ -1,0 +1,2934 @@
+{
+  "generado": "2026-11-04T19:31:38",
+  "seleccion": {
+    "elegido": "lrchar_v2_C10",
+    "spec": {
+      "name": "lrchar_v2_C10",
+      "profile": "v2",
+      "model": "lr_char",
+      "C": 10.0
+    },
+    "hubo_elegibles": true,
+    "empatados": [
+      "lrchar_v2_C10"
+    ],
+    "criterio": "máx. promedio F1 macro (grupo, tiempo, WELFake-dev) con F1 por clase in-domain >= 0.9 e invarianza <= 2%; empates (< 0.005) -> más simple"
+  },
+  "resultados": [
+    {
+      "candidato": "it1_svm_v1",
+      "spec": {
+        "name": "it1_svm_v1",
+        "profile": "v1",
+        "model": "svm_word",
+        "C": 3.0
+      },
+      "in_domain": {
+        "n": 5730,
+        "prop_falsas": 0.45322862129144853,
+        "accuracy": 0.9902268760907504,
+        "f1_macro": 0.9901425411649054,
+        "f1_falsa": 0.9892307692307692,
+        "f1_real": 0.9910543130990416,
+        "brier": 0.007815542902352476,
+        "ece": 0.005293361705185263,
+        "trivial_accuracy": 0.5467713787085515,
+        "trivial_f1_macro": 0.35349204558275976,
+        "trivial_brier": 0.2478124398878423
+      },
+      "externo_dev_welfake": {
+        "n": 11625,
+        "prop_falsas": 0.4172043010752688,
+        "accuracy": 0.5436559139784947,
+        "f1_macro": 0.519587763271047,
+        "f1_falsa": 0.6271174527307233,
+        "f1_real": 0.41205807381137094,
+        "brier": 0.40008027680039954,
+        "ece": 0.3992447907148122,
+        "trivial_accuracy": 0.5827956989247312,
+        "trivial_f1_macro": 0.36820652173913043,
+        "trivial_brier": 0.24444564321555715
+      },
+      "liar_valid": {
+        "n": 799,
+        "prop_falsas": 0.47434292866082606,
+        "accuracy": 0.5306633291614519,
+        "f1_macro": 0.5037719131176456,
+        "f1_falsa": 0.6192893401015228,
+        "f1_real": 0.38825448613376834,
+        "brier": 0.34659159235525605,
+        "ece": 0.2983031850924649,
+        "trivial_accuracy": 0.5256570713391739,
+        "trivial_f1_macro": 0.3445447087776866,
+        "trivial_brier": 0.2497857617815584,
+        "nota": ""
+      },
+      "invarianza": {
+        "comillas_curvas_rectas": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0
+        },
+        "apostrofo_espacio": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0
+        },
+        "mayusculas_titulo": {
+          "tasa_cambio": 0.0005,
+          "delta_p_medio": 0.00014075049945047515
+        },
+        "sin_dias_meses": {
+          "tasa_cambio": 0.0055,
+          "delta_p_medio": 0.010053594209701
+        },
+        "marcas_de_fuente": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 1.753121552280769e-05
+        }
+      },
+      "invarianza_max_cambio": 0.0055,
+      "grupo_folds": [
+        {
+          "fold": "politicsNews + News",
+          "n": 17246,
+          "prop_falsas": 0.4459004986663574,
+          "accuracy": 0.6515713788704627,
+          "f1_macro": 0.6304499563728871,
+          "f1_falsa": 0.7187982591604661,
+          "f1_real": 0.5421016535853083,
+          "brier": 0.2928484352829847,
+          "ece": 0.3380084281309935,
+          "trivial_accuracy": 0.5540995013336426,
+          "trivial_f1_macro": 0.356540556674875,
+          "trivial_brier": 0.24731984867131013
+        },
+        {
+          "fold": "worldnews + politics",
+          "n": 13571,
+          "prop_falsas": 0.39606513889912315,
+          "accuracy": 0.95343010831921,
+          "f1_macro": 0.9513979533093337,
+          "f1_falsa": 0.9414597999258985,
+          "f1_real": 0.9613361066927689,
+          "brier": 0.036593019899618495,
+          "ece": 0.015065149987703272,
+          "trivial_accuracy": 0.6039348611008769,
+          "trivial_f1_macro": 0.37653328432948957,
+          "trivial_brier": 0.24885510482745868
+        },
+        {
+          "fold": "politicsNews + subjects falsos chicos",
+          "n": 11208,
+          "prop_falsas": 0.14739471805852963,
+          "accuracy": 0.46279443254817987,
+          "f1_macro": 0.4459012057821281,
+          "f1_falsa": 0.34915144308723384,
+          "f1_real": 0.5426509684770224,
+          "brier": 0.45657940023172594,
+          "ece": 0.5170463599195594,
+          "trivial_accuracy": 0.14739471805852963,
+          "trivial_f1_macro": 0.12846034214618973,
+          "trivial_brier": 0.34386193467618986
+        },
+        {
+          "fold": "worldnews + subjects falsos chicos",
+          "n": 9848,
+          "prop_falsas": 0.16774979691307879,
+          "accuracy": 0.9566409423233144,
+          "f1_macro": 0.9278802598851397,
+          "f1_falsa": 0.8823367318820612,
+          "f1_real": 0.973423787888218,
+          "brier": 0.03347611937717759,
+          "ece": 0.05146888462264126,
+          "trivial_accuracy": 0.16774979691307879,
+          "trivial_f1_macro": 0.14365217391304347,
+          "trivial_brier": 0.30755475728998155
+        }
+      ],
+      "grupo": {
+        "prop_falsas": 0.28927753813427226,
+        "accuracy": 0.7561092155152918,
+        "f1_macro": 0.7389073438373722,
+        "f1_falsa": 0.7229365585139149,
+        "f1_real": 0.7548781291608295,
+        "brier": 0.20487424369787666,
+        "ece": 0.23039720566522434,
+        "trivial_accuracy": 0.36829471935153196,
+        "trivial_f1_macro": 0.25129658926589943,
+        "trivial_brier": 0.28689791136623505
+      },
+      "tiempo": {
+        "corte": "2017-07-01",
+        "n": 12952,
+        "prop_falsas": 0.17549413218035825,
+        "accuracy": 0.9377702285361335,
+        "f1_macro": 0.9045899813243601,
+        "f1_falsa": 0.8483251787730524,
+        "f1_real": 0.9608547838756678,
+        "brier": 0.045592226279007136,
+        "ece": 0.07485198906908026,
+        "trivial_accuracy": 0.17549413218035825,
+        "trivial_f1_macro": 0.14929392446633827,
+        "trivial_brier": 0.35823591854373266
+      },
+      "puntaje_robusto": 0.7210283628109263,
+      "piso_in_domain_ok": true,
+      "piso_invarianza_ok": true,
+      "elegible": true,
+      "segundos": 354.5
+    },
+    {
+      "candidato": "lr_v1_C10",
+      "spec": {
+        "name": "lr_v1_C10",
+        "profile": "v1",
+        "model": "lr_word",
+        "C": 10.0
+      },
+      "in_domain": {
+        "n": 5730,
+        "prop_falsas": 0.45322862129144853,
+        "accuracy": 0.9820244328097731,
+        "f1_macro": 0.9818615441963625,
+        "f1_falsa": 0.9801426643531906,
+        "f1_real": 0.9835804240395345,
+        "brier": 0.013721125040020356,
+        "ece": 0.024198182860931075,
+        "trivial_accuracy": 0.5467713787085515,
+        "trivial_f1_macro": 0.35349204558275976,
+        "trivial_brier": 0.2478124398878423
+      },
+      "externo_dev_welfake": {
+        "n": 11625,
+        "prop_falsas": 0.4172043010752688,
+        "accuracy": 0.5629247311827957,
+        "f1_macro": 0.5458828002689431,
+        "f1_falsa": 0.6338545795200692,
+        "f1_real": 0.4579110210178171,
+        "brier": 0.34662165566277064,
+        "ece": 0.33801447963370734,
+        "trivial_accuracy": 0.5827956989247312,
+        "trivial_f1_macro": 0.36820652173913043,
+        "trivial_brier": 0.24444564321555715
+      },
+      "liar_valid": {
+        "n": 799,
+        "prop_falsas": 0.47434292866082606,
+        "accuracy": 0.5494367959949937,
+        "f1_macro": 0.5353750726885055,
+        "f1_falsa": 0.6162046908315565,
+        "f1_real": 0.45454545454545453,
+        "brier": 0.28033005703026004,
+        "ece": 0.18099610550266146,
+        "trivial_accuracy": 0.5256570713391739,
+        "trivial_f1_macro": 0.3445447087776866,
+        "trivial_brier": 0.2497857617815584,
+        "nota": ""
+      },
+      "invarianza": {
+        "comillas_curvas_rectas": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0
+        },
+        "apostrofo_espacio": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0
+        },
+        "mayusculas_titulo": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.00011505336388654542
+        },
+        "sin_dias_meses": {
+          "tasa_cambio": 0.0065,
+          "delta_p_medio": 0.014814175427061855
+        },
+        "marcas_de_fuente": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 1.9720248325029387e-05
+        }
+      },
+      "invarianza_max_cambio": 0.0065,
+      "grupo_folds": [
+        {
+          "fold": "politicsNews + News",
+          "n": 17246,
+          "prop_falsas": 0.4459004986663574,
+          "accuracy": 0.6619505972399397,
+          "f1_macro": 0.6432951319508349,
+          "f1_falsa": 0.7248702218027372,
+          "f1_real": 0.5617200420989324,
+          "brier": 0.24330663881717798,
+          "ece": 0.31382838825239123,
+          "trivial_accuracy": 0.5540995013336426,
+          "trivial_f1_macro": 0.356540556674875,
+          "trivial_brier": 0.24731984867131013
+        },
+        {
+          "fold": "worldnews + politics",
+          "n": 13571,
+          "prop_falsas": 0.39606513889912315,
+          "accuracy": 0.9409770834868469,
+          "f1_macro": 0.9381732758060702,
+          "f1_falsa": 0.9250070218144368,
+          "f1_real": 0.9513395297977036,
+          "brier": 0.048718431668623864,
+          "ece": 0.044662556142576394,
+          "trivial_accuracy": 0.6039348611008769,
+          "trivial_f1_macro": 0.37653328432948957,
+          "trivial_brier": 0.24885510482745868
+        },
+        {
+          "fold": "politicsNews + subjects falsos chicos",
+          "n": 11208,
+          "prop_falsas": 0.14739471805852963,
+          "accuracy": 0.4338865096359743,
+          "f1_macro": 0.42082720227809545,
+          "f1_falsa": 0.33385826771653543,
+          "f1_real": 0.5077961368396555,
+          "brier": 0.4177641433609861,
+          "ece": 0.5106633891785601,
+          "trivial_accuracy": 0.14739471805852963,
+          "trivial_f1_macro": 0.12846034214618973,
+          "trivial_brier": 0.34386193467618986
+        },
+        {
+          "fold": "worldnews + subjects falsos chicos",
+          "n": 9848,
+          "prop_falsas": 0.16774979691307879,
+          "accuracy": 0.9502437043054427,
+          "f1_macro": 0.9180237135832623,
+          "f1_falsa": 0.8666303756124115,
+          "f1_real": 0.9694170515541131,
+          "brier": 0.042149213561942137,
+          "ece": 0.0915858059870597,
+          "trivial_accuracy": 0.16774979691307879,
+          "trivial_f1_macro": 0.14365217391304347,
+          "trivial_brier": 0.30755475728998155
+        }
+      ],
+      "grupo": {
+        "prop_falsas": 0.28927753813427226,
+        "accuracy": 0.7467644736670509,
+        "f1_macro": 0.7300798309045657,
+        "f1_falsa": 0.7125914717365303,
+        "f1_real": 0.7475681900726011,
+        "brier": 0.18798460685218252,
+        "ece": 0.24018503489014686,
+        "trivial_accuracy": 0.36829471935153196,
+        "trivial_f1_macro": 0.25129658926589943,
+        "trivial_brier": 0.28689791136623505
+      },
+      "tiempo": {
+        "corte": "2017-07-01",
+        "n": 12952,
+        "prop_falsas": 0.17549413218035825,
+        "accuracy": 0.9320568252007412,
+        "f1_macro": 0.8966638568217942,
+        "f1_falsa": 0.8361876396128072,
+        "f1_real": 0.9571400740307813,
+        "brier": 0.055068594490219384,
+        "ece": 0.12096839511953784,
+        "trivial_accuracy": 0.17549413218035825,
+        "trivial_f1_macro": 0.14929392446633827,
+        "trivial_brier": 0.35823591854373266
+      },
+      "puntaje_robusto": 0.7242088293317677,
+      "piso_in_domain_ok": true,
+      "piso_invarianza_ok": true,
+      "elegible": true,
+      "segundos": 76.2
+    },
+    {
+      "candidato": "lr_v1_C1",
+      "spec": {
+        "name": "lr_v1_C1",
+        "profile": "v1",
+        "model": "lr_word",
+        "C": 1.0
+      },
+      "in_domain": {
+        "n": 5730,
+        "prop_falsas": 0.45322862129144853,
+        "accuracy": 0.974694589877836,
+        "f1_macro": 0.9744531895631755,
+        "f1_falsa": 0.971969843417746,
+        "f1_real": 0.9769365357086051,
+        "brier": 0.025007352328025974,
+        "ece": 0.06436850021791969,
+        "trivial_accuracy": 0.5467713787085515,
+        "trivial_f1_macro": 0.35349204558275976,
+        "trivial_brier": 0.2478124398878423
+      },
+      "externo_dev_welfake": {
+        "n": 11625,
+        "prop_falsas": 0.4172043010752688,
+        "accuracy": 0.5612903225806452,
+        "f1_macro": 0.5486022051860568,
+        "f1_falsa": 0.6242817150434654,
+        "f1_real": 0.4729226953286482,
+        "brier": 0.31423064209661306,
+        "ece": 0.28473805830407367,
+        "trivial_accuracy": 0.5827956989247312,
+        "trivial_f1_macro": 0.36820652173913043,
+        "trivial_brier": 0.24444564321555715
+      },
+      "liar_valid": {
+        "n": 799,
+        "prop_falsas": 0.47434292866082606,
+        "accuracy": 0.5632040050062578,
+        "f1_macro": 0.5611997136045697,
+        "f1_falsa": 0.5908558030480656,
+        "f1_real": 0.5315436241610738,
+        "brier": 0.252324157677721,
+        "ece": 0.08249431403729136,
+        "trivial_accuracy": 0.5256570713391739,
+        "trivial_f1_macro": 0.3445447087776866,
+        "trivial_brier": 0.2497857617815584,
+        "nota": ""
+      },
+      "invarianza": {
+        "comillas_curvas_rectas": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0
+        },
+        "apostrofo_espacio": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0
+        },
+        "mayusculas_titulo": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.00012831142521463335
+        },
+        "sin_dias_meses": {
+          "tasa_cambio": 0.005,
+          "delta_p_medio": 0.018680897825513968
+        },
+        "marcas_de_fuente": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 3.2170067308470604e-05
+        }
+      },
+      "invarianza_max_cambio": 0.005,
+      "grupo_folds": [
+        {
+          "fold": "politicsNews + News",
+          "n": 17246,
+          "prop_falsas": 0.4459004986663574,
+          "accuracy": 0.6606169546561521,
+          "f1_macro": 0.6417372179216434,
+          "f1_falsa": 0.7239801933506248,
+          "f1_real": 0.559494242492662,
+          "brier": 0.20857271141054118,
+          "ece": 0.28517391443042817,
+          "trivial_accuracy": 0.5540995013336426,
+          "trivial_f1_macro": 0.356540556674875,
+          "trivial_brier": 0.24731984867131013
+        },
+        {
+          "fold": "worldnews + politics",
+          "n": 13571,
+          "prop_falsas": 0.39606513889912315,
+          "accuracy": 0.9305872817036327,
+          "f1_macro": 0.9269934334601594,
+          "f1_falsa": 0.9107954545454545,
+          "f1_real": 0.9431914123748643,
+          "brier": 0.06808704551819099,
+          "ece": 0.11246920608179099,
+          "trivial_accuracy": 0.6039348611008769,
+          "trivial_f1_macro": 0.37653328432948957,
+          "trivial_brier": 0.24885510482745868
+        },
+        {
+          "fold": "politicsNews + subjects falsos chicos",
+          "n": 11208,
+          "prop_falsas": 0.14739471805852963,
+          "accuracy": 0.4307637401855817,
+          "f1_macro": 0.4177120895009738,
+          "f1_falsa": 0.3305351521511018,
+          "f1_real": 0.5048890268508459,
+          "brier": 0.36438424161722444,
+          "ece": 0.479388425840827,
+          "trivial_accuracy": 0.14739471805852963,
+          "trivial_f1_macro": 0.12846034214618973,
+          "trivial_brier": 0.34386193467618986
+        },
+        {
+          "fold": "worldnews + subjects falsos chicos",
+          "n": 9848,
+          "prop_falsas": 0.16774979691307879,
+          "accuracy": 0.934199837530463,
+          "f1_macro": 0.8943120211251945,
+          "f1_falsa": 0.8293838862559242,
+          "f1_real": 0.9592401559944647,
+          "brier": 0.06762827872313391,
+          "ece": 0.16411506878324159,
+          "trivial_accuracy": 0.16774979691307879,
+          "trivial_f1_macro": 0.14365217391304347,
+          "trivial_brier": 0.30755475728998155
+        }
+      ],
+      "grupo": {
+        "prop_falsas": 0.28927753813427226,
+        "accuracy": 0.7390419535189574,
+        "f1_macro": 0.7201886905019927,
+        "f1_falsa": 0.6986736715757763,
+        "f1_real": 0.7417037094282093,
+        "brier": 0.17716806931727264,
+        "ece": 0.26028665378407195,
+        "trivial_accuracy": 0.36829471935153196,
+        "trivial_f1_macro": 0.25129658926589943,
+        "trivial_brier": 0.28689791136623505
+      },
+      "tiempo": {
+        "corte": "2017-07-01",
+        "n": 12952,
+        "prop_falsas": 0.17549413218035825,
+        "accuracy": 0.8959234095120445,
+        "f1_macro": 0.8507062409701852,
+        "f1_falsa": 0.7685439560439561,
+        "f1_real": 0.9328685258964143,
+        "brier": 0.0889699602684505,
+        "ece": 0.20246887417010265,
+        "trivial_accuracy": 0.17549413218035825,
+        "trivial_f1_macro": 0.14929392446633827,
+        "trivial_brier": 0.35823591854373266
+      },
+      "puntaje_robusto": 0.706499045552745,
+      "piso_in_domain_ok": true,
+      "piso_invarianza_ok": true,
+      "elegible": true,
+      "segundos": 76.2
+    },
+    {
+      "candidato": "lr_v2_C10",
+      "spec": {
+        "name": "lr_v2_C10",
+        "profile": "v2",
+        "model": "lr_word",
+        "C": 10.0
+      },
+      "in_domain": {
+        "n": 5730,
+        "prop_falsas": 0.45322862129144853,
+        "accuracy": 0.9827225130890053,
+        "f1_macro": 0.9825600758457005,
+        "f1_falsa": 0.9808769557658876,
+        "f1_real": 0.9842431959255132,
+        "brier": 0.014277407432189308,
+        "ece": 0.023645372300962357,
+        "trivial_accuracy": 0.5467713787085515,
+        "trivial_f1_macro": 0.35349204558275976,
+        "trivial_brier": 0.2478124398878423
+      },
+      "externo_dev_welfake": {
+        "n": 11625,
+        "prop_falsas": 0.4172043010752688,
+        "accuracy": 0.5432258064516129,
+        "f1_macro": 0.5244991356231417,
+        "f1_falsa": 0.6188630490956072,
+        "f1_real": 0.4301352221506761,
+        "brier": 0.36211034136324177,
+        "ece": 0.35244976389450916,
+        "trivial_accuracy": 0.5827956989247312,
+        "trivial_f1_macro": 0.36820652173913043,
+        "trivial_brier": 0.24444564321555715
+      },
+      "liar_valid": {
+        "n": 799,
+        "prop_falsas": 0.47434292866082606,
+        "accuracy": 0.5569461827284106,
+        "f1_macro": 0.5538087305493506,
+        "f1_falsa": 0.5912240184757506,
+        "f1_real": 0.5163934426229508,
+        "brier": 0.27507027374462606,
+        "ece": 0.15932295726283216,
+        "trivial_accuracy": 0.5256570713391739,
+        "trivial_f1_macro": 0.3445447087776866,
+        "trivial_brier": 0.2497857617815584,
+        "nota": ""
+      },
+      "invarianza": {
+        "comillas_curvas_rectas": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0
+        },
+        "apostrofo_espacio": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0
+        },
+        "mayusculas_titulo": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.00017288696678588168
+        },
+        "sin_dias_meses": {
+          "tasa_cambio": 0.0005,
+          "delta_p_medio": 0.00028731228411197664
+        },
+        "marcas_de_fuente": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 2.1444429003167897e-05
+        }
+      },
+      "invarianza_max_cambio": 0.0005,
+      "grupo_folds": [
+        {
+          "fold": "politicsNews + News",
+          "n": 17246,
+          "prop_falsas": 0.4459004986663574,
+          "accuracy": 0.6436275078279021,
+          "f1_macro": 0.620562704015635,
+          "f1_falsa": 0.7141129407386734,
+          "f1_real": 0.5270124672925965,
+          "brier": 0.25997921556057474,
+          "ece": 0.3281094261627559,
+          "trivial_accuracy": 0.5540995013336426,
+          "trivial_f1_macro": 0.356540556674875,
+          "trivial_brier": 0.24731984867131013
+        },
+        {
+          "fold": "worldnews + politics",
+          "n": 13571,
+          "prop_falsas": 0.39606513889912315,
+          "accuracy": 0.9291135509542406,
+          "f1_macro": 0.9260388840538152,
+          "f1_falsa": 0.910958904109589,
+          "f1_real": 0.9411188639980413,
+          "brier": 0.0570594098625195,
+          "ece": 0.057138071681013605,
+          "trivial_accuracy": 0.6039348611008769,
+          "trivial_f1_macro": 0.37653328432948957,
+          "trivial_brier": 0.24885510482745868
+        },
+        {
+          "fold": "politicsNews + subjects falsos chicos",
+          "n": 11208,
+          "prop_falsas": 0.14739471805852963,
+          "accuracy": 0.44816202712348324,
+          "f1_macro": 0.4324819147382864,
+          "f1_falsa": 0.33814874264312467,
+          "f1_real": 0.5268150868334481,
+          "brier": 0.4102768176808082,
+          "ece": 0.4993913871479238,
+          "trivial_accuracy": 0.14739471805852963,
+          "trivial_f1_macro": 0.12846034214618973,
+          "trivial_brier": 0.34386193467618986
+        },
+        {
+          "fold": "worldnews + subjects falsos chicos",
+          "n": 9848,
+          "prop_falsas": 0.16774979691307879,
+          "accuracy": 0.9130787977254264,
+          "f1_macro": 0.8656818535398416,
+          "f1_falsa": 0.7858929464732366,
+          "f1_real": 0.9454707606064466,
+          "brier": 0.068446627738548,
+          "ece": 0.13629914281907035,
+          "trivial_accuracy": 0.16774979691307879,
+          "trivial_f1_macro": 0.14365217391304347,
+          "trivial_brier": 0.30755475728998155
+        }
+      ],
+      "grupo": {
+        "prop_falsas": 0.28927753813427226,
+        "accuracy": 0.7334954709077632,
+        "f1_macro": 0.7111913390868945,
+        "f1_falsa": 0.6872783834911559,
+        "f1_real": 0.7351042946826332,
+        "brier": 0.1989405177106126,
+        "ece": 0.2552345069526909,
+        "trivial_accuracy": 0.36829471935153196,
+        "trivial_f1_macro": 0.25129658926589943,
+        "trivial_brier": 0.28689791136623505
+      },
+      "tiempo": {
+        "corte": "2017-07-01",
+        "n": 12952,
+        "prop_falsas": 0.17549413218035825,
+        "accuracy": 0.8790920321185918,
+        "f1_macro": 0.8314501766983187,
+        "f1_falsa": 0.7418397626112759,
+        "f1_real": 0.9210605907853614,
+        "brier": 0.08733150483921712,
+        "ece": 0.17374828949240048,
+        "trivial_accuracy": 0.17549413218035825,
+        "trivial_f1_macro": 0.14929392446633827,
+        "trivial_brier": 0.35823591854373266
+      },
+      "puntaje_robusto": 0.689046883802785,
+      "piso_in_domain_ok": true,
+      "piso_invarianza_ok": true,
+      "elegible": true,
+      "segundos": 73.2
+    },
+    {
+      "candidato": "lr_v2_C1",
+      "spec": {
+        "name": "lr_v2_C1",
+        "profile": "v2",
+        "model": "lr_word",
+        "C": 1.0
+      },
+      "in_domain": {
+        "n": 5730,
+        "prop_falsas": 0.45322862129144853,
+        "accuracy": 0.9738219895287958,
+        "f1_macro": 0.97356404961728,
+        "f1_falsa": 0.9709527498063517,
+        "f1_real": 0.9761753494282084,
+        "brier": 0.025732802072305525,
+        "ece": 0.06548058240197804,
+        "trivial_accuracy": 0.5467713787085515,
+        "trivial_f1_macro": 0.35349204558275976,
+        "trivial_brier": 0.2478124398878423
+      },
+      "externo_dev_welfake": {
+        "n": 11625,
+        "prop_falsas": 0.4172043010752688,
+        "accuracy": 0.5410752688172042,
+        "f1_macro": 0.5279840073707691,
+        "f1_falsa": 0.6065924341862694,
+        "f1_real": 0.4493755805552689,
+        "brier": 0.3278213485817894,
+        "ece": 0.294428205168135,
+        "trivial_accuracy": 0.5827956989247312,
+        "trivial_f1_macro": 0.36820652173913043,
+        "trivial_brier": 0.24444564321555715
+      },
+      "liar_valid": {
+        "n": 799,
+        "prop_falsas": 0.47434292866082606,
+        "accuracy": 0.5782227784730913,
+        "f1_macro": 0.5779027679149482,
+        "f1_falsa": 0.5662805662805663,
+        "f1_real": 0.5895249695493301,
+        "brier": 0.24980959916435788,
+        "ece": 0.06877641012432877,
+        "trivial_accuracy": 0.5256570713391739,
+        "trivial_f1_macro": 0.3445447087776866,
+        "trivial_brier": 0.2497857617815584,
+        "nota": ""
+      },
+      "invarianza": {
+        "comillas_curvas_rectas": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0
+        },
+        "apostrofo_espacio": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0
+        },
+        "mayusculas_titulo": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.00019302849704399706
+        },
+        "sin_dias_meses": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.000278964102268219
+        },
+        "marcas_de_fuente": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 3.157037007622421e-05
+        }
+      },
+      "invarianza_max_cambio": 0.0,
+      "grupo_folds": [
+        {
+          "fold": "politicsNews + News",
+          "n": 17246,
+          "prop_falsas": 0.4459004986663574,
+          "accuracy": 0.640786269279833,
+          "f1_macro": 0.6170101361409815,
+          "f1_falsa": 0.7124355939284223,
+          "f1_real": 0.5215846783535408,
+          "brier": 0.22380313994602308,
+          "ece": 0.29924939693786934,
+          "trivial_accuracy": 0.5540995013336426,
+          "trivial_f1_macro": 0.356540556674875,
+          "trivial_brier": 0.24731984867131013
+        },
+        {
+          "fold": "worldnews + politics",
+          "n": 13571,
+          "prop_falsas": 0.39606513889912315,
+          "accuracy": 0.9185026895586177,
+          "f1_macro": 0.9147177106851572,
+          "f1_falsa": 0.8967513069454817,
+          "f1_real": 0.9326841144248327,
+          "brier": 0.07777740946099726,
+          "ece": 0.1194076160995685,
+          "trivial_accuracy": 0.6039348611008769,
+          "trivial_f1_macro": 0.37653328432948957,
+          "trivial_brier": 0.24885510482745868
+        },
+        {
+          "fold": "politicsNews + subjects falsos chicos",
+          "n": 11208,
+          "prop_falsas": 0.14739471805852963,
+          "accuracy": 0.4180049964311206,
+          "f1_macro": 0.4063413889117447,
+          "f1_falsa": 0.3231296046487496,
+          "f1_real": 0.4895531731747398,
+          "brier": 0.37501295718516936,
+          "ece": 0.4851380810140317,
+          "trivial_accuracy": 0.14739471805852963,
+          "trivial_f1_macro": 0.12846034214618973,
+          "trivial_brier": 0.34386193467618986
+        },
+        {
+          "fold": "worldnews + subjects falsos chicos",
+          "n": 9848,
+          "prop_falsas": 0.16774979691307879,
+          "accuracy": 0.8916531275385865,
+          "f1_macro": 0.8380694457845146,
+          "f1_falsa": 0.7449199139373656,
+          "f1_real": 0.9312189776316637,
+          "brier": 0.0944305529074397,
+          "ece": 0.2010562126207465,
+          "trivial_accuracy": 0.16774979691307879,
+          "trivial_f1_macro": 0.14365217391304347,
+          "trivial_brier": 0.30755475728998155
+        }
+      ],
+      "grupo": {
+        "prop_falsas": 0.28927753813427226,
+        "accuracy": 0.7172367707020394,
+        "f1_macro": 0.6940346703805995,
+        "f1_falsa": 0.6693091048650048,
+        "f1_real": 0.7187602358961942,
+        "brier": 0.19275601487490737,
+        "ece": 0.276212826668054,
+        "trivial_accuracy": 0.36829471935153196,
+        "trivial_f1_macro": 0.25129658926589943,
+        "trivial_brier": 0.28689791136623505
+      },
+      "tiempo": {
+        "corte": "2017-07-01",
+        "n": 12952,
+        "prop_falsas": 0.17549413218035825,
+        "accuracy": 0.8477455219271155,
+        "f1_macro": 0.7963636771844316,
+        "f1_falsa": 0.6940738442444927,
+        "f1_real": 0.8986535101243704,
+        "brier": 0.11404338314617712,
+        "ece": 0.23657472483766162,
+        "trivial_accuracy": 0.17549413218035825,
+        "trivial_f1_macro": 0.14929392446633827,
+        "trivial_brier": 0.35823591854373266
+      },
+      "puntaje_robusto": 0.6727941183119334,
+      "piso_in_domain_ok": true,
+      "piso_invarianza_ok": true,
+      "elegible": true,
+      "segundos": 73.5
+    },
+    {
+      "candidato": "lr_v3_C10",
+      "spec": {
+        "name": "lr_v3_C10",
+        "profile": "v3",
+        "model": "lr_word",
+        "C": 10.0
+      },
+      "in_domain": {
+        "n": 5730,
+        "prop_falsas": 0.45322862129144853,
+        "accuracy": 0.9834205933682374,
+        "f1_macro": 0.9832624345413908,
+        "f1_falsa": 0.981635414653006,
+        "f1_real": 0.9848894544297757,
+        "brier": 0.014348522808739756,
+        "ece": 0.02438448665261873,
+        "trivial_accuracy": 0.5467713787085515,
+        "trivial_f1_macro": 0.35349204558275976,
+        "trivial_brier": 0.2478124398878423
+      },
+      "externo_dev_welfake": {
+        "n": 11625,
+        "prop_falsas": 0.4172043010752688,
+        "accuracy": 0.5292903225806451,
+        "f1_macro": 0.5118223530659877,
+        "f1_falsa": 0.6041666666666666,
+        "f1_real": 0.4194780394653087,
+        "brier": 0.37554897548382044,
+        "ece": 0.3587242827718272,
+        "trivial_accuracy": 0.5827956989247312,
+        "trivial_f1_macro": 0.36820652173913043,
+        "trivial_brier": 0.24444564321555715
+      },
+      "liar_valid": {
+        "n": 799,
+        "prop_falsas": 0.47434292866082606,
+        "accuracy": 0.5857321652065082,
+        "f1_macro": 0.5856906304976839,
+        "f1_falsa": 0.5815423514538559,
+        "f1_real": 0.5898389095415117,
+        "brier": 0.2728637316008846,
+        "ece": 0.14774847276766445,
+        "trivial_accuracy": 0.5256570713391739,
+        "trivial_f1_macro": 0.3445447087776866,
+        "trivial_brier": 0.2497857617815584,
+        "nota": ""
+      },
+      "invarianza": {
+        "comillas_curvas_rectas": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0
+        },
+        "apostrofo_espacio": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0
+        },
+        "mayusculas_titulo": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.00018897502297477331
+        },
+        "sin_dias_meses": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.00024747835099697116
+        },
+        "marcas_de_fuente": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 1.1094367040641372e-05
+        }
+      },
+      "invarianza_max_cambio": 0.0,
+      "grupo_folds": [
+        {
+          "fold": "politicsNews + News",
+          "n": 17246,
+          "prop_falsas": 0.4459004986663574,
+          "accuracy": 0.6187521744172562,
+          "f1_macro": 0.5885429701882763,
+          "f1_falsa": 0.7000319357634929,
+          "f1_real": 0.47705400461305975,
+          "brier": 0.2859509075516096,
+          "ece": 0.34824833032149655,
+          "trivial_accuracy": 0.5540995013336426,
+          "trivial_f1_macro": 0.356540556674875,
+          "trivial_brier": 0.24731984867131013
+        },
+        {
+          "fold": "worldnews + politics",
+          "n": 13571,
+          "prop_falsas": 0.39606513889912315,
+          "accuracy": 0.9140078107729718,
+          "f1_macro": 0.91057213284145,
+          "f1_falsa": 0.8930437173494639,
+          "f1_real": 0.928100548333436,
+          "brier": 0.06831822164969374,
+          "ece": 0.0656862350630189,
+          "trivial_accuracy": 0.6039348611008769,
+          "trivial_f1_macro": 0.37653328432948957,
+          "trivial_brier": 0.24885510482745868
+        },
+        {
+          "fold": "politicsNews + subjects falsos chicos",
+          "n": 11208,
+          "prop_falsas": 0.14739471805852963,
+          "accuracy": 0.4035510349750178,
+          "f1_macro": 0.39408359108573243,
+          "f1_falsa": 0.31834403997144894,
+          "f1_real": 0.46982314220001586,
+          "brier": 0.4574894795008341,
+          "ece": 0.5347971916714319,
+          "trivial_accuracy": 0.14739471805852963,
+          "trivial_f1_macro": 0.12846034214618973,
+          "trivial_brier": 0.34386193467618986
+        },
+        {
+          "fold": "worldnews + subjects falsos chicos",
+          "n": 9848,
+          "prop_falsas": 0.16774979691307879,
+          "accuracy": 0.8721567831031681,
+          "f1_macro": 0.8144196708115268,
+          "f1_falsa": 0.7109070034443169,
+          "f1_real": 0.9179323381787368,
+          "brier": 0.09411909999717734,
+          "ece": 0.17122235321007265,
+          "trivial_accuracy": 0.16774979691307879,
+          "trivial_f1_macro": 0.14365217391304347,
+          "trivial_brier": 0.30755475728998155
+        }
+      ],
+      "grupo": {
+        "prop_falsas": 0.28927753813427226,
+        "accuracy": 0.7021169508171035,
+        "f1_macro": 0.6769045912317464,
+        "f1_falsa": 0.6555816741321807,
+        "f1_real": 0.6982275083313121,
+        "brier": 0.2264694271748287,
+        "ece": 0.279988527566505,
+        "trivial_accuracy": 0.36829471935153196,
+        "trivial_f1_macro": 0.25129658926589943,
+        "trivial_brier": 0.28689791136623505
+      },
+      "tiempo": {
+        "corte": "2017-07-01",
+        "n": 12952,
+        "prop_falsas": 0.17549413218035825,
+        "accuracy": 0.8382489190858554,
+        "f1_macro": 0.7867904551656097,
+        "f1_falsa": 0.6820458339657004,
+        "f1_real": 0.891535076365519,
+        "brier": 0.11125125013882906,
+        "ece": 0.2063527372921171,
+        "trivial_accuracy": 0.17549413218035825,
+        "trivial_f1_macro": 0.14929392446633827,
+        "trivial_brier": 0.35823591854373266
+      },
+      "puntaje_robusto": 0.6585057998211146,
+      "piso_in_domain_ok": true,
+      "piso_invarianza_ok": true,
+      "elegible": true,
+      "segundos": 71.9
+    },
+    {
+      "candidato": "lr_v3_C1",
+      "spec": {
+        "name": "lr_v3_C1",
+        "profile": "v3",
+        "model": "lr_word",
+        "C": 1.0
+      },
+      "in_domain": {
+        "n": 5730,
+        "prop_falsas": 0.45322862129144853,
+        "accuracy": 0.9713787085514834,
+        "f1_macro": 0.9710824242610743,
+        "f1_falsa": 0.9681553398058252,
+        "f1_real": 0.9740095087163233,
+        "brier": 0.028288783366112007,
+        "ece": 0.07045882383278568,
+        "trivial_accuracy": 0.5467713787085515,
+        "trivial_f1_macro": 0.35349204558275976,
+        "trivial_brier": 0.2478124398878423
+      },
+      "externo_dev_welfake": {
+        "n": 11625,
+        "prop_falsas": 0.4172043010752688,
+        "accuracy": 0.5314408602150538,
+        "f1_macro": 0.5202175240441608,
+        "f1_falsa": 0.5935984481086324,
+        "f1_real": 0.4468365999796892,
+        "brier": 0.3350593511346368,
+        "ece": 0.2953744874913846,
+        "trivial_accuracy": 0.5827956989247312,
+        "trivial_f1_macro": 0.36820652173913043,
+        "trivial_brier": 0.24444564321555715
+      },
+      "liar_valid": {
+        "n": 799,
+        "prop_falsas": 0.47434292866082606,
+        "accuracy": 0.571964956195244,
+        "f1_macro": 0.5635414004600051,
+        "f1_falsa": 0.502906976744186,
+        "f1_real": 0.6241758241758242,
+        "brier": 0.2501257619011489,
+        "ece": 0.08121363809903401,
+        "trivial_accuracy": 0.5256570713391739,
+        "trivial_f1_macro": 0.3445447087776866,
+        "trivial_brier": 0.2497857617815584,
+        "nota": ""
+      },
+      "invarianza": {
+        "comillas_curvas_rectas": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0
+        },
+        "apostrofo_espacio": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0
+        },
+        "mayusculas_titulo": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0002313964543864131
+        },
+        "sin_dias_meses": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.00035066494345664976
+        },
+        "marcas_de_fuente": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 2.4363946402445436e-05
+        }
+      },
+      "invarianza_max_cambio": 0.0,
+      "grupo_folds": [
+        {
+          "fold": "politicsNews + News",
+          "n": 17246,
+          "prop_falsas": 0.4459004986663574,
+          "accuracy": 0.61718659399281,
+          "f1_macro": 0.5865300369935806,
+          "f1_falsa": 0.6991158508795916,
+          "f1_real": 0.47394422310756973,
+          "brier": 0.24292488696699796,
+          "ece": 0.3125903139052437,
+          "trivial_accuracy": 0.5540995013336426,
+          "trivial_f1_macro": 0.356540556674875,
+          "trivial_brier": 0.24731984867131013
+        },
+        {
+          "fold": "worldnews + politics",
+          "n": 13571,
+          "prop_falsas": 0.39606513889912315,
+          "accuracy": 0.8899123130204112,
+          "f1_macro": 0.8853716692040283,
+          "f1_falsa": 0.862557497700092,
+          "f1_real": 0.9081858407079646,
+          "brier": 0.09494180035470766,
+          "ece": 0.12193242069345459,
+          "trivial_accuracy": 0.6039348611008769,
+          "trivial_f1_macro": 0.37653328432948957,
+          "trivial_brier": 0.24885510482745868
+        },
+        {
+          "fold": "politicsNews + subjects falsos chicos",
+          "n": 11208,
+          "prop_falsas": 0.14739471805852963,
+          "accuracy": 0.37946109921484655,
+          "f1_macro": 0.3724220685571997,
+          "f1_falsa": 0.3059574892725277,
+          "f1_real": 0.4388866478418717,
+          "brier": 0.41214040719349365,
+          "ece": 0.5119703193220508,
+          "trivial_accuracy": 0.14739471805852963,
+          "trivial_f1_macro": 0.12846034214618973,
+          "trivial_brier": 0.34386193467618986
+        },
+        {
+          "fold": "worldnews + subjects falsos chicos",
+          "n": 9848,
+          "prop_falsas": 0.16774979691307879,
+          "accuracy": 0.8589561332250203,
+          "f1_macro": 0.7983475608059881,
+          "f1_falsa": 0.6877950101146325,
+          "f1_real": 0.9089001114973437,
+          "brier": 0.11445742174514649,
+          "ece": 0.2231511518420749,
+          "trivial_accuracy": 0.16774979691307879,
+          "trivial_f1_macro": 0.14365217391304347,
+          "trivial_brier": 0.30755475728998155
+        }
+      ],
+      "grupo": {
+        "prop_falsas": 0.28927753813427226,
+        "accuracy": 0.686379034863272,
+        "f1_macro": 0.6606678338901992,
+        "f1_falsa": 0.638856461991711,
+        "f1_real": 0.6824792057886875,
+        "brier": 0.21611612906508645,
+        "ece": 0.292411051440706,
+        "trivial_accuracy": 0.36829471935153196,
+        "trivial_f1_macro": 0.25129658926589943,
+        "trivial_brier": 0.28689791136623505
+      },
+      "tiempo": {
+        "corte": "2017-07-01",
+        "n": 12952,
+        "prop_falsas": 0.17549413218035825,
+        "accuracy": 0.7918468190240889,
+        "f1_macro": 0.7397705661607549,
+        "f1_falsa": 0.6233584800223526,
+        "f1_real": 0.8561826522991571,
+        "brier": 0.14041511285368583,
+        "ece": 0.2703198265165332,
+        "trivial_accuracy": 0.17549413218035825,
+        "trivial_f1_macro": 0.14929392446633827,
+        "trivial_brier": 0.35823591854373266
+      },
+      "puntaje_robusto": 0.6402186413650383,
+      "piso_in_domain_ok": true,
+      "piso_invarianza_ok": true,
+      "elegible": true,
+      "segundos": 72.3
+    },
+    {
+      "candidato": "svm_v2",
+      "spec": {
+        "name": "svm_v2",
+        "profile": "v2",
+        "model": "svm_word",
+        "C": 3.0
+      },
+      "in_domain": {
+        "n": 5730,
+        "prop_falsas": 0.45322862129144853,
+        "accuracy": 0.9895287958115183,
+        "f1_macro": 0.9894411668450427,
+        "f1_falsa": 0.988479262672811,
+        "f1_real": 0.9904030710172744,
+        "brier": 0.008065572520474138,
+        "ece": 0.005023244372271409,
+        "trivial_accuracy": 0.5467713787085515,
+        "trivial_f1_macro": 0.35349204558275976,
+        "trivial_brier": 0.2478124398878423
+      },
+      "externo_dev_welfake": {
+        "n": 11625,
+        "prop_falsas": 0.4172043010752688,
+        "accuracy": 0.5230967741935484,
+        "f1_macro": 0.494367678495137,
+        "f1_falsa": 0.6148930258405112,
+        "f1_real": 0.37384233114976284,
+        "brier": 0.4178078370163942,
+        "ece": 0.41675087008901684,
+        "trivial_accuracy": 0.5827956989247312,
+        "trivial_f1_macro": 0.36820652173913043,
+        "trivial_brier": 0.24444564321555715
+      },
+      "liar_valid": {
+        "n": 799,
+        "prop_falsas": 0.47434292866082606,
+        "accuracy": 0.5444305381727159,
+        "f1_macro": 0.5284698893630267,
+        "f1_falsa": 0.6152219873150105,
+        "f1_real": 0.44171779141104295,
+        "brier": 0.33932674722721207,
+        "ece": 0.28643268421069307,
+        "trivial_accuracy": 0.5256570713391739,
+        "trivial_f1_macro": 0.3445447087776866,
+        "trivial_brier": 0.2497857617815584,
+        "nota": ""
+      },
+      "invarianza": {
+        "comillas_curvas_rectas": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0
+        },
+        "apostrofo_espacio": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0
+        },
+        "mayusculas_titulo": {
+          "tasa_cambio": 0.001,
+          "delta_p_medio": 0.0003269032124361914
+        },
+        "sin_dias_meses": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0004951222083232885
+        },
+        "marcas_de_fuente": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 8.769874288043179e-07
+        }
+      },
+      "invarianza_max_cambio": 0.001,
+      "grupo_folds": [
+        {
+          "fold": "politicsNews + News",
+          "n": 17246,
+          "prop_falsas": 0.4459004986663574,
+          "accuracy": 0.6245506204337238,
+          "f1_macro": 0.5958878592297054,
+          "f1_falsa": 0.7035120655707678,
+          "f1_real": 0.488263652888643,
+          "brier": 0.31340435690564955,
+          "ece": 0.3562666587737627,
+          "trivial_accuracy": 0.5540995013336426,
+          "trivial_f1_macro": 0.356540556674875,
+          "trivial_brier": 0.24731984867131013
+        },
+        {
+          "fold": "worldnews + politics",
+          "n": 13571,
+          "prop_falsas": 0.39606513889912315,
+          "accuracy": 0.9325031316778425,
+          "f1_macro": 0.9301025664693373,
+          "f1_falsa": 0.9171490593342981,
+          "f1_real": 0.9430560736043765,
+          "brier": 0.049383260860791145,
+          "ece": 0.02998452257867491,
+          "trivial_accuracy": 0.6039348611008769,
+          "trivial_f1_macro": 0.37653328432948957,
+          "trivial_brier": 0.24885510482745868
+        },
+        {
+          "fold": "politicsNews + subjects falsos chicos",
+          "n": 11208,
+          "prop_falsas": 0.14739471805852963,
+          "accuracy": 0.4234475374732334,
+          "f1_macro": 0.4123825452225335,
+          "f1_falsa": 0.33174767321613235,
+          "f1_real": 0.49301741722893455,
+          "brier": 0.48899313614516715,
+          "ece": 0.5417970792835242,
+          "trivial_accuracy": 0.14739471805852963,
+          "trivial_f1_macro": 0.12846034214618973,
+          "trivial_brier": 0.34386193467618986
+        },
+        {
+          "fold": "worldnews + subjects falsos chicos",
+          "n": 9848,
+          "prop_falsas": 0.16774979691307879,
+          "accuracy": 0.920085296506905,
+          "f1_macro": 0.8751760475905677,
+          "f1_falsa": 0.8003044912458767,
+          "f1_real": 0.9500476039352587,
+          "brier": 0.05859447115202251,
+          "ece": 0.0878244660837443,
+          "trivial_accuracy": 0.16774979691307879,
+          "trivial_f1_macro": 0.14365217391304347,
+          "trivial_brier": 0.30755475728998155
+        }
+      ],
+      "grupo": {
+        "prop_falsas": 0.28927753813427226,
+        "accuracy": 0.7251466465229262,
+        "f1_macro": 0.703387254628036,
+        "f1_falsa": 0.6881783223417688,
+        "f1_real": 0.7185961869143032,
+        "brier": 0.22759380626590758,
+        "ece": 0.2539681816799265,
+        "trivial_accuracy": 0.36829471935153196,
+        "trivial_f1_macro": 0.25129658926589943,
+        "trivial_brier": 0.28689791136623505
+      },
+      "tiempo": {
+        "corte": "2017-07-01",
+        "n": 12952,
+        "prop_falsas": 0.17549413218035825,
+        "accuracy": 0.9041846819024089,
+        "f1_macro": 0.861178180802126,
+        "f1_falsa": 0.783910847988856,
+        "f1_real": 0.9384455136153961,
+        "brier": 0.07365294618632479,
+        "ece": 0.11880179027986609,
+        "trivial_accuracy": 0.17549413218035825,
+        "trivial_f1_macro": 0.14929392446633827,
+        "trivial_brier": 0.35823591854373266
+      },
+      "puntaje_robusto": 0.6863110379750997,
+      "piso_in_domain_ok": true,
+      "piso_invarianza_ok": true,
+      "elegible": true,
+      "segundos": 343.4
+    },
+    {
+      "candidato": "svm_v3",
+      "spec": {
+        "name": "svm_v3",
+        "profile": "v3",
+        "model": "svm_word",
+        "C": 3.0
+      },
+      "in_domain": {
+        "n": 5730,
+        "prop_falsas": 0.45322862129144853,
+        "accuracy": 0.987783595113438,
+        "f1_macro": 0.987679775148371,
+        "f1_falsa": 0.9865488086087625,
+        "f1_real": 0.9888107416879796,
+        "brier": 0.009121332810659336,
+        "ece": 0.00567673255429092,
+        "trivial_accuracy": 0.5467713787085515,
+        "trivial_f1_macro": 0.35349204558275976,
+        "trivial_brier": 0.2478124398878423
+      },
+      "externo_dev_welfake": {
+        "n": 11625,
+        "prop_falsas": 0.4172043010752688,
+        "accuracy": 0.5110537634408602,
+        "f1_macro": 0.4840180170961508,
+        "f1_falsa": 0.6021279574408512,
+        "f1_real": 0.36590807675145026,
+        "brier": 0.4262122654263333,
+        "ece": 0.4206750437480364,
+        "trivial_accuracy": 0.5827956989247312,
+        "trivial_f1_macro": 0.36820652173913043,
+        "trivial_brier": 0.24444564321555715
+      },
+      "liar_valid": {
+        "n": 799,
+        "prop_falsas": 0.47434292866082606,
+        "accuracy": 0.5556946182728411,
+        "f1_macro": 0.553340986430712,
+        "f1_falsa": 0.5857642940490082,
+        "f1_real": 0.5209176788124157,
+        "brier": 0.317488895040591,
+        "ece": 0.2583886355147554,
+        "trivial_accuracy": 0.5256570713391739,
+        "trivial_f1_macro": 0.3445447087776866,
+        "trivial_brier": 0.2497857617815584,
+        "nota": ""
+      },
+      "invarianza": {
+        "comillas_curvas_rectas": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0
+        },
+        "apostrofo_espacio": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0
+        },
+        "mayusculas_titulo": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0002781563612723981
+        },
+        "sin_dias_meses": {
+          "tasa_cambio": 0.0005,
+          "delta_p_medio": 0.0002933087864969028
+        },
+        "marcas_de_fuente": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 9.795264893446183e-06
+        }
+      },
+      "invarianza_max_cambio": 0.0005,
+      "grupo_folds": [
+        {
+          "fold": "politicsNews + News",
+          "n": 17246,
+          "prop_falsas": 0.4459004986663574,
+          "accuracy": 0.5988055201206077,
+          "f1_macro": 0.561520366782979,
+          "f1_falsa": 0.6893827160493827,
+          "f1_real": 0.4336580175165753,
+          "brier": 0.3443385013442423,
+          "ece": 0.3812206533901738,
+          "trivial_accuracy": 0.5540995013336426,
+          "trivial_f1_macro": 0.356540556674875,
+          "trivial_brier": 0.24731984867131013
+        },
+        {
+          "fold": "worldnews + politics",
+          "n": 13571,
+          "prop_falsas": 0.39606513889912315,
+          "accuracy": 0.9095866185247955,
+          "f1_macro": 0.9067720619721162,
+          "f1_falsa": 0.8905734415410684,
+          "f1_real": 0.922970682403164,
+          "brier": 0.06669906816492889,
+          "ece": 0.051014502030891626,
+          "trivial_accuracy": 0.6039348611008769,
+          "trivial_f1_macro": 0.37653328432948957,
+          "trivial_brier": 0.24885510482745868
+        },
+        {
+          "fold": "politicsNews + subjects falsos chicos",
+          "n": 11208,
+          "prop_falsas": 0.14739471805852963,
+          "accuracy": 0.4073875802997859,
+          "f1_macro": 0.39818449196071204,
+          "f1_falsa": 0.32376298106291995,
+          "f1_real": 0.47260600285850407,
+          "brier": 0.5208921423133906,
+          "ece": 0.5672421137330489,
+          "trivial_accuracy": 0.14739471805852963,
+          "trivial_f1_macro": 0.12846034214618973,
+          "trivial_brier": 0.34386193467618986
+        },
+        {
+          "fold": "worldnews + subjects falsos chicos",
+          "n": 9848,
+          "prop_falsas": 0.16774979691307879,
+          "accuracy": 0.8928716490658002,
+          "f1_macro": 0.8380709053629112,
+          "f1_falsa": 0.7438698713279922,
+          "f1_real": 0.9322719393978302,
+          "brier": 0.08098374517049133,
+          "ece": 0.11690230181360428,
+          "trivial_accuracy": 0.16774979691307879,
+          "trivial_f1_macro": 0.14365217391304347,
+          "trivial_brier": 0.30755475728998155
+        }
+      ],
+      "grupo": {
+        "prop_falsas": 0.28927753813427226,
+        "accuracy": 0.7021628420027474,
+        "f1_macro": 0.6761369565196796,
+        "f1_falsa": 0.6618972524953408,
+        "f1_real": 0.6903766605440184,
+        "brier": 0.2532283642482633,
+        "ece": 0.27909489274192967,
+        "trivial_accuracy": 0.36829471935153196,
+        "trivial_f1_macro": 0.25129658926589943,
+        "trivial_brier": 0.28689791136623505
+      },
+      "tiempo": {
+        "corte": "2017-07-01",
+        "n": 12952,
+        "prop_falsas": 0.17549413218035825,
+        "accuracy": 0.859017912291538,
+        "f1_macro": 0.8089182851410607,
+        "f1_falsa": 0.7110759493670886,
+        "f1_real": 0.9067606209150327,
+        "brier": 0.10359411467584533,
+        "ece": 0.16151196844776966,
+        "trivial_accuracy": 0.17549413218035825,
+        "trivial_f1_macro": 0.14929392446633827,
+        "trivial_brier": 0.35823591854373266
+      },
+      "puntaje_robusto": 0.6563577529189637,
+      "piso_in_domain_ok": true,
+      "piso_invarianza_ok": true,
+      "elegible": true,
+      "segundos": 339.9
+    },
+    {
+      "candidato": "lrchar_v1_C10",
+      "spec": {
+        "name": "lrchar_v1_C10",
+        "profile": "v1",
+        "model": "lr_char",
+        "C": 10.0
+      },
+      "in_domain": {
+        "n": 5730,
+        "prop_falsas": 0.45322862129144853,
+        "accuracy": 0.9910994764397906,
+        "f1_macro": 0.9910194212276199,
+        "f1_falsa": 0.9901715166698786,
+        "f1_real": 0.9918673257853612,
+        "brier": 0.007444861242996762,
+        "ece": 0.016618772084090558,
+        "trivial_accuracy": 0.5467713787085515,
+        "trivial_f1_macro": 0.35349204558275976,
+        "trivial_brier": 0.2478124398878423
+      },
+      "externo_dev_welfake": {
+        "n": 11625,
+        "prop_falsas": 0.4172043010752688,
+        "accuracy": 0.5983655913978495,
+        "f1_macro": 0.5938928439088836,
+        "f1_falsa": 0.6365122615803814,
+        "f1_real": 0.5512734262373858,
+        "brier": 0.30375753512480536,
+        "ece": 0.27342574546201237,
+        "trivial_accuracy": 0.5827956989247312,
+        "trivial_f1_macro": 0.36820652173913043,
+        "trivial_brier": 0.24444564321555715
+      },
+      "liar_valid": {
+        "n": 799,
+        "prop_falsas": 0.47434292866082606,
+        "accuracy": 0.5556946182728411,
+        "f1_macro": 0.5502388778686353,
+        "f1_falsa": 0.5997745208568207,
+        "f1_real": 0.5007032348804501,
+        "brier": 0.2967426738541396,
+        "ece": 0.19893672161191253,
+        "trivial_accuracy": 0.5256570713391739,
+        "trivial_f1_macro": 0.3445447087776866,
+        "trivial_brier": 0.2497857617815584,
+        "nota": ""
+      },
+      "invarianza": {
+        "comillas_curvas_rectas": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0
+        },
+        "apostrofo_espacio": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0
+        },
+        "mayusculas_titulo": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.00014939600659636198
+        },
+        "sin_dias_meses": {
+          "tasa_cambio": 0.003,
+          "delta_p_medio": 0.01312539697833381
+        },
+        "marcas_de_fuente": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 2.5700919082737526e-05
+        }
+      },
+      "invarianza_max_cambio": 0.003,
+      "grupo_folds": [
+        {
+          "fold": "politicsNews + News",
+          "n": 17246,
+          "prop_falsas": 0.4459004986663574,
+          "accuracy": 0.6863040705091036,
+          "f1_macro": 0.6727162045588353,
+          "f1_falsa": 0.7394026974951831,
+          "f1_real": 0.6060297116224876,
+          "brier": 0.2281634026791013,
+          "ece": 0.2958373659950483,
+          "trivial_accuracy": 0.5540995013336426,
+          "trivial_f1_macro": 0.356540556674875,
+          "trivial_brier": 0.24731984867131013
+        },
+        {
+          "fold": "worldnews + politics",
+          "n": 13571,
+          "prop_falsas": 0.39606513889912315,
+          "accuracy": 0.9427455603861175,
+          "f1_macro": 0.9404329348992764,
+          "f1_falsa": 0.9286959713682665,
+          "f1_real": 0.9521698984302862,
+          "brier": 0.04729299736695918,
+          "ece": 0.0591635089535287,
+          "trivial_accuracy": 0.6039348611008769,
+          "trivial_f1_macro": 0.37653328432948957,
+          "trivial_brier": 0.24885510482745868
+        },
+        {
+          "fold": "politicsNews + subjects falsos chicos",
+          "n": 11208,
+          "prop_falsas": 0.14739471805852963,
+          "accuracy": 0.49491434689507496,
+          "f1_macro": 0.47162653923666165,
+          "f1_falsa": 0.36070016939582156,
+          "f1_real": 0.5825529090775017,
+          "brier": 0.3920046063384985,
+          "ece": 0.4739895438099308,
+          "trivial_accuracy": 0.14739471805852963,
+          "trivial_f1_macro": 0.12846034214618973,
+          "trivial_brier": 0.34386193467618986
+        },
+        {
+          "fold": "worldnews + subjects falsos chicos",
+          "n": 9848,
+          "prop_falsas": 0.16774979691307879,
+          "accuracy": 0.9307473598700243,
+          "f1_macro": 0.8914782852384502,
+          "f1_falsa": 0.8261977573904179,
+          "f1_real": 0.9567588130864824,
+          "brier": 0.0560025866003803,
+          "ece": 0.12562117976050646,
+          "trivial_accuracy": 0.16774979691307879,
+          "trivial_f1_macro": 0.14365217391304347,
+          "trivial_brier": 0.30755475728998155
+        }
+      ],
+      "grupo": {
+        "prop_falsas": 0.28927753813427226,
+        "accuracy": 0.7636778344150801,
+        "f1_macro": 0.7440634909833059,
+        "f1_falsa": 0.7137491489124222,
+        "f1_real": 0.7743778330541895,
+        "brier": 0.1808658982462348,
+        "ece": 0.23865289962975356,
+        "trivial_accuracy": 0.36829471935153196,
+        "trivial_f1_macro": 0.25129658926589943,
+        "trivial_brier": 0.28689791136623505
+      },
+      "tiempo": {
+        "corte": "2017-07-01",
+        "n": 12952,
+        "prop_falsas": 0.17549413218035825,
+        "accuracy": 0.8939159975293391,
+        "f1_macro": 0.8488907356617004,
+        "f1_falsa": 0.7664059843590616,
+        "f1_real": 0.9313754869643392,
+        "brier": 0.07656715852660072,
+        "ece": 0.15586557298640738,
+        "trivial_accuracy": 0.17549413218035825,
+        "trivial_f1_macro": 0.14929392446633827,
+        "trivial_brier": 0.35823591854373266
+      },
+      "puntaje_robusto": 0.7289490235179633,
+      "piso_in_domain_ok": true,
+      "piso_invarianza_ok": true,
+      "elegible": true,
+      "segundos": 192.5
+    },
+    {
+      "candidato": "lrchar_v2_C10",
+      "spec": {
+        "name": "lrchar_v2_C10",
+        "profile": "v2",
+        "model": "lr_char",
+        "C": 10.0
+      },
+      "in_domain": {
+        "n": 5730,
+        "prop_falsas": 0.45322862129144853,
+        "accuracy": 0.9895287958115183,
+        "f1_macro": 0.9894335562469811,
+        "f1_falsa": 0.9884303895102198,
+        "f1_real": 0.9904367229837424,
+        "brier": 0.008810012085048106,
+        "ece": 0.015938757272680574,
+        "trivial_accuracy": 0.5467713787085515,
+        "trivial_f1_macro": 0.35349204558275976,
+        "trivial_brier": 0.2478124398878423
+      },
+      "externo_dev_welfake": {
+        "n": 11625,
+        "prop_falsas": 0.4172043010752688,
+        "accuracy": 0.5965591397849462,
+        "f1_macro": 0.5935211651927301,
+        "f1_falsa": 0.6286619160728424,
+        "f1_real": 0.5583804143126178,
+        "brier": 0.3068433924670247,
+        "ece": 0.28339274359563416,
+        "trivial_accuracy": 0.5827956989247312,
+        "trivial_f1_macro": 0.36820652173913043,
+        "trivial_brier": 0.24444564321555715
+      },
+      "liar_valid": {
+        "n": 799,
+        "prop_falsas": 0.47434292866082606,
+        "accuracy": 0.5669586983729662,
+        "f1_macro": 0.5669254580544902,
+        "f1_falsa": 0.5631313131313131,
+        "f1_real": 0.5707196029776674,
+        "brier": 0.29543704124464143,
+        "ece": 0.20099068547319854,
+        "trivial_accuracy": 0.5256570713391739,
+        "trivial_f1_macro": 0.3445447087776866,
+        "trivial_brier": 0.2497857617815584,
+        "nota": ""
+      },
+      "invarianza": {
+        "comillas_curvas_rectas": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0
+        },
+        "apostrofo_espacio": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 1.1177465930813923e-06
+        },
+        "mayusculas_titulo": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0005412688247834012
+        },
+        "sin_dias_meses": {
+          "tasa_cambio": 0.0015,
+          "delta_p_medio": 0.0026459149429138053
+        },
+        "marcas_de_fuente": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 2.7009968223865143e-05
+        }
+      },
+      "invarianza_max_cambio": 0.0015,
+      "grupo_folds": [
+        {
+          "fold": "politicsNews + News",
+          "n": 17246,
+          "prop_falsas": 0.4459004986663574,
+          "accuracy": 0.6571378870462716,
+          "f1_macro": 0.6374900729829251,
+          "f1_falsa": 0.7218851418089459,
+          "f1_real": 0.5530950041569043,
+          "brier": 0.25945592106286747,
+          "ece": 0.32210641517526184,
+          "trivial_accuracy": 0.5540995013336426,
+          "trivial_f1_macro": 0.356540556674875,
+          "trivial_brier": 0.24731984867131013
+        },
+        {
+          "fold": "worldnews + politics",
+          "n": 13571,
+          "prop_falsas": 0.39606513889912315,
+          "accuracy": 0.9479773045464593,
+          "f1_macro": 0.9454718622346305,
+          "f1_falsa": 0.9337835302945039,
+          "f1_real": 0.9571601941747573,
+          "brier": 0.042508372518040946,
+          "ece": 0.043382692564909314,
+          "trivial_accuracy": 0.6039348611008769,
+          "trivial_f1_macro": 0.37653328432948957,
+          "trivial_brier": 0.24885510482745868
+        },
+        {
+          "fold": "politicsNews + subjects falsos chicos",
+          "n": 11208,
+          "prop_falsas": 0.14739471805852963,
+          "accuracy": 0.46306209850107066,
+          "f1_macro": 0.44536596364514275,
+          "f1_falsa": 0.3462958939821855,
+          "f1_real": 0.5444360333081,
+          "brier": 0.4253098786330733,
+          "ece": 0.5025333871752609,
+          "trivial_accuracy": 0.14739471805852963,
+          "trivial_f1_macro": 0.12846034214618973,
+          "trivial_brier": 0.34386193467618986
+        },
+        {
+          "fold": "worldnews + subjects falsos chicos",
+          "n": 9848,
+          "prop_falsas": 0.16774979691307879,
+          "accuracy": 0.9510560519902518,
+          "f1_macro": 0.9194634170177649,
+          "f1_falsa": 0.8690217391304348,
+          "f1_real": 0.9699050949050949,
+          "brier": 0.04077597324764592,
+          "ece": 0.09347596869526371,
+          "trivial_accuracy": 0.16774979691307879,
+          "trivial_f1_macro": 0.14365217391304347,
+          "trivial_brier": 0.30755475728998155
+        }
+      ],
+      "grupo": {
+        "prop_falsas": 0.28927753813427226,
+        "accuracy": 0.7548083355210133,
+        "f1_macro": 0.7369478289701159,
+        "f1_falsa": 0.7177465763040175,
+        "f1_real": 0.7561490816362142,
+        "brier": 0.1920125363654069,
+        "ece": 0.24037461590267395,
+        "trivial_accuracy": 0.36829471935153196,
+        "trivial_f1_macro": 0.25129658926589943,
+        "trivial_brier": 0.28689791136623505
+      },
+      "tiempo": {
+        "corte": "2017-07-01",
+        "n": 12952,
+        "prop_falsas": 0.17549413218035825,
+        "accuracy": 0.9315163681284744,
+        "f1_macro": 0.8957702113385104,
+        "f1_falsa": 0.8347307620644681,
+        "f1_real": 0.9568096606125529,
+        "brier": 0.05353118667862164,
+        "ece": 0.11686276526997884,
+        "trivial_accuracy": 0.17549413218035825,
+        "trivial_f1_macro": 0.14929392446633827,
+        "trivial_brier": 0.35823591854373266
+      },
+      "puntaje_robusto": 0.7420797351671188,
+      "piso_in_domain_ok": true,
+      "piso_invarianza_ok": true,
+      "elegible": true,
+      "segundos": 204.1
+    },
+    {
+      "candidato": "lrchar_v3_C10",
+      "spec": {
+        "name": "lrchar_v3_C10",
+        "profile": "v3",
+        "model": "lr_char",
+        "C": 10.0
+      },
+      "in_domain": {
+        "n": 5730,
+        "prop_falsas": 0.45322862129144853,
+        "accuracy": 0.9883071553228622,
+        "f1_macro": 0.9881996174365829,
+        "f1_falsa": 0.9870731236735482,
+        "f1_real": 0.9893261111996177,
+        "brier": 0.009925899293462848,
+        "ece": 0.022125232620168293,
+        "trivial_accuracy": 0.5467713787085515,
+        "trivial_f1_macro": 0.35349204558275976,
+        "trivial_brier": 0.2478124398878423
+      },
+      "externo_dev_welfake": {
+        "n": 11625,
+        "prop_falsas": 0.4172043010752688,
+        "accuracy": 0.5810752688172043,
+        "f1_macro": 0.5795638679570139,
+        "f1_falsa": 0.6047719526050965,
+        "f1_real": 0.5543557833089312,
+        "brier": 0.3146384289895286,
+        "ece": 0.2806111678600188,
+        "trivial_accuracy": 0.5827956989247312,
+        "trivial_f1_macro": 0.36820652173913043,
+        "trivial_brier": 0.24444564321555715
+      },
+      "liar_valid": {
+        "n": 799,
+        "prop_falsas": 0.47434292866082606,
+        "accuracy": 0.571964956195244,
+        "f1_macro": 0.5670652876535229,
+        "f1_falsa": 0.5210084033613446,
+        "f1_real": 0.6131221719457014,
+        "brier": 0.28859978579050805,
+        "ece": 0.188741002521108,
+        "trivial_accuracy": 0.5256570713391739,
+        "trivial_f1_macro": 0.3445447087776866,
+        "trivial_brier": 0.2497857617815584,
+        "nota": ""
+      },
+      "invarianza": {
+        "comillas_curvas_rectas": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0
+        },
+        "apostrofo_espacio": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 1.3075425813440235e-06
+        },
+        "mayusculas_titulo": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0007127331644151127
+        },
+        "sin_dias_meses": {
+          "tasa_cambio": 0.0015,
+          "delta_p_medio": 0.001230080890505633
+        },
+        "marcas_de_fuente": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 3.2655244212946853e-05
+        }
+      },
+      "invarianza_max_cambio": 0.0015,
+      "grupo_folds": [
+        {
+          "fold": "politicsNews + News",
+          "n": 17246,
+          "prop_falsas": 0.4459004986663574,
+          "accuracy": 0.6377130928911052,
+          "f1_macro": 0.6132186106068915,
+          "f1_falsa": 0.7105531362920411,
+          "f1_real": 0.5158840849217419,
+          "brier": 0.2805295856283751,
+          "ece": 0.33863397506416704,
+          "trivial_accuracy": 0.5540995013336426,
+          "trivial_f1_macro": 0.356540556674875,
+          "trivial_brier": 0.24731984867131013
+        },
+        {
+          "fold": "worldnews + politics",
+          "n": 13571,
+          "prop_falsas": 0.39606513889912315,
+          "accuracy": 0.9234396875690811,
+          "f1_macro": 0.920337623951798,
+          "f1_falsa": 0.9046176443587625,
+          "f1_real": 0.9360576035448336,
+          "brier": 0.05987498631574896,
+          "ece": 0.05574363449463946,
+          "trivial_accuracy": 0.6039348611008769,
+          "trivial_f1_macro": 0.37653328432948957,
+          "trivial_brier": 0.24885510482745868
+        },
+        {
+          "fold": "politicsNews + subjects falsos chicos",
+          "n": 11208,
+          "prop_falsas": 0.14739471805852963,
+          "accuracy": 0.42425053533190576,
+          "f1_macro": 0.41250131115573335,
+          "f1_falsa": 0.3294191000727424,
+          "f1_real": 0.4955835222387243,
+          "brier": 0.46326149162926217,
+          "ece": 0.5325053672711005,
+          "trivial_accuracy": 0.14739471805852963,
+          "trivial_f1_macro": 0.12846034214618973,
+          "trivial_brier": 0.34386193467618986
+        },
+        {
+          "fold": "worldnews + subjects falsos chicos",
+          "n": 9848,
+          "prop_falsas": 0.16774979691307879,
+          "accuracy": 0.9295288383428107,
+          "f1_macro": 0.887883646576147,
+          "f1_falsa": 0.8195527821112845,
+          "f1_real": 0.9562145110410095,
+          "brier": 0.05601196063236442,
+          "ece": 0.11620079247116726,
+          "trivial_accuracy": 0.16774979691307879,
+          "trivial_f1_macro": 0.14365217391304347,
+          "trivial_brier": 0.30755475728998155
+        }
+      ],
+      "grupo": {
+        "prop_falsas": 0.28927753813427226,
+        "accuracy": 0.7287330385337257,
+        "f1_macro": 0.7084852980726425,
+        "f1_falsa": 0.6910356657087076,
+        "f1_real": 0.7259349304365773,
+        "brier": 0.21491950605143767,
+        "ece": 0.2607709423252686,
+        "trivial_accuracy": 0.36829471935153196,
+        "trivial_f1_macro": 0.25129658926589943,
+        "trivial_brier": 0.28689791136623505
+      },
+      "tiempo": {
+        "corte": "2017-07-01",
+        "n": 12952,
+        "prop_falsas": 0.17549413218035825,
+        "accuracy": 0.8883570105003088,
+        "f1_macro": 0.8421422926606915,
+        "f1_falsa": 0.7567294751009421,
+        "f1_real": 0.9275551102204409,
+        "brier": 0.07901899806385897,
+        "ece": 0.1597773509598687,
+        "trivial_accuracy": 0.17549413218035825,
+        "trivial_f1_macro": 0.14929392446633827,
+        "trivial_brier": 0.35823591854373266
+      },
+      "puntaje_robusto": 0.7100638195634493,
+      "piso_in_domain_ok": true,
+      "piso_invarianza_ok": true,
+      "elegible": true,
+      "segundos": 201.8
+    },
+    {
+      "candidato": "ens_v2",
+      "spec": {
+        "name": "ens_v2",
+        "profile": "v2",
+        "model": "ensemble",
+        "C": 10.0
+      },
+      "in_domain": {
+        "n": 5730,
+        "prop_falsas": 0.45322862129144853,
+        "accuracy": 0.9841186736474694,
+        "f1_macro": 0.983982150494674,
+        "f1_falsa": 0.9825033647375505,
+        "f1_real": 0.9854609362517974,
+        "brier": 0.012071019516260873,
+        "ece": 0.005443352624357462,
+        "trivial_accuracy": 0.5467713787085515,
+        "trivial_f1_macro": 0.35349204558275976,
+        "trivial_brier": 0.2478124398878423
+      },
+      "externo_dev_welfake": {
+        "n": 11625,
+        "prop_falsas": 0.4172043010752688,
+        "accuracy": 0.5477849462365592,
+        "f1_macro": 0.52827772517733,
+        "f1_falsa": 0.6242047322896561,
+        "f1_real": 0.4323507180650038,
+        "brier": 0.40576493577150047,
+        "ece": 0.4015771598295915,
+        "trivial_accuracy": 0.5827956989247312,
+        "trivial_f1_macro": 0.36820652173913043,
+        "trivial_brier": 0.24444564321555715
+      },
+      "liar_valid": {
+        "n": 799,
+        "prop_falsas": 0.47434292866082606,
+        "accuracy": 0.5569461827284106,
+        "f1_macro": 0.5534198560060628,
+        "f1_falsa": 0.593103448275862,
+        "f1_real": 0.5137362637362637,
+        "brier": 0.33304953792732206,
+        "ece": 0.2771277788539567,
+        "trivial_accuracy": 0.5256570713391739,
+        "trivial_f1_macro": 0.3445447087776866,
+        "trivial_brier": 0.2497857617815584,
+        "nota": ""
+      },
+      "invarianza": {
+        "comillas_curvas_rectas": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0
+        },
+        "apostrofo_espacio": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 9.975444367210954e-08
+        },
+        "mayusculas_titulo": {
+          "tasa_cambio": 0.005,
+          "delta_p_medio": 0.01028581879252983
+        },
+        "sin_dias_meses": {
+          "tasa_cambio": 0.0005,
+          "delta_p_medio": 0.0001475503793396221
+        },
+        "marcas_de_fuente": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 2.080124199093009e-05
+        }
+      },
+      "invarianza_max_cambio": 0.005,
+      "grupo_folds": [
+        {
+          "fold": "politicsNews + News",
+          "n": 17246,
+          "prop_falsas": 0.4459004986663574,
+          "accuracy": 0.7021918125942247,
+          "f1_macro": 0.6912821583524805,
+          "f1_falsa": 0.7493166731745412,
+          "f1_real": 0.6332476435304198,
+          "brier": 0.2397213854627378,
+          "ece": 0.2841254380543176,
+          "trivial_accuracy": 0.5540995013336426,
+          "trivial_f1_macro": 0.356540556674875,
+          "trivial_brier": 0.24731984867131013
+        },
+        {
+          "fold": "worldnews + politics",
+          "n": 13571,
+          "prop_falsas": 0.39606513889912315,
+          "accuracy": 0.9333873701274777,
+          "f1_macro": 0.9306314048791242,
+          "f1_falsa": 0.9168047119455182,
+          "f1_real": 0.9444580978127304,
+          "brier": 0.05153581691472253,
+          "ece": 0.028879240656509698,
+          "trivial_accuracy": 0.6039348611008769,
+          "trivial_f1_macro": 0.37653328432948957,
+          "trivial_brier": 0.24885510482745868
+        },
+        {
+          "fold": "politicsNews + subjects falsos chicos",
+          "n": 11208,
+          "prop_falsas": 0.14739471805852963,
+          "accuracy": 0.5162384011420414,
+          "f1_macro": 0.4886801943241189,
+          "f1_falsa": 0.36997443643969324,
+          "f1_real": 0.6073859522085445,
+          "brier": 0.40407553439924726,
+          "ece": 0.45902414441716766,
+          "trivial_accuracy": 0.14739471805852963,
+          "trivial_f1_macro": 0.12846034214618973,
+          "trivial_brier": 0.34386193467618986
+        },
+        {
+          "fold": "worldnews + subjects falsos chicos",
+          "n": 9848,
+          "prop_falsas": 0.16774979691307879,
+          "accuracy": 0.927497969130788,
+          "f1_macro": 0.885149274034025,
+          "f1_falsa": 0.8154084798345398,
+          "f1_real": 0.9548900682335102,
+          "brier": 0.054162082158987615,
+          "ece": 0.07272410463197905,
+          "trivial_accuracy": 0.16774979691307879,
+          "trivial_f1_macro": 0.14365217391304347,
+          "trivial_brier": 0.30755475728998155
+        }
+      ],
+      "grupo": {
+        "prop_falsas": 0.28927753813427226,
+        "accuracy": 0.7698288882486329,
+        "f1_macro": 0.7489357578974372,
+        "f1_falsa": 0.7128760753485731,
+        "f1_real": 0.7849954404463013,
+        "brier": 0.1873737047339238,
+        "ece": 0.21118823193999353,
+        "trivial_accuracy": 0.36829471935153196,
+        "trivial_f1_macro": 0.25129658926589943,
+        "trivial_brier": 0.28689791136623505
+      },
+      "tiempo": {
+        "corte": "2017-07-01",
+        "n": 12952,
+        "prop_falsas": 0.17549413218035825,
+        "accuracy": 0.9048023471278567,
+        "f1_macro": 0.8620043294156197,
+        "f1_falsa": 0.785154208050183,
+        "f1_real": 0.9388544507810563,
+        "brier": 0.07168248828456912,
+        "ece": 0.10852701029295263,
+        "trivial_accuracy": 0.17549413218035825,
+        "trivial_f1_macro": 0.14929392446633827,
+        "trivial_brier": 0.35823591854373266
+      },
+      "puntaje_robusto": 0.7130726041634623,
+      "piso_in_domain_ok": true,
+      "piso_invarianza_ok": true,
+      "elegible": true,
+      "segundos": 365.5
+    },
+    {
+      "candidato": "ens_v3",
+      "spec": {
+        "name": "ens_v3",
+        "profile": "v3",
+        "model": "ensemble",
+        "C": 10.0
+      },
+      "in_domain": {
+        "n": 5730,
+        "prop_falsas": 0.45322862129144853,
+        "accuracy": 0.9830715532286213,
+        "f1_macro": 0.9829204250863159,
+        "f1_falsa": 0.9813138123675592,
+        "f1_real": 0.9845270378050726,
+        "brier": 0.012201280920460508,
+        "ece": 0.006297906637207532,
+        "trivial_accuracy": 0.5467713787085515,
+        "trivial_f1_macro": 0.35349204558275976,
+        "trivial_brier": 0.2478124398878423
+      },
+      "externo_dev_welfake": {
+        "n": 11625,
+        "prop_falsas": 0.4172043010752688,
+        "accuracy": 0.528258064516129,
+        "f1_macro": 0.509161245521885,
+        "f1_falsa": 0.6059778703836758,
+        "f1_real": 0.4123446206600943,
+        "brier": 0.42544239374437093,
+        "ece": 0.41665701775861597,
+        "trivial_accuracy": 0.5827956989247312,
+        "trivial_f1_macro": 0.36820652173913043,
+        "trivial_brier": 0.24444564321555715
+      },
+      "liar_valid": {
+        "n": 799,
+        "prop_falsas": 0.47434292866082606,
+        "accuracy": 0.571964956195244,
+        "f1_macro": 0.5707216378237756,
+        "f1_falsa": 0.5938242280285035,
+        "f1_real": 0.5476190476190477,
+        "brier": 0.322333470403688,
+        "ece": 0.27609390324288036,
+        "trivial_accuracy": 0.5256570713391739,
+        "trivial_f1_macro": 0.3445447087776866,
+        "trivial_brier": 0.2497857617815584,
+        "nota": ""
+      },
+      "invarianza": {
+        "comillas_curvas_rectas": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0
+        },
+        "apostrofo_espacio": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 1.0935919835635809e-07
+        },
+        "mayusculas_titulo": {
+          "tasa_cambio": 0.001,
+          "delta_p_medio": 0.0013553893003385295
+        },
+        "sin_dias_meses": {
+          "tasa_cambio": 0.0005,
+          "delta_p_medio": 0.00016354425025997524
+        },
+        "marcas_de_fuente": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 3.8747098798629685e-06
+        }
+      },
+      "invarianza_max_cambio": 0.001,
+      "grupo_folds": [
+        {
+          "fold": "politicsNews + News",
+          "n": 17246,
+          "prop_falsas": 0.4459004986663574,
+          "accuracy": 0.6367273570683057,
+          "f1_macro": 0.611960293199135,
+          "f1_falsa": 0.7099939823172707,
+          "f1_real": 0.5139266040809993,
+          "brier": 0.3136278330339029,
+          "ece": 0.349519190066742,
+          "trivial_accuracy": 0.5540995013336426,
+          "trivial_f1_macro": 0.356540556674875,
+          "trivial_brier": 0.24731984867131013
+        },
+        {
+          "fold": "worldnews + politics",
+          "n": 13571,
+          "prop_falsas": 0.39606513889912315,
+          "accuracy": 0.9129761992483973,
+          "f1_macro": 0.909801577101234,
+          "f1_falsa": 0.8928798185941043,
+          "f1_real": 0.9267233356083638,
+          "brier": 0.06632410556602544,
+          "ece": 0.042070555330746426,
+          "trivial_accuracy": 0.6039348611008769,
+          "trivial_f1_macro": 0.37653328432948957,
+          "trivial_brier": 0.24885510482745868
+        },
+        {
+          "fold": "politicsNews + subjects falsos chicos",
+          "n": 11208,
+          "prop_falsas": 0.14739471805852963,
+          "accuracy": 0.43094218415417557,
+          "f1_macro": 0.41779899121223285,
+          "f1_falsa": 0.33032339353212936,
+          "f1_real": 0.5052745888923363,
+          "brier": 0.5025011605368606,
+          "ece": 0.5408084347864223,
+          "trivial_accuracy": 0.14739471805852963,
+          "trivial_f1_macro": 0.12846034214618973,
+          "trivial_brier": 0.34386193467618986
+        },
+        {
+          "fold": "worldnews + subjects falsos chicos",
+          "n": 9848,
+          "prop_falsas": 0.16774979691307879,
+          "accuracy": 0.8782493907392364,
+          "f1_macro": 0.8211925637380202,
+          "f1_falsa": 0.7201866977829638,
+          "f1_real": 0.9221984296930764,
+          "brier": 0.09000747668315433,
+          "ece": 0.1168198922143513,
+          "trivial_accuracy": 0.16774979691307879,
+          "trivial_f1_macro": 0.14365217391304347,
+          "trivial_brier": 0.30755475728998155
+        }
+      ],
+      "grupo": {
+        "prop_falsas": 0.28927753813427226,
+        "accuracy": 0.7147237828025288,
+        "f1_macro": 0.6901883563126555,
+        "f1_falsa": 0.663345973056617,
+        "f1_real": 0.717030739568694,
+        "brier": 0.24311514395498582,
+        "ece": 0.2623045180995655,
+        "trivial_accuracy": 0.36829471935153196,
+        "trivial_f1_macro": 0.25129658926589943,
+        "trivial_brier": 0.28689791136623505
+      },
+      "tiempo": {
+        "corte": "2017-07-01",
+        "n": 12952,
+        "prop_falsas": 0.17549413218035825,
+        "accuracy": 0.8554663372452131,
+        "f1_macro": 0.8051035274653365,
+        "f1_falsa": 0.7060301507537688,
+        "f1_real": 0.9041769041769042,
+        "brier": 0.11061262761494425,
+        "ece": 0.15902396743662947,
+        "trivial_accuracy": 0.17549413218035825,
+        "trivial_f1_macro": 0.14929392446633827,
+        "trivial_brier": 0.35823591854373266
+      },
+      "puntaje_robusto": 0.6681510430999591,
+      "piso_in_domain_ok": true,
+      "piso_invarianza_ok": true,
+      "elegible": true,
+      "segundos": 356.8
+    },
+    {
+      "candidato": "d1_lr_v2_w025",
+      "spec": {
+        "name": "d1_lr_v2_w025",
+        "profile": "v2",
+        "model": "lr_word",
+        "C": 10.0,
+        "d1": true,
+        "d1_weight": 0.25
+      },
+      "in_domain": {
+        "n": 5730,
+        "prop_falsas": 0.45322862129144853,
+        "accuracy": 0.9832460732984293,
+        "f1_macro": 0.9830750468814555,
+        "f1_falsa": 0.9813736903376019,
+        "f1_real": 0.9847764034253093,
+        "brier": 0.014376585190631794,
+        "ece": 0.028251251275346397,
+        "trivial_accuracy": 0.5467713787085515,
+        "trivial_f1_macro": 0.35349204558275976,
+        "trivial_brier": 0.2478124398878423
+      },
+      "externo_dev_welfake": {
+        "n": 11625,
+        "prop_falsas": 0.4172043010752688,
+        "accuracy": 0.546236559139785,
+        "f1_macro": 0.5326232238501143,
+        "f1_falsa": 0.6123888603130282,
+        "f1_real": 0.4528575873872005,
+        "brier": 0.35041323008617425,
+        "ece": 0.33421382171847674,
+        "trivial_accuracy": 0.5827956989247312,
+        "trivial_f1_macro": 0.36820652173913043,
+        "trivial_brier": 0.24444564321555715
+      },
+      "liar_valid": {
+        "n": 799,
+        "prop_falsas": 0.47434292866082606,
+        "accuracy": 0.6708385481852316,
+        "f1_macro": 0.6689718510210286,
+        "f1_falsa": 0.6441136671177267,
+        "f1_real": 0.6938300349243306,
+        "brier": 0.21804084289507075,
+        "ece": 0.09475820071969615,
+        "trivial_accuracy": 0.5256570713391739,
+        "trivial_f1_macro": 0.3445447087776866,
+        "trivial_brier": 0.2497857617815584,
+        "nota": "en D1 LIAR no es externo (se entrenó con LIAR-train)"
+      },
+      "invarianza": {
+        "comillas_curvas_rectas": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0
+        },
+        "apostrofo_espacio": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0
+        },
+        "mayusculas_titulo": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.00017205551300139633
+        },
+        "sin_dias_meses": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0005083813816308975
+        },
+        "marcas_de_fuente": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 1.3878424899303354e-05
+        }
+      },
+      "invarianza_max_cambio": 0.0,
+      "grupo_folds": [
+        {
+          "fold": "politicsNews + News",
+          "n": 17246,
+          "prop_falsas": 0.4459004986663574,
+          "accuracy": 0.6992925895859909,
+          "f1_macro": 0.687935707671827,
+          "f1_falsa": 0.7474678613167122,
+          "f1_real": 0.6284035540269418,
+          "brier": 0.21262189870442472,
+          "ece": 0.28387800420425074,
+          "trivial_accuracy": 0.5540995013336426,
+          "trivial_f1_macro": 0.356540556674875,
+          "trivial_brier": 0.24731984867131013
+        },
+        {
+          "fold": "worldnews + politics",
+          "n": 13571,
+          "prop_falsas": 0.39606513889912315,
+          "accuracy": 0.9395033527374549,
+          "f1_macro": 0.9364038596195319,
+          "f1_falsa": 0.9223640661938535,
+          "f1_real": 0.9504436530452104,
+          "brier": 0.049323803853661786,
+          "ece": 0.046698705379376586,
+          "trivial_accuracy": 0.6039348611008769,
+          "trivial_f1_macro": 0.37653328432948957,
+          "trivial_brier": 0.24885510482745868
+        },
+        {
+          "fold": "politicsNews + subjects falsos chicos",
+          "n": 11208,
+          "prop_falsas": 0.14739471805852963,
+          "accuracy": 0.49928622412562457,
+          "f1_macro": 0.4733336727257138,
+          "f1_falsa": 0.35642201834862386,
+          "f1_real": 0.5902453271028038,
+          "brier": 0.3678213064654787,
+          "ece": 0.45869742811886444,
+          "trivial_accuracy": 0.14739471805852963,
+          "trivial_f1_macro": 0.12846034214618973,
+          "trivial_brier": 0.34386193467618986
+        },
+        {
+          "fold": "worldnews + subjects falsos chicos",
+          "n": 9848,
+          "prop_falsas": 0.16774979691307879,
+          "accuracy": 0.9378554021121039,
+          "f1_macro": 0.8976132912509317,
+          "f1_falsa": 0.8334240609689711,
+          "f1_real": 0.9618025215328923,
+          "brier": 0.05018533045329849,
+          "ece": 0.09125733043311418,
+          "trivial_accuracy": 0.16774979691307879,
+          "trivial_f1_macro": 0.14365217391304347,
+          "trivial_brier": 0.30755475728998155
+        }
+      ],
+      "grupo": {
+        "prop_falsas": 0.28927753813427226,
+        "accuracy": 0.7689843921402936,
+        "f1_macro": 0.748821632817001,
+        "f1_falsa": 0.7149195017070401,
+        "f1_real": 0.782723763926962,
+        "brier": 0.16998808486921593,
+        "ece": 0.2201328670339015,
+        "trivial_accuracy": 0.36829471935153196,
+        "trivial_f1_macro": 0.25129658926589943,
+        "trivial_brier": 0.28689791136623505
+      },
+      "tiempo": {
+        "corte": "2017-07-01",
+        "n": 12952,
+        "prop_falsas": 0.17549413218035825,
+        "accuracy": 0.932983323038913,
+        "f1_macro": 0.8974795234189639,
+        "f1_falsa": 0.8371482176360225,
+        "f1_real": 0.9578108292019053,
+        "brier": 0.05369909089880414,
+        "ece": 0.11999962828127865,
+        "trivial_accuracy": 0.17549413218035825,
+        "trivial_f1_macro": 0.14929392446633827,
+        "trivial_brier": 0.35823591854373266
+      },
+      "puntaje_robusto": 0.7263081266953598,
+      "piso_in_domain_ok": true,
+      "piso_invarianza_ok": true,
+      "elegible": true,
+      "segundos": 77.8
+    },
+    {
+      "candidato": "d1_lr_v2_w1",
+      "spec": {
+        "name": "d1_lr_v2_w1",
+        "profile": "v2",
+        "model": "lr_word",
+        "C": 10.0,
+        "d1": true,
+        "d1_weight": 1.0
+      },
+      "in_domain": {
+        "n": 5730,
+        "prop_falsas": 0.45322862129144853,
+        "accuracy": 0.9764397905759162,
+        "f1_macro": 0.9761933420082245,
+        "f1_falsa": 0.9737711288129007,
+        "f1_real": 0.9786155552035483,
+        "brier": 0.01809437616024503,
+        "ece": 0.02101809727649311,
+        "trivial_accuracy": 0.5467713787085515,
+        "trivial_f1_macro": 0.35349204558275976,
+        "trivial_brier": 0.2478124398878423
+      },
+      "externo_dev_welfake": {
+        "n": 11625,
+        "prop_falsas": 0.4172043010752688,
+        "accuracy": 0.5430537634408602,
+        "f1_macro": 0.5297543531533233,
+        "f1_falsa": 0.6088365243004418,
+        "f1_real": 0.45067218200620474,
+        "brier": 0.36477896708871094,
+        "ece": 0.3483237334534811,
+        "trivial_accuracy": 0.5827956989247312,
+        "trivial_f1_macro": 0.36820652173913043,
+        "trivial_brier": 0.24444564321555715
+      },
+      "liar_valid": {
+        "n": 799,
+        "prop_falsas": 0.47434292866082606,
+        "accuracy": 0.6545682102628285,
+        "f1_macro": 0.6522668785952165,
+        "f1_falsa": 0.6239782016348774,
+        "f1_real": 0.6805555555555556,
+        "brier": 0.2324384768850957,
+        "ece": 0.14800486142331273,
+        "trivial_accuracy": 0.5256570713391739,
+        "trivial_f1_macro": 0.3445447087776866,
+        "trivial_brier": 0.2497857617815584,
+        "nota": "en D1 LIAR no es externo (se entrenó con LIAR-train)"
+      },
+      "invarianza": {
+        "comillas_curvas_rectas": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0
+        },
+        "apostrofo_espacio": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0
+        },
+        "mayusculas_titulo": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0001917498255643295
+        },
+        "sin_dias_meses": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0005098523870110512
+        },
+        "marcas_de_fuente": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 1.9531250472937245e-05
+        }
+      },
+      "invarianza_max_cambio": 0.0,
+      "grupo_folds": [
+        {
+          "fold": "politicsNews + News",
+          "n": 17246,
+          "prop_falsas": 0.4459004986663574,
+          "accuracy": 0.7051490200626233,
+          "f1_macro": 0.6949662014962553,
+          "f1_falsa": 0.750698632151787,
+          "f1_real": 0.6392337708407236,
+          "brier": 0.2154201571680993,
+          "ece": 0.27935108743849774,
+          "trivial_accuracy": 0.5540995013336426,
+          "trivial_f1_macro": 0.356540556674875,
+          "trivial_brier": 0.24731984867131013
+        },
+        {
+          "fold": "worldnews + politics",
+          "n": 13571,
+          "prop_falsas": 0.39606513889912315,
+          "accuracy": 0.9252081644683516,
+          "f1_macro": 0.9218728699581773,
+          "f1_falsa": 0.905730472740782,
+          "f1_real": 0.9380152671755725,
+          "brier": 0.058512169394814975,
+          "ece": 0.03997081868122171,
+          "trivial_accuracy": 0.6039348611008769,
+          "trivial_f1_macro": 0.37653328432948957,
+          "trivial_brier": 0.24885510482745868
+        },
+        {
+          "fold": "politicsNews + subjects falsos chicos",
+          "n": 11208,
+          "prop_falsas": 0.14739471805852963,
+          "accuracy": 0.5230192719486081,
+          "f1_macro": 0.49102652388785606,
+          "f1_falsa": 0.36341986187187425,
+          "f1_real": 0.6186331859038379,
+          "brier": 0.35796091160511084,
+          "ece": 0.4385509073993669,
+          "trivial_accuracy": 0.14739471805852963,
+          "trivial_f1_macro": 0.12846034214618973,
+          "trivial_brier": 0.34386193467618986
+        },
+        {
+          "fold": "worldnews + subjects falsos chicos",
+          "n": 9848,
+          "prop_falsas": 0.16774979691307879,
+          "accuracy": 0.9235377741673436,
+          "f1_macro": 0.8761153457769667,
+          "f1_falsa": 0.7994673768308922,
+          "f1_real": 0.9527633147230412,
+          "brier": 0.05833906357783208,
+          "ece": 0.09523208463970392,
+          "trivial_accuracy": 0.16774979691307879,
+          "trivial_f1_macro": 0.14365217391304347,
+          "trivial_brier": 0.30755475728998155
+        }
+      ],
+      "grupo": {
+        "prop_falsas": 0.28927753813427226,
+        "accuracy": 0.7692285576617317,
+        "f1_macro": 0.7459952352798138,
+        "f1_falsa": 0.7048290858988339,
+        "f1_real": 0.7871613846607939,
+        "brier": 0.1725580754364643,
+        "ece": 0.21327622453969758,
+        "trivial_accuracy": 0.36829471935153196,
+        "trivial_f1_macro": 0.25129658926589943,
+        "trivial_brier": 0.28689791136623505
+      },
+      "tiempo": {
+        "corte": "2017-07-01",
+        "n": 12952,
+        "prop_falsas": 0.17549413218035825,
+        "accuracy": 0.9224058060531192,
+        "f1_macro": 0.882899393232788,
+        "f1_falsa": 0.814883035549825,
+        "f1_real": 0.9509157509157509,
+        "brier": 0.05892479981451113,
+        "ece": 0.11980532060225213,
+        "trivial_accuracy": 0.17549413218035825,
+        "trivial_f1_macro": 0.14929392446633827,
+        "trivial_brier": 0.35823591854373266
+      },
+      "puntaje_robusto": 0.7195496605553083,
+      "piso_in_domain_ok": true,
+      "piso_invarianza_ok": true,
+      "elegible": true,
+      "segundos": 79.3
+    },
+    {
+      "candidato": "d1_lr_v3_w025",
+      "spec": {
+        "name": "d1_lr_v3_w025",
+        "profile": "v3",
+        "model": "lr_word",
+        "C": 10.0,
+        "d1": true,
+        "d1_weight": 0.25
+      },
+      "in_domain": {
+        "n": 5730,
+        "prop_falsas": 0.45322862129144853,
+        "accuracy": 0.981500872600349,
+        "f1_macro": 0.9813107037499458,
+        "f1_falsa": 0.9794254658385093,
+        "f1_real": 0.9831959416613824,
+        "brier": 0.01606042326392781,
+        "ece": 0.029570218750551887,
+        "trivial_accuracy": 0.5467713787085515,
+        "trivial_f1_macro": 0.35349204558275976,
+        "trivial_brier": 0.2478124398878423
+      },
+      "externo_dev_welfake": {
+        "n": 11625,
+        "prop_falsas": 0.4172043010752688,
+        "accuracy": 0.5321290322580645,
+        "f1_macro": 0.5176515206089046,
+        "f1_falsa": 0.6012170980277146,
+        "f1_real": 0.4340859431900947,
+        "brier": 0.36483581064226983,
+        "ece": 0.34675933937686093,
+        "trivial_accuracy": 0.5827956989247312,
+        "trivial_f1_macro": 0.36820652173913043,
+        "trivial_brier": 0.24444564321555715
+      },
+      "liar_valid": {
+        "n": 799,
+        "prop_falsas": 0.47434292866082606,
+        "accuracy": 0.6695869837296621,
+        "f1_macro": 0.6669571807502841,
+        "f1_falsa": 0.6373626373626373,
+        "f1_real": 0.696551724137931,
+        "brier": 0.22025310651835117,
+        "ece": 0.08505611196020443,
+        "trivial_accuracy": 0.5256570713391739,
+        "trivial_f1_macro": 0.3445447087776866,
+        "trivial_brier": 0.2497857617815584,
+        "nota": "en D1 LIAR no es externo (se entrenó con LIAR-train)"
+      },
+      "invarianza": {
+        "comillas_curvas_rectas": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0
+        },
+        "apostrofo_espacio": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0
+        },
+        "mayusculas_titulo": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0002075463962246431
+        },
+        "sin_dias_meses": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0002666586935520172
+        },
+        "marcas_de_fuente": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 1.2566562967549544e-05
+        }
+      },
+      "invarianza_max_cambio": 0.0,
+      "grupo_folds": [
+        {
+          "fold": "politicsNews + News",
+          "n": 17246,
+          "prop_falsas": 0.4459004986663574,
+          "accuracy": 0.6651397425489969,
+          "f1_macro": 0.6475474724658058,
+          "f1_falsa": 0.7262903455140054,
+          "f1_real": 0.5688045994176062,
+          "brier": 0.23846328070499104,
+          "ece": 0.3067315472577406,
+          "trivial_accuracy": 0.5540995013336426,
+          "trivial_f1_macro": 0.356540556674875,
+          "trivial_brier": 0.24731984867131013
+        },
+        {
+          "fold": "worldnews + politics",
+          "n": 13571,
+          "prop_falsas": 0.39606513889912315,
+          "accuracy": 0.9190184953209048,
+          "f1_macro": 0.9155403021815952,
+          "f1_falsa": 0.8984006656189332,
+          "f1_real": 0.9326799387442573,
+          "brier": 0.06411691058454005,
+          "ece": 0.05549035694707914,
+          "trivial_accuracy": 0.6039348611008769,
+          "trivial_f1_macro": 0.37653328432948957,
+          "trivial_brier": 0.24885510482745868
+        },
+        {
+          "fold": "politicsNews + subjects falsos chicos",
+          "n": 11208,
+          "prop_falsas": 0.14739471805852963,
+          "accuracy": 0.4544075660242684,
+          "f1_macro": 0.43592137253098234,
+          "f1_falsa": 0.3338054254276065,
+          "f1_real": 0.5380373196343582,
+          "brier": 0.3990189578586217,
+          "ece": 0.48736326091091386,
+          "trivial_accuracy": 0.14739471805852963,
+          "trivial_f1_macro": 0.12846034214618973,
+          "trivial_brier": 0.34386193467618986
+        },
+        {
+          "fold": "worldnews + subjects falsos chicos",
+          "n": 9848,
+          "prop_falsas": 0.16774979691307879,
+          "accuracy": 0.9107432981316004,
+          "f1_macro": 0.8592938852714206,
+          "f1_falsa": 0.7742101207295146,
+          "f1_real": 0.9443776498133266,
+          "brier": 0.06951640907060704,
+          "ece": 0.12408677450851412,
+          "trivial_accuracy": 0.16774979691307879,
+          "trivial_f1_macro": 0.14365217391304347,
+          "trivial_brier": 0.30755475728998155
+        }
+      ],
+      "grupo": {
+        "prop_falsas": 0.28927753813427226,
+        "accuracy": 0.7373272755064426,
+        "f1_macro": 0.714575758112451,
+        "f1_falsa": 0.6831766393225148,
+        "f1_real": 0.7459748769023871,
+        "brier": 0.19277888955468997,
+        "ece": 0.24341798490606192,
+        "trivial_accuracy": 0.36829471935153196,
+        "trivial_f1_macro": 0.25129658926589943,
+        "trivial_brier": 0.28689791136623505
+      },
+      "tiempo": {
+        "corte": "2017-07-01",
+        "n": 12952,
+        "prop_falsas": 0.17549413218035825,
+        "accuracy": 0.9053428042001236,
+        "f1_macro": 0.8617669426368337,
+        "f1_falsa": 0.7841549295774648,
+        "f1_real": 0.9393789556962026,
+        "brier": 0.070090709826323,
+        "ece": 0.14612322589505242,
+        "trivial_accuracy": 0.17549413218035825,
+        "trivial_f1_macro": 0.14929392446633827,
+        "trivial_brier": 0.35823591854373266
+      },
+      "puntaje_robusto": 0.6979980737860632,
+      "piso_in_domain_ok": true,
+      "piso_invarianza_ok": true,
+      "elegible": true,
+      "segundos": 76.1
+    },
+    {
+      "candidato": "d1_lr_v3_w1",
+      "spec": {
+        "name": "d1_lr_v3_w1",
+        "profile": "v3",
+        "model": "lr_word",
+        "C": 10.0,
+        "d1": true,
+        "d1_weight": 1.0
+      },
+      "in_domain": {
+        "n": 5730,
+        "prop_falsas": 0.45322862129144853,
+        "accuracy": 0.9738219895287958,
+        "f1_macro": 0.9735509977997631,
+        "f1_falsa": 0.970873786407767,
+        "f1_real": 0.9762282091917591,
+        "brier": 0.02081231014814093,
+        "ece": 0.022256312039212665,
+        "trivial_accuracy": 0.5467713787085515,
+        "trivial_f1_macro": 0.35349204558275976,
+        "trivial_brier": 0.2478124398878423
+      },
+      "externo_dev_welfake": {
+        "n": 11625,
+        "prop_falsas": 0.4172043010752688,
+        "accuracy": 0.5340215053763441,
+        "f1_macro": 0.5217520134126222,
+        "f1_falsa": 0.5983539704901015,
+        "f1_real": 0.4451500563351429,
+        "brier": 0.3725195472453028,
+        "ece": 0.35388783577187,
+        "trivial_accuracy": 0.5827956989247312,
+        "trivial_f1_macro": 0.36820652173913043,
+        "trivial_brier": 0.24444564321555715
+      },
+      "liar_valid": {
+        "n": 799,
+        "prop_falsas": 0.47434292866082606,
+        "accuracy": 0.6670838548185232,
+        "f1_macro": 0.6645824127264693,
+        "f1_falsa": 0.6356164383561644,
+        "f1_real": 0.6935483870967742,
+        "brier": 0.23485470103722444,
+        "ece": 0.13535128416900336,
+        "trivial_accuracy": 0.5256570713391739,
+        "trivial_f1_macro": 0.3445447087776866,
+        "trivial_brier": 0.2497857617815584,
+        "nota": "en D1 LIAR no es externo (se entrenó con LIAR-train)"
+      },
+      "invarianza": {
+        "comillas_curvas_rectas": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0
+        },
+        "apostrofo_espacio": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0
+        },
+        "mayusculas_titulo": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0002237234240019461
+        },
+        "sin_dias_meses": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 0.0003679085746407509
+        },
+        "marcas_de_fuente": {
+          "tasa_cambio": 0.0,
+          "delta_p_medio": 1.6267387949483236e-05
+        }
+      },
+      "invarianza_max_cambio": 0.0,
+      "grupo_folds": [
+        {
+          "fold": "politicsNews + News",
+          "n": 17246,
+          "prop_falsas": 0.4459004986663574,
+          "accuracy": 0.6769105879624261,
+          "f1_macro": 0.6621223739011746,
+          "f1_falsa": 0.7328090534190084,
+          "f1_real": 0.5914356943833406,
+          "brier": 0.23650991343863934,
+          "ece": 0.29757809532399715,
+          "trivial_accuracy": 0.5540995013336426,
+          "trivial_f1_macro": 0.356540556674875,
+          "trivial_brier": 0.24731984867131013
+        },
+        {
+          "fold": "worldnews + politics",
+          "n": 13571,
+          "prop_falsas": 0.39606513889912315,
+          "accuracy": 0.9057549185763761,
+          "f1_macro": 0.9017620235451698,
+          "f1_falsa": 0.8819566220581448,
+          "f1_real": 0.9215674250321948,
+          "brier": 0.07109748243525689,
+          "ece": 0.03907905019162466,
+          "trivial_accuracy": 0.6039348611008769,
+          "trivial_f1_macro": 0.37653328432948957,
+          "trivial_brier": 0.24885510482745868
+        },
+        {
+          "fold": "politicsNews + subjects falsos chicos",
+          "n": 11208,
+          "prop_falsas": 0.14739471805852963,
+          "accuracy": 0.4685938615274804,
+          "f1_macro": 0.44652595268973827,
+          "f1_falsa": 0.3360089186176143,
+          "f1_real": 0.5570429867618623,
+          "brier": 0.39993760634882103,
+          "ece": 0.4783909735655578,
+          "trivial_accuracy": 0.14739471805852963,
+          "trivial_f1_macro": 0.12846034214618973,
+          "trivial_brier": 0.34386193467618986
+        },
+        {
+          "fold": "worldnews + subjects falsos chicos",
+          "n": 9848,
+          "prop_falsas": 0.16774979691307879,
+          "accuracy": 0.8929731925264013,
+          "f1_macro": 0.8353481017095779,
+          "f1_falsa": 0.7379413227250124,
+          "f1_real": 0.9327548806941431,
+          "brier": 0.07799978539135034,
+          "ece": 0.1251649845696376,
+          "trivial_accuracy": 0.16774979691307879,
+          "trivial_f1_macro": 0.14365217391304347,
+          "trivial_brier": 0.30755475728998155
+        }
+      ],
+      "grupo": {
+        "prop_falsas": 0.28927753813427226,
+        "accuracy": 0.736058140148171,
+        "f1_macro": 0.7114396129614151,
+        "f1_falsa": 0.672178979204945,
+        "f1_real": 0.7507002467178853,
+        "brier": 0.19638619690351689,
+        "ece": 0.2350532759127043,
+        "trivial_accuracy": 0.36829471935153196,
+        "trivial_f1_macro": 0.25129658926589943,
+        "trivial_brier": 0.28689791136623505
+      },
+      "tiempo": {
+        "corte": "2017-07-01",
+        "n": 12952,
+        "prop_falsas": 0.17549413218035825,
+        "accuracy": 0.8912137121680049,
+        "f1_macro": 0.8442727015789666,
+        "f1_falsa": 0.7587741825029961,
+        "f1_real": 0.929771220654937,
+        "brier": 0.07999504272759338,
+        "ece": 0.15398912210251361,
+        "trivial_accuracy": 0.17549413218035825,
+        "trivial_f1_macro": 0.14929392446633827,
+        "trivial_brier": 0.35823591854373266
+      },
+      "puntaje_robusto": 0.6924881093176679,
+      "piso_in_domain_ok": true,
+      "piso_invarianza_ok": true,
+      "elegible": true,
+      "segundos": 70.4
+    }
+  ],
+  "vistas": {
+    "grupo": [
+      "politicsNews + News",
+      "worldnews + politics",
+      "politicsNews + subjects falsos chicos",
+      "worldnews + subjects falsos chicos"
+    ],
+    "tiempo_corte": "2017-07-01"
+  }
+}

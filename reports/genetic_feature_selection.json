@@ -1,0 +1,109 @@
+{
+  "profundidad_arbol": 12,
+  "historia": [
+    {
+      "generacion": 1,
+      "mejor_fitness": 0.8709457364341086,
+      "fitness_medio": 0.8279906198834265,
+      "rasgos_mejor": 6
+    },
+    {
+      "generacion": 2,
+      "mejor_fitness": 0.8758337843061461,
+      "fitness_medio": 0.8431861088785467,
+      "rasgos_mejor": 7
+    },
+    {
+      "generacion": 3,
+      "mejor_fitness": 0.8786905132192846,
+      "fitness_medio": 0.863010428205037,
+      "rasgos_mejor": 7
+    },
+    {
+      "generacion": 4,
+      "mejor_fitness": 0.8786905132192846,
+      "fitness_medio": 0.8695310057027352,
+      "rasgos_mejor": 7
+    },
+    {
+      "generacion": 5,
+      "mejor_fitness": 0.8801240310077519,
+      "fitness_medio": 0.8648874156979961,
+      "rasgos_mejor": 8
+    },
+    {
+      "generacion": 6,
+      "mejor_fitness": 0.8801240310077519,
+      "fitness_medio": 0.8694063169138644,
+      "rasgos_mejor": 8
+    },
+    {
+      "generacion": 7,
+      "mejor_fitness": 0.8801240310077519,
+      "fitness_medio": 0.8717712911798502,
+      "rasgos_mejor": 8
+    },
+    {
+      "generacion": 8,
+      "mejor_fitness": 0.8801240310077519,
+      "fitness_medio": 0.8662409889862468,
+      "rasgos_mejor": 8
+    },
+    {
+      "generacion": 9,
+      "mejor_fitness": 0.8801240310077519,
+      "fitness_medio": 0.8671381265173072,
+      "rasgos_mejor": 8
+    },
+    {
+      "generacion": 10,
+      "mejor_fitness": 0.8801240310077519,
+      "fitness_medio": 0.868602549393402,
+      "rasgos_mejor": 8
+    },
+    {
+      "generacion": 11,
+      "mejor_fitness": 0.8801240310077519,
+      "fitness_medio": 0.8665159362268945,
+      "rasgos_mejor": 8
+    },
+    {
+      "generacion": 12,
+      "mejor_fitness": 0.8801240310077519,
+      "fitness_medio": 0.872326819088132,
+      "rasgos_mejor": 8
+    },
+    {
+      "generacion": 13,
+      "mejor_fitness": 0.8801240310077519,
+      "fitness_medio": 0.8669021757433002,
+      "rasgos_mejor": 8
+    },
+    {
+      "generacion": 14,
+      "mejor_fitness": 0.8801240310077519,
+      "fitness_medio": 0.867328224006006,
+      "rasgos_mejor": 8
+    },
+    {
+      "generacion": 15,
+      "mejor_fitness": 0.8801240310077519,
+      "fitness_medio": 0.8707936756706683,
+      "rasgos_mejor": 8
+    }
+  ],
+  "mejor_subconjunto": [
+    "avg_word_len",
+    "upper_char_ratio",
+    "allcaps_word_ratio",
+    "question_per_100w",
+    "sensational_ratio",
+    "attribution_ratio",
+    "first_person_ratio",
+    "second_person_ratio"
+  ],
+  "f1_val_mejor_subconjunto": 0.896124031007752,
+  "f1_val_todos_los_rasgos": 0.8941676322904596,
+  "evaluaciones_distintas": 212,
+  "nota": "Exploratorio: el fitness usa validación, así que el F1 del subconjunto es optimista. No se usa para el modelo productivo ni se evalúa en test."
+}

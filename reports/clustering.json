@@ -1,0 +1,398 @@
+{
+  "k_elegido": 10,
+  "criterio": "mayor silueta (muestra); el codo se reporta como apoyo",
+  "grilla": [
+    {
+      "k": 5,
+      "inercia": 16187.552734375,
+      "silueta_muestra": 0.05049633979797363
+    },
+    {
+      "k": 6,
+      "inercia": 15916.548828125,
+      "silueta_muestra": 0.05631300061941147
+    },
+    {
+      "k": 7,
+      "inercia": 15676.1474609375,
+      "silueta_muestra": 0.05962248519062996
+    },
+    {
+      "k": 8,
+      "inercia": 15462.443359375,
+      "silueta_muestra": 0.05779481679201126
+    },
+    {
+      "k": 9,
+      "inercia": 15228.109375,
+      "silueta_muestra": 0.059721533209085464
+    },
+    {
+      "k": 10,
+      "inercia": 15059.16015625,
+      "silueta_muestra": 0.06035467982292175
+    }
+  ],
+  "grupos": [
+    {
+      "grupo": 1,
+      "n": 6852,
+      "prop_falsas": 0.973292469352014,
+      "terminos_top": [
+        "trump",
+        "you",
+        "that",
+        "is",
+        "he",
+        "it",
+        "his",
+        "this",
+        "for",
+        "they",
+        "we",
+        "about"
+      ]
+    },
+    {
+      "grupo": 2,
+      "n": 2722,
+      "prop_falsas": 0.5543717854518736,
+      "terminos_top": [
+        "clinton",
+        "hillary",
+        "trump",
+        "her",
+        "campaign",
+        "presidential",
+        "for",
+        "that",
+        "republican",
+        "she",
+        "is",
+        "democratic"
+      ]
+    },
+    {
+      "grupo": 9,
+      "n": 2237,
+      "prop_falsas": 0.5163164953062137,
+      "terminos_top": [
+        "police",
+        "was",
+        "were",
+        "said",
+        "at",
+        "for",
+        "that",
+        "had",
+        "he",
+        "with",
+        "by",
+        "who"
+      ]
+    },
+    {
+      "grupo": 6,
+      "n": 1747,
+      "prop_falsas": 0.37779049799656556,
+      "terminos_top": [
+        "russia",
+        "russian",
+        "trump",
+        "intelligence",
+        "that",
+        "putin",
+        "fbi",
+        "investigation",
+        "election",
+        "said",
+        "he",
+        "comey"
+      ]
+    },
+    {
+      "grupo": 3,
+      "n": 3677,
+      "prop_falsas": 0.3309763394071254,
+      "terminos_top": [
+        "for",
+        "that",
+        "said",
+        "is",
+        "by",
+        "from",
+        "court",
+        "it",
+        "as",
+        "has",
+        "have",
+        "not"
+      ]
+    },
+    {
+      "grupo": 0,
+      "n": 2822,
+      "prop_falsas": 0.15379163713678243,
+      "terminos_top": [
+        "trump",
+        "president",
+        "said",
+        "that",
+        "for",
+        "he",
+        "with",
+        "united",
+        "house",
+        "white",
+        "will",
+        "china"
+      ]
+    },
+    {
+      "grupo": 5,
+      "n": 1622,
+      "prop_falsas": 0.1381011097410604,
+      "terminos_top": [
+        "bill",
+        "senate",
+        "tax",
+        "house",
+        "republican",
+        "republicans",
+        "legislation",
+        "obamacare",
+        "healthcare",
+        "said",
+        "that",
+        "would"
+      ]
+    },
+    {
+      "grupo": 4,
+      "n": 791,
+      "prop_falsas": 0.08217446270543616,
+      "terminos_top": [
+        "korea",
+        "north",
+        "korean",
+        "nuclear",
+        "missile",
+        "south",
+        "pyongyang",
+        "china",
+        "sanctions",
+        "said",
+        "test",
+        "united"
+      ]
+    },
+    {
+      "grupo": 7,
+      "n": 2358,
+      "prop_falsas": 0.062340966921119595,
+      "terminos_top": [
+        "said",
+        "military",
+        "syria",
+        "forces",
+        "al",
+        "islamic",
+        "state",
+        "syrian",
+        "government",
+        "saudi",
+        "that",
+        "turkey"
+      ]
+    },
+    {
+      "grupo": 8,
+      "n": 1911,
+      "prop_falsas": 0.020931449502878074,
+      "terminos_top": [
+        "eu",
+        "minister",
+        "european",
+        "party",
+        "said",
+        "brexit",
+        "government",
+        "parliament",
+        "britain",
+        "prime",
+        "for",
+        "that"
+      ]
+    }
+  ],
+  "anomalias": {
+    "percentil": 99.5,
+    "corte_distancia": 1.015913963317871,
+    "n": 134,
+    "prop_falsas": 0.7761194029850746,
+    "ejemplos": [
+      {
+        "id": "fake_11954",
+        "etiqueta": 1,
+        "distancia": 1.0934,
+        "titulo": "BRAVO! WATCH TED CRUZ SLAM The Lies Of Leftists Attacking Senator Jeff Sessions"
+      },
+      {
+        "id": "fake_15011",
+        "etiqueta": 1,
+        "distancia": 1.0863,
+        "titulo": "Wow! Ted Cruz Blasts CNBC Anchor Over Ridiculous Debate Questions"
+      },
+      {
+        "id": "fake_22661",
+        "etiqueta": 1,
+        "distancia": 1.0847,
+        "titulo": "Join us for uncensored, uninterruptible talk radio, custom-made for barfly philosophers, misguided moralists, masochists, street corner evan"
+      },
+      {
+        "id": "fake_14953",
+        "etiqueta": 1,
+        "distancia": 1.0828,
+        "titulo": "BOOM! WATCH TED CRUZ School Pro-Gun Control Liberal On The 2nd Amendment"
+      },
+      {
+        "id": "fake_21947",
+        "etiqueta": 1,
+        "distancia": 1.0804,
+        "titulo": "Join us for uncensored, uninterruptible talk radio, custom-made for bar fly philosophers, misguided moralists, masochists, street corner eva"
+      },
+      {
+        "id": "fake_21951",
+        "etiqueta": 1,
+        "distancia": 1.0804,
+        "titulo": "Join us for uncensored, uninterruptible talk radio, custom-made for bar fly philosophers, misguided moralists, masochists, street corner eva"
+      },
+      {
+        "id": "fake_21938",
+        "etiqueta": 1,
+        "distancia": 1.0804,
+        "titulo": "Join us for uncensored, uninterruptible talk radio, custom-made for bar fly philosophers, misguided moralists, masochists, street corner eva"
+      },
+      {
+        "id": "fake_21933",
+        "etiqueta": 1,
+        "distancia": 1.0804,
+        "titulo": "Join us for uncensored, uninterruptible talk radio, custom-made for bar fly philosophers, misguided moralists, masochists, street corner eva"
+      },
+      {
+        "id": "fake_22196",
+        "etiqueta": 1,
+        "distancia": 1.0804,
+        "titulo": "Join us for uncensored, uninterruptible talk radio, custom-made for bar fly philosophers, misguided moralists, masochists, street corner eva"
+      },
+      {
+        "id": "fake_22206",
+        "etiqueta": 1,
+        "distancia": 1.0804,
+        "titulo": "Join us for uncensored, uninterruptible talk radio, custom-made for bar fly philosophers, misguided moralists, masochists, street corner eva"
+      },
+      {
+        "id": "fake_22016",
+        "etiqueta": 1,
+        "distancia": 1.0804,
+        "titulo": "Join us for uncensored, uninterruptible talk radio, custom-made for bar fly philosophers, misguided moralists, masochists, street corner eva"
+      },
+      {
+        "id": "fake_22246",
+        "etiqueta": 1,
+        "distancia": 1.0801,
+        "titulo": "Join us for uncensored, uninterruptible talk radio, custom-made for barfly philosophers, misguided moralists, masochists, street corner evan"
+      },
+      {
+        "id": "fake_22222",
+        "etiqueta": 1,
+        "distancia": 1.0797,
+        "titulo": "Join us for uncensored, uninterruptible talk radio, custom-made for bar fly philosophers, misguided moralists, masochists, street corner eva"
+      },
+      {
+        "id": "fake_22666",
+        "etiqueta": 1,
+        "distancia": 1.0796,
+        "titulo": "Join us for uncensored, uninterruptible talk radio, custom-made for barfly philosophers, misguided moralists, masochists, street corner evan"
+      },
+      {
+        "id": "fake_21977",
+        "etiqueta": 1,
+        "distancia": 1.0788,
+        "titulo": "Join us for uncensored, uninterruptible talk radio, custom-made for bar fly philosophers, misguided moralists, masochists, street corner eva"
+      }
+    ]
+  },
+  "gmm": {
+    "frac_pertenencia_ambigua_(<0.6)": 0.059089719136841315,
+    "pertenencia_media": 0.9208568930625916
+  },
+  "temporal_por_trimestre": [
+    {
+      "periodo": "2015Q1",
+      "n": 2,
+      "prop_falsas": 1.0
+    },
+    {
+      "periodo": "2015Q2",
+      "n": 329,
+      "prop_falsas": 1.0
+    },
+    {
+      "periodo": "2015Q3",
+      "n": 368,
+      "prop_falsas": 1.0
+    },
+    {
+      "periodo": "2015Q4",
+      "n": 415,
+      "prop_falsas": 1.0
+    },
+    {
+      "periodo": "2016Q1",
+      "n": 2639,
+      "prop_falsas": 0.696097006441834
+    },
+    {
+      "periodo": "2016Q2",
+      "n": 2458,
+      "prop_falsas": 0.6550040683482506
+    },
+    {
+      "periodo": "2016Q3",
+      "n": 2182,
+      "prop_falsas": 0.6869844179651695
+    },
+    {
+      "periodo": "2016Q4",
+      "n": 2422,
+      "prop_falsas": 0.5982658959537572
+    },
+    {
+      "periodo": "2017Q1",
+      "n": 2841,
+      "prop_falsas": 0.5121436114044351
+    },
+    {
+      "periodo": "2017Q2",
+      "n": 2400,
+      "prop_falsas": 0.5304166666666666
+    },
+    {
+      "periodo": "2017Q3",
+      "n": 3963,
+      "prop_falsas": 0.27756749936916475
+    },
+    {
+      "periodo": "2017Q4",
+      "n": 6690,
+      "prop_falsas": 0.11255605381165919
+    },
+    {
+      "periodo": "2018Q1",
+      "n": 30,
+      "prop_falsas": 1.0
+    }
+  ],
+  "nota_temporal": "Las fechas no son comparables entre clases: las reales van de 2016-01 a 2017-12 y las falsas de 2015-03 a 2018-02 (ver data_card). La proporción de falsas por trimestre refleja cómo se armó el dataset, no la evolución real de la desinformación."
+}

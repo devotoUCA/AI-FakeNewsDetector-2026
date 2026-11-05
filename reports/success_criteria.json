@@ -1,0 +1,76 @@
+{
+  "modelo_productivo": "linear_svm_cal",
+  "criterios": [
+    {
+      "criterio": "Accuracy en test > 80 %",
+      "valor": 0.9893542757417103,
+      "estado": "cumplido"
+    },
+    {
+      "criterio": "F1 por clase > 0,80 (real y falsa)",
+      "valor": [
+        0.9902509189707528,
+        0.9882759946184894
+      ],
+      "estado": "cumplido"
+    },
+    {
+      "criterio": "Supera con claridad al clasificador ingenuo sin favorecer una clase",
+      "valor": {
+        "accuracy_trivial": 0.5465968586387434,
+        "f1_falsa_trivial": 0.0
+      },
+      "estado": "cumplido"
+    },
+    {
+      "criterio": "Modelo adicional iguala o supera al baseline, con la diferencia explicada",
+      "valor": {
+        "f1_falsa_baseline": 0.984936268829664,
+        "f1_falsa_productivo": 0.9882759946184894,
+        "mcnemar_p": 0.030028945411892487
+      },
+      "estado": "cumplido (ver informe para la explicación)"
+    },
+    {
+      "criterio": "Train / validación / test sin filtración",
+      "valor": {
+        "train-val": {
+          "ids": 0,
+          "exactos": 0,
+          "casi_duplicados": 0
+        },
+        "train-test": {
+          "ids": 0,
+          "exactos": 0,
+          "casi_duplicados": 0
+        },
+        "val-test": {
+          "ids": 0,
+          "exactos": 0,
+          "casi_duplicados": 0
+        },
+        "ok": true
+      },
+      "estado": "cumplido"
+    },
+    {
+      "criterio": ">= 20 errores revisados y comentados por el equipo",
+      "valor": {
+        "casos_en_csv": 40,
+        "comentados_por_el_equipo": 0
+      },
+      "estado": "pendiente: requiere revisión humana del equipo"
+    },
+    {
+      "criterio": "Demo devuelve etiqueta y probabilidad para un texto nuevo",
+      "valor": "verificado por tests/test_demo.py y tests/test_predict.py",
+      "estado": "cumplido (si la suite de tests pasa)"
+    },
+    {
+      "criterio": "Alerta de accuracy > 98 % (tratar con sospecha)",
+      "valor": 0.9893542757417103,
+      "estado": "ALERTA activa: ver diagnósticos y validación externa"
+    }
+  ],
+  "generado": "2026-11-04T17:48:15"
+}

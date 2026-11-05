@@ -1,0 +1,18 @@
+vista,iteracion_1,iteracion_2
+Panel · in-domain ISOT val (F1 macro),0.9901425411649054,0.9894335562469811
+Panel · cambio de grupo/subject (F1 macro),0.7389073438373722,0.7369478289701159
+Panel · cambio temporal (F1 macro),0.9045899813243601,0.8957702113385104
+Panel · WELFake-dev (F1 macro),0.519587763271047,0.5935211651927301
+Panel · LIAR-valid (F1 macro),0.5037719131176456,0.5669254580544902
+Panel · invarianza: máx. tasa de cambio,0.0055,0.0015
+Panel · puntaje robusto,0.7210283628109263,0.7420797351671188
+Final · ISOT test accuracy (forzado),0.9893542757417103,0.9898778359511344
+Final · ISOT test F1 falsa (forzado),0.9882759946184894,0.9888547271329746
+Final · WELFake holdout accuracy (forzado),0.547010752688172,0.5807311827956989
+Final · WELFake holdout F1 macro (forzado),0.5248787959636385,0.5749565281318123
+Final · WELFake holdout trivial accuracy,0.5828817204301076,0.5828817204301076
+Final · WELFake holdout ECE (it2 contraída),0.3976875537639043,0.10141896601013158
+Final · WELFake holdout cobertura del sistema,0.9510537634408602,0.5128602150537634
+Final · WELFake holdout accuracy respondidos,0.5485709117221418,0.6298222073129822
+Final · WELFake holdout trivial sobre respondidos,0.5737156295224313,0.6308285810130828
+Final · LIAR test accuracy (NO virgen),0.47256857855361595,0.513715710723192

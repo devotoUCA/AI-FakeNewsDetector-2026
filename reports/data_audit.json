@@ -1,0 +1,81 @@
+{
+  "falsas": {
+    "filas": 23481,
+    "nulos_por_columna": {
+      "title": 0,
+      "text": 630,
+      "subject": 0,
+      "date": 0
+    },
+    "texto_vacio_o_solo_espacios": 630,
+    "texto_menos_de_20_palabras": 1105,
+    "texto_solo_enlaces": 84,
+    "fechas_no_parseables": 10,
+    "ejemplos_fechas_no_parseables": [
+      "https://100percentfedup.com/served-roy-moore-vietnamletter-veteran-sets-record-straight-honorable-decent-respectable-patriotic-commander-soldier/",
+      "https://100percentfedup.com/video-hillary-asked-about-trump-i-just-want-to-eat-some-pie/",
+      "https://100percentfedup.com/12-yr-old-black-conservative-whose-video-to-obama-went-viral-do-you-really-love-america-receives-death-threats-from-left/"
+    ],
+    "rango_fechas": [
+      "2015-03-31",
+      "2018-02-19"
+    ],
+    "palabras_cuerpo": {
+      "count": 23481.0,
+      "mean": 436.3,
+      "std": 421.4,
+      "min": 0.0,
+      "1%": 0.0,
+      "50%": 375.0,
+      "99%": 1975.0,
+      "max": 8375.0
+    },
+    "textos_mas_de_5000_palabras": 28,
+    "duplicados_exactos_texto": 6026,
+    "duplicados_exactos_titulo_y_texto": 5573,
+    "subjects": {
+      "News": 9050,
+      "politics": 6841,
+      "left-news": 4459,
+      "Government News": 1570,
+      "US_News": 783,
+      "Middle-east": 778
+    }
+  },
+  "reales": {
+    "filas": 21417,
+    "nulos_por_columna": {
+      "title": 0,
+      "text": 1,
+      "subject": 0,
+      "date": 0
+    },
+    "texto_vacio_o_solo_espacios": 1,
+    "texto_menos_de_20_palabras": 1,
+    "texto_solo_enlaces": 0,
+    "fechas_no_parseables": 0,
+    "ejemplos_fechas_no_parseables": [],
+    "rango_fechas": [
+      "2016-01-13",
+      "2017-12-31"
+    ],
+    "palabras_cuerpo": {
+      "count": 21417.0,
+      "mean": 393.8,
+      "std": 280.8,
+      "min": 0.0,
+      "1%": 44.2,
+      "50%": 367.0,
+      "99%": 1179.0,
+      "max": 5292.0
+    },
+    "textos_mas_de_5000_palabras": 1,
+    "duplicados_exactos_texto": 225,
+    "duplicados_exactos_titulo_y_texto": 220,
+    "subjects": {
+      "politicsNews": 11272,
+      "worldnews": 10145
+    }
+  },
+  "textos_identicos_entre_clases": 0
+}

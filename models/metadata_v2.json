@@ -1,0 +1,63 @@
+{
+  "iteracion": 2,
+  "modelo": "lrchar_v2_C10",
+  "spec": {
+    "name": "lrchar_v2_C10",
+    "profile": "v2",
+    "model": "lr_char",
+    "C": 10.0
+  },
+  "perfil_limpieza": "v2",
+  "version": "v2-lrchar_v2_C10-368807aebb201e9f",
+  "creado": "2026-11-04T19:38:39",
+  "semilla": 42,
+  "config_hash": "368807aebb201e9f",
+  "umbral": 0.5,
+  "cortes_confianza": {
+    "baja_si_conf_menor_a": 0.6,
+    "alta_si_conf_mayor_o_igual_a": 0.9
+  },
+  "zona_ambigua": [
+    0.4,
+    0.6
+  ],
+  "calibracion": "isotonic",
+  "ood": {
+    "tau": 0.8,
+    "tau_cap": 0.7557974323635306,
+    "prior": 0.45327050375855493
+  },
+  "datos": {
+    "train": {
+      "sha256_ids": "fde3c9771a4fe6d15beaf263ae9c544d03b0b03afe1c7f912ebad873e2ec76f6",
+      "n": 26739
+    },
+    "val": {
+      "sha256_ids": "370b7bd51a7606485c3a7bb8ccd8a7a1fe0b1c8c0854f6ec499ae588e6a52230",
+      "n": 5730
+    },
+    "test": {
+      "sha256_ids": "e4dcef04fac38a6b550bde9361e54cf7ece6e9f03bed5791a25a63c3691b8047",
+      "n": 5730
+    }
+  },
+  "metricas_val": {
+    "accuracy": 0.9895287958115183,
+    "precision_fake": 0.9876970396001538,
+    "recall_fake": 0.9892183288409704,
+    "f1_fake": 0.9884570988841862,
+    "precision_real": 0.9910514541387024,
+    "recall_real": 0.989786147462496,
+    "f1_real": 0.9904183966783775,
+    "brier": 0.008143619591521574,
+    "log_loss": 0.029652142578317865,
+    "ece": 0.0027545437034347886
+  },
+  "versiones": {
+    "python": "3.12.13",
+    "sklearn": "1.9.1",
+    "numpy": "2.5.4",
+    "pandas": "3.1.1",
+    "scipy": "1.18.1"
+  }
+}

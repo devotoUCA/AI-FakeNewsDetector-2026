@@ -1,0 +1,430 @@
+id,etiqueta,p_texto,p_estilo,p_ensamble,titulo,log_n_words,avg_word_len,upper_char_ratio,allcaps_word_ratio,exclam_per_100w,question_per_100w,sensational_ratio,attribution_ratio,first_person_ratio,second_person_ratio,repetition_ratio,digit_ratio,acierta
+true_06475,0,0.0,0.5027,0.0225,Mexico says rejects threats against investment after Trump remark,4.852,4.5433,0.0642,0.0157,0.7874,0.0,0.0,0.0551,0.0,0.0,0.4567,0.0,texto
+true_09450,0,0.0002,0.5022,0.0225,"The very idea of a President Trump scares some, bolsters others in Asia",7.0699,4.6843,0.0458,0.0043,0.0,0.2553,0.0034,0.0213,0.0034,0.0,0.5677,0.0006,texto
+true_20238,0,0.0,0.5026,0.0225,Macron may see slackers become protest rallying cry in France,6.2364,4.9,0.0333,0.0059,0.0,0.3922,0.0,0.0137,0.0078,0.002,0.4431,0.0032,texto
+true_02256,0,0.0002,0.505,0.0227,Bush-era FTC official is Trump favorite for chief: source,6.0113,4.7838,0.0858,0.0491,0.0,0.0,0.0025,0.0221,0.0,0.0,0.43,0.0045,texto
+true_06999,0,0.0,0.5058,0.0228,Trump fills top jobs for his administration,6.452,5.0695,0.1037,0.0458,0.0,0.0,0.0016,0.0032,0.0,0.0,0.4613,0.0143,texto
+true_00165,0,0.0001,0.5063,0.0228,What is in the Republicans final tax bill,6.1026,5.0471,0.1028,0.0583,0.0,0.0,0.0,0.0,0.0,0.0,0.5404,0.0176,texto
+true_10615,0,0.0005,0.5061,0.0229,Former Christie campaign finance chair slams Christie endorsement of Donald Trump,5.8833,5.0894,0.0589,0.0168,0.0,0.0,0.0056,0.0363,0.0112,0.0028,0.4469,0.0009,texto
+true_18043,0,0.0004,0.507,0.0229,Italy s main parties back election law that isolates 5-Star,6.2422,4.7349,0.0303,0.0039,0.1949,0.0,0.0058,0.0117,0.0019,0.0,0.5283,0.0073,texto
+true_04020,0,0.0,0.5077,0.0229,Congress readies votes Friday on bill to avert government shutdown,6.2785,5.032,0.0299,0.0,0.188,0.0,0.0019,0.0038,0.0056,0.0,0.4774,0.0052,texto
+true_03360,0,0.0,0.5103,0.0232,N.J. favorites to succeed Christie head for November showdown,5.9454,5.315,0.0427,0.0,0.0,0.0,0.0026,0.0052,0.0026,0.0026,0.4331,0.0105,texto
+true_10611,0,0.0,0.5136,0.0234,Tech CEO Whitman calls Trump unfit to be U.S. president,6.6067,4.7984,0.0525,0.0122,0.0,0.2706,0.0,0.0176,0.0108,0.0027,0.5074,0.0023,texto
+true_11200,0,0.0,0.5132,0.0234,"Growing feud: Trump, Cruz escalate attacks on each other",6.2823,4.5487,0.0512,0.0056,0.0,0.0,0.0019,0.0169,0.0056,0.0037,0.4906,0.0066,texto
+true_08306,0,0.006,0.5024,0.0236,"Naked Donald Trump statue up for auction, could fetch $20,000",5.5413,4.7441,0.0549,0.0039,0.0,0.0,0.0079,0.0118,0.0,0.0,0.4331,0.0145,texto
+true_03059,0,0.0,0.516,0.0237,"Trump denies obstructing FBI probe, says has no tapes of talks with Comey",6.4281,4.945,0.0484,0.0113,0.1618,0.6472,0.0016,0.0291,0.0065,0.0,0.5566,0.0019,texto
+true_09560,0,0.0,0.5161,0.0237,U.S. foreign policy veteran warns Trump would make world less stable,6.0331,4.9447,0.0579,0.0072,0.0,0.2404,0.0,0.0192,0.0072,0.0024,0.5,0.0,texto
+true_19198,0,0.0,0.5171,0.0238,"Not so fast, Theresa: EU seeks divorce terms to stay friends",6.5497,4.7307,0.0425,0.0258,0.0,0.0,0.0,0.0072,0.0043,0.0014,0.51,0.008,texto
+true_02240,0,0.0,0.5175,0.0238,Trump attacks Mitch McConnell for second day over Senate health policy failure,6.4489,4.8574,0.0434,0.0,0.1585,0.1585,0.0032,0.0127,0.0174,0.0032,0.5563,0.0029,texto
+true_15623,0,0.0003,0.5189,0.024,Center-right leads narrowly in Sicily regional vote: exit polls,5.1874,5.2079,0.0478,0.0112,0.5618,0.0,0.0,0.0112,0.0,0.0,0.3483,0.0223,texto
+true_03573,0,0.0,0.5207,0.0241,"Trump, at NATO, vows unwavering fight against terrorism",4.9628,5.0634,0.0543,0.0282,0.0,0.0,0.0282,0.0282,0.0141,0.007,0.3028,0.009,texto
+true_21314,0,0.0,0.5224,0.0242,"Explain your results, beaten Angola party head tells electoral commission",6.0039,5.2574,0.0505,0.0322,0.0,0.2475,0.0025,0.0198,0.0,0.0025,0.4653,0.0066,texto
+true_03121,0,0.0,0.5236,0.0244,Trump picks Republican lawyer Kaplan for U.S. labor board,5.7589,5.2532,0.0422,0.0063,0.0,0.0,0.0032,0.0063,0.0,0.0,0.4241,0.003,texto
+true_10166,0,0.0009,0.5252,0.0247,"As tensions escalate, Cruz calls Trump a sniveling coward",6.5862,4.7928,0.0514,0.0028,0.0,0.0,0.0014,0.0083,0.0069,0.0083,0.5359,0.0069,texto
+true_02484,0,0.0023,0.5224,0.0247,CFTC commissioner nominees pledge to complete position limit rules,5.8551,5.3994,0.0389,0.0115,0.0,0.0,0.0029,0.0086,0.0029,0.0,0.408,0.0018,texto
+true_17857,0,0.0028,0.5223,0.0248,Scotland can still offer choice on independence from UK: Sturgeon,6.3008,4.6746,0.0398,0.0294,0.0,0.0,0.0037,0.0129,0.0055,0.0,0.4963,0.0038,texto
+true_14560,0,0.0,0.532,0.0251,Erdogan says Turkey must clear Syria s Afrin of YPG militia,5.7301,5.0033,0.0654,0.0293,0.0,0.0,0.0033,0.0228,0.0098,0.0,0.4528,0.0,texto
+true_02887,0,0.0,0.5316,0.0251,U.S. taps ex-envoy to NATO to resolve Ukraine crisis,6.0521,5.0236,0.0639,0.0071,0.0,0.2358,0.0,0.0212,0.0047,0.0,0.4929,0.0038,texto
+true_16320,0,0.0012,0.5306,0.0252,Rights groups urge UK to request Bahrain free activist s relatives,5.9135,4.9593,0.0586,0.0136,0.0,0.0,0.0,0.0108,0.0027,0.0027,0.4797,0.0045,texto
+true_01924,0,0.0009,0.5336,0.0255,Trump hugs Harvey s victims in test of presidential mien,6.6821,4.8281,0.0312,0.0013,0.0,0.3764,0.0038,0.0125,0.0113,0.0063,0.4994,0.0067,texto
+true_07153,0,0.0055,0.53,0.026,"Obama tells Latin America and world: give Trump time, don t assume worst",6.319,4.9296,0.0326,0.0036,0.0,0.0,0.0,0.0108,0.0072,0.0108,0.4531,0.0,texto
+true_09511,0,0.0039,0.5346,0.0262,Appeals court delays release of NJ s Bridgegate co-conspirators list,6.0426,5.1143,0.0411,0.0024,0.0,0.0,0.0024,0.0048,0.0048,0.0,0.4548,0.0034,texto
+true_01896,0,0.0024,0.5397,0.0264,How the Trump administration will wind down protections for Dreamers,5.6021,5.3407,0.064,0.0481,0.0,0.0,0.0037,0.0185,0.0,0.0,0.4296,0.0222,texto
+true_19095,0,0.0001,0.5465,0.0266,"Conservative, liberal, progressive: Merkel s Jamaica coalition puzzle",6.8352,4.8364,0.0446,0.0355,0.0,0.0,0.0,0.0032,0.0,0.0011,0.5296,0.0011,texto
+true_04573,0,0.0138,0.521,0.0269,U.S. Commerce s Ross says hopes to trigger NAFTA talks countdown by next week,5.0039,4.5068,0.066,0.0203,0.0,0.0,0.0,0.027,0.0203,0.0068,0.3176,0.0048,texto
+true_07885,0,0.0033,0.5433,0.0269,"Trump, Clinton spend much of debate insulting each other",6.045,4.6865,0.033,0.0024,0.0,0.0,0.0024,0.0143,0.019,0.0095,0.4608,0.0029,texto
+true_04277,0,0.001,0.5535,0.0275,"At U.N., U.S. tells Russia it s isolating itself by backing Assad",6.2748,4.7,0.0531,0.0,0.0,0.1887,0.0019,0.017,0.0057,0.0057,0.517,0.001,texto
+true_03860,0,0.0009,0.5543,0.0275,FBI Director Comey s year of controversy ends in firing,6.6438,4.8931,0.0562,0.0156,0.2608,0.0,0.0,0.0274,0.0039,0.0013,0.5698,0.0069,texto
+true_20871,0,0.0017,0.5534,0.0276,Yemen s Saleh keeps friend and foe guessing after skirmish with Houthi allies,6.7166,4.8364,0.0357,0.0085,0.0,0.0,0.0,0.0073,0.0012,0.0048,0.4921,0.0055,texto
+true_07419,0,0.0166,0.5227,0.0276,Swiss right-wing s Blocher: Trump win a warning to world establishment,5.8464,4.7797,0.0541,0.0174,0.0,0.0,0.0029,0.0203,0.0,0.0058,0.4261,0.0141,texto
+true_15109,0,0.0001,0.559,0.0279,TPP trade pact in disarray as Canada holds up talks,6.5191,4.7445,0.0502,0.0177,0.0,0.2954,0.0,0.0222,0.0177,0.003,0.5126,0.0023,texto
+true_13043,0,0.0016,0.5573,0.028,Cambodia s Sam Rainsy to be sued over treasonous call to soldiers: PM,6.1675,4.6303,0.0459,0.0084,0.0,0.0,0.0042,0.0126,0.0042,0.0,0.4874,0.0066,texto
+true_17920,0,0.0,0.5632,0.0283,Japan main parties key election pledges ahead of October 22 vote,6.4489,4.981,0.0383,0.0079,0.0,0.0,0.0048,0.0016,0.0,0.0,0.5135,0.0075,texto
+true_14023,0,0.0142,0.536,0.0285,Backlash among German MPs against parliamentary Twitter ban,5.6384,5.1571,0.0277,0.0,0.3571,0.3571,0.0,0.0071,0.0036,0.0036,0.3464,0.0028,texto
+true_06494,0,0.0005,0.5651,0.0286,Democratic leader Schumer emerges as Trump s newest punching bag,6.4003,5.0715,0.0487,0.0,0.0,0.1664,0.0033,0.0067,0.0,0.0017,0.4326,0.0029,texto
+true_19122,0,0.0011,0.5648,0.0287,Juncker to Merkel: EU needs stable German government to shape Europe,4.2485,5.4203,0.0618,0.0145,0.0,0.0,0.0,0.0,0.0145,0.0,0.2754,0.0,texto
+true_03017,0,0.0038,0.5606,0.0288,White House spokesman Spicer draws heat off camera,5.6733,4.9655,0.0466,0.0103,0.0,1.0345,0.0,0.0172,0.0138,0.0103,0.3793,0.0045,texto
+true_13349,0,0.0004,0.5706,0.0292,Russian bombers hit targets in Syria s Deir al-Zor province,3.6109,5.1111,0.0994,0.0278,0.0,0.0,0.0,0.0,0.0,0.0,0.3056,0.0,texto
+true_18099,0,0.0,0.5752,0.0296,Tokyo Governor Koike leaves door open for ruling party PM post election,5.8749,4.6507,0.0431,0.0141,0.0,0.0,0.0056,0.0141,0.0141,0.0,0.4789,0.0073,texto
+true_08230,0,0.0018,0.5723,0.0297,What is Aleppo? asks U.S. Libertarian Party candidate,6.0753,4.9309,0.0533,0.0115,0.0,1.6129,0.0,0.0184,0.0092,0.0092,0.477,0.003,texto
+true_18522,0,0.0009,0.5788,0.0302,EU s Tusk appealed to Rajoy to avoid escalation in Catalonia,4.2485,5.2319,0.0637,0.0145,0.0,0.0,0.0,0.0,0.0145,0.0,0.3768,0.0,texto
+true_11075,0,0.0012,0.5803,0.0304,Clinton: DNC should authorize additional Democratic debate next week,4.6913,4.7407,0.0705,0.0278,0.0,0.0,0.0,0.0185,0.0185,0.0093,0.3056,0.0,texto
+true_18688,0,0.0001,0.5826,0.0304,International air ban over Iraqi Kurdistan comes into effect,5.9839,4.6515,0.0456,0.0152,0.0,0.2525,0.0,0.0253,0.0076,0.0,0.4773,0.0125,texto
+true_09994,0,0.0,0.5828,0.0304,"Sanders wins Wyoming, prepares to take on Clinton in New York",6.1377,4.8766,0.0449,0.0022,0.2165,0.0,0.0022,0.0065,0.0043,0.0,0.539,0.0064,texto
+true_12889,0,0.0001,0.5836,0.0305,Support for Irish PM s party surges on back of Brexit row,5.6384,4.9071,0.043,0.0143,0.0,0.0,0.0036,0.0036,0.0,0.0,0.4,0.0059,texto
+true_20872,0,0.0048,0.5836,0.0317,Dennis Rodman talks of skiing friendship with Kim Jong Un,5.8777,4.5,0.0493,0.0056,0.0,0.0,0.0056,0.0197,0.0365,0.0,0.441,0.0,texto
+true_19477,0,0.0386,0.5141,0.0318,"Italy s 5-Star Movement votes for leader, Di Maio seen winning",5.6699,4.6713,0.0364,0.0035,0.0,0.0,0.0035,0.0069,0.0,0.0,0.391,0.0118,texto
+true_12295,0,0.0003,0.5963,0.0321,Chronology: It only took seven decades: the path to EU s defense pact,5.7557,5.2444,0.0692,0.0317,0.0,0.0,0.0032,0.0,0.0,0.0,0.4635,0.026,texto
+true_16882,0,0.0007,0.5965,0.0322,French defense minister: scrapping nuclear deal would be gift to Iran hardliners,5.4596,4.735,0.0542,0.0043,0.0,0.0,0.0,0.0085,0.0171,0.0,0.3974,0.0073,texto
+true_00633,0,0.0,0.5994,0.0324,U.S. small business community pushes Congress on bank lending relief: letter,6.1203,4.9692,0.0365,0.0022,0.0,0.4405,0.0,0.0088,0.0132,0.0044,0.4956,0.0061,texto
+true_02216,0,0.0149,0.5689,0.0324,Perfectionist Mayer leads at halfway in decathlon,5.656,4.5263,0.0303,0.0,0.0,0.0,0.0,0.0035,0.0175,0.0,0.4982,0.0431,texto
+true_21366,0,0.0138,0.572,0.0326,Safer than London! North Korea opens door to Russian tourists,5.7004,5.0705,0.0338,0.0067,0.3356,0.0,0.0034,0.0,0.0,0.0,0.3557,0.0075,texto
+true_02923,0,0.005,0.5928,0.0328,"Trump tweets mock video of himself tackling, punching CNN logo",6.3226,4.6996,0.061,0.0252,0.0,0.0,0.0036,0.0162,0.0108,0.0,0.518,0.0025,texto
+true_19005,0,0.0002,0.6024,0.0328,Russian bombers fire cruise missiles at Islamic State targets in Syria: RIA,4.2627,4.7571,0.0816,0.0286,0.0,0.0,0.0,0.0,0.0,0.0,0.3143,0.0049,texto
+true_03001,0,0.0029,0.6013,0.0334,Iran s Zarif raps U.S. Supreme Court s partial revival of travel ban,5.7137,4.6391,0.0472,0.0099,0.0,0.0,0.0033,0.0132,0.0099,0.0,0.4272,0.0046,texto
+true_07805,0,0.0028,0.604,0.0337,Trump pledges strong U.S. ties with India if elected president,5.2627,4.9688,0.0525,0.0,0.0,0.0,0.0052,0.0104,0.0365,0.0052,0.401,0.0009,texto
+true_17746,0,0.0051,0.5998,0.0338,Protesters sentenced to jail in French Kung Fu cop trial,5.8551,4.7443,0.0206,0.0029,0.0,0.0,0.0,0.0057,0.0,0.0,0.4138,0.0039,texto
+true_20072,0,0.0004,0.6133,0.0342,U.S.-backed forces not planning on entering Deir al-Zor city,5.6419,4.6441,0.0655,0.0214,0.0,0.0,0.0,0.0214,0.0036,0.0036,0.4911,0.0025,texto
+true_17050,0,0.0,0.6165,0.0346,"Turkey s Erdogan calls on mayors to resign, Hurriyet newspaper says",6.0307,4.9373,0.0308,0.0048,0.0,0.0,0.0024,0.0048,0.012,0.0,0.4506,0.0047,texto
+true_10906,0,0.0001,0.6184,0.0348,Yellen faces tough sell on Fed rate hikes in Congress,6.3439,4.7676,0.0403,0.0053,0.0,0.0,0.0018,0.007,0.0053,0.0,0.4736,0.0051,texto
+true_19344,0,0.0001,0.619,0.0349,Post-election conundrum awaits Germany s Merkel,7.0264,4.9378,0.1044,0.0747,0.0,0.0,0.0018,0.0018,0.0,0.0,0.5804,0.0032,texto
+true_14281,0,0.0147,0.5892,0.035,Zimbabwe s state mouthpiece captures fall of First Lady Grace,6.0259,4.9516,0.0525,0.0121,0.0,0.0,0.0,0.0024,0.0024,0.0,0.4528,0.0032,texto
+true_01173,0,0.0003,0.6233,0.0355,Trump backs away from bipartisan Senate healthcare bill,5.0304,4.9342,0.0361,0.0,0.0,0.0,0.0132,0.0,0.0197,0.0,0.2961,0.0,texto
+true_20518,0,0.0001,0.6241,0.0356,"Amid tension, Trump and Turkey s Erdogan agree to strengthen ties",5.9322,4.8378,0.0474,0.008,0.0,0.0,0.0,0.0106,0.0106,0.0027,0.4628,0.0018,texto
+true_01748,0,0.0034,0.6173,0.0356,"Trump on Twitter (September 13) Tax reform, Florida, Clinton",4.9836,4.5931,0.0616,0.0069,3.4483,0.0,0.0,0.0,0.0345,0.0,0.2897,0.0047,texto
+true_08357,0,0.0015,0.6267,0.0363,Trump to give speech on illegal immigration on Wednesday,5.961,4.7778,0.0439,0.0078,0.2584,0.2584,0.0,0.0207,0.0155,0.0,0.4832,0.0013,texto
+true_02615,0,0.0009,0.6294,0.0365,Scaramucci awaits U.S. approval for China deal,5.6768,5.0275,0.0704,0.0378,0.0,0.0,0.0034,0.0172,0.0,0.0,0.4089,0.0034,texto
+true_13344,0,0.0083,0.616,0.0368,UK s Prince Harry and fiancee Markle delight crowd on first official walkabout,6.25,4.5938,0.0485,0.0116,0.0,0.1934,0.0019,0.0213,0.0097,0.0019,0.4584,0.0054,texto
+true_17880,0,0.0003,0.6359,0.0372,Macron determined to engage Germany in debate on Europe reforms,5.4848,4.6833,0.0339,0.0,0.0,0.0,0.0,0.0083,0.0042,0.0125,0.3833,0.0043,texto
+true_02859,0,0.0,0.6374,0.0374,Two senior Republican senators criticize Tillerson comments on Russia,5.9814,4.9342,0.0611,0.0101,0.0,0.2532,0.0,0.0177,0.0152,0.0,0.4886,0.0017,texto
+true_21100,0,0.0003,0.6387,0.0376,Mexico presidential hopeful rejects comparisons to Venezuela,6.0591,5.0796,0.056,0.0117,0.2342,0.0,0.0023,0.0141,0.007,0.0,0.4426,0.006,texto
+true_15356,0,0.0029,0.6333,0.0376,Non-EU Norway appeals for smooth Brexit terms,5.6095,4.7316,0.0631,0.0404,0.0,0.0,0.0,0.011,0.0074,0.0,0.4449,0.0013,texto
+true_01309,0,0.0001,0.6428,0.0381,Trump suggests challenging TV network licenses over fake news,6.6644,5.1762,0.0531,0.0281,0.2554,0.1277,0.0064,0.0217,0.0,0.0,0.5019,0.0036,texto
+true_12593,0,0.0,0.6454,0.0385,Former Macedonian rightist PM resigns party leadership,5.6276,5.5162,0.0691,0.0325,0.0,0.0,0.0036,0.0144,0.0,0.0,0.3863,0.0165,texto
+true_16180,0,0.0117,0.621,0.0385,Hundreds rally in France to protest sexual harassment after Weinstein scandal,5.8693,4.7337,0.0365,0.0028,0.0,0.0,0.0057,0.0113,0.0255,0.0,0.4193,0.0039,texto
+true_17715,0,0.0582,0.5271,0.0388,Brazil Supreme Court allows Congress last word on removal of lawmakers,5.9687,5.1154,0.0286,0.0051,0.0,0.0,0.0077,0.0,0.0,0.0,0.4821,0.0058,texto
+true_13385,0,0.0,0.649,0.039,Pope ordains priests in Bangladesh ahead of meeting with Rohingya,5.6904,4.8237,0.0408,0.0,0.0,0.0,0.0034,0.0068,0.0034,0.0136,0.4644,0.013,texto
+true_12931,0,0.0385,0.5742,0.0398,Greek police fire teargas at protesters on anniversary of riots,5.6525,5.0739,0.025,0.0,0.3521,0.0,0.0,0.0,0.0,0.0035,0.3944,0.0085,texto
+true_05637,0,0.0001,0.6594,0.0406,Trump s whirlwind start draws admiration on French far-right,6.4313,4.7048,0.0472,0.0145,0.0,0.1613,0.0081,0.0194,0.0161,0.0,0.4677,0.0052,texto
+true_04315,0,0.0554,0.5457,0.0408,Groups sue to obtain White House visitor logs,5.9054,5.1038,0.0713,0.0109,0.0,0.0,0.0109,0.0137,0.0,0.0,0.4754,0.0078,texto
+true_06317,0,0.0437,0.5704,0.0408,Trump attacks civil rights leader who questioned his election win,6.3953,4.7191,0.0511,0.005,0.3344,0.1672,0.0,0.0201,0.0134,0.0033,0.5033,0.0088,texto
+true_00560,0,0.0017,0.6585,0.0409,Trump says AT&T plan to buy Time Warner not a good deal,6.2841,4.4467,0.0573,0.028,0.0,0.0,0.0,0.015,0.0093,0.0019,0.5308,0.0077,texto
+true_14337,0,0.0001,0.6648,0.0414,"Like Zimbabwe, South Africa needs leadership change: ANC official",6.1527,4.7186,0.053,0.032,0.0,0.2132,0.0,0.0213,0.0085,0.0043,0.4755,0.0044,texto
+true_20903,0,0.022,0.6193,0.0414,China is key to resolving North Korean nuclear issue: UK defense minister,5.0938,4.6667,0.0503,0.0185,0.0,0.0,0.0123,0.0123,0.0123,0.0,0.3642,0.0,texto
+true_15519,0,0.055,0.5543,0.0419,"Trump arrives in South Korea for talks on nukes, trade",4.7362,4.6018,0.0792,0.0088,0.0,0.0,0.0,0.0,0.0,0.0,0.3009,0.0031,texto
+fake_12009,1,0.0267,0.6282,0.0444,TRUMP TWEET STORM On Obamacare Sets Up Battle with Democrats On Lousy Healthcare,3.0445,5.15,0.3495,0.2,0.0,0.0,0.0,0.05,0.0,0.0,0.05,0.0,estilo
+true_14270,0,0.0003,0.6849,0.0447,"Still battling for independence, Lebanon to mark national day",6.6012,4.9633,0.0414,0.0027,0.0,0.2721,0.0014,0.0068,0.0027,0.0027,0.5143,0.0124,texto
+true_05412,0,0.0071,0.6709,0.0447,"Trump on Twitter (Feb 16) Stock market, NYT, fake news, Russsia",4.7622,4.6207,0.0617,0.0345,5.1724,0.0,0.0086,0.0,0.0,0.0,0.2759,0.0073,texto
+true_02097,0,0.0157,0.6555,0.0451,Trump tweets thanks to Steve Bannon for service and role in campaign against Clinton,4.4543,4.9176,0.0719,0.0,1.1765,0.0,0.0,0.0,0.0235,0.0,0.4,0.0,texto
+true_05494,0,0.0008,0.6931,0.0462,Trump says he will bring down the price of wall on Mexico s border,6.0064,4.6765,0.0524,0.0198,0.7407,0.0,0.0,0.0123,0.0099,0.0,0.4667,0.0109,texto
+true_08995,0,0.0003,0.694,0.0462,Donald Trump heads for Scotland to reopen a golf resort,6.2879,4.7058,0.0472,0.0093,0.0,0.0,0.0,0.0074,0.0019,0.0019,0.46,0.0076,texto
+true_14391,0,0.0711,0.5477,0.0463,Noon deadline set by ZANU-PF for Mugabe s resignation passes,4.1431,4.3548,0.0749,0.0323,0.0,0.0,0.0,0.0,0.0,0.0,0.2581,0.0118,texto
+true_09171,0,0.0127,0.6704,0.0466,"After Orlando shooting, Donald Trump reiterates Muslim ban",4.2485,4.8841,0.0506,0.0,0.0,0.0,0.0145,0.0,0.029,0.0,0.2464,0.0,texto
+true_19182,0,0.0416,0.6123,0.0469,Trump will do everything to avoid nuclear war with North Korea: Mnuchin,4.8752,4.3385,0.0586,0.0077,0.0,0.0,0.0,0.0154,0.0385,0.0077,0.3923,0.0,texto
+true_19113,0,0.0363,0.6244,0.0471,British lesbian wins right to spousal visa in landmark Hong Kong case,5.793,4.7676,0.0335,0.0122,0.0,0.0,0.0,0.0031,0.0,0.0,0.4526,0.0052,texto
+true_06866,0,0.0059,0.689,0.0474,Ex-U.S. Attorney Yang being considered for SEC chair: source,6.1759,5.1125,0.0576,0.0104,0.0,0.0,0.0042,0.0042,0.0,0.0,0.4729,0.004,texto
+true_10855,0,0.0154,0.6698,0.0474,House panel approves plan to privatize air traffic control,5.9584,5.513,0.0325,0.0155,0.0,0.0,0.0052,0.0052,0.0026,0.0,0.4611,0.0016,texto
+true_09645,0,0.0,0.7036,0.0478,Trump dips toe into delicate U.S. debt discussion,6.4019,4.6761,0.0349,0.005,0.0,0.1661,0.0,0.0133,0.0033,0.0033,0.5033,0.0009,texto
+true_06465,0,0.0002,0.708,0.0486,Republican senators urge Trump to embrace findings on Russia hacking,6.2558,5.0442,0.0446,0.0096,0.3846,0.0,0.0019,0.0154,0.0154,0.0038,0.4442,0.0,texto
+true_08645,0,0.0077,0.6984,0.0497,Obama s brother plans to vote for Trump,5.9322,4.5505,0.0556,0.008,0.0,0.0,0.0,0.016,0.0186,0.0027,0.4761,0.0047,texto
+true_08410,0,0.0085,0.6975,0.0498,Clinton says U.S. presidential election an alternative reality,5.9081,4.6022,0.0439,0.0054,0.0,0.2725,0.0027,0.0272,0.0354,0.0082,0.4605,0.0113,texto
+true_09873,0,0.0059,0.7107,0.0513,U.S. chief justice uses sign language as deaf lawyers sworn in,5.7961,4.7012,0.0403,0.0,0.0,0.0,0.003,0.0091,0.0,0.003,0.503,0.0098,texto
+true_15385,0,0.0,0.7249,0.0517,Philippines Duterte to Trump: Lay off human rights when we meet,5.6595,4.7517,0.0501,0.0,0.0,0.0,0.0035,0.0105,0.0245,0.0105,0.4021,0.0036,texto
+true_18528,0,0.0001,0.7282,0.0523,Run or wait? Tokyo s Koike faces dilemma ahead of Oct. 22 poll,6.7639,4.6012,0.039,0.0139,0.0,0.1156,0.0035,0.0116,0.0035,0.0035,0.5283,0.0078,texto
+true_14588,0,0.0,0.7454,0.0557,German coalition talks flounder as disagreements persist,6.4877,5.0137,0.0403,0.0213,0.0,0.0,0.0046,0.0076,0.003,0.003,0.4695,0.0059,texto
+fake_09423,1,0.0893,0.5654,0.0568,UCLA PLAYERS Hold Press Conference...Finally Thank President Trump!,5.649,5.1272,0.0524,0.0177,0.7067,0.0,0.0,0.0247,0.0141,0.0071,0.4523,0.0028,estilo
+true_06666,0,0.0005,0.7517,0.0572,Trump to Pennsylvania: See you in four years,5.8493,4.5751,0.0507,0.0,0.0,0.578,0.0,0.0145,0.0058,0.0145,0.4624,0.007,texto
+true_16251,0,0.1232,0.5006,0.0579,Italian man sentenced to 24 years for infecting dozens of women with HIV,5.425,4.5841,0.0407,0.0354,0.0,0.0,0.0,0.0044,0.0,0.0,0.4425,0.0167,texto
+fake_11867,1,0.0022,0.7572,0.0591,TRUMP FINANCIAL ADVISOR Has Great Tax News For Job Creators: I think they need to get that done quickly ...MAGA!,4.2341,5.2206,0.1243,0.0588,1.4706,0.0,0.0,0.0294,0.0147,0.0,0.1618,0.0091,estilo
+true_20312,0,0.0003,0.7637,0.0597,"Russia s Lavrov, Tillerson to meet at U.N. General Assembly: TASS",3.9318,5.02,0.1474,0.04,0.0,0.0,0.0,0.0,0.0,0.0,0.3,0.0,texto
+true_17821,0,0.0001,0.773,0.0616,"NZ First touts progress in talks to form govt, but decision delayed",5.9454,4.8268,0.0366,0.0105,0.0,0.2625,0.0052,0.0131,0.0157,0.0052,0.4252,0.0096,texto
+true_14389,0,0.0001,0.7867,0.0648,Clamor for justice: Yugoslav court leaves global legacy,7.0255,4.7998,0.0479,0.0133,0.0,0.0,0.0027,0.0071,0.0036,0.0018,0.5383,0.006,texto
+true_07547,0,0.0215,0.7441,0.0652,Trump hustled off stage in Nevada by security agents,4.7707,4.5897,0.0298,0.0085,0.0,0.0,0.0085,0.0085,0.0085,0.0,0.3675,0.0,texto
+true_16897,0,0.0247,0.7472,0.0676,Russian aerobatics team joins Serbian display of air power,5.7714,5.1469,0.0505,0.0062,0.0,0.0,0.0,0.0031,0.0062,0.0031,0.3594,0.0133,texto
+true_06310,0,0.0005,0.8019,0.0687,"Trump says Brexit to be a great thing , wants quick trade deal with UK",6.0707,4.713,0.0423,0.0069,0.0,0.2315,0.0023,0.0139,0.0208,0.0046,0.463,0.0032,texto
+true_06417,0,0.0001,0.8051,0.0693,Trump secretary of state choice to say Russia must be held to account,6.3099,4.7687,0.0471,0.0036,0.0,0.0,0.0109,0.0091,0.0146,0.0,0.4791,0.0031,texto
+fake_17221,1,0.0019,0.8074,0.0708,GREXIT ? GREEKS VOTE NO ON MORE AUSTERITY IN RETURN FOR RESCUE LOANS,5.8348,4.7449,0.0663,0.0352,0.0,0.2933,0.0,0.0235,0.0029,0.0,0.4663,0.0055,estilo
+true_19332,0,0.0029,0.8092,0.0718,UK s May calls for two-year transition after Brexit,6.7262,4.9808,0.1143,0.0984,0.0,0.0,0.0024,0.0,0.012,0.0,0.5234,0.0028,texto
+true_02203,0,0.016,0.7863,0.0729,Charlottesville violence tests Trump s presidential mettle,6.6438,5.0482,0.0337,0.0052,0.0,0.0,0.0039,0.0052,0.0052,0.0,0.4746,0.0015,texto
+true_04857,0,0.0001,0.8209,0.0733,Top NSA official ridicules allegation Britain spied on Trump,5.7236,5.1115,0.0667,0.0361,0.0,0.3279,0.0066,0.0459,0.0,0.0,0.4557,0.0042,texto
+true_19932,0,0.0005,0.8197,0.0733,Euro zone enlargement call sparks backlash in Germany,6.3818,5.0136,0.038,0.0136,0.0,0.1695,0.0034,0.0034,0.0,0.0,0.5237,0.0044,texto
+true_13209,0,0.0,0.8244,0.0742,EU getting closer to starting trade talks with Britain in December: Tusk,5.118,4.8675,0.0594,0.0361,0.6024,0.0,0.0,0.0181,0.0181,0.0,0.4458,0.004,texto
+true_00811,0,0.0079,0.8086,0.0744,Trump greets Japanese emperor with a handshake and nod but no bow,6.1137,4.6098,0.0342,0.0022,0.0,0.0,0.0022,0.0067,0.0044,0.0022,0.4745,0.0084,texto
+fake_09551,1,0.0264,0.7706,0.0745,JUST IN: Senior GOP Rep Announces His Retirement...A BIG LOSS,6.2126,5.1446,0.1088,0.0743,0.0,0.0,0.002,0.008,0.0301,0.0,0.5281,0.0102,estilo
+fake_22397,1,0.0739,0.6742,0.075,WARNING: Don t Worry If the Stock Market Goes Crazy After Election,5.4467,4.6407,0.0486,0.013,0.0,0.0,0.0043,0.013,0.0,0.0043,0.3247,0.0198,estilo
+true_08221,0,0.0075,0.8162,0.0762,Mexico s new finance minister spurns Donald Trump,6.0845,4.7648,0.0422,0.0023,0.0,0.0,0.0046,0.0091,0.0205,0.0046,0.5228,0.0031,texto
+true_06036,0,0.0005,0.8319,0.0765,Trump says waterboarding works but will defer to Cabinet: ABC interview,5.1417,4.4765,0.0579,0.0176,0.0,0.5882,0.0118,0.0235,0.0353,0.0,0.4,0.0042,texto
+true_02140,0,0.0095,0.8186,0.078,"Trump on Twitter (Aug 16)- Manufacturing Council, Policy forum",4.9972,5.102,0.0907,0.0272,5.4422,0.0,0.0136,0.0,0.0136,0.0068,0.2177,0.0021,texto
+true_06413,0,0.0033,0.8343,0.0788,Debate over firing U.S. consumer watchdog director intensifies,6.021,5.0122,0.0535,0.0073,0.0,0.0,0.0049,0.0073,0.0073,0.0049,0.4307,0.0067,texto
+true_12195,0,0.0001,0.8498,0.0813,Multi-summit Macron burns energy in hunt for results,6.3919,4.8272,0.0348,0.0067,0.0,0.1678,0.0017,0.005,0.0034,0.0,0.4245,0.0011,texto
+true_17520,0,0.0267,0.8052,0.0844,A picture and its story: tear gas in Nairobi,5.6021,4.5,0.0305,0.0,0.0,0.0,0.0037,0.0037,0.0259,0.0,0.4259,0.0026,texto
+true_11090,0,0.0482,0.7671,0.0864,"Ferrer victory was my best match, says Murray",5.9584,4.329,0.0433,0.0,0.0,0.0,0.0026,0.0052,0.0389,0.0,0.4663,0.009,texto
+true_19456,0,0.0006,0.8716,0.0882,Anti-Zuma MP quits South Africa s corrupt ANC,6.3474,4.9649,0.0466,0.0211,0.0,0.7018,0.007,0.0105,0.0123,0.0018,0.4404,0.0063,texto
+true_17736,0,0.0003,0.8837,0.0919,North Korea says Trump has lit the wick of war: Russia s TASS agency,5.6131,4.4286,0.0564,0.011,0.0,0.0,0.011,0.0183,0.0256,0.0037,0.4835,0.0,texto
+true_12923,0,0.0,0.8889,0.0933,Top German conservative embraces Macron s EU proposals,5.743,5.3762,0.0402,0.0129,0.0,0.3215,0.0,0.0032,0.0193,0.0,0.4084,0.0,texto
+true_14370,0,0.0408,0.8135,0.0964,U.S. envoy to Russia: visa consultations in consulates may resume soon TASS,4.9558,4.6525,0.0671,0.0142,0.0,0.0,0.0,0.0,0.0284,0.0,0.3972,0.0,texto
+true_12093,0,0.0,0.9098,0.1004,"Brexit will not be derailed, says May ahead of crunch cabinet meetings",6.0981,4.6959,0.0332,0.0158,0.0,0.2252,0.0023,0.0113,0.018,0.0023,0.4527,0.0016,texto
+fake_14703,1,0.0844,0.7408,0.1025,TRUMP S RIGHT AGAIN: North Korea Says It Just Tested The H Bomb Of Justice After Nuclear Test,5.7004,4.5134,0.091,0.0369,0.0,0.0,0.0,0.0235,0.0201,0.0034,0.4396,0.0106,estilo
+true_18643,0,0.0001,0.9163,0.1028,Britain s Boris Johnson wants maximum two-year Brexit transition,6.0544,4.5906,0.0446,0.0141,0.0,0.4706,0.0071,0.0141,0.0141,0.0,0.4965,0.0074,texto
+true_12665,0,0.0001,0.9311,0.1082,"Nobel peace laureate group tells U.S., North Korea to negotiate",6.1312,4.5708,0.0645,0.0131,0.0,0.0,0.0065,0.0087,0.0065,0.0,0.5033,0.0072,texto
+true_06313,0,0.0069,0.917,0.1082,Davos elites struggle for answers as Trump era dawns,6.868,4.8229,0.0394,0.0094,0.0,0.2083,0.0021,0.0062,0.0031,0.0031,0.5073,0.0026,texto
+true_01730,0,0.0283,0.8794,0.1108,"Trump on Twitter (Sept 14) DACA, U.S.-Mexico border wall",4.1271,4.3115,0.0837,0.0492,0.0,0.0,0.0164,0.0,0.0,0.0,0.2295,0.0059,texto
+true_18411,0,0.0719,0.7975,0.1142,Turkey should follow West s lead on rights: author Orhan Pamuk,5.9989,4.7861,0.0432,0.0,0.0,0.995,0.0,0.005,0.0398,0.01,0.4353,0.0058,texto
+true_14760,0,0.0018,0.9443,0.1147,Coup? What coup? Zimbabwe s Herald misses army move on Mugabe,5.0626,4.8153,0.0518,0.0127,0.0,1.2739,0.0064,0.0064,0.0064,0.0064,0.3567,0.0053,texto
+true_07044,0,0.0146,0.9309,0.1199,Trump adviser warns him not to pick Romney for Secretary of State,5.7714,4.7156,0.0431,0.0062,0.0,0.0,0.0031,0.0094,0.0125,0.0031,0.4375,0.0022,texto
+true_03965,0,0.0253,0.92,0.1246,Trump questions why U.S. Civil War had to happen,6.0568,4.5164,0.0515,0.007,0.2347,0.7042,0.0023,0.0141,0.0,0.007,0.5305,0.0135,texto
+true_09893,0,0.199,0.5646,0.1267,Legal issues in Supreme Court immigration case,6.2729,5.1853,0.0347,0.0038,0.0,0.0,0.0057,0.0019,0.0,0.0,0.5595,0.0012,texto
+fake_15950,1,0.0548,0.8688,0.129,#Irma Update: Latest Look as Hurricane Strengthens to Cat 5... A Great Danger to Florida Keys,5.6131,4.6374,0.1485,0.0989,0.0,0.0,0.0,0.0073,0.0073,0.0,0.4689,0.0162,estilo
+true_01200,0,0.0035,0.9775,0.1299,FCC chairman rejects Trump suggestion on broadcast licenses,5.9839,5.0581,0.057,0.0328,0.2525,0.2525,0.0051,0.0051,0.0025,0.0,0.4571,0.0024,texto
+true_00384,0,0.0491,0.8843,0.1305,"Trump on Twitter (Dec 1) Kate Steinle, Tax cuts, Rex Tillerson",5.366,4.4648,0.1157,0.0704,1.8779,0.0,0.0,0.0047,0.0282,0.0,0.3662,0.0083,texto
+fake_15395,1,0.0946,0.7913,0.1311,SHOCKING POLL: TRUMP PASSES BUSH AND RUBIO IN HOME STATE OF FLORIDA,5.961,4.8605,0.082,0.0362,0.0,0.0,0.0026,0.0078,0.0078,0.0,0.447,0.0253,estilo
+true_11003,0,0.1618,0.6534,0.1318,House fails to knock down Obama veto of anti-Obamacare bill,6.0283,5.0676,0.0397,0.0,0.4831,0.2415,0.0,0.0024,0.0097,0.0,0.4758,0.0058,texto
+fake_17738,1,0.105,0.7761,0.134,REFS WALK OFF IN PROTEST After High School Players Kneel During Anthem,6.1247,4.7215,0.1139,0.0746,0.2193,0.0,0.0,0.0285,0.0373,0.0,0.4912,0.0037,estilo
+true_08152,0,0.0615,0.8745,0.1378,Mexican band Maná urges Latinos to vote in U.S. election,5.8777,4.6826,0.0485,0.0,0.0,0.0,0.0028,0.0084,0.0084,0.0028,0.4803,0.0043,texto
+true_05242,0,0.0615,0.8746,0.1378,U.S. justices skeptical of sex offender social media ban,6.4862,4.8901,0.0313,0.0046,0.1527,0.1527,0.0031,0.0031,0.0061,0.0015,0.516,0.0066,texto
+true_02518,0,0.125,0.7439,0.1382,"Trump on Twitter (July 26) U.S. Military, Transgender individuals",5.118,4.7711,0.0694,0.012,2.4096,0.0,0.012,0.0,0.0361,0.0181,0.3554,0.0118,texto
+true_17568,0,0.1606,0.6728,0.1395,Senior Quds force commander says Trump s threats against Iran will damage U.S.: report,4.8752,4.8077,0.0721,0.0154,0.0,0.0,0.0,0.0077,0.0154,0.0,0.3769,0.0,texto
+fake_12603,1,0.0104,0.9886,0.1414,TRUMP LAUNCHES GRENADE AT TAX AND SPEND WASHINGTON: Under Budget And Ahead Of Schedule...You Don t Hear Those Words Too Often In Government...But You ,3.3322,4.5556,0.4959,0.2963,0.0,0.0,0.0,0.0,0.0,0.0741,0.0741,0.0,estilo
+true_04679,0,0.2056,0.595,0.1469,Fights erupt at pro-Trump rally on California beach,5.9054,5.0956,0.0539,0.0109,0.2732,0.0,0.0055,0.0219,0.0027,0.0027,0.4727,0.0053,texto
+true_02050,0,0.0373,0.9463,0.148,Connecticut governor eyes economic investments amid fiscal crisis,6.1633,4.9768,0.0378,0.0127,0.0,0.8439,0.0021,0.0021,0.0464,0.0063,0.4979,0.0041,texto
+true_09879,0,0.12,0.7839,0.1524,U.S. lawsuit seeks disclosure of court orders on decryption,4.4067,5.0,0.0864,0.037,0.0,0.0,0.0123,0.0,0.0,0.0,0.2593,0.0,texto
+true_01826,0,0.1248,0.7827,0.1569,"Trump on Twitter (September 7) Sheikh Sabah, Hurricane Irma, DACA",5.1417,4.6471,0.1156,0.0588,3.5294,0.0,0.0,0.0059,0.0529,0.0176,0.3118,0.004,texto
+true_19830,0,0.0387,0.9692,0.161,What Trump has said about the United Nations,5.9814,4.2987,0.0583,0.0101,0.2532,0.5063,0.0051,0.0025,0.0304,0.0051,0.5114,0.0231,texto
+true_11873,0,0.1035,0.836,0.1617,Detained journalist wrote children s book on nature and absence,5.9081,4.5068,0.0297,0.0,0.0,0.0,0.0054,0.0109,0.0082,0.0109,0.4578,0.0048,texto
+fake_14391,1,0.0496,0.9547,0.1654,SUPER TUESDAY PROJECTION MAP FROM REAL CLEAR POLITICS,3.091,5.1905,0.4771,0.381,0.0,0.0,0.0,0.0,0.0,0.0,0.381,0.0,estilo
+true_01503,0,0.2892,0.5242,0.2041,"Applause, laughter as wounded lawmaker Scalise returns to Congress",5.8081,4.7982,0.0371,0.0,0.0,0.0,0.0,0.009,0.009,0.009,0.4247,0.0025,texto
+true_09221,0,0.1077,0.9182,0.2153,California voting expert bares naked truth about politics,5.7557,4.6794,0.036,0.0,0.0,0.0,0.0063,0.0095,0.0127,0.0032,0.4381,0.0,texto
+fake_12538,1,0.1377,0.8674,0.2229,FANTASTIC! TRUMP S 7 POINT PLAN To Reform Healthcare Begins With A Bombshell!,6.3682,5.2715,0.0333,0.0069,0.3436,0.1718,0.0155,0.0,0.0103,0.0,0.4691,0.0032,estilo
+fake_13701,1,0.15,0.8426,0.2235,TRUMP S STATEMENT On Muslim Immigration Is Spot On: We have no choice!,4.4308,4.2169,0.0886,0.0241,1.2048,0.0,0.012,0.012,0.0723,0.0,0.2651,0.0,estilo
+true_05534,0,0.0933,0.9626,0.225,"Trump, reacting to U.S. appeals court ruling, tweets: SEE YOU IN COURT",4.0431,4.8393,0.2556,0.2857,1.7857,0.0,0.0,0.0,0.0179,0.0357,0.25,0.0,texto
+true_10889,0,0.1312,0.8884,0.2281,No love lost with Daily News after Trump wins New Hampshire,5.9135,4.8862,0.0567,0.0054,0.542,0.0,0.0,0.0027,0.0,0.0027,0.4228,0.0018,texto
+true_01954,0,0.0985,0.9598,0.2304,Trump s conflicting views on Obama Dreamer policy,6.0544,4.1812,0.0564,0.0165,0.0,0.0,0.0071,0.0071,0.0565,0.0141,0.5576,0.0129,texto
+true_03192,0,0.504,0.1872,0.2811,Suspect in baseball field shooting ranted against Trump on social media,6.672,4.9316,0.0489,0.0051,0.0,0.0,0.0063,0.0228,0.0076,0.0038,0.5133,0.0101,estilo
+true_20524,0,0.1624,0.8961,0.2812,To flee or stay? Irma s shifting path forces some to reconsider,6.5525,4.6029,0.032,0.0,0.0,0.2857,0.0029,0.0086,0.0129,0.01,0.4729,0.0067,texto
+true_04198,0,0.282,0.6484,0.2816,"Trump on Twitter (April 18) Obama administration, interview",3.7842,4.5116,0.0825,0.0233,4.6512,0.0,0.0,0.0,0.0465,0.0,0.0698,0.0272,texto
+true_03652,0,0.2281,0.7974,0.3116,"Trump, Netanyahu s wife lament negative media coverage",5.9322,4.7793,0.0446,0.0027,0.0,0.0,0.008,0.0133,0.0213,0.008,0.4388,0.0009,texto
+true_02884,0,0.5591,0.1107,0.3117,How U.S. states responded to Trump panel s voter data request,6.8189,5.5908,0.0393,0.0,0.0,0.0,0.0033,0.0142,0.0033,0.0,0.6772,0.0037,estilo
+fake_11824,1,0.1917,0.8849,0.3216,WAY TO GO! PRESIDENT TRUMP Called Husband Of Fallen Police Officer Debra Clayton,5.1417,5.1118,0.1039,0.0412,0.5882,0.0,0.0,0.0118,0.0,0.0,0.3647,0.0019,estilo
+true_10261,0,0.3501,0.5603,0.3251,Trump s obsession with anchorwoman Kelly is deplorable : Fox,6.073,4.9908,0.0367,0.0023,0.2309,0.0,0.0046,0.0115,0.0023,0.0023,0.4619,0.0,texto
+true_08125,0,0.5981,0.0661,0.3427,London s Muslim mayor backs Clinton for U.S. president,5.8021,4.8879,0.0453,0.003,0.0,0.0,0.0,0.0121,0.0061,0.0,0.4394,0.0045,estilo
+fake_09279,1,0.2158,0.8949,0.3744,JUST IN: SUPREME COURT Rules On Trump Travel Ban,5.7869,4.8738,0.0589,0.0123,0.9231,0.3077,0.0031,0.0185,0.0031,0.0,0.4492,0.0,estilo
+fake_13828,1,0.2107,0.9067,0.3756,GREAT! See What Trump Did When He Was Told There Was No Time To Sing The National Anthem,5.656,4.4281,0.0602,0.007,1.0526,0.3509,0.0,0.0246,0.0456,0.0105,0.4702,0.0,estilo
+true_01645,0,0.2211,0.8864,0.3767,"Trump on Twitter (September 20) Graham-Cassidy bill, Luther Strange, North Korea",5.7526,4.8153,0.0969,0.0255,3.8217,0.0,0.0,0.0,0.0287,0.0096,0.3599,0.0011,texto
+true_08675,0,0.3684,0.5886,0.3838,Peter Thiel tells Republican convention he is proud to be gay,6.1654,4.8189,0.0399,0.0021,0.0,0.2105,0.0021,0.0126,0.0211,0.0,0.4716,0.0014,texto
+true_00284,0,0.2195,0.9016,0.3876,"Trump on Twitter (December 6) America, California s wildfires",4.0604,4.9298,0.1459,0.1053,3.5088,0.0,0.0175,0.0175,0.0526,0.0351,0.193,0.0029,texto
+true_07640,0,0.3765,0.584,0.3951,Factbox How Carlos Danger got tangled up in the Clinton email scandal,6.5013,4.9459,0.035,0.006,0.0,0.0,0.006,0.006,0.0,0.0,0.5188,0.0049,texto
+true_11693,0,0.6343,0.0571,0.4026,Denmark no longer to automatically accept U.N. refugee resettlement quota,5.4806,4.9121,0.0332,0.0,0.0,0.0,0.0,0.0084,0.0042,0.0,0.431,0.0183,estilo
+fake_12272,1,0.2483,0.8657,0.4098,JILL STEIN (HILLARY S) Recount Collapses: Misses Deadline In Pennsylvania...Sues WI For Refusing Hand Recount,5.7714,4.7188,0.0523,0.0188,0.0,0.3125,0.0031,0.0156,0.0031,0.0,0.4812,0.0053,estilo
+fake_12604,1,0.5892,0.1648,0.4158,BREAKING: CLOSE AIDE TO BILL CLINTON: I arranged for $50 million in payments to Bill Clinton,6.0591,5.0468,0.0511,0.0141,0.0,0.0,0.0023,0.0117,0.007,0.0,0.5105,0.0083,texto
+fake_05493,1,0.6208,0.1028,0.4191,Court Smacks Down Utah s Attempt To Defund Planned Parenthood,6.2519,5.0425,0.0322,0.0019,0.0,0.0,0.0039,0.0116,0.0019,0.0,0.5347,0.0035,texto
+true_02658,0,0.2865,0.7995,0.422,"Trump on Twitter (July 19) Republican Senators, Healthcare bill, McCain",4.9127,5.1037,0.0814,0.0074,1.4815,0.0,0.0148,0.0,0.0519,0.0,0.3778,0.0023,texto
+fake_00316,1,0.6758,0.0215,0.4504,Republican Governor Helped Kill 11 Elderly People By Deleting Their Messages Begging For Help,6.2166,4.898,0.0347,0.004,0.0,0.0,0.002,0.018,0.004,0.0,0.486,0.0102,texto
+true_18483,0,0.5235,0.3736,0.4852,Trial of alleged ringleader of Benghazi attack begins in Washington,6.1633,4.6962,0.0378,0.0021,0.4219,0.0,0.0,0.0169,0.0127,0.0021,0.4684,0.0065,estilo
+fake_17385,1,0.5357,0.3487,0.4858,IRANIAN NAVY FIRES WARNING SHOTS ON AND SEIZES CARGO SHIP; U.S. NAVY SENDS DESTROYER,5.6904,4.8102,0.0917,0.0508,0.0,0.0,0.0,0.0407,0.0068,0.0,0.478,0.0029,texto
+true_04686,0,0.3169,0.8039,0.4869,Trump on Obamacare repeal: from boasts of greatness to lessons learned,5.7038,4.9699,0.0391,0.0,1.6722,0.0,0.0067,0.0,0.0234,0.0067,0.4482,0.0065,texto
+fake_14891,1,0.5778,0.278,0.5019,SHOCKING: Sharia Law Implemented In First American City With Muslim Majority City Council,6.9088,4.753,0.03,0.001,0.0,0.0,0.001,0.01,0.01,0.004,0.512,0.0068,texto
+true_10807,0,0.5786,0.2912,0.5163,Trump is a ------: White House hopeful plays fill-in-the-blanks with voters,6.6619,4.7964,0.031,0.0,0.0,0.2561,0.0026,0.0179,0.0179,0.0038,0.5147,0.0013,estilo
+fake_16428,1,0.4392,0.5837,0.5196,HOLY RIGGED ELECTION! Obama Regime Considers Special Declaration To Take Charge Of Elections!,5.9322,5.3537,0.0397,0.0186,0.5319,0.0,0.0,0.016,0.0213,0.0,0.4601,0.0033,estilo
+fake_14592,1,0.6477,0.1542,0.5226,WARNING: FEDS PREDICT $30 TRILLION DOLLAR DEBT Because Of These Two Key Things,6.142,4.7888,0.0468,0.0259,0.0,0.0,0.0,0.0194,0.0022,0.0022,0.4914,0.0254,texto
+fake_02401,1,0.6194,0.2135,0.523,"Trump Told FBI To Kill Stories About His Connections To Putin, They Said No",5.9989,5.0423,0.0568,0.0199,0.0,0.0,0.005,0.0373,0.005,0.0,0.4751,0.0033,texto
+true_04285,0,0.7098,0.029,0.5259,UK s Daily Mail to pay Melania Trump damages over modeling claims,5.7652,4.8491,0.0344,0.0031,0.0,0.0,0.0,0.0157,0.0094,0.0,0.4623,0.0078,estilo
+true_08120,0,0.4771,0.5378,0.5511,"Obama, Republican Kasich meet to strategize on TPP trade deal",4.4773,4.9885,0.0579,0.0115,0.0,0.0,0.0,0.0115,0.0,0.046,0.3333,0.0,texto
+fake_13538,1,0.2967,0.9204,0.5589,NO RESPECT! US DIPLOMAT ATTACKED By Russian Guard...Our Lame Response,5.591,4.7865,0.0923,0.0412,1.4981,0.3745,0.0,0.0375,0.03,0.0112,0.5056,0.0057,estilo
+fake_11869,1,0.4734,0.5741,0.5782,"WHOA! Canada s Donald Trump, Billionaire And Shark Tank Host Kevin O Leary Announces Run Against Canada s Barack Obama",5.4027,4.7511,0.0735,0.009,1.3575,0.0,0.0,0.0226,0.009,0.0,0.5023,0.0039,estilo
+true_02938,0,0.5625,0.392,0.5811,MSNBC hosts accuse White House of trying to pressure them over coverage,6.477,5.0,0.047,0.0062,0.1541,0.0,0.0077,0.0262,0.0185,0.0046,0.5254,0.0,estilo
+fake_11191,1,0.331,0.8976,0.6045,STUNNING! FIRST LADY MELANIA TRUMP Wears Red To Greet Chinese Leader And Wife,6.2953,4.9667,0.0549,0.0203,0.3697,0.0,0.0,0.0037,0.0074,0.0,0.4307,0.0037,estilo
+true_05500,0,0.7307,0.1121,0.6444,Gere faults Trump for blurring meaning of refugee and terrorist,5.9764,4.5344,0.0416,0.0,0.0,0.0,0.0,0.0178,0.0178,0.0,0.4758,0.0049,estilo
+fake_07154,1,0.648,0.3089,0.6665,Donald Trump Has Lowest Favorability Rating Of Any Candidate In Documented History,5.8777,5.0983,0.043,0.0028,0.0,0.2809,0.0028,0.0197,0.0,0.0084,0.514,0.0098,texto
+fake_12040,1,0.4778,0.6823,0.6837,RUSSIA S HYSTERICAL RESPONSE To Obama s Sanctions: Cold War Deja Vu,4.625,4.802,0.1056,0.0594,0.0,0.0,0.0099,0.0198,0.0297,0.0,0.4752,0.0067,estilo
+true_12160,0,0.405,0.8335,0.6838,"Day of Rage a knife, a fake bomb belt, a death",5.5491,4.5547,0.0523,0.0078,0.0,0.0,0.0,0.0078,0.0273,0.0,0.4023,0.0021,texto
+fake_11612,1,0.3908,0.8674,0.6876,WHOA! FRANCE S CONSERVATIVE PRESIDENTIAL CANDIDATE Refuses To Cover Her Head With Muslim Veil...Walks Out Of Meeting!,4.9972,4.7143,0.1611,0.0612,2.7211,0.0,0.0,0.0136,0.0204,0.0136,0.2993,0.0092,estilo
+fake_12887,1,0.3999,0.8497,0.6886,YOU WON T BELIEVE THIS! CALIFORNIA GOVERNOR S Desperate Move To Help Elect Hillary,5.5759,4.8935,0.074,0.0342,0.3802,0.0,0.0,0.0304,0.0152,0.0038,0.4297,0.0057,estilo
+true_10832,0,0.4084,0.8356,0.6915,Obama statement on death of Supreme Court Justice Scalia,6.1181,4.755,0.0534,0.0044,0.0,0.0,0.0,0.0022,0.0375,0.0,0.479,0.0023,texto
+fake_15132,1,0.3814,0.908,0.7048,BRITAIN S DAVID CAMERON Challenges Obama On Refusal To Admit ISLAMIC Extremist Violence Is Biggest Problem We Face,5.3936,5.0639,0.075,0.0228,0.0,0.0,0.0046,0.0091,0.0137,0.0137,0.3562,0.0,estilo
+true_09158,0,0.6284,0.4145,0.72,Trump fights release of video testimony in fraud case,5.8805,5.3137,0.0338,0.0056,0.0,0.0,0.0056,0.0056,0.0,0.0,0.4678,0.0048,estilo
+fake_10315,1,0.3577,0.9788,0.722,HOT MIC: REPUBLICAN SENATOR CALLS CONGRESSMAN Who Challenged Her to a Duel Fat and Unattractive in Hot-Mic Moment...as Democratic Friend Says She Coul,5.6454,4.5745,0.1778,0.1064,1.4184,0.3546,0.0106,0.0177,0.0142,0.0142,0.4184,0.0068,estilo
+fake_07783,1,0.4684,0.7698,0.7378,Another Progressive Democrat Lines Up Behind Sanders Will Warren Be Next?,6.1377,5.2208,0.0502,0.0087,0.0,0.2165,0.0,0.0,0.0,0.0,0.5195,0.0021,estilo
+fake_03453,1,0.7933,0.0976,0.7394,Chris Christie Reportedly Told Trump To Take His Cabinet Positions And Shove Em,5.9532,4.5677,0.0496,0.0052,0.0,0.0,0.0,0.0312,0.0104,0.0,0.4896,0.0027,texto
+fake_11323,1,0.752,0.195,0.7479,What Neighbor Said About MUSLIM MAN ID d As London Terrorist Speaks Volumes About The Danger Of Islamic Non-Assimilation,5.8861,4.7577,0.051,0.0139,0.0,0.0,0.0028,0.0223,0.0028,0.0,0.4485,0.0103,texto
+true_12024,0,0.8484,0.0203,0.766,Police search Finnish reporter s home after security article,5.826,5.0089,0.0278,0.0,0.0,0.0,0.0059,0.0385,0.0,0.0,0.4734,0.0019,estilo
+fake_13492,1,0.7604,0.2077,0.7695,COMMUNITY AGITATOR IN CHIEF Warns Republicans: We Don t Need Inflammatory Rhetoric,5.3279,4.7659,0.0574,0.0195,0.0,0.0,0.0,0.0244,0.0537,0.0,0.361,0.0,texto
+fake_10287,1,0.715,0.3056,0.7719,TOP TRUMP OFFICIAL Follows His Boss Lead...Won t Take Huge Salary,5.5373,5.0198,0.0711,0.0119,0.0,0.0,0.004,0.0356,0.0,0.0,0.4427,0.0219,texto
+fake_09092,1,0.8098,0.1237,0.7819,JUST IN: TRUMP ENDS FREE MONEY TRAIN After Pakistan Refuses To Stop Housing Terrorists...Cuts STUNNING About Of Military Aid,6.5985,4.9345,0.0581,0.0177,0.0,0.0,0.0014,0.0286,0.0123,0.0,0.5539,0.0074,texto
+fake_09967,1,0.6902,0.3839,0.7897,N KOREA JUST REVEALED Plans To Unleash An Unimaginable Attack That Could Lead To Electronic Armageddon,7.2248,5.0474,0.0508,0.0343,0.0,0.0729,0.0044,0.0146,0.008,0.0007,0.5554,0.005,texto
+true_05821,0,0.7518,0.2584,0.7912,Kushner divests equity in major NYC property,5.8348,4.6891,0.0551,0.0381,0.0,0.0,0.0,0.0411,0.0147,0.0,0.5103,0.0216,estilo
+fake_14281,1,0.8287,0.123,0.8063,"We choose the nominee, not the people GOP Official",5.7137,4.9801,0.0512,0.0265,0.0,0.0,0.0033,0.0199,0.0033,0.0,0.4801,0.0038,texto
+true_17476,0,0.6612,0.4945,0.8203,Thousands rally in Malaysia to oust premier Najib,6.0259,4.8136,0.0338,0.0145,0.0,0.0,0.0073,0.0097,0.0194,0.0,0.4189,0.0037,estilo
+fake_15093,1,0.7564,0.3051,0.825,"Katy Perry, Christina Aguilera, Kim and Kanye, Justin Bieber, Anti-American Ariana Grande And More A-listers Fundraise For Rich, White Democrat Presid",6.1506,5.109,0.0591,0.0021,0.0,0.0,0.0021,0.0043,0.0,0.0,0.4679,0.0078,texto
+true_09175,0,0.8035,0.2624,0.8537,Democrat Hillary Clinton calls Orlando shooting an act of terror,4.1897,4.9231,0.0594,0.0154,0.0,0.0,0.0,0.0308,0.0308,0.0154,0.2615,0.0,estilo
+fake_14384,1,0.4681,0.9596,0.8543,MASS EXODUS FROM DEMOCRAT Party In Liberal Massachusetts...TRUMP Effect?,5.1705,5.1257,0.0803,0.0343,0.0,1.1429,0.0057,0.0057,0.0057,0.0057,0.3486,0.0153,estilo
+fake_15726,1,0.7121,0.459,0.857,"DESPERATE TO STOP THE FLOW OF MUSLIM REFUGEES INTO SWEDEN, Swedish Citizens Devise A Controversial Scheme",6.0936,4.9615,0.0562,0.0249,0.0,0.0,0.0023,0.0204,0.0023,0.0045,0.4253,0.0114,texto
+true_07674,0,0.8592,0.1752,0.867,Hacked emails show Clinton aides surprised at 2015 email revelations,6.5624,5.0325,0.036,0.0,0.0,0.5658,0.0042,0.0198,0.0071,0.0014,0.5233,0.0041,estilo
+true_02812,0,0.7372,0.4373,0.8709,"MSNBC host leaving the Republican party, becoming an independent",5.3423,5.25,0.0505,0.0096,0.0,0.0,0.0048,0.0096,0.0048,0.0,0.3846,0.0,estilo
+fake_10359,1,0.7988,0.3166,0.874,DETROIT: IMMIGRANT STEALS $132 MILLION From Medicare...Owns $7 Million Mansion With Indoor Basketball Court...Defense Lawyer Mohammed Nasser Says He s,6.2206,5.0717,0.0558,0.012,0.0,0.0,0.01,0.0159,0.002,0.0,0.4502,0.0079,texto
+fake_10235,1,0.8077,0.311,0.8793,AG JEFF SESSIONS Warns Leakers...Taking Steps to Stop the Leaks that Hurt Our Country,5.2575,5.1309,0.0622,0.0262,0.0,0.0,0.0105,0.0419,0.0262,0.0,0.3822,0.0,texto
+true_14577,0,0.7189,0.4999,0.8812,Bones of contention: Australia returns ancient Aboriginal remains for outback burial,5.9814,4.957,0.023,0.0,0.0,0.0,0.0051,0.0076,0.0228,0.0051,0.4354,0.0143,estilo
+fake_02931,1,0.8614,0.2079,0.8827,WOW: Intercepted Communications Implicate Three Top Trump Advisors In Plot With Russia,6.7214,5.0326,0.0461,0.0036,0.0,0.1206,0.0084,0.0253,0.0145,0.0024,0.5573,0.0012,texto
+fake_17244,1,0.8985,0.1318,0.883,THEY LAID THEIR LIVES ON THE LINE FOR US....We Give Them Hospitals With Rats Dropping From The Ceiling And Cockroaches In Their Food,6.7322,4.7434,0.034,0.0143,0.0,0.0,0.0,0.0346,0.0191,0.0,0.6074,0.0024,texto
+fake_11628,1,0.9065,0.1197,0.8848,TWO F-15 FIGHTER JETS Called In To Intercept Unresponsive Plane Violating Airspace Near Mar-A-Lago,4.9273,5.438,0.077,0.0584,0.0,0.0,0.0,0.0292,0.0,0.0,0.2628,0.0044,texto
+fake_21506,1,0.7652,0.4162,0.8862,TRANSGENDER PRISONER IN CA JAIL FOR MURDER IS GRANTED PAROLE FOR SEX CHANGE,6.2748,5.0094,0.0588,0.0264,0.0,0.0,0.0,0.0189,0.0,0.0038,0.483,0.0083,texto
+fake_16775,1,0.8067,0.3568,0.8962,EVERY AMERICAN SHOULD BE CONCERNED About What Flew Over The Super Bowl Stadium Last Night,6.1779,4.9938,0.058,0.0166,0.0,0.0,0.0042,0.0146,0.0062,0.0,0.4615,0.0118,texto
+fake_14706,1,0.9031,0.1571,0.8964,"WHEN IT COMES TO IRAN, Obama Just Can t Help Himself: U.S. Allies Say Obama Has Secretly Chosen Sides In Saudi Arabia, Iran Conflict",6.4892,4.8463,0.0563,0.0076,0.0,0.0,0.0015,0.0167,0.0152,0.0,0.5068,0.0015,texto
+fake_22557,1,0.9729,0.02,0.8991,White House on Lockdown After Suspicious Package 1 Person Detained,4.6634,5.219,0.0474,0.0,0.0,0.0,0.0095,0.019,0.0,0.0,0.2952,0.0015,texto
+fake_07035,1,0.9519,0.0714,0.9018,President Obama: Hillary Clinton Is Undoubtedly Qualified To Be President,5.8021,4.8424,0.0527,0.0,0.0,0.0,0.0,0.0121,0.003,0.0,0.4697,0.001,texto
+true_08730,0,0.8656,0.2699,0.9083,"A festival air, and unease, hang over pre-convention Cleveland",6.5539,4.9843,0.029,0.0014,0.0,0.0,0.0057,0.0086,0.0029,0.0,0.4379,0.0104,estilo
+true_15130,0,0.8407,0.3249,0.9093,Hackers play 30 minutes of Islamic State propaganda on Swedish radio,5.3799,4.7083,0.0433,0.0,0.0,0.0,0.0,0.0139,0.0417,0.0093,0.375,0.0063,estilo
+fake_14765,1,0.988,0.0252,0.9113,OBAMA WARNS: Crackdown On Terrorism In U.S. Would Violate Iran Deal,6.5191,5.2969,0.0366,0.003,0.0,0.0,0.0015,0.0192,0.0059,0.0,0.5539,0.0005,texto
+fake_08406,1,0.8726,0.2841,0.9171,"Republican: Porn Is Worse Than Cocaine, Gov t Has To Act On Public Health Crisis",5.7807,4.9412,0.0288,0.0,0.0,0.3096,0.0,0.0124,0.0124,0.0,0.4396,0.0091,texto
+fake_12492,1,0.9743,0.0814,0.9196,JUST EXPOSED: Clinton Broke Ethics Agreement With Latest Bombshell Gift From This Middle Eastern Country While Secretary Of State,5.4381,5.2926,0.0537,0.0087,0.0,0.0,0.0087,0.0306,0.0,0.0,0.4192,0.0075,texto
+fake_08864,1,1.0,0.0288,0.9198,"Bundy s Anti-Government Militia Costing Taxpayers $100,000 A WEEK During Indefinite Standoff",6.1159,4.9646,0.0312,0.0066,0.0,0.0,0.0,0.0155,0.0066,0.0,0.469,0.0065,texto
+fake_08757,1,0.9308,0.1781,0.9214,Senate Democrats Will Force Senate Republicans To Vote On Trump s Racist Policies,5.9915,5.1078,0.0418,0.0025,0.2506,0.0,0.0,0.0125,0.0025,0.0,0.5138,0.0024,texto
+fake_02184,1,0.9888,0.0682,0.9243,John McCain Says Trump Is F*cked: Lots Of Shoes To Drop From This Centipede,5.6664,4.934,0.0606,0.0035,0.0,0.0,0.0,0.0208,0.0208,0.0,0.4062,0.0,texto
+fake_06950,1,0.9998,0.0488,0.9252,This GOP Lawmaker Is A Bigger Threat To Women s Safety Than The Trans People He Hates,5.9738,5.2296,0.0425,0.0051,0.0,0.0,0.0,0.0128,0.0,0.0,0.4745,0.0032,texto
+fake_01262,1,0.9922,0.0676,0.926,BREAKING: It Looks Like Russia Hacked Our Voting Machines,6.0064,5.1704,0.0344,0.0049,0.0,0.0,0.0025,0.0123,0.0074,0.0,0.4444,0.0024,texto
+fake_02197,1,0.8959,0.2676,0.9261,Highest Canadian Court CONFIRMS Trump Scammed Investors,6.0981,4.9099,0.0363,0.0023,0.0,0.0,0.0045,0.009,0.0,0.0,0.4775,0.0063,texto
+fake_01858,1,0.9999,0.053,0.9264,Syrian Air Base Trump Spent $80 Million Attacking Yesterday Already Up And On Bombing Raids Again,5.9296,4.8667,0.0439,0.0,0.0,0.0,0.0,0.0107,0.0,0.0,0.4027,0.0044,texto
+fake_07451,1,0.9983,0.0581,0.9268,"Report: Obama Says It s Over For Bernie, Time To Unite Behind Hillary",5.9558,4.9195,0.0454,0.0026,0.0,0.0,0.0052,0.0208,0.0078,0.0,0.4597,0.0039,texto
+fake_22181,1,0.8625,0.3457,0.9284,BREAKING: Wikileaks To Give Tech Companies Exclusive Access To CIA Hack Tools,6.0845,5.1644,0.0504,0.0388,0.0,0.0,0.0091,0.0228,0.0183,0.0,0.5,0.0018,texto
+fake_12847,1,0.9996,0.0647,0.9292,ILLEGAL ALIEN Who Helps Illegals Stay In U.S. ARRESTED For Drunk Driving...Why The Left May Not Be Able To Stop Her Deportation,6.1003,4.8045,0.0492,0.0112,0.0,0.0,0.0,0.0157,0.0,0.0,0.4539,0.0105,texto
+fake_00568,1,0.9718,0.1366,0.9328,Even Foreign Leaders Are Responding To Charlottesville Better Than Trump Did,5.7746,5.0093,0.0343,0.0,0.0,0.0,0.0156,0.0156,0.0093,0.0,0.4206,0.002,texto
+fake_06297,1,0.8465,0.4031,0.9344,Woman Who Worked For Trump Warns He HAS To Be Stopped,5.8721,4.4435,0.0536,0.0056,0.0,0.0,0.0028,0.0198,0.0169,0.0,0.4887,0.0066,texto
+fake_10494,1,0.9992,0.0927,0.9359,NUMEROUS PUBLIC Rapes Of Teenage Girls Reported At Swedish Music Festivals: Rapes at Swedish festivals are not really news anymore,5.8051,4.855,0.0424,0.006,0.0,0.0,0.003,0.0393,0.0211,0.0,0.4562,0.003,texto
+fake_21111,1,0.9104,0.2795,0.9365,AUSTRIAN PARENTS AND TEACHERS Sacrifice Young Girls At Liberal Altar: Teen Refugees Sexually Abuse School Girls For Months,6.3099,4.918,0.0371,0.0073,0.0,0.5464,0.0018,0.0182,0.0018,0.0018,0.5537,0.0054,texto
+fake_02091,1,0.9996,0.0953,0.9367,Federal Lawsuit Filed Against Trump Over Financial Disclosure,5.8579,4.9398,0.0302,0.0,0.0,0.0,0.0,0.0143,0.0086,0.0029,0.4871,0.0047,texto
+fake_15857,1,0.9999,0.0951,0.9368,OBAMA AND UNION LEADERS SELL OUT AMERICAN WORKERS By Turning Illegal Alien Into Union Members,6.3544,5.108,0.0488,0.0226,0.0,0.0,0.0,0.0122,0.0035,0.0,0.5192,0.0039,texto
+fake_06882,1,0.9951,0.1064,0.9371,National Republican Just Blamed Women For Assaults Again,5.8289,4.9086,0.0319,0.0029,0.0,0.0,0.0,0.0118,0.0029,0.0,0.41,0.0,texto
+fake_17242,1,0.9614,0.1828,0.9386,GAY MARRIAGE APPROVED BY SUPREME COURT With Ironic Dissenting Opinion From Justice Roberts: But this court is not a legislature,6.3208,4.9838,0.0469,0.0144,0.0,0.0,0.0018,0.0108,0.0072,0.0,0.5153,0.0076,texto
+fake_16663,1,0.9768,0.1566,0.9398,PAY TO STAY : Feds Open Fake University To Catch Fake Visa Scam,5.5835,5.0906,0.0437,0.0226,0.0,0.0,0.0038,0.0151,0.0113,0.0,0.3283,0.006,texto
+fake_15695,1,0.9827,0.1467,0.9403,CONSEQUENCES OF OPEN BORDERS: 15 Heavily Armed Men Break Into Texas Border Home With 9 Yr Old Boy And Open Fire,5.7203,4.75,0.0479,0.0132,0.0,0.0,0.0,0.0164,0.0099,0.0,0.4145,0.0045,texto
+fake_15783,1,0.9851,0.1439,0.9408,CLINTON MEGA-CHARITY: Slush Fund For The Clinton s Took In $140 Million... Gave Pittance In Direct Aid,6.3368,5.016,0.039,0.0053,0.0,0.0,0.0018,0.0089,0.0018,0.0,0.5124,0.022,texto
+fake_03949,1,0.9999,0.1203,0.9423,Elected Official In Oklahoma Calls For Firing Squad To Execute Hillary,4.9558,4.8298,0.0471,0.0,0.0,0.0,0.0071,0.0142,0.0,0.0,0.2695,0.0,texto
+fake_05516,1,0.9996,0.1222,0.9426,White Police Officer Fired After Threatening Black Child On Facebook,5.9558,5.1065,0.052,0.0,0.0,0.0,0.0026,0.0234,0.0208,0.0026,0.4909,0.0025,texto
+fake_13066,1,0.8348,0.4647,0.9427,BAD NEWS FOR HILLARY: CNN Says Millennials Are More Conservative Than You May Think,5.7398,5.0742,0.0567,0.0194,0.0,0.0,0.0,0.0161,0.0032,0.0065,0.4935,0.0163,texto
+fake_22043,1,0.9977,0.1331,0.944,Confirmed: FBI Raids Home of Former Trump Manager Paul Manafort,4.8828,5.2443,0.0961,0.0534,0.0,0.0,0.0,0.0382,0.0,0.0,0.3511,0.0,texto
+fake_03618,1,0.9851,0.1607,0.9443,Mike Pence s Neighbors Troll Him With Gay Pride Flags On His Block In D.C.,5.8889,4.7,0.0468,0.0083,0.0,0.0,0.0,0.0194,0.0167,0.0,0.4556,0.0019,texto
+fake_14860,1,0.9997,0.1334,0.945,OBAMA USES WORLD STAGE To Announce Plans For Executive Action On Gun Control In U.S.,6.1527,4.855,0.0484,0.0128,0.0,0.0,0.0,0.0128,0.0107,0.0,0.4606,0.0053,texto
+fake_05805,1,1.0,0.134,0.9452,White Students Accused Of Dragging Black Classmate By A Rope Around Her Neck,6.1485,4.5739,0.0398,0.0171,0.0,0.0,0.0,0.0236,0.0,0.0,0.5503,0.0038,texto
+fake_21332,1,1.0,0.1358,0.9456,ADMINISTRATORS FACE BACKLASH After Florida Middle School Organizes Segregated Field Trip For Blacks Only,6.2934,4.7111,0.05,0.0093,0.0,0.0,0.0,0.0222,0.037,0.0,0.5481,0.0029,texto
+fake_16882,1,0.9935,0.1501,0.9457,PATRIOT CALL TO ACTION: A Major Storm Is Brewing In Oregon Over Fed Gov Charging Rancher With Terrorism For Insane Reason,7.2612,4.7533,0.0447,0.007,0.0,0.0703,0.0014,0.0183,0.0084,0.0021,0.598,0.0032,texto
+fake_22039,1,0.9998,0.1373,0.9458,Google is the Engine of Censorship,5.3566,4.9194,0.0319,0.0095,0.0,0.0,0.0,0.0095,0.0,0.0,0.3412,0.0,texto
+fake_06668,1,0.9997,0.1403,0.9463,"Taxpayers Billed $800,000 A Year For Prayers In Congress",6.0684,5.0139,0.0436,0.0139,0.0,0.0,0.0023,0.0116,0.0046,0.0,0.5336,0.0336,texto
+fake_06502,1,0.9999,0.1512,0.9485,Whoops: VA Gun Shop Employee Accidentally Shoots Herself,5.8916,4.7895,0.04,0.0166,0.0,0.0,0.0028,0.0166,0.0028,0.0,0.4903,0.0056,texto
+fake_01560,1,0.9981,0.1613,0.9497,"Officials: Obama Warned About Flynn, But Trump Thought He Was Joking",5.7714,5.0188,0.0586,0.0156,0.0,0.0,0.0031,0.0406,0.0,0.0,0.475,0.0061,texto
+fake_01744,1,0.9243,0.3145,0.9497,"Pence On Aircraft Carrier Lie: No, It Wasn t Strategy, We re Just Morons",6.2461,4.7282,0.0477,0.0078,0.0,0.0,0.0039,0.0233,0.0097,0.0019,0.501,0.001,texto
+fake_04502,1,0.9381,0.291,0.9506,ANOTHER Trump Adviser Under Investigation For Russian Ties,6.4184,5.0899,0.0447,0.0033,0.0,0.3268,0.0033,0.0278,0.0,0.0,0.5212,0.0011,texto
+fake_12131,1,0.9881,0.1883,0.9508,FBI NEW YORK FIELD OFFICE Just Gave A Wake Up Call To Hillary Clinton,5.0938,5.1296,0.0866,0.0494,0.0,0.0,0.0,0.0432,0.0,0.0,0.3889,0.001,texto
+fake_12856,1,0.9948,0.1762,0.9512,4 DEAD TEENAGERS In Two Weeks...Illegal Immigrant Gang Violence Hits Long Island Town HARD,6.8742,4.8903,0.0415,0.0093,0.0,0.0,0.0021,0.0135,0.0166,0.001,0.5072,0.011,texto
+fake_07264,1,0.9373,0.2957,0.9512,"Sorry, Republicans, Workers Just Got A Major Win In This State",5.8081,4.7651,0.0265,0.0,0.0,0.0,0.0,0.006,0.0,0.0,0.4639,0.0229,texto
+fake_08798,1,0.9483,0.2738,0.9514,Virginia Republicans Want To Verify Kids Genitals Before They Use School Bathrooms,6.0379,5.2703,0.0214,0.0,0.0,0.0,0.0024,0.0,0.0,0.0,0.4593,0.0019,texto
+fake_07446,1,1.0,0.1745,0.9528,"UPDATE: Anonymous Releases Data On First Attack Doxxing Trump, Promises More To Come",5.7961,5.0915,0.0437,0.0061,0.0,0.0,0.003,0.0122,0.003,0.0,0.3994,0.0025,texto
+fake_08019,1,0.9993,0.1774,0.953,YMCA Camp Forces Black Children Through Slavery Reenactment,6.4489,5.0571,0.0455,0.0206,0.0,0.0,0.0,0.0143,0.0127,0.0,0.561,0.0023,texto
+fake_17098,1,0.9995,0.1801,0.9536,Executive Order: Obama Orders Behavioral Experiments On Americans,4.92,5.2574,0.0434,0.0,0.0,0.0,0.0,0.0147,0.0147,0.0147,0.2794,0.0092,texto
+fake_15174,1,0.9848,0.212,0.9538,HUCKABEE NAILS IT: Says Obama s Radical List Of Invited Guests To Meet Pope Proves His Fake Christianity,6.1115,4.8711,0.0526,0.0089,0.0,0.0,0.0,0.0178,0.0111,0.0067,0.4622,0.0041,texto
+fake_05480,1,0.9995,0.1828,0.954,Watch As GOP Sen. Tim Scott Emotionally Details Being Unfairly Targeted By Police As A Black Man,5.0689,4.5316,0.0629,0.0063,0.0,0.0,0.0,0.019,0.0063,0.0,0.4557,0.0,texto
+fake_06872,1,0.9999,0.1836,0.9543,Berkeley Student Kicked Off Southwest Flight For Speaking Arabic,6.2879,4.7933,0.0412,0.0056,0.0,0.0,0.0019,0.0168,0.0354,0.0056,0.4804,0.0044,texto
+fake_21164,1,0.9988,0.1899,0.955,"SAUDI BILLIONAIRE Who Used Sharia Law To Make Fortune, Donates $10 MILLION To Yale University To Build Islamic Law Center",6.1633,5.2932,0.0681,0.0063,0.0,0.0,0.0,0.0127,0.0042,0.0,0.481,0.0053,texto
+fake_22605,1,0.9974,0.1932,0.9551,IRAQ 1991: US Carpet Bombs Highway of Death,6.7405,4.9112,0.0432,0.0166,0.0,0.0,0.0036,0.013,0.0095,0.0,0.5254,0.0183,texto
+fake_04880,1,0.9973,0.2012,0.9563,"Federal Judge Tells Anti-Vaxxers To Go F*ck Themselves, Upholds Strict California Vaccination Law",6.3279,5.0268,0.0249,0.0,0.0,0.0,0.0054,0.0089,0.0054,0.0,0.4687,0.0075,texto
+fake_11257,1,0.8673,0.4762,0.9572,DIRTY POLITICS: HOW OBAMA S INTEL RULES CHANGES Opened The Door For More Spying On Americans,5.2523,5.8737,0.0745,0.0421,0.0,0.0,0.0,0.0,0.0,0.0,0.3263,0.006,texto
+fake_20312,1,0.9462,0.3124,0.9572,"ANOTHER SOLDIER IN OBAMA S RACE WAR: 4 White People SHOT In TN Ambush, Including A Cop, One KILLED...Cowardly Thug Reportedly Upset Over Black Shootin",5.3845,5.0783,0.0873,0.0507,0.0,0.0,0.0,0.0276,0.0046,0.0,0.3825,0.0022,texto
+fake_05351,1,0.9997,0.2057,0.9578,Former Jail Guard Admits To Falsifying Documents In Sandra Bland Death,5.9162,4.7541,0.0484,0.0,0.0,0.0,0.0027,0.0135,0.0,0.0,0.473,0.005,texto
+fake_05851,1,0.9847,0.2372,0.9579,Donald Trump s Negatives Hit Record Highs After Orlando Shooting,5.7621,4.9306,0.0365,0.0,0.0,0.0,0.0032,0.0063,0.0,0.0,0.4479,0.0103,texto
+fake_07209,1,0.8854,0.444,0.958,First Supreme Court 4-4 Tie Screws Republicans HARD,5.8522,4.8444,0.0244,0.0029,0.0,0.0,0.0,0.0058,0.0029,0.0,0.3948,0.0044,texto
+fake_07257,1,0.9997,0.2094,0.9584,Robert DeNiro Axes Anti-Vaxxer Movie From Tribeca Film Festival,5.9054,5.041,0.0305,0.0,0.0,0.0,0.0082,0.0137,0.0273,0.0,0.4563,0.0018,texto
+fake_00001,1,0.9998,0.2115,0.9588,Drunk Bragging Trump Staffer Started Russian Collusion Investigation,5.7557,5.0444,0.0574,0.0063,0.0,0.0,0.0032,0.019,0.0063,0.0,0.4,0.0021,texto
+fake_16606,1,0.9881,0.2439,0.96,ALARMING: 22% OF REFUGEES In Minnesota Test POSITIVE For TB,6.7534,5.0187,0.0501,0.0339,0.0,0.0,0.0012,0.0117,0.0035,0.0,0.6238,0.019,texto
+fake_03989,1,0.9835,0.2583,0.9607,Veteran Spy: Trump Trading Secret Info With Russians,5.9216,5.2554,0.0451,0.0108,0.0,0.0,0.0027,0.0134,0.0027,0.0,0.4516,0.0004,texto
+fake_08860,1,0.9651,0.2973,0.9608,How Fox News Helped Domestic Terrorists,5.961,4.9432,0.0393,0.0,0.0,0.0,0.0,0.0078,0.0052,0.0026,0.3902,0.0072,texto
+fake_01826,1,0.9981,0.23,0.961,What This Poll Says About Bernie Sanders And Republicans Should TERRIFY The GOP,5.8289,5.0708,0.0466,0.0088,0.0,0.0,0.0,0.0059,0.0,0.0,0.4808,0.0136,texto
+fake_10278,1,0.9982,0.2311,0.9612,"DEBBIE WASSERMAN SCHULTZ Planned To Continue Pay For Muslim IT Aide Charged With Multiple Counts of Bank Fraud, While Living In Pakistan...Didn t Tell",7.1632,4.9481,0.0507,0.0171,0.0,0.0,0.0031,0.0194,0.0039,0.0,0.614,0.0057,texto
+fake_02624,1,0.9998,0.2299,0.9615,WH Official: We Will Keep Saying Fake News Until The Media Is Nicer To Trump,6.1717,4.6464,0.0428,0.0042,0.0,0.0,0.0,0.0293,0.0126,0.0126,0.5293,0.0004,texto
+fake_05132,1,1.0,0.2319,0.9618,BREAKING: Melania Trump May Have Lied That She s Never Been Married,6.0958,4.8871,0.0444,0.0023,0.0,0.0,0.0068,0.0135,0.0068,0.0,0.4786,0.0052,texto
+fake_07973,1,0.9999,0.2353,0.9623,Guess Which Republican Candidate Helped KKK Chapters More Than Double Last Year,6.107,4.9665,0.0464,0.0201,0.0,0.0,0.0022,0.0067,0.0,0.0,0.4665,0.0116,texto
+fake_01522,1,1.0,0.2351,0.9623,BREAKING: Comey Was Troubled By Evidence Of Collusion With Russia When Trump Fired Him,5.9839,4.9773,0.0467,0.0152,0.0,0.0,0.0076,0.0202,0.0,0.0,0.4899,0.0,texto
+fake_01471,1,0.9935,0.2545,0.9631,"Texas Moving To Ban Jews, Muslims, and Gays from Adopting",5.7683,5.4013,0.0308,0.0063,0.0,0.0,0.0,0.0063,0.0,0.0,0.4326,0.0,texto
+fake_04624,1,0.9987,0.2444,0.9632,Christian Pastor Gets BUSTED In Arizona For Molesting Children For Decades,5.7621,4.7571,0.0345,0.0063,0.0,0.0,0.0,0.0095,0.0,0.0,0.4353,0.007,texto
+fake_09296,1,0.8795,0.4913,0.9632,JUST IN: VIDEO SHOWS Obama State Department Telling Reporters They Have No Problem With General Flynn Contacting Foreign Officials,6.1506,5.2179,0.0631,0.0214,0.0,0.0,0.0064,0.0321,0.0321,0.0,0.5342,0.0017,texto
+fake_01497,1,0.9999,0.2428,0.9633,"Trump s Lawyer Says Trump Has No Russian Income With A Few Exceptions , Internet Drags Him",5.8377,4.5965,0.0375,0.0029,0.0,0.0,0.0058,0.0205,0.0058,0.0,0.4298,0.0051,texto
+fake_05869,1,0.9999,0.2429,0.9634,Poll: Clinton Ahead Of Trump By A Staggering 12 Points,6.1591,4.7585,0.0352,0.0,0.0,0.0,0.0085,0.0127,0.0,0.0,0.5127,0.0131,texto
+fake_14870,1,0.8877,0.4801,0.964,FAMOUS RHODE ISLAND DANCING COP FIRED For Protesting Cop Hating Terror Group,5.5645,4.6346,0.073,0.0231,0.0,0.0,0.0,0.0231,0.0192,0.0,0.4038,0.008,texto
+fake_15865,1,0.9732,0.306,0.9644,SHOCKING: Why Our Fed Government Will Grant Disabled Status With Benefits To Spanish Speaking Residents Of Puerto Rico,6.4313,5.2339,0.0553,0.029,0.0,0.0,0.0032,0.0177,0.0081,0.0,0.5597,0.0078,texto
+fake_12205,1,0.9732,0.3084,0.9647,BREAKING: MI Court Of Appeals Orders Vote Recount To STOP...Jill Stein s Democrat Activist Attorney Says Count Must Go On,6.649,4.7484,0.0505,0.0091,0.0,0.1297,0.0065,0.0259,0.013,0.0,0.6148,0.0051,texto
+fake_05744,1,0.9895,0.2799,0.9654,TN First Sgt. Cites Toxic Leadership In Curse-Filled Resignation Letter,6.1612,4.945,0.0535,0.0296,0.0,0.0,0.0021,0.0106,0.0063,0.0,0.4799,0.0066,texto
+fake_14452,1,0.9995,0.2603,0.9656,HOW PRESIDENT EISENHOWER Solved The Illegal Immigration Problem In America,7.3671,4.8534,0.0442,0.0076,0.0632,0.0,0.0,0.0126,0.0145,0.0,0.5929,0.0157,texto
+fake_14172,1,0.9997,0.26,0.9656,OBAMA UNDERMINES AMERICA...Plans To Slash Nuclear Stockpiles...Again,5.9506,5.2298,0.0515,0.0131,0.0,0.0,0.0,0.0078,0.0052,0.0,0.4543,0.0197,texto
+fake_09514,1,0.9928,0.2761,0.9658,JUST IN: RAND PAUL ASSAULTED By Democrat Doctor...Here s What We Know About The Attacker,5.8805,4.9412,0.0848,0.0224,0.0,0.0,0.0,0.0252,0.0028,0.0,0.451,0.0127,texto
+fake_05450,1,0.997,0.2673,0.9658,There s A New Majority Religious Voting Bloc In The U.S. And Conservative Christians Won t Like It,5.826,5.0533,0.0317,0.0,0.0,0.0,0.0,0.003,0.0,0.0,0.503,0.0019,texto
+fake_04648,1,0.9994,0.2664,0.9663,Christian Ex-Mayor Raped 4-Year-Old Girl For Three Years And Blames Her For It,5.9428,4.6842,0.0327,0.0026,0.0,0.0,0.0,0.0105,0.0079,0.0,0.4605,0.0091,texto
+fake_05904,1,0.9983,0.2747,0.9671,Second Anti-Gay Massacre Stopped By Police In L.A.,5.8944,4.6326,0.049,0.0083,0.0,0.0,0.0028,0.0221,0.011,0.0,0.4834,0.0029,texto
+fake_15491,1,0.9936,0.2868,0.9673,"NOT SO FAST: CA LIBS TRY TO Drought Shame Conservative Actor Tom Selleck For Stealing Water, But Ventura County Sheriff Disagrees",6.1924,4.582,0.0452,0.0205,0.0,0.0,0.002,0.0184,0.0164,0.0,0.4836,0.0075,texto
+fake_11459,1,0.8982,0.4862,0.9675,CNN Anchor Asks Van Jones To Take Back His Praise For President Trump...Viewers Are STUNNED By His Response,4.625,4.4554,0.1381,0.0396,0.0,0.0,0.0,0.0198,0.0297,0.0,0.3465,0.0,texto
+fake_08450,1,1.0,0.2747,0.9675,Black GOP Super PAC Is Secretly All-White,5.7589,5.0633,0.059,0.0316,0.0,0.0,0.0,0.0095,0.0,0.0,0.4177,0.0126,texto
+fake_11245,1,0.9775,0.3259,0.968,"FIRED! #NeverTrumper, Close Friend Of Reince Preibus, White House Deputy-Chief-Of-Staff Katie Walsh OUTED As Leaker",7.142,5.1481,0.0551,0.0055,0.0792,0.0792,0.0016,0.015,0.0055,0.0032,0.6358,0.0008,texto
+fake_05447,1,1.0,0.282,0.9684,Trump Continues To Solicit Illegal Donations From Foreign Lawmakers,6.3544,4.9286,0.0371,0.0105,0.0,0.0,0.0052,0.0157,0.0122,0.0017,0.5192,0.0023,texto
+fake_10217,1,0.955,0.3781,0.9687,MAXINE WATERS Gleefully Reveals Plan to Destroy Trump in Disturbing Interview,5.5568,4.5543,0.063,0.0155,0.0,0.0,0.0,0.0271,0.0155,0.0,0.4457,0.0027,texto
+fake_16497,1,0.9981,0.2992,0.9699,OBAMA ADMINISTRATION Sues Private Business For Saying NO To Dreadlocks...Just The Tip Of The Iceberg!,6.5221,5.2725,0.0422,0.0162,0.1473,0.0,0.0029,0.0118,0.0,0.0,0.5302,0.0037,texto
+fake_05348,1,0.9988,0.3019,0.9704,OK Cop Shoots Family Dog During Child s Birthday Party,5.9661,4.2134,0.0385,0.0026,0.0,0.0,0.0026,0.0283,0.0051,0.0026,0.5321,0.0072,texto
+fake_07305,1,0.9403,0.4252,0.9706,"Interview With Progressive Superstar Running For Congress, Zephyr Teachout",6.809,5.1448,0.0499,0.0077,0.0,0.0,0.0,0.0099,0.0133,0.0055,0.5348,0.0084,texto
+fake_07837,1,0.982,0.3514,0.972,"Greedy Oil CEO Fires 20 Percent Of Employees, Awards Himself $18 Million",6.0981,4.8716,0.0338,0.0113,0.0,0.0,0.0023,0.0,0.0,0.0,0.491,0.0303,texto
+fake_12592,1,0.9744,0.3678,0.972,"CAMPAIGN VOLUNTEERS Deliver Opposing Messages: Support A Lawless Nation Or Vote To Restore Law And Order, Honor Our Veterans",6.7719,4.7649,0.0532,0.0172,0.0,0.0,0.0023,0.0126,0.0092,0.0023,0.5241,0.0068,texto
+fake_14531,1,0.999,0.3186,0.9722,"BREAKING: OBAMA S Director Of Diversity Donates Hundreds Of Thousands Of Tax Payer Dollars To Open Borders, Other Radical Groups",6.561,5.4476,0.0643,0.0312,0.0,0.0,0.0014,0.0099,0.0014,0.0,0.5014,0.0127,texto
+fake_21939,1,0.9997,0.3182,0.9723,U.S. State Dept. Spox: Everybody wants Assad out five years ago,4.6634,4.9048,0.0874,0.0286,0.0,0.0,0.0,0.0095,0.0,0.0,0.2952,0.0031,texto
+fake_11396,1,0.9906,0.3391,0.9726,JUST IN: Criminal Hackers Who Stole Data From 500 MILLION Yahoo Email Users Were RUSSIAN Agents Obama Regime INVITED To U.S...Courted By FBI,6.3099,4.9454,0.0693,0.0383,0.0,0.0,0.0018,0.02,0.0036,0.0,0.4954,0.0042,texto
+fake_01084,1,1.0,0.3281,0.9734,Airlines Push Back On Trump s Racist Agenda In A Major Way,5.7746,4.8692,0.0282,0.0,0.0,0.0,0.0031,0.0093,0.0125,0.0,0.4268,0.0021,texto
+fake_20125,1,0.9962,0.3377,0.9736,"FATHER OF ARMED THUG Killed By Milwaukee Cop Speaks Out: Blames Whites, They got us killing each other ...Blames Himself For Being Bad Role Model, You",6.3172,4.6763,0.0484,0.0108,0.0,0.0,0.0,0.0181,0.0018,0.0072,0.5497,0.012,texto
+fake_14232,1,0.9345,0.4663,0.9736,OBAMA RACES TO SET GITMO TERRORISTS FREE...Leaves Servicemen Punished For Making Heat-of-the-battle decisions that saved lives In Fort Leavenworth,6.7856,4.914,0.039,0.0079,0.0,0.0,0.0023,0.009,0.0057,0.0023,0.5204,0.0106,texto
+fake_06382,1,1.0,0.3308,0.9737,Report Reveals 7 Most Disgusting Things Trump Did To Women,4.9698,5.007,0.049,0.0,0.0,0.0,0.014,0.0,0.0,0.0,0.3077,0.0023,texto
+fake_13698,1,0.9993,0.3359,0.974,BREAKING: FL MUSLIM TERRORIST Worked For Security Company Who Quietly Transports And RELEASES Van Loads Of ILLEGAL ALIENS Away From Border For U.S. Go,6.8824,4.9086,0.0611,0.0267,0.0,0.1027,0.0021,0.0216,0.0123,0.0,0.5595,0.0117,texto
+fake_05262,1,0.9999,0.3348,0.9741,Family Values Republican Busted For Having A Sex Video Of Himself On Government Computer,5.9375,4.9365,0.051,0.0026,0.0,0.2646,0.0026,0.0185,0.0079,0.0,0.4894,0.0018,texto
+fake_08842,1,0.9913,0.3535,0.9742,"Bernie Sanders Blocked From Speaking At Iowa High School, Guess Who They Let Speak Instead",6.2804,4.9268,0.0324,0.0,0.0,0.0,0.0019,0.0094,0.0113,0.0019,0.5385,0.0022,texto
+fake_07128,1,0.9996,0.3383,0.9743,"Bernie Sanders Won The Nevada Caucus On Saturday, And Here s How",5.9026,5.1068,0.0467,0.0,0.0,0.0,0.0027,0.011,0.0,0.0082,0.5425,0.0168,texto
+fake_22251,1,0.9988,0.3419,0.9745,Trump Moves Ahead with The Wall Between US and Mexico,5.3891,5.0505,0.0527,0.0275,0.0,0.0,0.0,0.0092,0.0138,0.0,0.367,0.0133,texto
+fake_00484,1,0.9841,0.3728,0.9746,Advisers Are Now Warning Donald Trump About Impeachment,5.8051,4.9517,0.0398,0.003,0.3021,0.0,0.0,0.0091,0.006,0.0,0.4109,0.0035,texto
+fake_16667,1,0.9996,0.3422,0.9747,HERE S WHY AMERICA IS $19 Trillion Dollars In Debt...Two Cities Have Received $572.5 Million For Mortgage Assistance ...,6.4953,4.9682,0.0457,0.0076,0.0,0.1513,0.003,0.0166,0.0091,0.0045,0.5598,0.0191,texto
+fake_04493,1,0.9894,0.3641,0.9748,Trump Has Been Sued REPEATEDLY For Disabilities Violations At His Properties,6.6026,4.712,0.0421,0.0095,0.0,0.0,0.0,0.0082,0.0041,0.0,0.5639,0.0106,texto
+fake_00208,1,0.9438,0.46,0.9749,George W. Bush Calls Out Trump For Supporting White Supremacy,6.248,4.814,0.0395,0.0039,0.0,0.0,0.0078,0.0155,0.0213,0.0,0.4864,0.0013,texto
+fake_10251,1,0.9372,0.4751,0.975,COLLEGES MAY BE FORCED To Stop Pushing Qualified White Students To Back Of Line.. DOJ Will Take On Affirmative Action In College Admissions,7.5099,5.3189,0.046,0.0148,0.0,0.0548,0.0011,0.0011,0.0005,0.0,0.6762,0.0044,texto
+fake_02749,1,0.9341,0.4807,0.975,"Trump s SCOTUS Pick Sided With Hobby Lobby Against Women, Thinks Christianity Trumps Secular Courts",6.0707,4.9954,0.0427,0.0046,0.0,0.0,0.0,0.0069,0.0116,0.0,0.456,0.0023,texto
+fake_12171,1,0.9803,0.3848,0.975,"WAR HAWK, ANTI-TRUMPER RINOS Join Dems To Investigate Russian Influence In Election...Trump Says Russian Interference Claim Is Ridiculous",6.5667,5.1986,0.0613,0.0197,0.0,0.0,0.0014,0.031,0.0113,0.0042,0.5197,0.0031,texto
+fake_00638,1,0.9997,0.3501,0.9755,"Hey Trump Fans: Trump Hasn t Improved The Economy One Single Bit, And Here s Proof",6.2577,4.4971,0.0389,0.0038,0.0,0.0,0.0,0.0115,0.0192,0.0,0.5106,0.0196,texto
+fake_01349,1,0.9444,0.4663,0.9756,White House Staffer On Kushner FBI Investigation: Jared Is So F***ed,6.073,4.8568,0.0477,0.0139,0.0,0.0,0.0023,0.0069,0.0,0.0,0.485,0.0031,texto
+fake_05732,1,1.0,0.3509,0.9756,Texas Supreme Court Rules That Christian Parents Can Keep Their Kids Stupid,6.1399,4.8898,0.0314,0.0,0.0,0.0,0.0108,0.0086,0.0,0.0,0.568,0.0051,texto
+fake_15058,1,0.9483,0.4596,0.9757,Watch Texas Biker Hit By Car Was It On Purpose?,4.9836,4.4828,0.037,0.0,0.0,1.3793,0.0,0.0207,0.0,0.0069,0.3793,0.0049,texto
+fake_03282,1,0.9398,0.4772,0.9757,Is Trump Purging The Government? Team Asking For List Of Names,5.793,5.0703,0.041,0.0,0.0,0.3058,0.0,0.0092,0.0,0.0,0.4709,0.0,texto
+fake_08828,1,1.0,0.3548,0.976,SIX Republican Lawmakers Have Quietly Met With The Bundy Militia In Oregon,6.3026,4.8294,0.0407,0.0073,0.0,0.1835,0.0,0.0165,0.0128,0.0018,0.4807,0.0012,texto
+fake_02114,1,1.0,0.3551,0.976,Prepare To Kill : Conservative Trump Fan Declares Open Season On Anyone Who Punches Nazis,6.2691,4.6698,0.033,0.0,0.0,0.1898,0.0019,0.0209,0.0057,0.0114,0.4858,0.0,texto
+fake_05803,1,0.9995,0.3575,0.9761,AL Cop Goes Ballistic On Fellow Officer Over Records Dispute,5.8522,4.2882,0.0417,0.0144,0.0,0.0,0.0,0.0202,0.0346,0.0,0.4784,0.0011,texto
+fake_08399,1,1.0,0.3577,0.9762,"Unlike Hillary, Cruz s Campaign May Have ACTUALLY Just Broken The Law In Iowa",6.4922,4.8179,0.0347,0.003,0.0,0.1517,0.0046,0.0167,0.0061,0.0061,0.5099,0.001,texto
+fake_01329,1,0.9995,0.3617,0.9765,Trump Has Finally Commented On Portland Train Attack... Sort Of,6.3063,4.819,0.0365,0.0055,0.0,0.0,0.0,0.0091,0.0219,0.0,0.4717,0.0025,texto
+fake_07670,1,0.999,0.3638,0.9766,Trump Was So Desperate During Last Debate He Broke The Rules To Ask For Help,5.8021,4.8909,0.0434,0.0061,0.0,0.0,0.0,0.0091,0.0,0.0,0.4848,0.0,texto
+fake_05284,1,0.9977,0.3769,0.9775,Clinton Is Beating Trump By 9 Points In Pennsylvania Here s Why That Matters,5.8141,4.9431,0.0473,0.006,0.0,0.0,0.0,0.003,0.0,0.0,0.4581,0.0117,texto
+fake_04835,1,0.9856,0.4103,0.9782,"Florida Voters Kick Racist, Corrupt State Prosecutor Angela Corey Out Of Office",6.6708,4.9835,0.0334,0.0,0.0,0.1269,0.0038,0.0051,0.0025,0.0,0.5051,0.0084,texto
+fake_02045,1,0.9999,0.3823,0.9783,"BOMBSHELL: Information Suggests Trump Associates DID Collude With Russia, According To Officials",5.0814,5.2688,0.07,0.0375,0.0,0.0,0.0062,0.0438,0.0062,0.0,0.4062,0.0,texto
+fake_21062,1,0.9971,0.3922,0.9787,Refugee Living In England Arrested For Threatening To Cut Out His Wife s Heart Because She Was Becoming Too English,5.7683,4.6834,0.0402,0.0031,0.0,0.0,0.0,0.0125,0.0031,0.0,0.5016,0.0016,texto
+fake_03560,1,0.9991,0.3897,0.9788,"Trump Lied About Spontaneous Call With Taiwan, They Had Been Planning To Talk For Months",5.8916,4.7895,0.0371,0.0028,0.0,0.0,0.0028,0.0111,0.0111,0.0,0.4709,0.0019,texto
+fake_02221,1,1.0,0.3929,0.9792,Sean Spicer Accidentally ADMITS Trump Lied About Obama Tapping His Wires,6.0379,4.9354,0.0437,0.0096,0.0,0.0,0.0024,0.012,0.0239,0.0,0.4282,0.0,texto
+fake_05162,1,1.0,0.3982,0.9796,New Polls Stun: State That s Been Deep Red For OVER 20 YEARS May Become Key Battleground State,6.1137,5.031,0.05,0.0111,0.0,0.0,0.0022,0.0022,0.0,0.0,0.4767,0.0093,texto
+fake_06835,1,1.0,0.4009,0.9798,Superdelegate Tammy Baldwin: I m Still A Human,6.089,4.9614,0.0372,0.0068,0.0,0.0,0.0,0.0068,0.0045,0.0,0.5295,0.0026,texto
+fake_03128,1,0.977,0.4509,0.98,Trump Wants Media Who Reported On Russian Hacking Punished Like This,6.073,5.0647,0.0333,0.0139,0.0,0.2309,0.0046,0.0208,0.0046,0.0,0.4365,0.0015,texto
+fake_22092,1,0.9677,0.4768,0.9805,SYRIA: British and American Presence Directly Escalating Conflict Near Al-Tanf,7.0493,5.0947,0.0514,0.0269,0.0,0.0,0.0026,0.0096,0.0139,0.0,0.5812,0.0054,texto
+fake_11028,1,0.9995,0.4176,0.981,COLLEGE STUDENTS EXPRESS DISGUST In Trump s First 100 Days ...Until They Find Out Interviewer Was Talking About Obama,5.2204,5.3587,0.0822,0.0217,0.0,0.0,0.0,0.0,0.0,0.0,0.3261,0.0076,texto
+fake_11519,1,0.9999,0.4172,0.981,"Sickening Reason COP-HATING, RACIST 49 ers QB Colin Kaepernick Just Announced He ll Now Stand For National Anthem",6.0684,4.703,0.0529,0.0232,0.0,0.0,0.0,0.0139,0.0255,0.0,0.4756,0.0099,texto
+fake_04716,1,0.9999,0.4163,0.981,Trump Loving Nut-Job Facing Charges After Making Death Threats For This Absurd Reason,6.1356,4.6269,0.0436,0.0022,0.0,0.0,0.0,0.013,0.0108,0.0065,0.4772,0.0082,texto
+fake_14188,1,1.0,0.4196,0.9812,"BLACK FELON Brutally Beats Girlfriend, Grabs Cop s Gun, Sticks Gun In Cop s Back...Cop s Partner SHOOTS, KILLS Felon...Cop Exonerated...Black Lives Ma",6.4892,4.8919,0.0604,0.0107,0.1522,0.0,0.0,0.0167,0.0122,0.0,0.5251,0.002,texto
+fake_11277,1,0.9754,0.4702,0.9812,60 Minutes Uses Fake News Story To Destroy Credibility Of Popular Conservative Twitter Personality For Suggesting Hillary Had Parkinson s,5.247,4.9418,0.0717,0.0159,0.0,0.0,0.0,0.0,0.0,0.0,0.4074,0.0104,texto
+fake_05195,1,0.9975,0.4263,0.9813,Trump s Taj Mahal Will Be Officially Closing After Labor Day,6.073,4.6859,0.0345,0.0,0.0,0.0,0.0,0.0046,0.0,0.0,0.4642,0.0075,texto
+fake_22132,1,0.9935,0.437,0.9815,Syria Strikes: This is NOT The Donald Trump We Wanted,4.4188,4.4756,0.0736,0.0244,0.0,0.0,0.0,0.0122,0.0244,0.0,0.2561,0.0,texto
+fake_12065,1,0.9998,0.4235,0.9815,OBAMA S EMBARRASSING Farewell Interview: Mom Was Hippie But Shaved Her Legs...Promises To Take 5-Star Mooch On Nice Vacation...She Deserves It,6.608,4.7554,0.0549,0.0054,0.0,0.0,0.0041,0.0135,0.0189,0.0014,0.5122,0.014,texto
+fake_00822,1,0.9999,0.4277,0.9818,"Trump Campaign Manager Was In Debt To Shady Russian Interests, Obviously Compromised",6.0591,4.7963,0.0459,0.0,0.0,0.0,0.007,0.0094,0.0094,0.0,0.4754,0.0094,texto
+fake_22665,1,0.9998,0.4297,0.9819,FBI Arrest Cliven Bundy at Portland Airport Charged with Federal Conspiracy,6.7154,5.0947,0.0504,0.0231,0.0,0.0,0.0024,0.0085,0.0024,0.0012,0.5133,0.0047,texto
+fake_15858,1,0.9991,0.4314,0.9819,UPDATE: WHY UNIV OF MICHIGAN REPLACED SCHEDULED SHOWING OF American Sniper With PG Movie About A Teddy Bear,6.7878,5.079,0.0572,0.0192,0.0,0.0,0.0023,0.0158,0.0192,0.0,0.553,0.0018,texto
+fake_01941,1,1.0,0.4319,0.9821,Noam Chomsky Warns Of Staged Terrorist Attack If Enough People Turn On Trump,6.0474,4.846,0.0357,0.0024,0.0,0.0,0.0118,0.0095,0.0142,0.0,0.4479,0.0055,texto
+fake_02748,1,0.9941,0.4452,0.9821,Democratic Senator Joins #THERESISTANCE: Says Trump Stole Obama s SCOTUS Seat,6.1203,4.9868,0.052,0.0066,0.0,0.0,0.0,0.0088,0.0044,0.0,0.4604,0.0,texto
+fake_04321,1,0.9999,0.4343,0.9822,BREAKING: Yet ANOTHER Trump Advisor Caught With Disturbing Russian Connections,6.2615,5.2065,0.0442,0.0057,0.0,0.0,0.0057,0.0115,0.0153,0.0,0.4359,0.0018,texto
+fake_01525,1,0.9995,0.4357,0.9823,Top Dems Take Action To Keep Documents On Russia Investigation Safe From Trump,5.9216,4.7849,0.0546,0.0161,0.0,0.0,0.0,0.0108,0.0054,0.0,0.4516,0.0,texto
+fake_08174,1,0.9969,0.4434,0.9824,Here s The Ted Cruz Ad Starring An Adult Film Star He Doesn t Want You To See,5.7807,4.8019,0.0484,0.0,0.0,0.0,0.0,0.0124,0.0031,0.0062,0.4272,0.0,texto
+fake_01413,1,0.9764,0.4894,0.9826,GOP Senator Says Flynn Stonewalling Russia Investigation,5.8348,4.8886,0.0414,0.0147,0.0,0.8798,0.0,0.0205,0.0088,0.0,0.4135,0.0015,texto
+fake_01738,1,0.9995,0.4492,0.9831,"BREAKING: It s Real, Russia Stole Our Election And Now Officials Have Definitive PROOF",5.948,4.9738,0.0475,0.0157,0.0,0.0,0.0079,0.0236,0.0157,0.0052,0.4581,0.0004,texto
+fake_13444,1,0.9935,0.4662,0.9834,"BOOM! Mother Of Black Son Murdered By Blacks: I Don t Preach Black Lives Matter, Because Black Lives Only Matters When Law Enforcement Is Involved",5.7071,4.5633,0.0572,0.0067,0.3333,0.0,0.0,0.0233,0.0167,0.0,0.4167,0.0117,texto
+fake_10943,1,0.9994,0.4568,0.9836,BLACK HARVARD STUDENTS Host Separate Segregated Graduation Ceremony,5.8201,5.3095,0.0415,0.0089,0.0,0.0,0.006,0.0149,0.006,0.003,0.4911,0.0105,texto
+fake_00434,1,0.9932,0.4703,0.9836,South Dakota Republican Rigs Upcoming Election For Herself By Personally Purging Democratic Voters,5.8636,4.5812,0.0436,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.4957,0.0299,texto
+fake_05409,1,0.9993,0.466,0.9842,One Of The Worst Right-Wing Trolls Just Got Banned From Twitter FOREVER,5.8464,4.9159,0.0373,0.0087,0.0,0.0,0.0,0.0058,0.0,0.0,0.4319,0.0,texto
+fake_22638,1,1.0,0.4668,0.9843,"New Evidence Shows Foul Play, Cover-up by FBI and OSP in Shooting of LaVoy Finicum DOJ Opens New Investigation",6.5848,5.2503,0.0353,0.0124,0.0,0.0,0.0028,0.0069,0.0014,0.0,0.5228,0.0013,texto
+fake_02356,1,0.9973,0.4747,0.9844,Publisher Announces Books By The Obamas Are Officially On The Way,6.0331,4.9447,0.0492,0.0048,0.0,0.2404,0.0048,0.0192,0.0192,0.0,0.488,0.0024,texto
+fake_05113,1,0.9999,0.4696,0.9845,Clinton Is Trouncing Trump In GOP Districts By Double Digits,5.3613,4.8632,0.0447,0.0047,0.0,0.0,0.0047,0.0047,0.0,0.0,0.3821,0.0109,texto
+fake_20470,1,0.9999,0.472,0.9846,RESTAURANT OWNER Makes Awesome Sign Mocking Transgender Bathroom Law,4.2047,5.1667,0.0821,0.0303,0.0,0.0,0.0,0.0,0.0,0.0,0.2576,0.0,texto
+fake_07942,1,1.0,0.4727,0.9846,Someone Just Turned The Lights Off On Donald Trump,5.4889,4.3859,0.0473,0.0,1.2448,0.0,0.0,0.0124,0.0,0.0,0.4232,0.0,texto
+fake_12778,1,1.0,0.4738,0.9847,PROOF THEY KNOW SHE S LOSING...Hillary s Campaign Spokesman Tells Trump: Go F*ck Yourself During Debate,4.6821,4.9907,0.1051,0.0467,0.0,0.0,0.0,0.0374,0.0,0.0187,0.3084,0.0,texto
+fake_02702,1,1.0,0.4751,0.9848,Fox News Literally Praises Last Jobs Report Under President Obama As Economic Win For Trump,6.48,4.8495,0.0422,0.0,0.0,0.0,0.0108,0.0061,0.0015,0.0,0.5837,0.0177,texto
+fake_09585,1,0.9974,0.4827,0.9849,FBI INFORMANT Blows The Whistle on Obama DOJ s Intimidation Tactics,5.451,5.4741,0.0924,0.0517,0.0,0.0,0.0,0.0129,0.0,0.0,0.4095,0.0026,texto
+fake_06506,1,1.0,0.4786,0.985,"FBI Turns Up No Evidence, Says Hillary Clinton Committed No Criminal Wrongdoing",5.9216,4.8602,0.0459,0.0269,0.0,0.0,0.0054,0.0188,0.0054,0.0027,0.4462,0.0005,texto
+fake_06229,1,1.0,0.4812,0.9851,Suspicions Mount As New Details On Donald Trump Self-Funding Emerge,5.8861,4.7994,0.0453,0.0195,0.0,0.0,0.0,0.0084,0.0028,0.0,0.5376,0.0052,texto
+fake_12622,1,0.9937,0.4943,0.9851,HILLARY CLINTON MEETS BLACK LIVES MATTER: Says Members Will Play An Important And Constructive Role In America s Future,4.1271,5.0656,0.1877,0.0984,0.0,0.0,0.0,0.0328,0.0,0.0,0.4262,0.0,texto
+fake_22282,1,0.9977,0.4892,0.9853,LAST MINUTE GOV T GRAB: Obama Admin Decrees DHS will Take Control of US Election Systems,6.9489,5.6177,0.0299,0.0115,0.0,0.0,0.0019,0.0086,0.0221,0.0,0.6119,0.0033,texto
+fake_01798,1,0.996,0.4921,0.9853,Australia s Ex-Foreign Minister Responds To Trump s Failing Presidency; America Should Listen,5.79,5.0276,0.041,0.0031,0.0,0.0,0.0092,0.0153,0.0123,0.0031,0.3926,0.002,texto
+fake_17061,1,0.9991,0.489,0.9855,Obama Suggests Gun Confiscation Is Solution...Citizens In Gun Free Britain Disagree,5.3519,4.7048,0.0486,0.0,0.0,0.0,0.0,0.0,0.0429,0.0,0.3571,0.0041,texto
+fake_13251,1,0.999,0.4902,0.9855,ANGRY BLACK MILWAUKEE RESIDENTS Set City On Fire After Armed Black Man Is Killed By Police: The black people of Milwaukee are tired...They re tired of,6.9921,4.609,0.0414,0.0055,0.0,0.276,0.0009,0.0248,0.0074,0.0064,0.598,0.0157,texto
+fake_18876,1,0.9993,0.4889,0.9855,MARINE VETERAN S American Flag Set On Fire...In His Own Driveway,5.2933,4.1061,0.0776,0.0202,0.0,0.0,0.0,0.0202,0.0303,0.0,0.4091,0.0,texto
+fake_05373,1,1.0,0.4881,0.9855,Jailers Left Paralyzed Man On Cell Floor For Five Days Before He Died,6.5793,4.7775,0.0364,0.0028,0.0,0.0,0.0014,0.007,0.0014,0.0,0.5786,0.0031,texto
+fake_06245,1,0.9995,0.4899,0.9856,"Lesbian Couple Beaten, Arrested For Holding Hands Wins $80,000 Settlement",5.8833,4.676,0.0467,0.0056,0.0,0.0,0.0028,0.014,0.0056,0.0,0.4777,0.0105,texto
+fake_01810,1,0.9988,0.4995,0.986,Trump Attacks James Comey For Not Jailing Clinton: She Was Guilty Of Every Charge,5.6733,4.8966,0.0655,0.0241,0.0,0.0,0.0034,0.0172,0.0,0.0,0.4069,0.0012,texto

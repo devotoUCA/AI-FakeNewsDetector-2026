@@ -1,0 +1,68 @@
+{
+  "fuente": "WELFake, Zenodo record 4561253 (CC BY 4.0)",
+  "sha256_csv": "665331424230fc452e9482c3547a6a199a2c29745ade8d236950d1d105223773",
+  "direccion_etiquetas": {
+    "filas_coincidentes_con_isot": 44284,
+    "acuerdo_si_1_es_falsa": 0.9997064402493,
+    "direccion": "1 = falsa, 0 = real (igual que nuestra convención)",
+    "invertir": false
+  },
+  "pasos": [
+    {
+      "paso": "carga",
+      "filas": 72134,
+      "falsas": 37106
+    },
+    {
+      "paso": "filtrar_textos_cortos (< 20 palabras)",
+      "eliminadas": 1209,
+      "eliminadas_falsas": 1174,
+      "eliminadas_reales": 35
+    },
+    {
+      "paso": "duplicado_exacto_de_cualquier_fila_de_ISOT",
+      "eliminadas": 44198,
+      "eliminadas_falsas": 22784,
+      "eliminadas_reales": 21414
+    },
+    {
+      "paso": "casi_duplicado_de_ISOT",
+      "eliminadas": 42,
+      "eliminadas_falsas": 36,
+      "eliminadas_reales": 6
+    },
+    {
+      "paso": "coincide_con_afirmacion_de_LIAR",
+      "eliminadas": 0,
+      "eliminadas_falsas": 0,
+      "eliminadas_reales": 0
+    },
+    {
+      "paso": "duplicados_exactos_internos (conflicto de etiqueta: se descarta el grupo)",
+      "eliminadas": 2602,
+      "eliminadas_falsas": 2584,
+      "eliminadas_reales": 18
+    },
+    {
+      "paso": "casi_duplicados_internos",
+      "eliminadas": 833,
+      "eliminadas_falsas": 829,
+      "eliminadas_reales": 4
+    }
+  ],
+  "frac_con_dateline_reuters_tras_dedup": 0.001032258064516129,
+  "splits": {
+    "dev": {
+      "n": 11625,
+      "falsas": 4850,
+      "reales": 6775,
+      "sha256_ids": "36d3ff3725a36a852ab71f3d7a660bf21a9101e332863ddab52cc5ee8ff47ff5"
+    },
+    "holdout": {
+      "n": 11625,
+      "falsas": 4849,
+      "reales": 6776,
+      "sha256_ids": "a6f2edf788e3180cd66ea5021fabb89f71d0b38deda93234c939d885c32ef984"
+    }
+  }
+}
