@@ -17,7 +17,26 @@ Duración sugerida: unos 12 minutos más preguntas. Todas las cifras salen de `r
 | 11 | Demo | En vivo: un ejemplo del test, un texto en español (→ incierta) y un texto corto (→ advertencia). Aviso permanente. | `streamlit run app/demo.py` |
 | 12 | Riesgos, límites y próximos pasos | Riesgo de falso respaldo y de censura; nunca usarlo como único criterio. Próximos pasos: etiquetas de veracidad, varias fuentes por clase, validación cruzada por fuente. | informe §12–14 |
 
+## Versión con la iteración 2 (recomendada)
+
+La historia que más defiende el proyecto: **"detectamos que el 98,9 % era engañoso, lo medimos y lo
+mitigamos, y mostramos hasta dónde se puede llegar"**. Se reemplazan las diapositivas 8–10 por estas:
+
+| # | Diapositiva | Mensaje clave | Figura o fuente |
+|---|---|---|---|
+| 8 | "El 98,9 % es engañoso" | En LIAR y en WELFake (artículos de otros medios, deduplicados contra ISOT), el modelo de la iteración 1 queda **por debajo del trivial**. En ISOT, la clase es la fuente. | `external_liar.png`, `comparison_it1_vs_it2.csv` |
+| 9 | Cazamos los atajos | Un solo rasgo predice la etiqueta: `(Reuters)` 0,996, `said` 0,86, días de la semana 0,86, comillas curvas 0,76. Mostrar qué neutraliza cada perfil. | `shortcut_audit_v2.png` |
+| 10 | Evaluamos robustez, no in-domain | Panel con cambio de subject, cambio temporal, externo de desarrollo e invarianza. **Neutralizar el texto empeoró a los modelos de palabras**; los n-gramas de caracteres con v2 ganaron. | `ablation_v2.png`, `panel_v2.csv` |
+| 10b | Resultado honesto | WELFake-holdout: 0,547 → 0,581 (trivial 0,583). ECE 0,40 → 0,10. La probabilidad ahora es honesta afuera; el modelo sigue sin superar al trivial. | `reliability_final_v2.png`, `abstention_coverage_v2.png` |
+| 10c | Lo que encontramos tarde | Atajo de espaciado de oraciones (`.the`) y subconfianza in-domain por la contracción. Lo mostramos. | informe §15.3–15.4 |
+
 ## Preguntas probables y respuestas cortas
+
+- **"¿Por qué no mejoraron más?"** Porque la causa raíz está en los datos: en ISOT, la clase es la
+  fuente. Probamos neutralizar el texto, regularizar más, el ensamble y sumar LIAR, y ninguno
+  resuelve eso. Hace falta un corpus con muchas fuentes por clase.
+- **"¿Por qué WELFake y no LIAR como holdout?"** LIAR ya se había mirado completo en la iteración 1.
+  WELFake se deduplicó contra ISOT (el 61 % era ISOT) y se verificó la dirección de sus etiquetas.
 
 - **"¿98,9 % no es demasiado?"** Sí, y por eso lo tratamos con sospecha: sacamos las marcas, medimos la
   fuga y lo probamos en LIAR, donde cae al nivel del azar.

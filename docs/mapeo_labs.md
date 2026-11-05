@@ -27,3 +27,16 @@ real generado en la corrida.
 | 20 Riesgos y arquitectura | matriz probabilidad × impacto | tabla de riesgos del informe §12 (misma regla: ≥ 16 ALTO, ≥ 8 MEDIO) | informe |
 | 21 Despliegue, pruebas y monitoreo | contrato de entrada/salida, validación, deriva, versión, registro | `Predictor.input_warnings`; `metadata.json` (versión y hashes); registro opcional por hash (`demo.log_predictions`); deriva en LIAR | `tests/test_predict.py`, `external_liar.json → deriva_y_fuera_de_distribucion` |
 | 22 Integración y defensa final | checklist de evidencias | `evaluate.success_criteria` → `success_criteria.json`; `docs/guion_defensa.md` | `success_criteria.json` |
+
+## Iteración 2: componentes nuevos
+
+| Lab | Componente | Implementación | Evidencia |
+|---|---|---|---|
+| 03 Datos y calidad / fuga | auditoría de atajos de un solo rasgo (AUC y stump), crudo y por perfil | `shortcuts.py` | `reports/shortcut_audit_v2.csv`, `shortcut_audit_v2.png` |
+| 03 / 16 | limpieza "neutral a la fuente" (v2, v3) y verificación de etiquetas de un dataset nuevo | `cleaning.py` (perfiles), `corpus.verify_welfake_label_direction` | `tests/test_cleaning_v2.py`, `welfake_manifest_v2.json` |
+| 08 Ensamble | ensamble con y sin rasgos de estilo en el panel | `panel.build_model("ensemble")` | `panel_v2.csv` |
+| 09 / 16 | n-gramas de caracteres; similitud coseno como rasgo OOD | `panel.build_model("lr_char")`, `ood.ood_features` | `train_v2.json` |
+| 13 Sobreajuste / generalización | panel con cambio de grupo y de tiempo, regularización más fuerte | `panel.py` | `panel_v2.csv`, `ablation_v2.csv` |
+| 17 RAG: abstención | abstención por OOD, contracción hacia la prior | `ood.py`, `Predictor.predict` | `abstention_coverage_v2.png`, `tests/test_ood_v2.py` |
+| 21 Monitoreo y pruebas | pruebas metamórficas de invarianza; detección de entradas fuera de distribución; versión del modelo y del perfil en la metadata | `invariance.py`, `models/metadata_v2.json` | `tests/test_invariance_v2.py` |
+| 22 Defensa | criterios reevaluados; comparación iteración 1 frente a 2 | `evaluate_v2.success_criteria_v2`, `comparison_table` | `success_criteria_v2.json`, `comparison_it1_vs_it2.csv` |

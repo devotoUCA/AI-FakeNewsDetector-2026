@@ -96,9 +96,34 @@ Solapamiento entre splits: 0 ids, 0 duplicados exactos y 0 casi-duplicados para 
 | Binarización | **falsa** = `false` + `pants-fire`; **real** = `true` + `mostly-true`; **se excluyen** `half-true` y `barely-true` porque no se pueden asignar a una clase sin forzar la etiqueta. Quedan **8090** afirmaciones (44,0 % falsas). |
 | Diferencia de dominio | Son afirmaciones de unas 17 palabras (mediana), no artículos de unas 384. La etiqueta es de veracidad verificada, no de fuente. |
 
+## 3. Dataset externo de la iteración 2: WELFake (solo evaluación)
+
+| Campo | Valor |
+|---|---|
+| Fuente | P. K. Verma, P. Agrawal y R. Prodan, *WELFake dataset for fake news detection in text data*, Zenodo, registro 4561253 (2021). https://zenodo.org/records/4561253 |
+| Licencia | **CC BY 4.0**, declarada en Zenodo |
+| Contenido | 72 134 artículos (título y texto) que combinan cuatro datasets: Kaggle, McIntire, **Reuters (= ISOT)** y BuzzFeed Political |
+| **Dirección de las etiquetas** | La descripción de Zenodo dice "0 = fake, 1 = real", **pero el CSV usa 1 = falsa y 0 = real**. Se verificó empíricamente con las 44 284 filas que coinciden con ISOT: el acuerdo con "1 = falsa" es del 99,97 %. Coincide con nuestra convención y no se invierte nada (`corpus.verify_welfake_label_direction` falla si esto cambia). |
+| Solapamiento con ISOT | **61 %** (44 284 filas). Se quitaron todas las filas idénticas a cualquier fila de ISOT (44 198), los casi-duplicados de ISOT (MinHash, Jaccard ≥ 0,8: 42) y las coincidencias con LIAR (0). |
+| Limpieza | Textos < 20 palabras (1209); duplicados exactos internos (2602) y casi-duplicados internos (833) |
+| Resultado | **23 250 artículos** que no están en ISOT (41,7 % falsas); solo el 0,1 % tiene dateline de Reuters |
+| Uso | 50/50 estratificado con semilla 42: **dev** (11 625; 4850 falsas) para decisiones y **holdout** (11 625; 4849 falsas) para la evaluación final única de la iteración 2 |
+| Limitaciones | Las etiquetas también son por fuente, según cada dataset de origen. Tras deduplicar quedan sobre todo los componentes Kaggle y McIntire, que tienen sus propios sesgos de fuente y de período (alrededor de 2016). |
+
+Manifiesto: `reports/welfake_manifest_v2.json` (SHA-256 del CSV, pasos y hashes de ids de cada split).
+
+### Porciones de LIAR
+
+En la iteración 1 se evaluaron las tres porciones juntas, así que **ninguna es virgen**. En la iteración 2:
+
+- `train` se usa para entrenar en los experimentos D1.
+- `valid` se usa como desarrollo externo.
+- `test` se reporta marcado como "no virgen".
+
 ## Pendientes (para el equipo)
 
 - Confirmar si el ISOT original de la University of Victoria impone condiciones además de la licencia
   CC BY-NC-SA 4.0 que declara el mirror de Kaggle.
+- Confirmar las condiciones de uso de WELFake: CC BY 4.0, con cita de Verma, Agrawal y Prodan (2021).
 - Revisar a mano una muestra de etiquetas dudosas (acta, riesgo "etiquetas ambiguas"):
   `reports/error_analysis.csv` incluye casos de este tipo.

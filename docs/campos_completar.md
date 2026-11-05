@@ -69,3 +69,18 @@ Cada valor sale de una corrida real. Entre paréntesis va el archivo de `reports
 - Firmas de aprobación: **pendiente**.
 - Revisión humana de ≥ 20 errores (`reports/error_analysis.csv`, columnas `comentario_equipo` y
   `revisado_por`): **pendiente**.
+
+---
+
+## Iteración 2 (para actualizar el acta si los docentes lo piden)
+
+Fuentes: `reports/panel_v2.csv`, `reports/final_v2.json`, `reports/comparison_it1_vs_it2.csv`.
+
+| Formulario · campo | Valor nuevo |
+|---|---|
+| 3 · Riesgo de fuga | Además de las marcas de la iteración 1, la auditoría de un solo rasgo encontró: verbos de atribución (AUC 0,87), días de la semana (0,86), apóstrofo como espacio (0,85), comillas curvas (0,76), `U.S.` con puntos (0,75) y, en el modelo final, el espaciado de oraciones. (`shortcut_audit_v2.csv`) |
+| 12 · Experimento controlado (ablación v1 → v2 → v3) | LR de palabras, puntaje robusto: 0,724 → 0,689 → 0,659. LR de caracteres: 0,729 → **0,742** → 0,710. Neutralizar más no siempre generaliza mejor. (`ablation_v2.csv`) |
+| 12 · Próximo paso (resultado) | Validación externa nueva (WELFake-holdout, deduplicado contra ISOT): accuracy 0,581 (it2) frente a 0,547 (it1); trivial 0,583 |
+| 13 · Configuración elegida (it2) | LR sobre n-gramas de caracteres `char_wb` 3–5 (150 000 rasgos), C = 10, limpieza v2, calibración isotónica, umbral 0,50, zona 0,4–0,6, OOD τ = 0,80 |
+| 14 · No linealidad (it2) | Ensamble con estilo: el mejor en la vista de grupo (0,749), el peor afuera (WELFake-dev 0,528). Se mantiene un modelo lineal. |
+| 8 · Valor del ensamble (it2) | No supera al lineal de caracteres en el puntaje robusto (0,713 frente a 0,742) |

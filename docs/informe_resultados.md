@@ -10,6 +10,16 @@ re-accesos).
 
 ## 1. Resumen
 
+> **Iteración 2 (ver §15).**
+> - Modelo productivo nuevo: LR sobre n-gramas de caracteres con limpieza v2, elegido por un panel
+>   de robustez.
+> - ISOT test: 0,990.
+> - WELFake-holdout (externo nuevo): accuracy 0,581 frente a 0,547 de la iteración 1. Sigue
+>   **por debajo del trivial** (0,583).
+> - ECE externa: 0,10 frente a 0,40.
+> - Lo que sigue en este resumen describe la iteración 1.
+
+
 - Se entrenó un clasificador de noticias en inglés (Real = 0, Falsa = 1) sobre el dataset ISOT/Kaggle,
   tras quitar las marcas de fuente y de formato y deduplicar antes de dividir.
 - El **modelo productivo** es un **SVM lineal sobre TF-IDF (1–2 gramas), calibrado con regresión isotónica**.
@@ -375,3 +385,239 @@ Fuente: `reports/success_criteria.json`.
    un detector.
 4. Próximos pasos: entrenar con datasets cuya etiqueta sea de veracidad (LIAR, FakeNewsNet), mezclar
    varias fuentes en cada clase y evaluar con validación cruzada por fuente.
+
+---
+
+## 15. Iteración 2: generalización real
+
+**Objetivo**: mejorar la generalización y la honestidad de la confianza, **no** el accuracy dentro de
+ISOT. Detalle del proceso y de las decisiones en `docs/01_iteracion_2.md`. Las cifras salen de
+`reports/*_v2.*`, `reports/panel_v2.csv`, `reports/final_v2.json` y
+`reports/comparison_it1_vs_it2.csv`.
+
+### 15.1 Holdout y reglas de evaluación
+
+- **LIAR ya no tiene ninguna porción virgen**: en la iteración 1 se evaluaron las tres juntas, aunque
+  el log no lo registró.
+- Por eso se agregó **WELFake** (CC BY 4.0) como holdout externo de nivel artículo. Hubo que
+  verificar dos cosas: la dirección de las etiquetas (la descripción de Zenodo está invertida respecto
+  del CSV) y que el 61 % de WELFake era ISOT, que se eliminó. Quedan 23 250 artículos nuevos:
+  11 625 de desarrollo y 11 625 de holdout.
+- Todas las decisiones se tomaron con ISOT val, las vistas de cambio de grupo y tiempo (pool
+  train+val), WELFake-dev y LIAR-valid.
+- El ISOT test y el WELFake-holdout se tocaron **una vez** al final. El log registra 5 accesos de la
+  iteración 2, sin re-accesos.
+
+### 15.2 Auditoría de atajos de un solo rasgo
+
+Fuente: `reports/shortcut_audit_v2.csv`, figura `shortcut_audit_v2.png`. Valores en AUC orientada,
+medida en ISOT val.
+
+| Rasgo (solo) | Crudo | v1 | v2 | v3 | Transfiere a WELFake-dev* |
+|---|---|---|---|---|---|
+| `subject` / formato de fecha (no entran al modelo) | 1,000 | — | — | — | — |
+| dateline `(Reuters)` | 0,996 | 0,500 | 0,500 | 0,500 | 0,501 |
+| verbos de atribución | 0,869 | 0,866 | 0,869 | **0,556** | **0,747** |
+| `said/says/told` | 0,863 | 0,863 | 0,866 | **0,500** | **0,767** |
+| palabras en mayúsculas en el título | 0,863 | 0,794 | 0,729 | 0,582 | 0,586 |
+| días de la semana | 0,857 | 0,856 | **0,500** | 0,500 | 0,714 |
+| apóstrofo como espacio (`don t`) | 0,847 | 0,795 | **0,500** | 0,500 | 0,500 |
+| comillas curvas | 0,762 | **0,500** | 0,500 | 0,500 | 0,654 |
+| `U.S.` con puntos | 0,755 | 0,752 | **0,500** | 0,500 | 0,454 |
+| segunda persona (`you`) | 0,733 | 0,732 | 0,732 | 0,731 | 0,527 |
+| signos de pregunta | 0,726 | 0,719 | 0,719 | 0,719 | 0,556 |
+| tokens neutros de enlaces (`xurlx`…) | — | 0,500 | **0,630** | 0,500 | 0,500 |
+
+\* AUC en WELFake-dev usando la orientación aprendida en ISOT. Un valor > 0,5 significa que el rasgo
+también predice fuera de ISOT.
+
+**Lectura.**
+
+- La v1 ya neutralizaba las marcas grandes, pero dejaba la atribución, los días, el apóstrofo y `U.S.`.
+- La v2 elimina estos últimos, aunque **introduce** un atajo nuevo: los tokens de enlace.
+- La v3 enmascara la atribución, pero **`said` también predice en WELFake** (0,77): no es solo un
+  atajo de ISOT, también es una señal de estilo periodístico que generaliza en parte. Enmascararlo
+  resultó contraproducente (§15.3).
+
+### 15.3 Panel de evaluación y escalera de ablación
+
+Fuente: `reports/panel_v2.csv`, `ablation_v2.csv`, figura `ablation_v2.png`.
+
+**Vistas:**
+
+- **In-domain**: entrena en ISOT train y evalúa en ISOT val.
+- **Grupo**: 4 folds; cada uno retiene un `subject` real y un grupo de `subject` falsos.
+- **Tiempo**: entrena antes del 2017-07-01 y evalúa después.
+- **Externo-dev**: WELFake-dev.
+- **LIAR-valid**: se reporta, pero no entra al puntaje porque D1 entrena con LIAR.
+- **Invarianza**: 5 transformaciones que no cambian la veracidad, sobre 2000 textos de val.
+
+**Puntaje robusto** = promedio de F1 macro en grupo, tiempo y WELFake-dev. Pisos: F1 por clase
+in-domain ≥ 0,90 e invarianza ≤ 2 %. Todos los candidatos pasaron los pisos.
+
+| Candidato | In (F1 falsa) | Grupo | Tiempo | WELFake-dev | LIAR-valid | Invar. máx. | **Robusto** |
+|---|---|---|---|---|---|---|---|
+| **it1: SVM palabras v1** (referencia) | 0,989 | 0,739 | 0,905 | 0,520 | 0,504 | 0,55 % | 0,721 |
+| LR palabras v1 C = 10 | 0,980 | 0,730 | 0,897 | 0,546 | 0,535 | 0,65 % | 0,724 |
+| LR palabras v1 C = 1 | 0,972 | 0,720 | 0,851 | 0,549 | 0,561 | 0,50 % | 0,707 |
+| LR palabras v2 C = 10 | 0,981 | 0,711 | 0,832 | 0,525 | 0,554 | 0,05 % | 0,689 |
+| LR palabras v3 C = 10 | 0,982 | 0,677 | 0,787 | 0,512 | 0,586 | 0,00 % | 0,659 |
+| SVM v2 / v3 | 0,989 / 0,987 | 0,703 / 0,676 | 0,861 / 0,809 | 0,494 / 0,484 | 0,529 / 0,553 | ≤ 0,1 % | 0,686 / 0,656 |
+| LR caracteres v1 | 0,990 | 0,744 | 0,849 | 0,594 | 0,550 | 0,30 % | 0,729 |
+| **LR caracteres v2 (elegido)** | **0,988** | 0,737 | **0,896** | **0,594** | 0,567 | 0,15 % | **0,742** |
+| LR caracteres v3 | 0,987 | 0,709 | 0,842 | 0,580 | 0,567 | 0,15 % | 0,710 |
+| Ensamble (texto + estilo) v2 / v3 | 0,983 / 0,981 | **0,749** / 0,690 | 0,862 / 0,805 | 0,528 / 0,509 | 0,553 / 0,571 | ≤ 0,5 % | 0,713 / 0,668 |
+| D1: LR v2 + LIAR-train (peso 0,25) | 0,981 | 0,749 | 0,898 | 0,533 | *0,669* | 0 % | 0,726 |
+| D1: LR v2 + LIAR-train (peso 1) | 0,974 | 0,746 | 0,883 | 0,530 | *0,652* | 0 % | 0,720 |
+| D1: LR v3 + LIAR-train (pesos 0,25 / 1) | 0,979 / 0,971 | 0,715 / 0,711 | 0,862 / 0,844 | 0,518 / 0,522 | *0,667 / 0,665* | 0 % | 0,698 / 0,693 |
+
+Trivial en WELFake-dev: accuracy 0,583, F1 macro 0,368. En LIAR-valid: 0,526. *En cursiva*: LIAR-valid
+para D1, que no es externo para esos modelos.
+
+**Qué se aprendió (incluidas las decisiones que salieron peor):**
+
+1. **Neutralizar el texto no mejora a los modelos de palabras.** v1 → v2 → v3 baja el puntaje robusto
+   en todas las familias de palabras (LR 0,724 → 0,689 → 0,659; SVM 0,721 → 0,686 → 0,656). Sin los
+   atajos evidentes, el modelo encuentra otros, y además se pierde señal que sí generalizaba (`said`).
+2. **Los n-gramas de caracteres son lo único que mejora afuera**: WELFake-dev sube de 0,52–0,55 a
+   0,59. Con caracteres, v2 ayuda en la vista temporal (0,849 → 0,896), porque quita días y fechas,
+   que son un atajo temporal. v3 vuelve a empeorar.
+3. **Regularización más fuerte** (C = 1 frente a C = 10): +0,003 en WELFake y −0,05 en la vista
+   temporal. No es una mejora robusta.
+4. **El ensamble con rasgos de estilo** es el mejor en la vista de grupo (0,749), pero el peor afuera.
+   Los rasgos de estilo son atajos de fuente.
+5. **D1 (sumar LIAR-train)** mejora LIAR-valid (0,55 → 0,67), que para D1 ya no es externo, y **no
+   mejora WELFake** (0,53). Aprender las afirmaciones cortas de PolitiFact no transfiere a artículos.
+   No se adopta.
+6. kNN y MLP no se reentrenaron porque en la iteración 1 no aportaron.
+
+**Modelo final elegido por el criterio**: LR sobre n-gramas de caracteres (`char_wb`, 3–5 gramas,
+150 000 rasgos, C = 10), con limpieza v2 y calibración isotónica (elegida por Brier en val: 0,0081).
+
+Términos más influyentes del modelo final (`final_v2.json → top_terminos_v2`):
+
+- Hacia "falsa": `.th`, `.the`, `s.t`, `this`, `gop`, `just`. Los primeros son **oraciones pegadas sin
+  espacio** después del punto, un artefacto del scraping de los blogs que la auditoría no había
+  cubierto.
+- Hacia "real": `said`, ` us `, ` . `, ` , `, `...`. Los signos con espacios alrededor son artefactos
+  de la propia limpieza (huecos que quedan al quitar palabras).
+
+Medido en val, normalizar el espaciado de oraciones cambia el 1,25 % de las predicciones (0 % en el
+modelo de la iteración 1). En una submuestra de 400 textos dio 2,5 %. **Está en el límite del criterio
+de invarianza**: es un atajo de formato residual, declarado y con su test
+(`test_sentence_spacing_dependence_is_bounded`).
+
+### 15.4 Confianza y abstención (OOD)
+
+Fuente: `reports/train_v2.json`, `shrink_alternatives_v2.json`; figuras `abstention_coverage_v2.png`
+y `reliability_shift_v2.png`.
+
+**Puntaje OOD.** Es una logística sobre 4 rasgos baratos:
+
+- similitud coseno máxima con las noticias de entrenamiento,
+- media de los 5 vecinos,
+- cobertura de vocabulario,
+- largo.
+
+Se ajusta para separar ISOT-val del desarrollo externo (WELFake-dev + LIAR-valid). La probabilidad se
+**contrae hacia la prior** (0,453) en proporción al puntaje. Si el puntaje es ≥ τ, el sistema responde
+"incierta". Si es ≥ τ_cap (0,756), la confianza no puede ser "alta".
+
+**Elección de τ, solo con desarrollo.** Ningún τ logra que, sobre lo respondido en el externo de
+desarrollo, el modelo sea **no peor que el trivial** manteniendo al menos el 95 % de cobertura en
+ISOT-val. Sobre lo respondido, el modelo acierta alrededor de 0,59 para casi cualquier τ: **el
+puntaje OOD no se correlaciona con los aciertos fuera de ISOT**. Solo con τ ≤ 0,25 lo respondido
+supera al trivial, pero entonces se responde menos del 39 % de ISOT. Por regla se tomó **τ = 0,80**:
+responde el 97,5 % de ISOT-val y se abstiene en el 27 % de WELFake-dev y el 6 % de LIAR-valid.
+
+**Calibración en las vistas con cambio de distribución** (sin contraer, modelo final). ECE de 0,237 en
+grupo y 0,117 en tiempo, contra 0,003 in-domain. La confianza in-domain no se traslada a otros
+grupos ni a otros períodos.
+
+**Intercambio de la contracción** (medido solo en val y desarrollo):
+
+| ECE | Sin contracción | Proporcional (adoptada y evaluada) | "Solo exceso" (alternativa, no evaluada en holdout) |
+|---|---|---|---|
+| ISOT val | 0,003 | **0,181** | 0,007 |
+| WELFake-dev | 0,344 | **0,102** | 0,282 |
+| LIAR-valid | 0,272 | **0,109** | 0,265 |
+
+La contracción proporcional hace la probabilidad mucho más honesta afuera, pero **subconfiada
+adentro**. Este efecto in-domain **ya era visible en validación y se pasó por alto antes de la
+evaluación final**; se declara como error del proceso. Se mantiene la proporcional por dos razones:
+es la que se evaluó una sola vez y es la opción conservadora (subestimar la confianza es menos
+dañino que sobreestimarla). Usar la alternativa requeriría una nueva evaluación en holdout.
+
+### 15.5 Evaluación final única
+
+Fuentes: `reports/final_v2.json` y `comparison_it1_vs_it2.csv`; figuras `confusion_v2_*.png` y
+`reliability_final_v2.png`.
+
+| Conjunto | Métrica | Iteración 1 | **Iteración 2** |
+|---|---|---|---|
+| ISOT test | accuracy (forzado) | 0,9894 | **0,9899** [IC 95 % 0,987–0,992] |
+| ISOT test | F1 falsa / F1 real | 0,988 / 0,990 | 0,989 / 0,991 |
+| **WELFake holdout** | accuracy (forzado); trivial 0,583 | 0,547 | **0,581** [0,571–0,589] |
+| WELFake holdout | F1 macro; trivial 0,368 | 0,525 | **0,575** |
+| WELFake holdout | ECE (it2: contraída) | 0,398 | **0,101** |
+| WELFake holdout | Brier (it2: contraída); trivial 0,244 | 0,397 | **0,242** |
+| WELFake holdout | cobertura del sistema (abstención OOD + zona ambigua) | 0,951 | 0,513 |
+| WELFake holdout | accuracy de lo respondido / trivial sobre lo respondido | 0,549 / 0,574 | 0,630 / 0,631 |
+| LIAR test (**no virgen**) | accuracy; trivial 0,574 | 0,473 | 0,514 |
+
+**Lectura honesta:**
+
+- **In-domain no bajó**: 0,989 → 0,990. Sigue arriba del 98 %, así que **la alerta del acta se
+  mantiene**. El modelo sigue apoyándose en el estilo de redacción de las fuentes de ISOT (`said`,
+  espaciado de oraciones).
+- **La generalización mejoró, pero no alcanza.** En WELFake-holdout la accuracy forzada sube 3,4
+  puntos y el F1 macro 5 puntos. Aun así **queda por debajo del trivial** (0,581 contra 0,583).
+- Con abstención, el sistema responde el 51 % de WELFake con accuracy 0,630. Eso **empata, no
+  supera**, al trivial sobre esos mismos casos (0,631). Es decir: la abstención **lleva al sistema al
+  nivel del trivial, no por encima**.
+- Afuera, el error dominante es marcar como **falsas** noticias reales de medios no-Reuters: 4078
+  falsos positivos contra 796 falsos negativos en el holdout.
+- **La honestidad de la probabilidad sí mejoró mucho** (ECE 0,40 → 0,10; Brier al nivel del trivial).
+  El sistema ya no se muestra "muy seguro" mientras falla afuera. El costo es la subconfianza
+  in-domain (§15.4).
+- En ISOT test, el sistema responde el 92,7 % (se abstiene por OOD en el 2,8 % y por zona ambigua en
+  el 4,5 %) con accuracy 0,995 sobre lo respondido. Por nivel de confianza: "alta" acierta 0,999,
+  "media" 0,993 y "baja" 0,898.
+
+### 15.6 Análisis de errores v2
+
+Fuente: `reports/error_analysis_v2.csv`, el archivo que **debe revisar el equipo**.
+
+- 40 errores del modelo final: 20 de ISOT test y 20 de WELFake-holdout, con FP y FN balanceados.
+- Todos son de alta confianza cruda. En 9 de ellos el sistema se habría abstenido por OOD.
+- Cada caso tiene una categoría tentativa y un comentario "BORRADOR – revisar por el equipo".
+- El archivo de la iteración 1 (`error_analysis.csv`) no se modificó.
+
+### 15.7 Criterios de éxito (reevaluados con el modelo v2)
+
+Fuente: `reports/success_criteria_v2.json`.
+
+| Criterio | Estado |
+|---|---|
+| Accuracy > 80 % (ISOT test) | Cumplido (0,990), **solo dentro de ISOT** |
+| F1 por clase > 0,80 | Cumplido (0,991 / 0,989) |
+| Supera claramente al trivial | Cumplido en ISOT; **no** en WELFake ni en LIAR |
+| Modelo adicional ≥ baseline, con la diferencia explicada | Cumplido (iteración 1: McNemar p = 0,030; el v2 se elige por robustez, §15.3) |
+| Sin filtración | Cumplido (ISOT sin solapamientos; WELFake deduplicado contra todo ISOT y LIAR) |
+| ≥ 20 errores revisados | **Pendiente (equipo)**: `error_analysis_v2.csv` |
+| Demo con etiqueta y probabilidad | Cumplido |
+| Accuracy > 98 % ⇒ sospecha | **Alerta activa** y justificada por los resultados externos |
+
+### 15.8 Limitaciones actualizadas
+
+- El modelo aprende **patrones de redacción de las fuentes del dataset**: atribución, registro y
+  formato, incluido el espaciado de oraciones. **No verifica hechos.**
+- La probabilidad es **parecido con el entrenamiento**, no certeza. Con la contracción OOD es más
+  honesta afuera, pero subconfiada en textos tipo ISOT.
+- Fuera de ISOT el sistema **no supera al trivial**, ni siquiera respondiendo solo los casos que
+  considera dentro de distribución.
+- Ninguna de las vías probadas resuelve la causa raíz: en ISOT, clase = fuente. Eso incluye
+  neutralizar el texto, regularizar más, el ensamble y sumar LIAR. El arreglo de fondo exige datos
+  donde **ambas clases vengan de muchas fuentes de nivel artículo**, y evaluar con **validación
+  cruzada por fuente**.
+- Nunca usar como único criterio de moderación.
