@@ -40,3 +40,15 @@ real generado en la corrida.
 | 17 RAG: abstención | abstención por OOD, contracción hacia la prior | `ood.py`, `Predictor.predict` | `abstention_coverage_v2.png`, `tests/test_ood_v2.py` |
 | 21 Monitoreo y pruebas | pruebas metamórficas de invarianza; detección de entradas fuera de distribución; versión del modelo y del perfil en la metadata | `invariance.py`, `models/metadata_v2.json` | `tests/test_invariance_v2.py` |
 | 22 Defensa | criterios reevaluados; comparación iteración 1 frente a 2 | `evaluate_v2.success_criteria_v2`, `comparison_table` | `success_criteria_v2.json`, `comparison_it1_vs_it2.csv` |
+
+## Iteración 3: componentes nuevos
+
+| Lab | Componente | Implementación | Evidencia |
+|---|---|---|---|
+| 03 Datos y calidad | descubrimiento automático de atajos de formato; verificación de un dataset nuevo | `format_shortcuts.py`, `corpus.prepare_fakes` | `format_shortcut_discovery_v3.csv`, `fakes_manifest_v3.json` |
+| 05 / 07 Probabilidad | probabilidad calibrada sin contraer; extremos como "< 1 %" | `predict.clip_public`, `display_probability` | `shrink_resolution_v3.json` |
+| 16 NLP y embeddings | embeddings congelados (MiniLM) como experimento opcional | `embeddings.py`, `requirements-extra.txt` | `panel_v3.csv` (resultado negativo) |
+| 17 RAG: abstención | sin veredicto fuera del dominio de validez | `domain.py`, `Predictor._predict_with_gate` | `domain_gate_v3.json`, `tests/test_predict_v3.py` |
+| 20 Riesgos | matriz de riesgos actualizada | informe §8 | informe |
+| 21 Monitoreo y pruebas | invarianza con IC; log de accesos verificable; CI; runner multiplataforma | `invariance.flip_stats_ci`, `access_log.py`, `.github/workflows/ci.yml`, `tasks.py` | `invariance_v3.json`, `tests/test_reports_v3.py` |
+| 22 Defensa | model card, tablas generadas desde reportes, cierre de la alerta | `docs/model_card.md`, `make_report.py` | informe §9–10 |

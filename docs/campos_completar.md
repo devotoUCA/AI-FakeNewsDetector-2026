@@ -7,11 +7,11 @@ Cada valor sale de una corrida real. Entre paréntesis va el archivo de `reports
 
 | Rol | Responsable |
 |---|---|
-| Coordinación | **pendiente: lo define el equipo** |
-| Datos | **pendiente: lo define el equipo** |
-| Modelado | **pendiente: lo define el equipo** |
-| Evaluación | **pendiente: lo define el equipo** |
-| Demo y documentación | **pendiente: lo define el equipo** |
+| Coordinación | pendiente: equipo |
+| Datos | pendiente: equipo |
+| Modelado | pendiente: equipo |
+| Evaluación | pendiente: equipo |
+| Demo y documentación | pendiente: equipo |
 
 ## Formulario 3 · Auditar los datos
 
@@ -65,10 +65,10 @@ Cada valor sale de una corrida real. Entre paréntesis va el archivo de `reports
 
 ## Otros campos que dependen del equipo
 
-- Fecha real de entrega (el acta supone el 18/11/2026): **pendiente de confirmar**.
-- Firmas de aprobación: **pendiente**.
-- Revisión humana de ≥ 20 errores (`reports/error_analysis.csv`, columnas `comentario_equipo` y
-  `revisado_por`): **pendiente**.
+- Fecha real de entrega (el acta supone el 18/11/2026): pendiente: equipo.
+- Firmas de aprobación: pendiente: equipo.
+- Revisión humana de ≥ 20 errores (`reports/error_analysis_v3.csv`, columnas `comentario_equipo` y
+  `revisado_por`): pendiente: equipo.
 
 ---
 
@@ -84,3 +84,52 @@ Fuentes: `reports/panel_v2.csv`, `reports/final_v2.json`, `reports/comparison_it
 | 13 · Configuración elegida (it2) | LR sobre n-gramas de caracteres `char_wb` 3–5 (150 000 rasgos), C = 10, limpieza v2, calibración isotónica, umbral 0,50, zona 0,4–0,6, OOD τ = 0,80 |
 | 14 · No linealidad (it2) | Ensamble con estilo: el mejor en la vista de grupo (0,749), el peor afuera (WELFake-dev 0,528). Se mantiene un modelo lineal. |
 | 8 · Valor del ensamble (it2) | No supera al lineal de caracteres en el puntaje robusto (0,713 frente a 0,742) |
+
+---
+
+## Cierre (iteración 3): valores vigentes
+
+Si los docentes piden el estado final, estos valores reemplazan a los anteriores. Las tablas se generan
+desde `reports/`.
+
+**Corrección importante.** Lo escrito arriba para la iteración 2 sobre "validación externa" y
+"mejora" se reinterpretó: la mejora en WELFake fue sobre todo un corrimiento de sesgo (informe §4).
+
+| Formulario · campo | Valor vigente |
+|---|---|
+| 3 · Riesgo de fuga | Además de lo anterior: oración pegada sin espacio tras el punto (AUC 0,94 como rasgo único, aun después de `v2`). (`format_shortcut_discovery_v3.csv`) |
+| 12 · Próximo paso (resultado final) | Ver la tabla de abajo: en FA-KES, holdout virgen con etiqueta de veracidad, la AUC es de azar |
+| 13 · Configuración elegida (final) | LR de n-gramas de caracteres `char_wb` 3–5, C = 10, limpieza `v2`, isotónica, umbral 0,50, zona 0,4–0,6, compuerta de dominio combinada (retención 97 %) |
+| 14 · Decisión | Se mantiene un modelo lineal. Embeddings congelados tampoco mejoran (puntaje robusto 0,623 frente a 0,742). |
+| 15 · Visión | No incluida |
+
+<!-- BEGIN GENERATED:iteraciones -->
+| Vista | It. 1 | It. 2 | It. 3 | Trivial |
+|---|---|---|---|---|
+| ISOT val, F1 macro | 0,990 | 0,989 | 0,989 | — |
+| Cambio de subject, F1 macro | 0,739 | 0,737 | 0,737 | — |
+| Cambio temporal, F1 macro | 0,905 | 0,896 | 0,896 | — |
+| WELFake dev, F1 macro | 0,520 | 0,594 | 0,594 | — |
+| LIAR valid, F1 macro | 0,504 | 0,567 | 0,567 | — |
+| Puntaje robusto | 0,721 | 0,742 | 0,742 | — |
+| ISOT test, accuracy | 0,989 | 0,990 | 0,990 | 0,547 |
+| ISOT test, F1 falsa | 0,988 | 0,989 | 0,989 | — |
+| WELFake holdout, accuracy | 0,547 | 0,581 | 0,581 | 0,583 |
+| WELFake holdout, F1 macro | 0,525 | 0,575 | 0,575 | — |
+| LIAR test, accuracy | 0,473 | 0,514 | 0,514 | 0,574 |
+| FA-KES, accuracy | 0,511 | 0,531 | 0,531 | 0,530 |
+| FA-KES, F1 macro | 0,417 | 0,398 | 0,398 | — |
+<!-- END GENERATED:iteraciones -->
+
+<!-- BEGIN GENERATED:criterios -->
+| Criterio del acta | Estado |
+|---|---|
+| Accuracy en test > 80 % | cumplido (solo dentro de ISOT) |
+| F1 por clase > 0,80 | cumplido (solo dentro de ISOT) |
+| Supera con claridad al ingenuo sin favorecer una clase | cumplido en ISOT; ver externos |
+| Modelo adicional iguala o supera al baseline, con la diferencia explicada | cumplido |
+| Sin filtración entre splits | cumplido |
+| >= 20 errores revisados por el equipo | pendiente: equipo (error_analysis_v3.csv) |
+| Demo devuelve etiqueta y probabilidad | cumplido (si pytest pasa) |
+| Accuracy > 98 % => sospecha | alerta cerrada con evidencia: ver informe |
+<!-- END GENERATED:criterios -->

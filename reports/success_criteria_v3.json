@@ -1,0 +1,56 @@
+{
+  "modelo": "it2_lrchar_v2",
+  "criterios": [
+    {
+      "criterio": "Accuracy en test > 80 %",
+      "valor": 0.9898778359511344,
+      "estado": "cumplido (solo dentro de ISOT)"
+    },
+    {
+      "criterio": "F1 por clase > 0,80",
+      "valor": [
+        0.9907289002557544,
+        0.9888547271329746
+      ],
+      "estado": "cumplido (solo dentro de ISOT)"
+    },
+    {
+      "criterio": "Supera con claridad al ingenuo sin favorecer una clase",
+      "valor": 0.5465968586387434,
+      "estado": "cumplido en ISOT; ver externos"
+    },
+    {
+      "criterio": "Modelo adicional iguala o supera al baseline, con la diferencia explicada",
+      "valor": {
+        "f1_baseline": 0.984936268829664,
+        "f1_final": 0.9888547271329746,
+        "mcnemar_p": 0.022462895492509273
+      },
+      "estado": "cumplido"
+    },
+    {
+      "criterio": "Sin filtración entre splits",
+      "valor": "0 solapamientos; externos deduplicados",
+      "estado": "cumplido"
+    },
+    {
+      "criterio": ">= 20 errores revisados por el equipo",
+      "valor": {
+        "casos": 61,
+        "comentados": 0
+      },
+      "estado": "pendiente: equipo (error_analysis_v3.csv)"
+    },
+    {
+      "criterio": "Demo devuelve etiqueta y probabilidad",
+      "valor": "tests de predict y demo",
+      "estado": "cumplido (si pytest pasa)"
+    },
+    {
+      "criterio": "Accuracy > 98 % => sospecha",
+      "valor": 0.9898778359511344,
+      "estado": "alerta cerrada con evidencia: ver informe"
+    }
+  ],
+  "generado": "2026-11-05T19:00:44"
+}
