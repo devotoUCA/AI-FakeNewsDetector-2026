@@ -1,6 +1,6 @@
 # Detector de Fake News
 
-Proyecto de la materia **Inteligencia Artificial (UCA, 2026)**. Docentes: Germán Lamartine y Javier
+Proyecto de la materia **Inteligencia Artificial (UCA, 2026)**. Docentes: Germán Lamartine, Felicitas Klix y Javier
 Adolfo Ouret. Equipo: Tomás Cortina, Martín Coronel, Mateo Denti, Mateo Devoto y Fabricio Pompozzi.
 
 ## 1. Qué es y qué NO es
