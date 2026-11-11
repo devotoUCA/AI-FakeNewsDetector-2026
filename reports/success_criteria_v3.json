@@ -37,7 +37,9 @@
       "criterio": ">= 20 errores revisados por el equipo",
       "valor": {
         "casos": 61,
-        "comentados": 0
+        "comentados": 0,
+        "comentados_sin_firma": 61,
+        "revisores": []
       },
       "estado": "pendiente: equipo (error_analysis_v3.csv)"
     },
@@ -52,5 +54,6 @@
       "estado": "alerta cerrada con evidencia: ver informe"
     }
   ],
-  "generado": "2026-11-05T19:00:44"
+  "generado": "2026-11-05T19:00:44",
+  "revision_actualizada": "2026-11-11T17:59:59"
 }

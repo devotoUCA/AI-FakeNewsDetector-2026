@@ -3,9 +3,9 @@
 PY ?= python3.12
 TASKS := PYTHONPATH=src $(PY) -m fakenews.tasks
 
-.PHONY: setup data train quickstart evaluate analyze report notebook test test-fast demo all predict clean-artifacts
+.PHONY: setup data train quickstart evaluate analyze review report notebook test test-fast demo all predict clean-artifacts
 
-setup data train quickstart evaluate analyze report notebook test test-fast demo all:
+setup data train quickstart evaluate analyze review report notebook test test-fast demo all:
 	$(TASKS) $@
 
 predict:          ## Ejemplo: make predict TEXT="..."

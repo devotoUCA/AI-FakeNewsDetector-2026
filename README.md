@@ -21,7 +21,7 @@ un nivel de confianza y los términos que más pesaron. Si no se parece, **no em
 | | |
 |---|---|
 | Python | 3.10 a 3.12. Probado con **3.12.13**. |
-| Sistema operativo | **macOS (arm64): probado.** Linux y **Windows: no probados localmente**; el runner `python -m fakenews.tasks` y el CI (`.github/workflows/ci.yml`, tampoco ejecutado localmente) están pensados para ellos. |
+| Sistema operativo | **macOS (arm64): probado.** **Linux (x86_64): probados `setup` y los tests sin datos** (lo mismo que corre el CI); el inicio rápido y la demo, no. **Windows: no probado.** El CI (`.github/workflows/ci.yml`) todavía no se vio correr en GitHub. Detalle en [docs/03_cierre.md](docs/03_cierre.md). |
 | Disco | ~0,9 GB para el entorno virtual. Inicio rápido: ~0,5 GB más. Pipeline completo: ~2,5 GB más. |
 | Memoria | 8 GB alcanzan para el inicio rápido; 16 GB recomendados para los paneles (o `panel --jobs 1`). |
 | Internet | Solo para instalar dependencias y descargar datos. Una vez entrenado, todo funciona **offline**. |
@@ -105,7 +105,8 @@ make setup && make all           # o: python -m fakenews.tasks all
 | `train` | iteraciones 1, 2 y 3: modelos, auditorías, paneles, modelo final con compuerta | `reports/panel_v3.csv`, `format_shortcut_discovery_v3.csv`, `domain_gate_v3.json`, `invariance_v3.json` |
 | `evaluate` | evaluaciones finales (registradas en el log) | `reports/final_v3.json`, `error_analysis_v3.csv`, `acta_comparison_v3.csv` |
 | `analyze` | clustering y algoritmo genético (exploratorios) | `reports/clustering.json` |
-| `report` | regenera las tablas de los documentos y verifica el log | `docs/`, `README.md` |
+| `review` | cuenta los errores revisados y firmados por el equipo (no carga modelo ni datos) | `reports/error_analysis_v3.csv`, [docs/03_cierre.md](docs/03_cierre.md) |
+| `report` | actualiza el criterio de revisión, regenera las tablas de los documentos y verifica el log | `docs/`, `README.md` |
 | `notebook` | ejecuta el EDA | `notebooks/` |
 | `test` / `test-fast` | tests | — |
 | `demo` | demo web local | http://localhost:8501 |
@@ -134,6 +135,12 @@ Abrir http://localhost:8501, pegar un texto en inglés (o elegir un ejemplo) y a
 .venv/bin/python -m fakenews.cli predict "texto en inglés..."
 .venv/bin/python -m fakenews.cli predict - < archivo.txt
 .venv/bin/python -m fakenews.cli predict - --similar < archivo.txt
+```
+
+En **PowerShell** no existe la redirección `<`. Para leer un archivo (no probado en Windows):
+
+```powershell
+Get-Content -Raw -Encoding UTF8 examples\01_agencia_real_val.txt | .\.venv\Scripts\python -m fakenews.cli predict -
 ```
 
 **Dentro de dominio** (salida real recortada, `examples/01_agencia_real_val.txt`):
@@ -201,10 +208,12 @@ make test                        # o: python -m fakenews.tasks test
 make test-fast                   # sin el notebook
 ```
 
-**231 tests** con todos los artefactos generados: 230 pasan y 1 es `xfail`. En una copia limpia tras el
-inicio rápido: 186 pasan, 44 se saltean y 1 es `xfail`. Cubren datos y splits, limpieza (v1 a v3), modelos y métricas, contrato de `predict`,
+**240 tests.** Sin datos ni modelos, que es lo que corre el CI (`-m "not slow"`): 180 pasan, 58 se
+saltean y 1 es `xfail` (medido en Linux). Con todos los artefactos se midieron 230 que pasan y 1 `xfail`
+en macOS, antes de sumar los 9 tests de la revisión de errores; esos 9 no necesitan artefactos y pasan,
+así que el total esperado es 239 y 1 `xfail` (195, 44 salteados y 1 `xfail` tras el inicio rápido). Cubren datos y splits, limpieza (v1 a v3), modelos y métricas, contrato de `predict`,
 compuerta de dominio, invarianza con IC, atajos, log de accesos, consistencia entre documentos y
-reportes, runner, demo y notebook. Un test figura como `xfailed` **a propósito**: documenta que el modelo
+reportes, revisión de errores, runner, demo y notebook. Un test figura como `xfailed` **a propósito**: documenta que el modelo
 final no cumple la invarianza en `oraciones_pegadas`. Los tests que necesitan datos o modelos se saltean
 si todavía no se generaron.
 
@@ -274,9 +283,10 @@ src/fakenews/
   domain.py, train_v3.py, evaluate_v3.py         iteración 3 (modelo final)
   predict.py, demo_logic.py, cli.py, tasks.py    inferencia, demo, CLI, runner
   access_log.py, make_report.py                  log de accesos y tablas de los documentos
+  review.py                                      conteo de errores revisados y firmados por el equipo
 app/demo.py            demo Streamlit
 examples/              textos de prueba (de validación)
-docs/                  informe, model card, data card, guion, bitácora, decisiones por iteración
+docs/                  informe, model card, data card, guion, bitácora, decisiones por iteración, cierre
 reports/               métricas, figuras, log de accesos
 models/                metadata y compuerta (versionados); .joblib (no versionados)
 ```

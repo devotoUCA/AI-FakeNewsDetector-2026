@@ -67,8 +67,10 @@ Cada valor sale de una corrida real. Entre paréntesis va el archivo de `reports
 
 - Fecha real de entrega (el acta supone el 18/11/2026): pendiente: equipo.
 - Firmas de aprobación: pendiente: equipo.
-- Revisión humana de ≥ 20 errores (`reports/error_analysis_v3.csv`, columnas `comentario_equipo` y
-  `revisado_por`): pendiente: equipo.
+- Revisión humana de ≥ 20 errores (`reports/error_analysis_v3.csv`): la columna `comentario_equipo`
+  trae una lectura propuesta de los 61 casos; falta que el equipo la lea, la corrija y firme en
+  `revisado_por`. Solo cuentan los casos firmados. Pasos en `docs/03_cierre.md`; el estado vigente
+  está en la tabla de criterios de más abajo.
 
 ---
 

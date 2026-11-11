@@ -302,12 +302,32 @@ Cifras en `reports/panel_v2.csv` y `reports/panel_v3.csv`.
 
 `reports/error_analysis_v3.csv` tiene 61 casos del modelo final, estratificados por conjunto (ISOT test
 y WELFake holdout), clase real y nivel de confianza, con 13 fuera de dominio. Cada uno tiene categoría
-tentativa y un comentario "BORRADOR – revisar por el equipo". **La revisión humana de al menos 20 casos
-está pendiente.**
+tentativa automática y un comentario "BORRADOR – revisar por el equipo".
 
-Patrones del borrador, a confirmar por el equipo: notas de Reuters que citan tuits sensacionalistas
-(marcadas como falsas con alta confianza: la etiqueta es de la fuente, el tono es otro), falsas con
-formato de agencia y artículos de medios no-Reuters marcados como falsos.
+Además, la columna `comentario_equipo` trae una **lectura propuesta caso por caso**, escrita a partir
+del título, el extracto y los términos de cada fila (no del artículo completo). Un caso cuenta como
+revisado solo cuando una persona del equipo lo lee, corrige lo que haga falta y firma en
+`revisado_por`. El estado vigente del criterio está en la tabla de §9 y se actualiza con
+`python -m fakenews.cli report`, sin volver a evaluar (`docs/03_cierre.md`).
+
+Patrones de la lectura propuesta, a confirmar con la firma del equipo:
+
+| Grupo (casos) | Patrón dominante | Ejemplos |
+|---|---|---|
+| ISOT, falsa dada por real (13) | En 6, el cuerpo es un comunicado oficial o una nota de un medio tradicional copiada casi entera; del sitio marcado como falso solo queda el título. La etiqueta es de quien publica, no de lo que dice. | `fake_10229`, `fake_13505`, `fake_12084` |
+| ISOT, real marcada como falsa (16) | En 7, Reuters reproduce voz ajena: la serie "Trump on Twitter", transcripciones de entrevistas con preguntas en mayúsculas, citas en primera persona. El modelo no separa la voz del medio de la voz citada. Es un error sistemático. | `true_02120`, `true_02774`, `true_02048` |
+| WELFake, falsa dada por real (16) | En 8, texto de agencia o de diario republicado por un agregador o un medio estatal. Solo 3 son falsos negativos que un lector no cometería (título que no coincide con el cuerpo, afirmaciones sin fuente, título sensacionalista). | `wel_37615`, `wel_56148`; `wel_54584`, `wel_09287` |
+| WELFake, real marcada como falsa (16) | Medios que ISOT nunca vio como reales: notas del New York Times (el tratamiento "Mr." pesa hacia falsa), notas con formato de Breitbart, columnas de opinión y dos notas de CNN. El modelo confunde género y casa editorial con veracidad. | `wel_12941`, `wel_44670`, `wel_30533` |
+
+Otras tres observaciones:
+
+- Los 13 casos fuera de dominio quedan **sin veredicto**: la compuerta evita esos errores. Uno pasa
+  raspando (`wel_71866`, puntaje apenas por debajo del umbral, con un valor de referencia casi seguro
+  de "falsa"), lo que muestra cuánto depende el sistema de ese umbral.
+- El caso más preocupante es `wel_30533`: una nota de CNN, dentro de dominio y marcada como falsa con
+  confianza máxima. Ni la compuerta ni la zona ambigua lo frenan.
+- La categoría automática se equivoca en al menos 4 casos (por ejemplo, `wel_03358` figura como
+  "posible sátira" porque el texto nombra a una revista satírica). Por eso no reemplaza a la lectura.
 
 ## 8. Limitaciones y riesgos éticos
 

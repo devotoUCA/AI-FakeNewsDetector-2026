@@ -131,6 +131,8 @@ def test_error_analysis_v3_strata():
 
     d = pd.read_csv(get_paths().reports / "error_analysis_v3.csv", keep_default_na=False)
     assert len(d) >= 40 and d["comentario_borrador"].str.startswith("BORRADOR").all()
-    assert (d["comentario_equipo"] == "").all() and (d["revisado_por"] == "").all()
+    # Las columnas de revisión las completa el equipo: deben existir, y nadie firma sin comentar.
+    assert {"comentario_equipo", "revisado_por"} <= set(d.columns)
+    assert ((d["revisado_por"].str.strip() == "") | (d["comentario_equipo"].str.strip() != "")).all()
     assert d["origen"].nunique() == 2 and d["tipo"].nunique() == 2 and d["estrato_confianza"].nunique() >= 3
     assert (d["estrato_confianza"] == "fuera_de_dominio").sum() >= 1
