@@ -37,11 +37,17 @@
       "criterio": ">= 20 errores revisados por el equipo",
       "valor": {
         "casos": 61,
-        "comentados": 0,
-        "comentados_sin_firma": 61,
-        "revisores": []
+        "comentados": 20,
+        "comentados_sin_firma": 41,
+        "revisores": [
+          "Fabricio Pompozzi",
+          "Martín Coronel",
+          "Mateo Denti",
+          "Mateo Devoto",
+          "Tomás Cortina"
+        ]
       },
-      "estado": "pendiente: equipo (error_analysis_v3.csv)"
+      "estado": "cumplido"
     },
     {
       "criterio": "Demo devuelve etiqueta y probabilidad",
@@ -55,5 +61,5 @@
     }
   ],
   "generado": "2026-11-05T19:00:44",
-  "revision_actualizada": "2026-11-11T17:59:59"
+  "revision_actualizada": "2026-11-11T22:00:44"
 }

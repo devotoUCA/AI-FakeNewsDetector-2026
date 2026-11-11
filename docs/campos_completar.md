@@ -131,7 +131,7 @@ desde `reports/`.
 | Supera con claridad al ingenuo sin favorecer una clase | cumplido en ISOT; ver externos |
 | Modelo adicional iguala o supera al baseline, con la diferencia explicada | cumplido |
 | Sin filtración entre splits | cumplido |
-| >= 20 errores revisados por el equipo | pendiente: equipo (error_analysis_v3.csv) |
+| >= 20 errores revisados por el equipo | cumplido |
 | Demo devuelve etiqueta y probabilidad | cumplido (si pytest pasa) |
 | Accuracy > 98 % => sospecha | alerta cerrada con evidencia: ver informe |
 <!-- END GENERATED:criterios -->
