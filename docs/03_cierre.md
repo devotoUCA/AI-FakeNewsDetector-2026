@@ -58,8 +58,8 @@ elección. Si se cambia: `final_v3.candidate` en `config.yaml`, luego `train-v3`
 |---|---|---|
 | Linux: instalación y tests sin datos (lo mismo que hace el CI) | **Verificado** el 11/11/2026 (Linux x86_64, Python 3.12): `setup` en ~27 s; 180 pasan, 58 se saltean, 1 `xfail` | — |
 | Linux: `quickstart` y demo | No verificado (el entorno de prueba no tenía acceso a Kaggle) | `make setup && make quickstart && make demo` |
-| CI en GitHub (Ubuntu y Windows) | No verificado | Pestaña *Actions* del repo, workflow `tests`, después del próximo push a `main` o `dev` |
-| Windows: instalación, quickstart y demo | No verificado | Pasos de README §3 y §5; `predict` por stdin: ver README §7 |
+| CI en GitHub (Ubuntu y Windows) | **Verificado** el 11/11/2026: en verde en `dev` | — |
+| Windows: instalación, tests, quickstart y demo | **Verificado** el 11/11/2026 (Windows 11, Python 3.12): sin `failed` en los tests; `quickstart` en ~11 min; `predict` y los casos de la demo de README §7 dan lo esperado. Los splits salieron idénticos a los de macOS (mismos `sha256_ids`). Hubo que fijar el fin de línea de los CSV y las rutas del manifiesto, que cambiaban en Windows. | — |
 | `all` de punta a punta | No se corrió en la iteración 3, a propósito (vuelve a mirar los reservados) | Solo si los docentes lo piden; queda registrado como `reacceso` |
 
 ## 4. Datos y acta

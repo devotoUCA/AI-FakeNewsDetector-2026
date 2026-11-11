@@ -21,7 +21,7 @@ un nivel de confianza y los términos que más pesaron. Si no se parece, **no em
 | | |
 |---|---|
 | Python | 3.10 a 3.12. Probado con **3.12.13**. |
-| Sistema operativo | **macOS (arm64): probado.** **Linux (x86_64): probados `setup` y los tests sin datos** (lo mismo que corre el CI); el inicio rápido y la demo, no. **Windows: no probado.** El CI (`.github/workflows/ci.yml`) todavía no se vio correr en GitHub. Detalle en [docs/03_cierre.md](docs/03_cierre.md). |
+| Sistema operativo | **macOS (arm64): probado.** **Windows 11 (PowerShell, Python 3.12): probado** de punta a punta: instalación, tests, inicio rápido y demo. **Linux (x86_64): probados `setup` y los tests sin datos**; el inicio rápido y la demo, no. El CI (`.github/workflows/ci.yml`) corre los tests en Ubuntu y Windows. Detalle en [docs/03_cierre.md](docs/03_cierre.md). |
 | Disco | ~0,9 GB para el entorno virtual. Inicio rápido: ~0,5 GB más. Pipeline completo: ~2,5 GB más. |
 | Memoria | 8 GB alcanzan para el inicio rápido; 16 GB recomendados para los paneles (o `panel --jobs 1`). |
 | Internet | Solo para instalar dependencias y descargar datos. Una vez entrenado, todo funciona **offline**. |
@@ -31,7 +31,7 @@ Tiempos medidos en un Apple M5 (10 núcleos, 16 GB):
 | Paso | Tiempo |
 |---|---|
 | `setup` | ~20 s con caché de pip; más la primera vez |
-| `quickstart` | ~7 min (medido: 6 min 47 s en un entorno limpio) |
+| `quickstart` | ~7 min (medido: 6 min 47 s en un entorno limpio); ~11 min en una notebook con Windows |
 | `data` | ~12 min (incluye descargar WELFake, 245 MB) |
 | `train` (todas las iteraciones) | ~1 h 10 min (paneles ~40 min; modelo final ~12 min) |
 | `evaluate` | ~8 min |
@@ -54,7 +54,7 @@ make setup                       # o: PYTHONPATH=src python3.12 -m fakenews.task
 .venv/bin/python -m fakenews.cli --help   # verificación: debe listar los comandos
 ```
 
-**Windows (PowerShell; no probado localmente):**
+**Windows (PowerShell; probado en Windows 11):**
 
 ```powershell
 git clone https://github.com/devotoUCA/AI-FakeNewsDetector-2026.git
@@ -137,7 +137,7 @@ Abrir http://localhost:8501, pegar un texto en inglés (o elegir un ejemplo) y a
 .venv/bin/python -m fakenews.cli predict - --similar < archivo.txt
 ```
 
-En **PowerShell** no existe la redirección `<`. Para leer un archivo (no probado en Windows):
+En **PowerShell** no existe la redirección `<`. Para leer un archivo:
 
 ```powershell
 Get-Content -Raw -Encoding UTF8 examples\01_agencia_real_val.txt | .\.venv\Scripts\python -m fakenews.cli predict -
@@ -307,6 +307,8 @@ models/                metadata y compuerta (versionados); .joblib (no versionad
 | Errores de versión de librerías | usar Python 3.12 y reinstalar con `pip install -r requirements.txt` |
 | Un panel se queda sin memoria | `python -m fakenews.cli panel-v3 --jobs 1` |
 | PowerShell no deja activar scripts | no hace falta activar: usar `.\.venv\Scripts\python` directamente |
+| `py -3.12` dice "No suitable Python runtime found" | instalar Python 3.12 (`winget install -e --id Python.Python.3.12` o desde python.org) y reabrir PowerShell |
+| Windows: al cerrar la demo aparece `ConnectionResetError: [WinError 10054]` y queda en "Stopping..." | es un aviso de Python en Windows al cortarse la conexión del navegador; no afecta los resultados. Apretar Ctrl + C otra vez o cerrar la ventana |
 | Muchos tests "skipped" | normal si todavía no se generaron datos o modelos |
 
 ## 13. Créditos, licencias y cita de los datasets
