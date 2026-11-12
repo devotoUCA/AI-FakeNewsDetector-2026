@@ -73,7 +73,7 @@ Se descargan automáticamente.
 
 | Dataset | Uso | Descarga automática | Alternativa manual | Licencia |
 |---|---|---|---|---|
-| ISOT / *Fake and Real News* (Kaggle) | entrenamiento | `cli download` (endpoint público, sin login) | https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset → `Fake.csv` y `True.csv` en `data/raw/isot_kaggle/` | **CC BY-NC-SA 4.0** según Kaggle. **Pendiente** confirmar las condiciones del ISOT original (University of Victoria). |
+| ISOT / *Fake and Real News* (Kaggle) | entrenamiento | `cli download` (endpoint público, sin login) | https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset → `Fake.csv` y `True.csv` en `data/raw/isot_kaggle/` | **CC BY-NC-SA 4.0** según Kaggle. El ReadMe oficial del ISOT (University of Victoria) no declara licencia; solo pide citar dos trabajos de los autores (§13). |
 | LIAR | externo | `cli download` | https://www.cs.ucsb.edu/~william/data/liar_dataset.zip → `data/raw/liar/` | **solo investigación** |
 | WELFake | externo | `cli download-external` | https://zenodo.org/records/4561253 → `data/raw/welfake/` | **CC BY 4.0**. Ojo: su descripción está invertida respecto de su CSV. |
 | FA-KES | holdout virgen | `cli download-external` | https://zenodo.org/records/2607278 → `data/raw/fakes/` | **CC BY 4.0** |
@@ -313,8 +313,14 @@ models/                metadata y compuerta (versionados); .joblib (no versionad
 
 ## 13. Créditos, licencias y cita de los datasets
 
-- **ISOT Fake News Dataset**: H. Ahmed, I. Traore y S. Saad (2017, 2018), University of Victoria.
-  Mirror de Kaggle de C. Bisaillon (CC BY-NC-SA 4.0).
+- **ISOT Fake News Dataset** (University of Victoria). Mirror de Kaggle de C. Bisaillon (CC BY-NC-SA 4.0).
+  Citas que pide el ReadMe oficial del dataset:
+  - H. Ahmed, I. Traore y S. Saad. *Detecting opinion spams and fake news using text classification*.
+    Journal of Security and Privacy, vol. 1, n.º 1, Wiley, enero/febrero 2018.
+  - H. Ahmed, I. Traore y S. Saad. *Detection of Online Fake News Using N-Gram Analysis and Machine
+    Learning Techniques*. En: I. Traore, I. Woungang y A. Awad (eds.), *Intelligent, Secure, and
+    Dependable Systems in Distributed and Cloud Environments* (ISDDC 2017), Lecture Notes in Computer
+    Science, vol. 10618, Springer, Cham, 2017, pp. 127–138.
 - **LIAR**: W. Y. Wang. *"Liar, Liar Pants on Fire": A New Benchmark Dataset for Fake News
   Detection.* ACL 2017. Solo para investigación.
 - **WELFake**: P. K. Verma, P. Agrawal y R. Prodan. *WELFake dataset for fake news detection in text

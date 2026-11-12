@@ -1,6 +1,6 @@
 # Informe final — Detector de Fake News
 
-**Materia:** Inteligencia Artificial (UCA, 2026) · **Docentes:** Germán Lamartine, Javier Adolfo Ouret
+**Materia:** Inteligencia Artificial (UCA, 2026) · **Docentes:** Germán Lamartine, Felicitas Klix y Javier Adolfo Ouret
 **Equipo:** Tomás Cortina, Martín Coronel, Mateo Denti, Mateo Devoto, Fabricio Pompozzi
 
 Las tablas de este informe se generan desde `reports/` con `python -m fakenews.cli report`.
@@ -26,7 +26,7 @@ estilos que conoce y deja pasar parte de los que no vio.
 
 | Dataset | Rol | Tamaño final | Qué significa la etiqueta | Licencia |
 |---|---|---|---|---|
-| ISOT (Kaggle) | entrenamiento, validación, test | 38 199 artículos | **la fuente**: Reuters frente a sitios poco fiables | CC BY-NC-SA 4.0 (según Kaggle) |
+| ISOT (Kaggle) | entrenamiento, validación, test | 38 199 artículos | **la fuente**: Reuters frente a sitios poco fiables | CC BY-NC-SA 4.0 (según Kaggle); el original pide citar a sus autores |
 | WELFake | externo: desarrollo y holdout | 23 250 artículos | la fuente, según cada dataset de origen | CC BY 4.0 |
 | LIAR | externo | 12 836 afirmaciones cortas | veracidad (PolitiFact) | solo investigación |
 | FA-KES | holdout virgen | 753 artículos | **veracidad**, con ambas clases de los mismos medios | CC BY 4.0 |

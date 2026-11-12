@@ -9,7 +9,7 @@ Todos los números salen de `reports/data_audit.json`, `reports/leakage_audit.js
 |---|---|
 | Fuente | Kaggle, `clmentbisaillon/fake-and-real-news-dataset` (versión 1, actualizada 19/04/2024). Fuente declarada: **ISOT Fake News Dataset**, University of Victoria (Ahmed, Traore y Saad, 2017–2018). |
 | Descarga | Endpoint público de Kaggle, sin login (`make data`). SHA-256 de `Fake.csv` y `True.csv` en `config.yaml`. |
-| Licencia | **CC BY-NC-SA 4.0**, según declara Kaggle. Uso académico no comercial con atribución: compatible con el proyecto. La licencia del ISOT original no se verificó por separado (ver "Pendientes"). |
+| Licencia | **CC BY-NC-SA 4.0**, según declara Kaggle. Uso académico no comercial con atribución: compatible con el proyecto. El ReadMe oficial del ISOT (University of Victoria) no declara una licencia ni restricciones de uso: solo pide citar dos trabajos de Ahmed, Traore y Saad (2017 y 2018), que están en el README §13. Sus conteos (21 417 reales y 23 481 falsas) coinciden con los archivos de Kaggle. Verificado el 11/11/2026. |
 | Idioma | Inglés |
 | Archivos | `Fake.csv` (23 481 filas), `True.csv` (21 417 filas) |
 | Columnas | `title`, `text`, `subject`, `date` |
@@ -140,8 +140,6 @@ En la iteración 1 se evaluaron las tres porciones juntas, así que **ninguna es
 
 ## Pendientes (para el equipo)
 
-- Confirmar si el ISOT original de la University of Victoria impone condiciones además de la licencia
-  CC BY-NC-SA 4.0 que declara el mirror de Kaggle.
 - WELFake y FA-KES (CC BY 4.0) exigen citar a sus autores; las citas están en el README.
 - Revisar a mano una muestra de etiquetas dudosas (acta, riesgo "etiquetas ambiguas"):
   `reports/error_analysis.csv` incluye casos de este tipo.

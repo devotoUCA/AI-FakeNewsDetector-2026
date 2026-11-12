@@ -64,8 +64,10 @@ elección. Si se cambia: `final_v3.candidate` en `config.yaml`, luego `train-v3`
 
 ## 4. Datos y acta
 
-- Confirmar las condiciones de uso del ISOT original (University of Victoria); hoy se cita la licencia
-  del mirror de Kaggle.
+- ~~Confirmar las condiciones de uso del ISOT original~~. **Hecho** el 11/11/2026: su ReadMe oficial no
+  declara licencia y solo pide citar dos trabajos de los autores, que ya están en el README §13.
 - La dirección de etiquetas de FA-KES se tomó de su descripción y de la leyenda del archivo, sin cruce
   con otro dataset. Si alguien puede verificarla de otra forma, anotarlo en `docs/data_card.md`.
-- Roles, fecha real de entrega y firmas del acta: `docs/campos_completar.md`.
+- ~~Roles y fecha real de entrega~~. **Hecho**: están en `docs/campos_completar.md` (entrega el 16/11/2026).
+- Firmas del acta: pendiente: equipo. Agregar a Felicitas Klix como docente en el acta (datos generales y
+  aprobaciones); la versión inicial no la incluía.
