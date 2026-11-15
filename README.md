@@ -21,7 +21,7 @@ un nivel de confianza y los términos que más pesaron. Si no se parece, **no em
 | | |
 |---|---|
 | Python | 3.10 a 3.12. Probado con **3.12.13**. |
-| Sistema operativo | **macOS (arm64): probado.** Linux y **Windows: no probados localmente**; el runner `python -m fakenews.tasks` y el CI (`.github/workflows/ci.yml`, tampoco ejecutado localmente) están pensados para ellos. |
+| Sistema operativo | **macOS (arm64): probado.** **Windows 11 (PowerShell, Python 3.12): probado** de punta a punta: instalación, tests, inicio rápido y demo. **Linux (x86_64): probados `setup` y los tests sin datos**; el inicio rápido y la demo, no. El CI (`.github/workflows/ci.yml`) corre los tests en Ubuntu y Windows. Detalle en [docs/03_cierre.md](docs/03_cierre.md). |
 | Disco | ~0,9 GB para el entorno virtual. Inicio rápido: ~0,5 GB más. Pipeline completo: ~2,5 GB más. |
 | Memoria | 8 GB alcanzan para el inicio rápido; 16 GB recomendados para los paneles (o `panel --jobs 1`). |
 | Internet | Solo para instalar dependencias y descargar datos. Una vez entrenado, todo funciona **offline**. |
@@ -31,7 +31,7 @@ Tiempos medidos en un Apple M5 (10 núcleos, 16 GB):
 | Paso | Tiempo |
 |---|---|
 | `setup` | ~20 s con caché de pip; más la primera vez |
-| `quickstart` | ~7 min (medido: 6 min 47 s en un entorno limpio) |
+| `quickstart` | ~7 min (medido: 6 min 47 s en un entorno limpio); ~11 min en una notebook con Windows |
 | `data` | ~12 min (incluye descargar WELFake, 245 MB) |
 | `train` (todas las iteraciones) | ~1 h 10 min (paneles ~40 min; modelo final ~12 min) |
 | `evaluate` | ~8 min |
@@ -54,7 +54,7 @@ make setup                       # o: PYTHONPATH=src python3.12 -m fakenews.task
 .venv/bin/python -m fakenews.cli --help   # verificación: debe listar los comandos
 ```
 
-**Windows (PowerShell; no probado localmente):**
+**Windows (PowerShell; probado en Windows 11):**
 
 ```powershell
 git clone https://github.com/devotoUCA/AI-FakeNewsDetector-2026.git
@@ -73,7 +73,7 @@ Se descargan automáticamente.
 
 | Dataset | Uso | Descarga automática | Alternativa manual | Licencia |
 |---|---|---|---|---|
-| ISOT / *Fake and Real News* (Kaggle) | entrenamiento | `cli download` (endpoint público, sin login) | https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset → `Fake.csv` y `True.csv` en `data/raw/isot_kaggle/` | **CC BY-NC-SA 4.0** según Kaggle. **Pendiente** confirmar las condiciones del ISOT original (University of Victoria). |
+| ISOT / *Fake and Real News* (Kaggle) | entrenamiento | `cli download` (endpoint público, sin login) | https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset → `Fake.csv` y `True.csv` en `data/raw/isot_kaggle/` | **CC BY-NC-SA 4.0** según Kaggle. El ReadMe oficial del ISOT (University of Victoria) no declara licencia; solo pide citar dos trabajos de los autores (§13). |
 | LIAR | externo | `cli download` | https://www.cs.ucsb.edu/~william/data/liar_dataset.zip → `data/raw/liar/` | **solo investigación** |
 | WELFake | externo | `cli download-external` | https://zenodo.org/records/4561253 → `data/raw/welfake/` | **CC BY 4.0**. Ojo: su descripción está invertida respecto de su CSV. |
 | FA-KES | holdout virgen | `cli download-external` | https://zenodo.org/records/2607278 → `data/raw/fakes/` | **CC BY 4.0** |
@@ -105,7 +105,8 @@ make setup && make all           # o: python -m fakenews.tasks all
 | `train` | iteraciones 1, 2 y 3: modelos, auditorías, paneles, modelo final con compuerta | `reports/panel_v3.csv`, `format_shortcut_discovery_v3.csv`, `domain_gate_v3.json`, `invariance_v3.json` |
 | `evaluate` | evaluaciones finales (registradas en el log) | `reports/final_v3.json`, `error_analysis_v3.csv`, `acta_comparison_v3.csv` |
 | `analyze` | clustering y algoritmo genético (exploratorios) | `reports/clustering.json` |
-| `report` | regenera las tablas de los documentos y verifica el log | `docs/`, `README.md` |
+| `review` | cuenta los errores revisados y firmados por el equipo (no carga modelo ni datos) | `reports/error_analysis_v3.csv`, [docs/03_cierre.md](docs/03_cierre.md) |
+| `report` | actualiza el criterio de revisión, regenera las tablas de los documentos y verifica el log | `docs/`, `README.md` |
 | `notebook` | ejecuta el EDA | `notebooks/` |
 | `test` / `test-fast` | tests | — |
 | `demo` | demo web local | http://localhost:8501 |
@@ -134,6 +135,12 @@ Abrir http://localhost:8501, pegar un texto en inglés (o elegir un ejemplo) y a
 .venv/bin/python -m fakenews.cli predict "texto en inglés..."
 .venv/bin/python -m fakenews.cli predict - < archivo.txt
 .venv/bin/python -m fakenews.cli predict - --similar < archivo.txt
+```
+
+En **PowerShell** no existe la redirección `<`. Para leer un archivo:
+
+```powershell
+Get-Content -Raw -Encoding UTF8 examples\01_agencia_real_val.txt | .\.venv\Scripts\python -m fakenews.cli predict -
 ```
 
 **Dentro de dominio** (salida real recortada, `examples/01_agencia_real_val.txt`):
@@ -201,10 +208,12 @@ make test                        # o: python -m fakenews.tasks test
 make test-fast                   # sin el notebook
 ```
 
-**231 tests** con todos los artefactos generados: 230 pasan y 1 es `xfail`. En una copia limpia tras el
-inicio rápido: 186 pasan, 44 se saltean y 1 es `xfail`. Cubren datos y splits, limpieza (v1 a v3), modelos y métricas, contrato de `predict`,
+**240 tests.** Sin datos ni modelos, que es lo que corre el CI (`-m "not slow"`): 180 pasan, 58 se
+saltean y 1 es `xfail` (medido en Linux). Con todos los artefactos se midieron 230 que pasan y 1 `xfail`
+en macOS, antes de sumar los 9 tests de la revisión de errores; esos 9 no necesitan artefactos y pasan,
+así que el total esperado es 239 y 1 `xfail` (195, 44 salteados y 1 `xfail` tras el inicio rápido). Cubren datos y splits, limpieza (v1 a v3), modelos y métricas, contrato de `predict`,
 compuerta de dominio, invarianza con IC, atajos, log de accesos, consistencia entre documentos y
-reportes, runner, demo y notebook. Un test figura como `xfailed` **a propósito**: documenta que el modelo
+reportes, revisión de errores, runner, demo y notebook. Un test figura como `xfailed` **a propósito**: documenta que el modelo
 final no cumple la invarianza en `oraciones_pegadas`. Los tests que necesitan datos o modelos se saltean
 si todavía no se generaron.
 
@@ -274,9 +283,10 @@ src/fakenews/
   domain.py, train_v3.py, evaluate_v3.py         iteración 3 (modelo final)
   predict.py, demo_logic.py, cli.py, tasks.py    inferencia, demo, CLI, runner
   access_log.py, make_report.py                  log de accesos y tablas de los documentos
+  review.py                                      conteo de errores revisados y firmados por el equipo
 app/demo.py            demo Streamlit
 examples/              textos de prueba (de validación)
-docs/                  informe, model card, data card, guion, bitácora, decisiones por iteración
+docs/                  informe, model card, data card, guion, bitácora, decisiones por iteración, cierre
 reports/               métricas, figuras, log de accesos
 models/                metadata y compuerta (versionados); .joblib (no versionados)
 ```
@@ -297,12 +307,20 @@ models/                metadata y compuerta (versionados); .joblib (no versionad
 | Errores de versión de librerías | usar Python 3.12 y reinstalar con `pip install -r requirements.txt` |
 | Un panel se queda sin memoria | `python -m fakenews.cli panel-v3 --jobs 1` |
 | PowerShell no deja activar scripts | no hace falta activar: usar `.\.venv\Scripts\python` directamente |
+| `py -3.12` dice "No suitable Python runtime found" | instalar Python 3.12 (`winget install -e --id Python.Python.3.12` o desde python.org) y reabrir PowerShell |
+| Windows: al cerrar la demo aparece `ConnectionResetError: [WinError 10054]` y queda en "Stopping..." | es un aviso de Python en Windows al cortarse la conexión del navegador; no afecta los resultados. Apretar Ctrl + C otra vez o cerrar la ventana |
 | Muchos tests "skipped" | normal si todavía no se generaron datos o modelos |
 
 ## 13. Créditos, licencias y cita de los datasets
 
-- **ISOT Fake News Dataset**: H. Ahmed, I. Traore y S. Saad (2017, 2018), University of Victoria.
-  Mirror de Kaggle de C. Bisaillon (CC BY-NC-SA 4.0).
+- **ISOT Fake News Dataset** (University of Victoria). Mirror de Kaggle de C. Bisaillon (CC BY-NC-SA 4.0).
+  Citas que pide el ReadMe oficial del dataset:
+  - H. Ahmed, I. Traore y S. Saad. *Detecting opinion spams and fake news using text classification*.
+    Journal of Security and Privacy, vol. 1, n.º 1, Wiley, enero/febrero 2018.
+  - H. Ahmed, I. Traore y S. Saad. *Detection of Online Fake News Using N-Gram Analysis and Machine
+    Learning Techniques*. En: I. Traore, I. Woungang y A. Awad (eds.), *Intelligent, Secure, and
+    Dependable Systems in Distributed and Cloud Environments* (ISDDC 2017), Lecture Notes in Computer
+    Science, vol. 10618, Springer, Cham, 2017, pp. 127–138.
 - **LIAR**: W. Y. Wang. *"Liar, Liar Pants on Fire": A New Benchmark Dataset for Fake News
   Detection.* ACL 2017. Solo para investigación.
 - **WELFake**: P. K. Verma, P. Agrawal y R. Prodan. *WELFake dataset for fake news detection in text

@@ -7,11 +7,14 @@ Cada valor sale de una corrida real. Entre paréntesis va el archivo de `reports
 
 | Rol | Responsable |
 |---|---|
-| Coordinación | pendiente: equipo |
-| Datos | pendiente: equipo |
-| Modelado | pendiente: equipo |
-| Evaluación | pendiente: equipo |
-| Demo y documentación | pendiente: equipo |
+| Coordinación | Mateo Devoto |
+| Datos | Fabricio Pompozzi |
+| Modelado | Tomás Cortina |
+| Evaluación | Mateo Denti |
+| Demo y documentación | Martín Coronel |
+
+**Docentes** (sección "Datos generales" y tabla de "Aprobaciones"): Germán Lamartine, Felicitas Klix y
+Javier Adolfo Ouret. La versión inicial del acta no incluía a Felicitas Klix.
 
 ## Formulario 3 · Auditar los datos
 
@@ -65,10 +68,12 @@ Cada valor sale de una corrida real. Entre paréntesis va el archivo de `reports
 
 ## Otros campos que dependen del equipo
 
-- Fecha real de entrega (el acta supone el 18/11/2026): pendiente: equipo.
+- Fecha real de entrega: **16/11/2026** (el acta suponía el 18/11/2026).
 - Firmas de aprobación: pendiente: equipo.
-- Revisión humana de ≥ 20 errores (`reports/error_analysis_v3.csv`, columnas `comentario_equipo` y
-  `revisado_por`): pendiente: equipo.
+- Revisión humana de ≥ 20 errores (`reports/error_analysis_v3.csv`): la columna `comentario_equipo`
+  trae una lectura propuesta de los 61 casos; falta que el equipo la lea, la corrija y firme en
+  `revisado_por`. Solo cuentan los casos firmados. Pasos en `docs/03_cierre.md`; el estado vigente
+  está en la tabla de criterios de más abajo.
 
 ---
 
@@ -129,7 +134,7 @@ desde `reports/`.
 | Supera con claridad al ingenuo sin favorecer una clase | cumplido en ISOT; ver externos |
 | Modelo adicional iguala o supera al baseline, con la diferencia explicada | cumplido |
 | Sin filtración entre splits | cumplido |
-| >= 20 errores revisados por el equipo | pendiente: equipo (error_analysis_v3.csv) |
+| >= 20 errores revisados por el equipo | cumplido |
 | Demo devuelve etiqueta y probabilidad | cumplido (si pytest pasa) |
 | Accuracy > 98 % => sospecha | alerta cerrada con evidencia: ver informe |
 <!-- END GENERATED:criterios -->

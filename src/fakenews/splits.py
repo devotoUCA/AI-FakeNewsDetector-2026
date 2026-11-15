@@ -90,10 +90,11 @@ def prepare_dataset() -> dict[str, Any]:
     for name, part in parts.items():
         part = part.sort_values("id")[cols]
         out = paths.processed / f"{name}.csv"
-        part.to_csv(out, index=False)
+        # Fin de línea "\n" fijo: en Windows pandas usa "\r\n" y el SHA-256 del archivo dejaría de coincidir.
+        part.to_csv(out, index=False, lineterminator="\n")
         ids_hash = hashlib.sha256("\n".join(part["id"]).encode()).hexdigest()
         manifest["splits"][name] = {**_class_counts(part), "sha256_archivo": sha256_file(out),
-                                    "sha256_ids": ids_hash, "archivo": str(out.relative_to(paths.root))}
+                                    "sha256_ids": ids_hash, "archivo": out.relative_to(paths.root).as_posix()}
     manifest["solapamiento"] = check_overlap(parts)
     write_json(manifest, paths.reports / "splits_manifest.json")
     LOGGER.info("Splits guardados: %s", {k: v["total"] for k, v in manifest["splits"].items()})

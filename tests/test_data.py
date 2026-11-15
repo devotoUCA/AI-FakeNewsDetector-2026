@@ -91,3 +91,14 @@ def test_processed_docs_have_no_source_marks():
         for marker in ("dateline '(Reuters) -'", "palabra 'Reuters'", "pic.twitter.com", "URL (http/www)",
                        "'Getty Images'", "descargo SAP"):
             assert rates[marker] == 0.0, (name, marker)
+
+
+def test_versioned_splits_manifest_is_platform_neutral():
+    """El manifiesto versionado no debe traer rutas de Windows (se generó con `/` y fin de línea `\\n`)."""
+    import json
+
+    path = get_paths().reports / "splits_manifest.json"
+    if not path.exists():
+        pytest.skip("Falta reports/splits_manifest.json.")
+    splits = json.loads(path.read_text(encoding="utf-8"))["splits"]
+    assert all("\\" not in v["archivo"] and v["archivo"].startswith("data/processed/") for v in splits.values())

@@ -1,6 +1,7 @@
 """Línea de comandos: `python -m fakenews.cli <comando>`.
 
 Comandos: download, prepare, audit, train, evaluate, external, analyze, predict, all.
+Lista completa (iteraciones 2 y 3, `report`, `review-status`): `python -m fakenews.cli --help`.
 """
 
 from __future__ import annotations
@@ -13,6 +14,21 @@ import sys
 from .config import setup_logging
 
 LOGGER = logging.getLogger("fakenews.cli")
+
+
+def _force_utf8_output() -> None:
+    """En Windows la consola suele usar cp1252: sin esto, imprimir "≥" o "–" puede fallar."""
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8", errors="replace")
+
+
+def _read_stdin_text() -> str:
+    """Lee stdin como UTF-8 (los ejemplos lo son), sin depender de la codificación de la consola."""
+    buffer = getattr(sys.stdin, "buffer", None)
+    if buffer is None:
+        return sys.stdin.read()
+    return buffer.read().decode("utf-8-sig", errors="replace")
 
 
 def _cmd_download(_: argparse.Namespace) -> None:
@@ -71,7 +87,7 @@ def _cmd_analyze(_: argparse.Namespace) -> None:
 def _cmd_predict(args: argparse.Namespace) -> None:
     from .predict import ModelNotTrainedError, predict
 
-    text = args.text if args.text != "-" else sys.stdin.read()
+    text = args.text if args.text != "-" else _read_stdin_text()
     try:
         out = predict(text, with_similar=args.similar)
     except ModelNotTrainedError as exc:
@@ -163,12 +179,37 @@ def _cmd_evaluate_v3(_: argparse.Namespace) -> None:
 def _cmd_report(_: argparse.Namespace) -> None:
     from .access_log import verify_access_log
     from .make_report import make_report
+    from .review import ReviewFileError, update_review_status
 
+    # Primero se actualiza el criterio de revisión de errores, así las tablas salen con el estado real.
+    try:
+        print(json.dumps({"revision_errores": update_review_status()}, ensure_ascii=False, indent=2))
+    except ReviewFileError as exc:
+        print(f"Revisión de errores: {exc}", file=sys.stderr)
+        sys.exit(1)
     print(json.dumps(make_report(), ensure_ascii=False, indent=2))
     r = verify_access_log()
     print(json.dumps(r, ensure_ascii=False, indent=2))
     if not r["ok"]:
         sys.exit(1)
+
+
+def _cmd_review_status(_: argparse.Namespace) -> None:
+    """Estado de la revisión humana de errores. No carga modelos ni datos reservados."""
+    from .review import ReviewFileError, update_review_status
+
+    try:
+        s = update_review_status()
+    except ReviewFileError as exc:
+        print(str(exc), file=sys.stderr)
+        sys.exit(1)
+    print(json.dumps(s, ensure_ascii=False, indent=2))
+    falta = max(0, s["minimo"] - s["revisados"])
+    print(f"Revisados (comentario + firma): {s['revisados']} de {s['casos']}. "
+          + ("Criterio del acta cumplido." if s["cumple"] else f"Faltan {falta} para cumplir el criterio del acta."))
+    if s["comentados_sin_firma"]:
+        print(f"Hay {s['comentados_sin_firma']} comentarios sin firma en `revisado_por`: no cuentan todavía.")
+    print("Para llevar el estado a los documentos: python -m fakenews.cli report")
 
 
 def _cmd_quickstart(args: argparse.Namespace) -> None:
@@ -221,10 +262,12 @@ def main(argv: list[str] | None = None) -> None:
     t3.add_argument("--quick", action="store_true", help="Sin externos: reutiliza models/domain_gate_v3.json.gz")
     sub.add_parser("evaluate-v3", help="(it3) Evaluación final de cierre (registrada)")
     sub.add_parser("report", help="(it3) Genera tablas de los documentos desde reports/ y verifica el log")
+    sub.add_parser("review-status", help="(cierre) Cuenta los errores revisados y firmados por el equipo")
     sub.add_parser("quickstart", help="Inicio rápido: datos mínimos + solo el modelo productivo")
     al = sub.add_parser("all", help="Todo el pipeline")
     al.add_argument("--reason", default="evaluación final (pipeline completo)")
     args = parser.parse_args(argv)
+    _force_utf8_output()
     setup_logging(logging.DEBUG if args.verbose else logging.INFO)
     {"download": _cmd_download, "prepare": _cmd_prepare, "audit": _cmd_audit, "train": _cmd_train,
      "evaluate": _cmd_evaluate, "external": _cmd_external, "analyze": _cmd_analyze,
@@ -232,7 +275,7 @@ def main(argv: list[str] | None = None) -> None:
      "prepare-external": _cmd_prepare_external, "shortcuts": _cmd_shortcuts, "panel": _cmd_panel,
      "train-v2": _cmd_train_v2, "evaluate-v2": _cmd_evaluate_v2, "quickstart": _cmd_quickstart,
      "format-shortcuts": _cmd_format_shortcuts, "panel-v3": _cmd_panel_v3, "train-v3": _cmd_train_v3,
-     "evaluate-v3": _cmd_evaluate_v3, "report": _cmd_report}[args.cmd](args)
+     "evaluate-v3": _cmd_evaluate_v3, "report": _cmd_report, "review-status": _cmd_review_status}[args.cmd](args)
 
 
 if __name__ == "__main__":

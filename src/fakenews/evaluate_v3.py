@@ -28,6 +28,7 @@ from .explain import global_top_terms, term_contributions
 from .features import STYLE_FEATURES, StyleFeatures
 from .metrics import bootstrap_ci, classification_metrics, compact, mcnemar_exact, reliability_bins
 from .models import p_fake
+from .review import carry_over_reviews, criterion_row, load_errors
 from .thresholds import confidence_level
 
 LOGGER = logging.getLogger(__name__)
@@ -188,6 +189,8 @@ def error_analysis_v3(art: dict[str, Any], sets: dict[str, pd.DataFrame], probs:
                                             f"con p={r['p']:.2f}; pesaron: {words}. Categoría tentativa: {cat}.",
                      "comentario_equipo": "", "revisado_por": ""})
     out = pd.DataFrame(rows).sort_values(["origen", "tipo", "estrato_confianza"])
+    # Si el equipo ya comentó y firmó casos, no se pisan al regenerar el archivo.
+    out = carry_over_reviews(out, get_paths().reports / "error_analysis_v3.csv")
     out.to_csv(get_paths().reports / "error_analysis_v3.csv", index=False)
     return {"n_en_csv": len(out), "por_origen": out["origen"].value_counts().to_dict(), "por_tipo": out["tipo"].value_counts().to_dict(),
             "por_estrato": out["estrato_confianza"].value_counts().to_dict(),
@@ -200,8 +203,7 @@ def success_criteria_v3() -> dict[str, Any]:
     r = read_json(paths.reports / "final_v3.json")
     m = r["v3"]["isot_test"]
     mc = r["mcnemar_baseline_vs_final"]
-    errs = pd.read_csv(paths.reports / "error_analysis_v3.csv", keep_default_na=False)
-    reviewed = int((errs["comentario_equipo"].astype(str).str.strip() != "").sum())
+    errs = load_errors(paths.reports / "error_analysis_v3.csv")
     rows = [
         {"criterio": "Accuracy en test > 80 %", "valor": m["accuracy"], "estado": "cumplido (solo dentro de ISOT)" if m["accuracy"] > .8 else "no cumplido"},
         {"criterio": "F1 por clase > 0,80", "valor": [m["f1_real"], m["f1_fake"]], "estado": "cumplido (solo dentro de ISOT)" if min(m["f1_real"], m["f1_fake"]) > .8 else "no cumplido"},
@@ -210,8 +212,7 @@ def success_criteria_v3() -> dict[str, Any]:
          "valor": {"f1_baseline": r["baseline_it1"]["f1_fake"], "f1_final": m["f1_fake"], "mcnemar_p": mc["p_value"]},
          "estado": "cumplido" if m["f1_fake"] >= r["baseline_it1"]["f1_fake"] else "no cumplido"},
         {"criterio": "Sin filtración entre splits", "valor": "0 solapamientos; externos deduplicados", "estado": "cumplido"},
-        {"criterio": ">= 20 errores revisados por el equipo", "valor": {"casos": len(errs), "comentados": reviewed},
-         "estado": "cumplido" if reviewed >= 20 else "pendiente: equipo (error_analysis_v3.csv)"},
+        criterion_row(errs),  # cuenta solo los casos con comentario Y firma (ver review.py)
         {"criterio": "Demo devuelve etiqueta y probabilidad", "valor": "tests de predict y demo", "estado": "cumplido (si pytest pasa)"},
         {"criterio": "Accuracy > 98 % => sospecha", "valor": m["accuracy"], "estado": "alerta cerrada con evidencia: ver informe" if r["alerta_accuracy_sospechosa"]["alerta"] else "sin alerta"},
     ]

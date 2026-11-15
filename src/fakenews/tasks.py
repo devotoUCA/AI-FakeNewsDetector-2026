@@ -41,6 +41,7 @@ TASKS: dict[str, list[list[str]]] = {
     "quickstart": [cli("quickstart")],
     "evaluate": [cli("evaluate"), cli("evaluate-v2"), cli("evaluate-v3")],
     "analyze": [cli("analyze")],
+    "review": [cli("review-status")],
     "report": [cli("report")],
     "notebook": [[venv_python(), "-m", "jupyter", "nbconvert", "--to", "notebook", "--execute", "--inplace",
                   "notebooks/01_eda_y_preparacion.ipynb", "--ExecutePreprocessor.timeout=1200"]],
